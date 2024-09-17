@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
+import NavButton from "../atoms/NavButton";
 import MenuButton from "../atoms/MenuButton";
 
 const Menu = () => {
@@ -24,9 +26,16 @@ const Menu = () => {
       link: "/kontakt",
     },
   ];
+
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const menuHandler = () => {
+    setMenuIsOpen((prev) => !prev);
+  };
+
   return (
     <div>
-      <ul className="flex gap-2">
+      <NavButton menuHandler={menuHandler} menuIsOpen={menuIsOpen} />
+      <ul className="flex flex-col md:flex-row md:gap-2">
         {menuItems.map((item) => (
           <li key={item.id}>
             <MenuButton name={item.name} link={item.link} />
