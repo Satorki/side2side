@@ -1,7 +1,18 @@
 "use client";
 import React, { useState } from "react";
-import NavButton from "../atoms/NavButton";
-import MenuButton from "../atoms/MenuButton";
+// import NavButton from "../atoms/NavButton";
+// import MenuButton from "../atoms/MenuButton";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenuToggle,
+  NavbarMenu,
+  NavbarMenuItem,
+  Link,
+  Button,
+} from "@nextui-org/react";
 
 const Menu = () => {
   const menuItems = [
@@ -26,23 +37,67 @@ const Menu = () => {
       link: "/kontakt",
     },
   ];
-
-  const [menuIsOpen, setMenuIsOpen] = useState(false);
-  const menuHandler = () => {
-    setMenuIsOpen((prev) => !prev);
-  };
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div>
-      <NavButton menuHandler={menuHandler} menuIsOpen={menuIsOpen} />
-      <ul className="flex flex-col md:flex-row md:gap-2">
-        {menuItems.map((item) => (
-          <li key={item.id}>
-            <MenuButton name={item.name} link={item.link} />
-          </li>
+    <Navbar onMenuOpenChange={setIsMenuOpen}>
+      <NavbarContent>
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="sm:hidden"
+        />
+        <NavbarBrand>
+          <p className="font-bold text-inherit">S2S</p>
+        </NavbarBrand>
+      </NavbarContent>
+
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        {menuItems.map((item, index) => (
+          <NavbarItem key={`${item.name}-${index}`}>
+            <Link
+              color={
+                index === 2
+                  ? "primary"
+                  : index === menuItems.length - 1
+                  ? "danger"
+                  : "foreground"
+              }
+              href={item.link}
+              size="lg"
+            >
+              {item.name}
+            </Link>
+          </NavbarItem>
         ))}
-      </ul>
-    </div>
+      </NavbarContent>
+      <NavbarContent justify="end">
+        <NavbarItem>
+          <Button as={Link} color="primary" href="#" variant="flat">
+            CALL
+          </Button>
+        </NavbarItem>
+      </NavbarContent>
+      <NavbarMenu>
+        {menuItems.map((item, index) => (
+          <NavbarMenuItem key={`${item.name}-${index}`}>
+            <Link
+              color={
+                index === 2
+                  ? "primary"
+                  : index === menuItems.length - 1
+                  ? "danger"
+                  : "foreground"
+              }
+              className="w-full"
+              href="#"
+              size="lg"
+            >
+              {item.name}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+      </NavbarMenu>
+    </Navbar>
   );
 };
 
