@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
-import Navbar from "@/components/organisms/NavbarSite";
 import Footer from "@/components/organisms/Footer";
-
+import NavbarSite from "@/components/organisms/NavbarSite";
 
 export const metadata: Metadata = {
   title: "Side2Side",
@@ -17,10 +16,8 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <body>
-        <Navbar />
-        <main>
-        {children}
-        </main>
+        <NavbarSite />
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

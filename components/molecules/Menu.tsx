@@ -13,6 +13,7 @@ import {
   Link,
   Button,
 } from "@nextui-org/react";
+import LogoBig from "../atoms/LogoBig";
 
 const Menu = () => {
   const menuItems = [
@@ -42,12 +43,8 @@ const Menu = () => {
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
-        />
         <NavbarBrand>
-          <p className="font-bold text-inherit">S2S</p>
+          <LogoBig />
         </NavbarBrand>
       </NavbarContent>
 
@@ -97,6 +94,10 @@ const Menu = () => {
           </NavbarMenuItem>
         ))}
       </NavbarMenu>
+      <NavbarMenuToggle
+        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+        className="sm:hidden"
+      />
     </Navbar>
   );
 };
