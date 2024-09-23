@@ -8,9 +8,7 @@ const Hero = () => {
     <div id="hero">
       <HeroTitle />
       <HeroImage />
-      <div className="absolute bottom-0 text-white w-full flex justify-center gap-10 z-20">
-        <HeroArrow />
-      </div>
+      <HeroArrow />
     </div>
   );
 };
