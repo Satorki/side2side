@@ -13,6 +13,7 @@ const config: Config = {
       fontFamily: {
         jura: ["Jura", "sans-serif"],
         space: ["Space Grotesk", "sans-serif"],
+        libre: ["Libre Franklin", "sans-serif"],
       },
       colors: {
         background: "var(--background)",

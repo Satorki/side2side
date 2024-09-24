@@ -1,7 +1,5 @@
 "use client";
 import React, { useState } from "react";
-// import NavButton from "../atoms/NavButton";
-// import MenuButton from "../atoms/MenuButton";
 import {
   Navbar,
   NavbarBrand,
@@ -11,11 +9,11 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   Link,
-  Button,
 } from "@nextui-org/react";
 import LogoBig from "../atoms/LogoBig";
+import LogoSmall from "../atoms/LogoSmall";
 
-const Menu = () => {
+const Header = () => {
   const menuItems = [
     {
       id: 1,
@@ -41,54 +39,37 @@ const Menu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen}>
+    <Navbar
+      onMenuOpenChange={setIsMenuOpen}
+      className="min-h-[75px] sm:min-h-[90px] font-jura bg-black text-white"
+    >
       <NavbarContent>
         <NavbarBrand>
-          <LogoBig />
+          <Link href="/">
+            <div className="hidden lg:block">
+              {" "}
+              <LogoBig />
+            </div>
+            <div className="block lg:hidden">
+              {" "}
+              <LogoSmall />
+            </div>
+          </Link>
         </NavbarBrand>
       </NavbarContent>
-
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden md:flex gap-4" justify="center">
         {menuItems.map((item, index) => (
           <NavbarItem key={`${item.name}-${index}`}>
-            <Link
-              color={
-                index === 2
-                  ? "primary"
-                  : index === menuItems.length - 1
-                  ? "danger"
-                  : "foreground"
-              }
-              href={item.link}
-              size="lg"
-            >
+            <Link href="{item.link}" className="text-white text-3xl">
               {item.name}
             </Link>
           </NavbarItem>
         ))}
       </NavbarContent>
-      <NavbarContent justify="end">
-        <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
-            CALL
-          </Button>
-        </NavbarItem>
-      </NavbarContent>
-      <NavbarMenu>
+      <NavbarMenu className="bg-black max-h-min font-light">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item.name}-${index}`}>
-            <Link
-              color={
-                index === 2
-                  ? "primary"
-                  : index === menuItems.length - 1
-                  ? "danger"
-                  : "foreground"
-              }
-              className="w-full"
-              href="#"
-              size="lg"
-            >
+            <Link className="text-white min-h-[60px] text-[36px] flex justify-center underline underline-offset-8 font-jura">
               {item.name}
             </Link>
           </NavbarMenuItem>
@@ -96,10 +77,10 @@ const Menu = () => {
       </NavbarMenu>
       <NavbarMenuToggle
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        className="sm:hidden"
+        className="md:hidden"
       />
     </Navbar>
   );
 };
 
-export default Menu;
+export default Header;
