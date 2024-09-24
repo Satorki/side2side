@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import React, { useState } from "react";
+import React from "react";
 
 const HeroTitle = () => {
   return (
