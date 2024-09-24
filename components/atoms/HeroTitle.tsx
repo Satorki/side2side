@@ -7,7 +7,7 @@ const HeroTitle = () => {
     <div className="absolute flex flex-col items-center w-full top-[22%]">
       <h1 className="text-6xl md:text-8xl flex tracking-tight font-bold font-libre">
         <motion.div
-          initial={{ x: -300 }}
+          initial={{ x: -1000 }}
           animate={{ x: 0 }}
           transition={{
             delay: 0.8,
@@ -35,7 +35,7 @@ const HeroTitle = () => {
           2
         </motion.div>
         <motion.div
-          initial={{ x: 300 }}
+          initial={{ x: 1000 }}
           animate={{ x: 0 }}
           transition={{
             delay: 1.5,
