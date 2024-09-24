@@ -1,12 +1,61 @@
-import React from "react";
+"use client";
+import { motion } from "framer-motion";
+import React, { useState } from "react";
 
 const HeroTitle = () => {
   return (
     <div className="absolute flex flex-col items-center w-full top-[22%]">
-      <h1 className="text-6xl md:text-8xl tracking-tight font-bold font-libre">
-        SIDE<span className="text-[--red]">2</span>SIDE
+      <h1 className="text-6xl md:text-8xl flex tracking-tight font-bold font-libre">
+        <motion.div
+          initial={{ x: -300 }}
+          animate={{ x: 0 }}
+          transition={{
+            delay: 0.8,
+            duration: 3,
+            type: "spring",
+            stiffness: 1000,
+            damping: 40,
+            mass: 1,
+          }}
+        >
+          SIDE
+        </motion.div>
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{
+            duration: 0.3,
+            type: "spring",
+            stiffness: 100,
+            damping: 30,
+            mass: 1,
+          }}
+          className="text-[--red]"
+        >
+          2
+        </motion.div>
+        <motion.div
+          initial={{ x: 300 }}
+          animate={{ x: 0 }}
+          transition={{
+            delay: 1.5,
+            duration: 3,
+            type: "spring",
+            stiffness: 1000,
+            damping: 40,
+            mass: 1,
+          }}
+        >
+          SIDE
+        </motion.div>
       </h1>
-      <p>Serwis Tuning Motorsport</p>
+      <motion.p
+        animate={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
+        transition={{ delay: 2, duration: 1.5 }}
+      >
+        Serwis Tuning Motorsport
+      </motion.p>
     </div>
   );
 };

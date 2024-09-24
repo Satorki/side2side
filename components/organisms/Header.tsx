@@ -47,11 +47,9 @@ const Header = () => {
         <NavbarBrand>
           <Link href="/">
             <div className="hidden lg:block">
-              {" "}
               <LogoBig />
             </div>
             <div className="block lg:hidden">
-              {" "}
               <LogoSmall />
             </div>
           </Link>
@@ -66,10 +64,10 @@ const Header = () => {
           </NavbarItem>
         ))}
       </NavbarContent>
-      <NavbarMenu className="bg-black max-h-min font-light">
+      <NavbarMenu className="bg-black max-h-min py-7 gap-10">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item.name}-${index}`}>
-            <Link className="text-white min-h-[60px] text-[36px] flex justify-center underline underline-offset-8 font-jura">
+            <Link className="text-white text-[36px] flex justify-center font-jura font-thin tracking-wider">
               {item.name}
             </Link>
           </NavbarMenuItem>
