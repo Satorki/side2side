@@ -4,17 +4,17 @@ import React from "react";
 
 const HeroTitle = () => {
   return (
-    <div className="absolute flex flex-col items-center w-full top-[22%]">
+    <div className="absolute flex flex-col items-center w-full top-[22%] overflow-hidden">
       <h1 className="text-6xl md:text-8xl flex tracking-tight font-bold font-libre">
         <motion.div
-          initial={{ x: -1000 }}
+          initial={{ x: -1500 }}
           animate={{ x: 0 }}
           transition={{
             delay: 0.8,
             duration: 3,
             type: "spring",
             stiffness: 1000,
-            damping: 40,
+            damping: 100,
             mass: 1,
           }}
         >
@@ -35,14 +35,14 @@ const HeroTitle = () => {
           2
         </motion.div>
         <motion.div
-          initial={{ x: 1000 }}
+          initial={{ x: 1500 }}
           animate={{ x: 0 }}
           transition={{
             delay: 1.5,
             duration: 3,
             type: "spring",
             stiffness: 1000,
-            damping: 40,
+            damping: 100,
             mass: 1,
           }}
         >

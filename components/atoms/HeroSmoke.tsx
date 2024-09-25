@@ -1,23 +1,31 @@
 "use client";
-import React from "react";
-import HeroSmokePicture from "../../public/images/smoke.png";
-import Image from "next/image";
+import { Smoke } from "react-smoke";
+import { Canvas } from "@react-three/fiber";
+import { Suspense } from "react";
 import { motion } from "framer-motion";
+import * as THREE from "three";
 
 const HeroSmoke = () => {
   return (
     <motion.div
-      initial={{ x: "1000px" }}
-      animate={{
-        x: 0,
-        transition: { duration: 1, repeat: Infinity, ease: "linear" },
-      }}
+      // initial={{ opacity: 0 }}
+      // animate={{ opacity: 1 }}
+      // transition={{ duration: 5, delay: 2.5 }}
+      // exit={{ opacity: 0 }}
+      className="absolute right-0 bottom-40 w-full h-full"
     >
-      <Image
-        src={HeroSmokePicture}
-        alt="hero background smoke picture"
-        className="-z-10 absolute bottom-0 right-0 w-full h-full object-cover"
-      />
+      <Canvas camera={{ fov: 50, position: [0, 0, 1400], far: 600 }}>
+        <Suspense fallback={null}>
+          <Smoke
+            color={new THREE.Color("#fff")}
+            opacity={0.3}
+            density={50}
+            enableWind={true}
+            windDirection={[-1, 1, 0]}
+            windStrength={[0.5, 0.5, 0]}
+          />
+        </Suspense>
+      </Canvas>
     </motion.div>
   );
 };
