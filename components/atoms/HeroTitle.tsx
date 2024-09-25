@@ -4,7 +4,7 @@ import React from "react";
 
 const HeroTitle = () => {
   return (
-    <div className="absolute flex flex-col items-center w-full top-[22%] overflow-hidden">
+    <div className="absolute z-20 flex flex-col items-center w-full top-[22%] overflow-hidden">
       <h1 className="text-6xl md:text-8xl flex tracking-tight font-bold font-libre">
         <motion.div
           initial={{ x: -1500 }}

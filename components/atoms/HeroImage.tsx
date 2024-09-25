@@ -7,7 +7,7 @@ const HeroImage = () => {
     <Image
       src={HeroImagePicture}
       alt="hero image a car during ride on a curcuit"
-      className="-z-10 absolute right-0 bottom-0 w-full h-full object-cover object-[80%] md:object-right-bottom"
+      className="z-10 absolute right-0 bottom-0 w-full h-full object-cover object-[80%] md:object-right-bottom"
     />
   );
 };
