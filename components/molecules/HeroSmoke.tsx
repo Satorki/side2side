@@ -15,7 +15,7 @@ const HeroSmoke = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 5, delay: 5 }}
         className="fixed right-0 bottom-0 w-full h-full z-10"
-        style={{ opacity: hideScreenSmoke }}
+
       >
         <HeroScreenSmoke />
       </motion.div>

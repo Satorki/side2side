@@ -1,13 +1,19 @@
+'use client';
 import React from "react";
 import { FaArrowDown } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const HeroArrow = () => {
   return (
-    <div className="absolute bottom-0 text-white w-full flex justify-center gap-10 z-20">
+    <motion.div
+    animate={{ opacity: 1 }}
+    initial={{ opacity: 0 }}
+    transition={{ delay: 5, duration: 2 }}
+    className="absolute bottom-0 text-white w-full flex justify-center gap-10 z-20">
       <div className="rounded-full bg-slate-300 bg-opacity-40 flex justify-center items-center w-10 h-10 text-black mb-4 pt-1 cursor-pointer transition-all duration-300 ease-out hover:-translate-y-4">
         <FaArrowDown className="text-2xl" />
       </div>
-    </div>
+    </motion.div>
   );
 };
 
