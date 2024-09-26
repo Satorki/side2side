@@ -3,7 +3,7 @@ import Hero from "@/containers/home-page/Hero";
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-red-700">
       <Hero />
       <About />
     </div>

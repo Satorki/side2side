@@ -5,8 +5,7 @@ import HeroScreenSmoke from "../atoms/HeroScreenSmoke";
 
 const HeroSmoke = () => {
   const { scrollYProgress } = useScroll();
-  const hideWheelSmoke = useTransform(scrollYProgress, [0, 0.01], [1, 0]);
-  const hideScreenSmoke = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  const hideSmoke = useTransform(scrollYProgress, [0, 0.01], [1, 0]);
 
   return (
     <div>
@@ -15,7 +14,7 @@ const HeroSmoke = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 5, delay: 5 }}
         className="fixed right-0 bottom-0 w-full h-full z-10"
-        style={{ opacity: hideWheelSmoke }}
+        style={{ opacity: hideSmoke }}
       >
         <HeroScreenSmoke />
       </motion.div>
@@ -26,7 +25,7 @@ const HeroSmoke = () => {
         transition={{ duration: 3, delay: 1 }}
         exit={{ opacity: 0 }}
         className="fixed z-10 overflow-hidden bottom-[20%] w-[10%] md:right-0 hidden md:block  h-[20%]"
-        style={{ filter: "blur(2px)", opacity: hideWheelSmoke }}
+        style={{ filter: "blur(2px)", opacity: hideSmoke }}
       >
         <HeroWheelSmoke />
       </motion.div>
