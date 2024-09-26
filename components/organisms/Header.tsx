@@ -15,8 +15,9 @@ import LogoSmall from "../atoms/LogoSmall";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const Header = () => {
-  const { scrollYProgress } = useScroll();
-  const showNavbarContent = useTransform(scrollYProgress, [0, 0.1], [-1500, 0]);
+  const { scrollY } = useScroll();
+  const opacity = useTransform(scrollY, [0, 200], [0, 1]);
+  const y = useTransform(scrollY, [0, 200], [-100, 0]);
 
   const menuItems = [
     {
@@ -43,15 +44,15 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <Navbar
-      onMenuOpenChange={setIsMenuOpen}
-      className="min-h-[75px] sm:min-h-[90px] font-jura  text-white"
+    <motion.div
+      style={{ y: y, opacity: opacity }}
+      className="min-h-[75px] sm:min-h-[90px] font-jura bg-black sticky top-0 text-white z-30 flex"
     >
-      <motion.div
-        style={{
-          x: showNavbarContent,
-        }}
-        className="flex items-center justify-between w-full"
+      <Navbar
+        position="static"
+        isBlurred={false}
+        onMenuOpenChange={setIsMenuOpen}
+        className="bg-black"
       >
         <NavbarContent>
           <NavbarBrand>
@@ -87,8 +88,8 @@ const Header = () => {
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="md:hidden"
         />
-      </motion.div>
-    </Navbar>
+      </Navbar>
+    </motion.div>
   );
 };
 
