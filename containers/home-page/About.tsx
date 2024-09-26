@@ -1,17 +1,12 @@
 import AboutImage from "@/components/atoms/AboutImage";
+import AboutQuote from "@/components/atoms/AboutQuote";
 import React from "react";
 
 const About = () => {
   return (
-    <div>
-      <div>O nas</div>
-      <div
-        id="About"
-        className="flex flex-col max-w-[1200px] overflow-hidden mx-auto"
-      >
-        <AboutImage />
-      </div>
-      <div>Text from left showing</div>
+    <div id="About" style={{ marginTop: "-10px" }} className="overflow-hidden">
+      <AboutImage />
+      <AboutQuote />
     </div>
   );
 };
