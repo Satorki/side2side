@@ -1,10 +1,17 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import React from "react";
 
 const HeroTitle = () => {
+  const { scrollY } = useScroll();
+  const opacity = useTransform(scrollY, [0, 150], [1, 0]);
+  const y = useTransform(scrollY, [150, 0], [-100, 0]);
+
   return (
-    <div className="absolute z-20 flex flex-col items-center w-full top-[22%] overflow-hidden">
+    <motion.div
+      style={{ opacity, y }}
+      className="absolute z-20 flex flex-col items-center w-full top-[22%] overflow-hidden"
+    >
       <h1 className="text-6xl md:text-8xl flex tracking-tight font-bold font-libre">
         <motion.div
           initial={{ x: -1500 }}
@@ -56,7 +63,7 @@ const HeroTitle = () => {
       >
         Serwis Tuning Motorsport
       </motion.p>
-    </div>
+    </motion.div>
   );
 };
 
