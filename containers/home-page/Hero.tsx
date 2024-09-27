@@ -6,7 +6,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div id="hero" className="h-screen">
+    <div id="hero" className="h-screen ">
       <HeroTitle />
       <HeroImage />
       <HeroSmoke />

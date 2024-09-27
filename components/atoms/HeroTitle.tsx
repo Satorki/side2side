@@ -10,7 +10,7 @@ const HeroTitle = () => {
   return (
     <motion.div
       style={{ opacity, y }}
-      className="absolute z-20 flex flex-col items-center w-full top-[22%] overflow-hidden"
+      className="absolute z-20 flex flex-col items-center w-full  top-[22%] overflow-hidden"
     >
       <h1 className="text-6xl md:text-8xl flex tracking-tight font-bold font-libre">
         <motion.div

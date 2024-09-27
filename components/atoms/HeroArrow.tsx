@@ -19,7 +19,7 @@ const HeroArrow = () => {
         damping: 20,
         mass: 1,
       }}
-      className="absolute bottom-0 text-white w-full flex justify-center gap-10 z-20"
+      className="absolute bottom-0 text-white w-full  flex justify-center gap-10 z-20"
       style={{ opacity }}
     >
       <Link
