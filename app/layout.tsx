@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl">
-      <body className="bg-red-700">
+      <body className="from-red-600 to-red-900 bg-gradient-to-tr">
         <Header />
         <main>{children}</main>
         <Footer />
