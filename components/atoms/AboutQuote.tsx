@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 const AboutQuote = () => {
   return (
-    <motion.div className="bg-black bg-opacity-30 rounded-3xl text-white p-5 m-10  shadow-2xl text-[1.5rem] font-jura md:text-[2rem]">
-      <h2>Garage</h2>
+    <motion.div className="bg-black bg-opacity-80 rounded-3xl text-white p-5  shadow-2xl text-[1.5rem] font-jura md:text-[2rem]">
+      <h3>Garage</h3>
       <p>
         Specjalizujemy się w budowie i przygotowaniu
         pojazdów do różnych dyscyplin motorsportu: <span>DRIFT</span>

@@ -3,29 +3,37 @@ import AboutImage from "@/components/atoms/AboutImage";
 import AboutQuote from "@/components/atoms/AboutQuote";
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import AboutEnter from "@/components/molecules/AboutEnter";
+import Image from "next/image";
+import CarIcon from "../../public/images/car-icon.png";
 
 const About = () => {
   const { scrollYProgress } = useScroll();
-  const xPos = useTransform(scrollYProgress, [0, 1], [2000, 0]);
+  const iconMove = useTransform(scrollYProgress, [0, 1.5], [300, 20]);
 
   return (
-    <div className="bg-black">
-      <AboutEnter />
-
-      {/* <div
-        id="About"
-        style={{ marginTop: "-60px" }}
-        className="grid grid-cols-1 md:grid-cols-2 gap-4 grid-flow-col items-center overflow-hidden"
-      >
-        <motion.div initial={{ x: -500 }} style={{ x: xPos }}>
-          <p className="absolute top-0 text-white font-mono font-2xl font-bold">
-            CAR
-          </p>
-        </motion.div>
-        <AboutImage />
-        <AboutQuote />
-      </div> */}
+    <div id="About">
+      <motion.div
+      style={{ x: iconMove, position: "absolute" }}>
+        <Image
+          src={CarIcon}
+          alt="car icon"
+          width={30}
+          style={{ rotate: "-90deg" }}
+        />
+      </motion.div>
+      <h2>O NAS</h2>
+      <AboutQuote />
+      <AboutImage />
+      <style jsx>{`
+        .about-container {
+          margin-left: 2rem;
+          margin-right: 2rem;
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          /* margin-top: -3rem; */
+        }
+      `}</style>
     </div>
   );
 };
