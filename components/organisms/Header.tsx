@@ -13,7 +13,6 @@ import {
 import LogoBig from "../atoms/LogoBig";
 import LogoSmall from "../atoms/LogoSmall";
 import { motion, useScroll, useTransform } from "framer-motion";
-import LogoRight from "../atoms/LogoRight";
 
 const Header = () => {
   const { scrollY } = useScroll();

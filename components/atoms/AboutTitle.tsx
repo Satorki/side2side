@@ -1,5 +1,4 @@
 "use client";
-import React, { useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const AboutTitle = () => {
@@ -8,12 +7,6 @@ const AboutTitle = () => {
   const colorN = useTransform(scrollYProgress, [0, 0.2], ["white", "#e35e5f"]);
   const colorA = useTransform(scrollYProgress, [0, 0.7], ["white", "#e35e5f"]);
   const colorS = useTransform(scrollYProgress, [0, 0.8], ["white", "#e35e5f"]);
-
-  useEffect(() => {
-    scrollYProgress.onChange((latest) => {
-      console.log("scrollYProgress:", latest); // sprawdzenie wartości
-    });
-  }, [scrollYProgress]);
 
   return (
     <div>
