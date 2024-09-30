@@ -19,7 +19,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href={Favicon.src} />
       </head>
-      <body className="from-[#850001] to-[#E35E5F] bg-gradient-to-t">
+      <body className="bg-black">
         <Header />
         <main>{children}</main>
         <Footer />

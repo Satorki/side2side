@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Navbar,
   NavbarBrand,
@@ -44,52 +44,56 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <motion.div
-      style={{ y: y, opacity: opacity }}
-      className="min-h-[60px] sm:min-h-[75px] font-jura bg-black sticky top-0 text-white z-30 flex "
-    >
-      <Navbar
-        position="static"
-        isBlurred={false}
-        onMenuOpenChange={setIsMenuOpen}
-        className="bg-black"
-      >
-        <NavbarContent>
-          <NavbarBrand>
-            <Link href="/">
-              <div className="hidden lg:block">
-                <LogoBig />
-              </div>
-              <div className="block lg:hidden">
-                <LogoSmall />
-              </div>
-            </Link>
-          </NavbarBrand>
-        </NavbarContent>
-        <NavbarContent className="hidden md:flex gap-4" justify="end">
-          {menuItems.map((item, index) => (
-            <NavbarItem key={`${item.name}-${index}`}>
-              <Link href="{item.link}" className="text-white text-[1.3rem]">
-                {item.name}
-              </Link>
-            </NavbarItem>
-          ))}
-        </NavbarContent>
-        <NavbarMenu className="bg-black max-h-min py-7 gap-10">
-          {menuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item.name}-${index}`}>
-              <Link className="text-white text-[1.5rem] underline underline-offset-8 flex justify-center font-jura font-thin tracking-wider">
-                {item.name}
-              </Link>
-            </NavbarMenuItem>
-          ))}
-        </NavbarMenu>
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="md:hidden"
-        />
-      </Navbar>
-    </motion.div>
+          <motion.div
+            style={{ y: y, opacity: opacity }}
+            className="min-h-[60px] sm:min-h-[75px] font-jura bg-black  sticky top-0 text-white z-30 flex "
+          >
+            <Navbar
+              position="static"
+              isBlurred={false}
+              onMenuOpenChange={setIsMenuOpen}
+              className="bg-black"
+            >
+              <NavbarContent>
+                <NavbarBrand>
+                  <Link href="/">
+                    <div className="hidden lg:block">
+                      <LogoBig />
+                    </div>
+                    <div className="block lg:hidden">
+                      <LogoSmall />
+                    </div>
+                  </Link>
+                </NavbarBrand>
+              </NavbarContent>
+              <NavbarContent className="hidden md:flex gap-4" justify="end">
+                {menuItems.map((item, index) => (
+                  <NavbarItem key={`${item.name}-${index}`}>
+                    <Link
+                      href="{item.link}"
+                      className="text-white text-[1.3rem]"
+                    >
+                      {item.name}
+                    </Link>
+                  </NavbarItem>
+                ))}
+              </NavbarContent>
+              <NavbarMenu className="bg-black max-h-min py-7 gap-10">
+                {menuItems.map((item, index) => (
+                  <NavbarMenuItem key={`${item.name}-${index}`}>
+                    <Link className="text-white text-[1.5rem] underline underline-offset-8 flex justify-center font-jura font-thin tracking-wider">
+                      {item.name}
+                    </Link>
+                  </NavbarMenuItem>
+                ))}
+              </NavbarMenu>
+              <NavbarMenuToggle
+                aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                className="md:hidden"
+              />
+            </Navbar>
+          </motion.div>
+
   );
 };
 

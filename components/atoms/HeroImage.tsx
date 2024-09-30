@@ -7,13 +7,14 @@ import { motion, useScroll, useTransform } from "framer-motion";
 const HeroImage = () => {
   const { scrollY } = useScroll();
   const opacity = useTransform(scrollY, [0, 600], [1, 0]);
+  const y = useTransform(scrollY, [0, 600], [0, 200]);
 
   return (
-    <motion.div style={{ opacity }}>
+    <motion.div style={{ opacity, y }} className="w-full h-screen">
       <Image
         src={HeroImagePicture}
         alt="hero image a car during ride on a curcuit"
-        className="z-10 absolute right-0  bottom-0 w-full h-full object-cover
+        className=" absolute right-0  bottom-0 w-full h-screen object-cover
       object-[86%]  md:object-right-bottom 2xl:object-center"
       />
     </motion.div>

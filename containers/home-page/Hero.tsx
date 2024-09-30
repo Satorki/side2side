@@ -7,36 +7,25 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const Hero = () => {
-  const [isSmokeVisible, setIsSmokeVisible] = useState(true);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 1) {
-        setIsSmokeVisible(false);
-      } else {
-        setIsSmokeVisible(true);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
-    <div id="hero" className="h-screen bg-black">
+    <div
+      id="hero"
+      className="hero-container h-screen bg-black overflow-hidden relative"
+    >
       <HeroTitle />
       <HeroImage />
-      {isSmokeVisible && (
-        <motion.div
-          initial={{ opacity: 1 }}
-          animate={{ opacity: isSmokeVisible ? 1 : 0 }}
-        >
-          <HeroSmoke />
-        </motion.div>
-      )}
+      <HeroSmoke />
       <HeroArrow />
+      <style jsx>{`
+        .hero-container {
+          margin-top: -75px;
+        }
+        @media (max-width: 768px) {
+          .hero-container {
+            margin-top: -64px;
+          }
+        }
+      `}</style>
     </div>
   );
 };
