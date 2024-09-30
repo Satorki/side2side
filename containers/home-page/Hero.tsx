@@ -25,7 +25,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div id="hero" className="h-screen">
+    <div id="hero" className="h-screen bg-black">
       <HeroTitle />
       <HeroImage />
       {isSmokeVisible && (

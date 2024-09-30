@@ -46,7 +46,7 @@ const Header = () => {
   return (
     <motion.div
       style={{ y: y, opacity: opacity }}
-      className="min-h-[75px] sm:min-h-[90px] font-jura bg-black sticky top-0 text-white z-30 flex "
+      className="min-h-[60px] sm:min-h-[75px] font-jura bg-black sticky top-0 text-white z-30 flex "
     >
       <Navbar
         position="static"
@@ -69,7 +69,7 @@ const Header = () => {
         <NavbarContent className="hidden md:flex gap-4" justify="end">
           {menuItems.map((item, index) => (
             <NavbarItem key={`${item.name}-${index}`}>
-              <Link href="{item.link}" className="text-white text-[1.4rem]">
+              <Link href="{item.link}" className="text-white text-[1.3rem]">
                 {item.name}
               </Link>
             </NavbarItem>

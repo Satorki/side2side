@@ -12,7 +12,7 @@ const HeroArrow = () => {
       animate={{ y: 0, opacity: 1 }}
       initial={{ y: 100, opacity: 0 }}
       transition={{
-        delay: 3.5,
+        delay: 3,
         duration: 2,
         type: "spring",
         stiffness: 300,

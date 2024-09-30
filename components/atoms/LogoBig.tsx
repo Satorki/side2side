@@ -7,7 +7,7 @@ const LogoBig = () => {
     <Image
       src={LogoHuge}
       alt="logo big"
-      className="max-h-[90px]"
+      className="max-h-[60px] w-auto"
       height={90}
       width={0}
     />

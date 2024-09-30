@@ -14,11 +14,10 @@ const HeroTitle = () => {
     >
       <h1 className="text-6xl md:text-8xl flex tracking-tight font-bold font-libre">
         <motion.div
-          initial={{ x: -1500 }}
-          animate={{ x: 0 }}
+          initial={{ x: -500, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
           transition={{
             delay: 0.8,
-            duration: 3,
             type: "spring",
             stiffness: 1000,
             damping: 100,
@@ -42,11 +41,10 @@ const HeroTitle = () => {
           2
         </motion.div>
         <motion.div
-          initial={{ x: 1500 }}
-          animate={{ x: 0 }}
+          initial={{ x: 500, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
           transition={{
             delay: 1.5,
-            duration: 3,
             type: "spring",
             stiffness: 1000,
             damping: 100,
@@ -56,13 +54,29 @@ const HeroTitle = () => {
           SIDE
         </motion.div>
       </h1>
-      <motion.p
-        animate={{ opacity: 1 }}
-        initial={{ opacity: 0 }}
-        transition={{ delay: 2, duration: 1.5 }}
-      >
-        Serwis Tuning Motorsport
-      </motion.p>
+      <div className="flex gap-2">
+        <motion.span
+          animate={{ opacity: 1 }}
+          initial={{ opacity: 0 }}
+          transition={{ delay: 2, duration: 0.5 }}
+        >
+          Serwis
+        </motion.span>
+        <motion.span
+          animate={{ opacity: 1 }}
+          initial={{ opacity: 0 }}
+          transition={{ delay: 2.3, duration: 0.5 }}
+        >
+          Tunning
+        </motion.span>
+        <motion.span
+          animate={{ opacity: 1 }}
+          initial={{ opacity: 0 }}
+          transition={{ delay: 2.6, duration: 0.55 }}
+        >
+          Motorsport
+        </motion.span>
+      </div>
     </motion.div>
   );
 };

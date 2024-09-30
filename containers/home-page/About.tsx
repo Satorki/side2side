@@ -8,19 +8,11 @@ import CarIcon from "../../public/images/car-icon.png";
 
 const About = () => {
   const { scrollYProgress } = useScroll();
-  const iconMove = useTransform(scrollYProgress, [0, 1.5], [300, 20]);
+  // const iconMove = useTransform(scrollYProgress, [0, 1.5], [300, 20]);
 
   return (
-    <div id="About">
-      <motion.div
-      style={{ x: iconMove, position: "absolute" }}>
-        <Image
-          src={CarIcon}
-          alt="car icon"
-          width={30}
-          style={{ rotate: "-90deg" }}
-        />
-      </motion.div>
+    <div id="About" className="bg-black">
+
       <h2>O NAS</h2>
       <AboutQuote />
       <AboutImage />
@@ -32,6 +24,11 @@ const About = () => {
           flex-direction: column;
           gap: 2rem;
           /* margin-top: -3rem; */
+        }
+        media (max-width: 768px) {
+          .about-container {
+            flex-direction: row;
+          }
         }
       `}</style>
     </div>

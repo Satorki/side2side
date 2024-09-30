@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "../styles/globals.css";
 import Footer from "@/components/organisms/Footer";
 import Header from "@/components/organisms/Header";
+import Favicon from "../public/images/favicon-bigs.png";
 
 export const metadata: Metadata = {
   title: "Side2Side",
@@ -15,7 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl">
-      <body className="from-red-600 to-red-900 bg-gradient-to-tr">
+      <head>
+        <link rel="icon" href={Favicon.src} />
+      </head>
+      <body className="from-[#850001] to-[#E35E5F] bg-gradient-to-t">
         <Header />
         <main>{children}</main>
         <Footer />
