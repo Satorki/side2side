@@ -9,11 +9,10 @@ const AboutQuote = () => {
 
   return (
     <motion.div
-      className="rounded-3xl text-white p-5  shadow-2xl text-[1.5rem] font-jura md:text-[2rem] relative"
+      className="bg-gradient-to-t from-[#850001] to-[#e35e5f] m-2 rounded-3xl text-white p-5 text-[1.1rem] font-jura md:text-[2rem] relative"
       style={{ y, scale, opacity }}
     >
-      <h2>Garage</h2>
-      <p>
+      <p className="text-justify">
         Specjalizujemy się w budowie i przygotowaniu pojazdów do różnych
         dyscyplin motorsportu: <span>DRIFT</span>, OFF-ROAD, TIME ATTACK i WRACK
         RACE. Oferujemy kompleksowe wsparcie techniczne, serwis oraz transport

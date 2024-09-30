@@ -7,7 +7,7 @@ const LogoSmall = () => {
     <Image
       src={LogoMini}
       alt="logo small"
-      className="max-h-[45px] w-auto inline-block"
+      className="max-h-[45px] w-auto z-20"
     />
   );
 };

@@ -13,7 +13,7 @@ const AboutImage = () => {
       <Image
         src={Reparing}
         alt="man repairng car"
-        className="w-[800px] right-0 h-auto rounded-l-3xl shadow-medium"
+        className="rounded-l-3xl shadow-medium"
       />
     </motion.div>
   );

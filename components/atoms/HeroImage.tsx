@@ -6,8 +6,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const HeroImage = () => {
   const { scrollY } = useScroll();
-  const opacity = useTransform(scrollY, [0, 600], [1, 0]);
-  const y = useTransform(scrollY, [0, 600], [0, 200]);
+  const opacity = useTransform(scrollY, [0, 700], [1, 0]);
+  const y = useTransform(scrollY, [0, 700], [0, 300]);
 
   return (
     <motion.div style={{ opacity, y }} className="w-full h-screen">

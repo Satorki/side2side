@@ -12,33 +12,29 @@ const CarPath = () => {
       const ctx = canvas.getContext("2d");
 
       if (ctx) {
-        // Ustawienia dla rysowania linii
-        ctx.lineWidth = 2;
-        ctx.strokeStyle = "#FF0000"; // Kolor linii
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = "#FF0000";
       }
     }
   }, []);
 
-  // Rysowanie linii, gdy samochód się porusza
   useEffect(() => {
     const drawLine = () => {
       const canvas = canvasRef.current;
       if (canvas) {
         const ctx = canvas.getContext("2d");
         if (ctx) {
-          ctx.clearRect(0, 0, canvas.width, canvas.height); // Czyścimy płótno
-
-          // Rysujemy linię od prawej do lewej
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
           ctx.beginPath();
-          ctx.moveTo(300, 50); // Punkt startowy
-          ctx.lineTo(iconMove.get(), 50); // Aktualna pozycja samochodu
+          ctx.moveTo(300, 50);
+          ctx.lineTo(iconMove.get(), 50);
           ctx.stroke();
         }
       }
     };
 
     const unsubscribe = iconMove.onChange(() => {
-      drawLine(); // Wywołaj rysowanie za każdym razem, gdy zmienia się pozycja samochodu
+      drawLine();
     });
 
     return () => unsubscribe();
@@ -47,9 +43,8 @@ const CarPath = () => {
   return (
     <div>
       <canvas
-        className="w-full h-10 absolute top-0 right-0"
+        className="w-full h-[70px] absolute top-0 right-0"
         ref={canvasRef}
-        style={{ border: "1px solid black" }}
       />
     </div>
   );

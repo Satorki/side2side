@@ -43,6 +43,18 @@ const Header = () => {
     },
   ];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth > 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <motion.div
@@ -58,20 +70,27 @@ const Header = () => {
         <NavbarContent>
           <NavbarBrand>
             <Link href="/">
-              {isMenuOpen || window.innerWidth > 768 ? (
+              {isMenuOpen || isLargeScreen ? (
                 <div className="flex">
                   <LogoSmall />
                   <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1.2 }}
+                    initial={{ opacity: 0, x: -110 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ type: "spring" }}
                   >
                     <LogoBig />
                   </motion.div>
                 </div>
               ) : (
-                <div>
+                <div className="flex">
                   <LogoSmall />
+                  <motion.div
+                    initial={{ opacity: 1, x: 0 }}
+                    animate={{ opacity: 0, x: -110 }}
+                    transition={{ type: "spring" }}
+                  >
+                    <LogoBig />
+                  </motion.div>
                 </div>
               )}
             </Link>
