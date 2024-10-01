@@ -1,17 +1,15 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
 
 const AboutTitle = () => {
-  const container = useRef(null);
   const { scrollY } = useScroll();
-  const colorO = useTransform(scrollY, [270, 275], ["#e35e5f", "#ffffff"]);
-  const colorN = useTransform(scrollY, [290, 295], ["#e35e5f", "#ffffff"]);
-  const colorA = useTransform(scrollY, [300, 305], ["#e35e5f", "#ffffff"]);
-  const colorS = useTransform(scrollY, [305, 310], ["#e35e5f", "#ffffff"]);
+  const colorO = useTransform(scrollY, [265, 275], ["#e35e5f", "#ffffff"]);
+  const colorN = useTransform(scrollY, [285, 295], ["#e35e5f", "#ffffff"]);
+  const colorA = useTransform(scrollY, [295, 305], ["#e35e5f", "#ffffff"]);
+  const colorS = useTransform(scrollY, [300, 310], ["#e35e5f", "#ffffff"]);
 
   return (
-    <div ref={container}>
+    <div className="z-10">
       <motion.span
         style={{ color: colorO }}
         className="rounded-lg text-[2rem] font-bold ml-4"
