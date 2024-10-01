@@ -7,8 +7,8 @@ import React from "react";
 
 const About = () => {
   return (
-    <div id="About" className="about-container relative ">
-      <div className="flex items-center justify-center">
+    <div id="About" className="about-container relative">
+      <div className="flex items-center justify-center my-1">
         <AboutTitle />
         <CarPath />
       </div>
@@ -20,22 +20,24 @@ const About = () => {
         .about-container {
           display: flex;
           flex-direction: column;
-          gap: 5px;
           height: 100vh;
           background-image: linear-gradient(to top, #850001, #e35e5f);
-          /* bg-gradient-to-t from-[#850001] to-[#e35e5f] */
         }
         .about-content {
           display: flex;
-          justify-content: center;
+          justify-content: space-between;
           align-items: center;
-          flex-direction: row;
-          gap: 10px;
+          padding: 2rem;
+          max-width: 1200px;
+          margin: 0 auto;
+          gap: 2rem;
         }
         @media (max-width: 768px) {
           .about-content {
             flex-direction: column;
+            padding: 1rem;
           }
+        }
       `}</style>
     </div>
   );

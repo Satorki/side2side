@@ -1,17 +1,23 @@
 "use client";
-// import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import Reparing from "../../public/images/repairing.jpg";
+import Repairing from "../../public/images/repairing.jpg";
 
 const AboutImage = () => {
-
   return (
-    <div className="flex flex-1">
+    <div className="about-image-container flex-1">
       <Image
-        src={Reparing}
-        alt="man repairng car"
-        className=""
+        src={Repairing}
+        alt="Naprawa samochodu"
+        className="rounded-lg shadow-lg object-cover"
+        layout="responsive"
+        width={500}
+        height={500}
       />
+      <style jsx>{`
+        .about-image-container {
+          max-width: 500px;
+        }
+      `}</style>
     </div>
   );
 };

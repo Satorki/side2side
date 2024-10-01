@@ -5,7 +5,6 @@ import React, { useEffect } from "react";
 const CarPath = () => {
   const { scrollYProgress } = useScroll();
   const linePrint = useTransform(scrollYProgress, [0, 0.4], [0, 400]);
-  const lineAvoid = useTransform(scrollYProgress, [0.135, 0.16], [0, 28]);
   const canvasRef = React.useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -31,11 +30,6 @@ const CarPath = () => {
           ctx.moveTo(-300, 50);
           ctx.lineTo(linePrint.get(), 50);
           ctx.stroke();
-          ctx.fillRect(138, 15, lineAvoid.get(), 70);
-          // ctx.beginPath();
-          // ctx.moveTo(-300, 50);
-          // ctx.lineTo(linePrint.get(), lineAvoid.get());
-          // ctx.stroke();
         }
       }
     };
@@ -50,7 +44,7 @@ const CarPath = () => {
   return (
     <div>
       <canvas
-        className="w-full h-[70px] absolute top-0 right-0 z-0"
+        className="w-full h-[80px] absolute top-0 right-0 z-0"
         ref={canvasRef}
       />
     </div>

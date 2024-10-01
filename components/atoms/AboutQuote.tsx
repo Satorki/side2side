@@ -8,14 +8,23 @@ const AboutQuote = () => {
   // const y = useTransform(scrollY, [0, 300], [100, 0]);
 
   return (
-    <motion.div className="bg-black flex flex-1  text-white pl-10 pt-5 pr-5 pb-5 text-[1.1rem] font-jura md:text-[2rem]">
+    <motion.div
+      className="bg-gradient-to-r from-black via-gray-800 to-black flex flex-1 text-white p-10 rounded-lg shadow-lg 
+             text-[1.1rem] font-sans md:text-[1.4rem] leading-relaxed tracking-wide"
+    >
       <p className="text-justify">
-        Specjalizujemy się w budowie i przygotowaniu pojazdów do różnych
-        dyscyplin motorsportu: <span>DRIFT</span>, OFF-ROAD, TIME ATTACK i WRACK
-        RACE. Oferujemy kompleksowe wsparcie techniczne, serwis oraz transport
-        na imprezy motoryzacyjne. Dzięki pasji i doświadczeniu naszego zespołu,
-        każdy pojazd charakteryzuje się najwyższą jakością i precyzją wykonania,
-        zapewniając konkurencyjną przewagę na torze jak i bezpieczeństwo
+        Wznosimy motorsport na wyższy poziom.
+        <br />
+        <br />Tworzymy pojazdy, które
+        przekraczają granice w takich dyscyplinach jak
+        <span className="text-red-500 font-semibold"> DRIFT</span>,
+        <span className="text-green-500 font-semibold"> OFF-ROAD</span>,
+        <span className="text-blue-500 font-semibold"> TIME ATTACK</span> oraz
+        <span className="text-yellow-500 font-semibold"> WRACK RACE</span>.
+        <br />
+        <br />Oferujemy pełne wsparcie techniczne, serwis i transport na imprezy
+        motoryzacyjne. Z naszą pasją i precyzją, Twoje auto zyska przewagę i
+        niezawodność zarówno na torze, jak i poza nim.
       </p>
     </motion.div>
   );
