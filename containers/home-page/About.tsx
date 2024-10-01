@@ -8,7 +8,7 @@ import React from "react";
 const About = () => {
   return (
     <div id="About" className="about-container relative ">
-      <div>
+      <div className="flex items-center justify-center">
         <AboutTitle />
         <CarPath />
       </div>
@@ -20,9 +20,10 @@ const About = () => {
         .about-container {
           display: flex;
           flex-direction: column;
-          justify-content: center;
           gap: 5px;
-          margin-top: 1rem;
+          height: 100vh;
+          background-image: linear-gradient(to top, #850001, #e35e5f);
+          /* bg-gradient-to-t from-[#850001] to-[#e35e5f] */
         }
         .about-content {
           display: flex;

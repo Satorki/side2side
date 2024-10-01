@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 
 const CarPath = () => {
   const { scrollYProgress } = useScroll();
-  const iconMove = useTransform(scrollYProgress, [0, 0.8], [400, 0]);
+  const iconMove = useTransform(scrollYProgress, [0, 0.4], [0, 400]);
   const canvasRef = React.useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -13,7 +13,7 @@ const CarPath = () => {
 
       if (ctx) {
         ctx.lineWidth = 3;
-        ctx.strokeStyle = "#FF0000";
+        ctx.strokeStyle = "#ffffff";
       }
     }
   }, []);
@@ -26,7 +26,7 @@ const CarPath = () => {
         if (ctx) {
           ctx.clearRect(0, 0, canvas.width, canvas.height);
           ctx.beginPath();
-          ctx.moveTo(300, 50);
+          ctx.moveTo(-300, 50);
           ctx.lineTo(iconMove.get(), 50);
           ctx.stroke();
         }
