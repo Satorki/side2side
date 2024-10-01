@@ -31,7 +31,6 @@ const AboutTitle = () => {
 
   return (
     <div className="z-10 bg-[#e35e5f] font-jura">
-                
       <motion.span
         style={{ color: colorO }}
         className="rounded-lg text-[2rem] font-bold ml-1"

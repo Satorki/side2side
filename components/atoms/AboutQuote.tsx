@@ -1,6 +1,5 @@
 "use client";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
 const AboutQuote = () => {
   // const scale = useTransform(scrollY, [0, 600], [0, 1]);
@@ -15,14 +14,15 @@ const AboutQuote = () => {
       <p className="text-justify">
         Wznosimy motorsport na wyższy poziom.
         <br />
-        <br />Tworzymy pojazdy, które
-        przekraczają granice w takich dyscyplinach jak
+        <br />
+        Tworzymy pojazdy, które przekraczają granice w takich dyscyplinach jak
         <span className="text-red-500 font-semibold"> DRIFT</span>,
         <span className="text-green-500 font-semibold"> OFF-ROAD</span>,
         <span className="text-blue-500 font-semibold"> TIME ATTACK</span> oraz
         <span className="text-yellow-500 font-semibold"> WRACK RACE</span>.
         <br />
-        <br />Oferujemy pełne wsparcie techniczne, serwis i transport na imprezy
+        <br />
+        Oferujemy pełne wsparcie techniczne, serwis i transport na imprezy
         motoryzacyjne. Z naszą pasją i precyzją, Twoje auto zyska przewagę i
         niezawodność zarówno na torze, jak i poza nim.
       </p>

@@ -1,5 +1,4 @@
 import { useScroll, useTransform } from "framer-motion";
-import { line } from "framer-motion/client";
 import React, { useEffect } from "react";
 
 const CarPath = () => {

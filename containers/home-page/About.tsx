@@ -20,7 +20,6 @@ const About = () => {
         .about-container {
           display: flex;
           flex-direction: column;
-          height: 100vh;
           background-image: linear-gradient(to top, #850001, #e35e5f);
         }
         .about-content {

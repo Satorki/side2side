@@ -3,13 +3,14 @@ import AboutImage from "@/components/atoms/AboutImage";
 import AboutQuote from "@/components/atoms/AboutQuote";
 import AboutTitle from "@/components/atoms/AboutTitle";
 import CarPath from "@/components/atoms/CarPath";
+import Title from "@/components/atoms/Title";
 import React from "react";
 
 const Projects = () => {
   return (
     <div id="About" className="about-container relative">
       <div className="flex items-center justify-center my-1">
-        <AboutTitle />
+        <Title title={["P", "r", "o", "j", "e", "c", "t", "s"]}  />
         <CarPath />
       </div>
       <div className="about-content">
