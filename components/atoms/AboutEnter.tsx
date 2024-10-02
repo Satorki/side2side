@@ -12,6 +12,13 @@ const AboutEnter = () => {
     offset: ["start start", "end end"],
   });
 
+  
+// import { motion, useScroll, useTransform } from "framer-motion";
+    //const { scrollY } = useScroll();
+  // const scale = useTransform(scrollY, [0, 600], [0, 1]);
+  // const opacity = useTransform(scrollY, [0, 800], [0, 1]);
+  // const y = useTransform(scrollY, [0, 600], [500, 0]);
+
   const carOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
   const garageOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
   const zoomIn = useTransform(scrollYProgress, [0, 5], [1, 5]);

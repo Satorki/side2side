@@ -16,6 +16,7 @@ const HeroImage = () => {
         alt="hero image a car during ride on a curcuit"
         className=" absolute right-0  bottom-0 w-full h-screen object-cover
       object-[86%]  md:object-right-bottom 2xl:object-center"
+        priority={true}
       />
     </motion.div>
   );

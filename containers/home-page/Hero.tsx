@@ -3,8 +3,6 @@ import HeroArrow from "@/components/atoms/HeroArrow";
 import HeroImage from "@/components/atoms/HeroImage";
 import HeroSmoke from "@/components/molecules/HeroSmoke";
 import HeroTitle from "@/components/atoms/HeroTitle";
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
@@ -22,7 +20,7 @@ const Hero = () => {
         }
         @media (max-width: 768px) {
           .hero-container {
-            margin-top: -64px;
+            margin-top: -60px;
           }
         }
       `}</style>

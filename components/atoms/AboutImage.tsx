@@ -1,23 +1,15 @@
 "use client";
 import Image from "next/image";
-import Repairing from "../../public/images/repairing.jpg";
+import Repairing from "../../public/images/crew.jpg";
 
 const AboutImage = () => {
   return (
-    <div className="about-image-container flex-1">
+    <div className="flex-1 w-full h-[80vh]">
       <Image
         src={Repairing}
-        alt="Naprawa samochodu"
-        className="rounded-lg shadow-lg object-cover"
-        layout="responsive"
-        width={500}
-        height={500}
+        alt="side2side crew around the car"
+        className="rounded-[25px] object-cover w-full h-full object-[42%]"
       />
-      <style jsx>{`
-        .about-image-container {
-          max-width: 500px;
-        }
-      `}</style>
     </div>
   );
 };

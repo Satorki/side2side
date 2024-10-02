@@ -1,57 +1,33 @@
 "use client";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useEffect, useState } from "react";
+import React, { useRef } from "react";
+import { motion, useAnimation, useInView, useTransform } from "framer-motion";
 
 const AboutTitle = () => {
-  const { scrollY } = useScroll();
+  const container = useRef(null);
+  const isInView = useInView(container, { once: false, amount: 0.5 });
+  const controls = useAnimation();
 
-  const [isLargeScreen, setIsLargeScreen] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsLargeScreen(window.innerWidth > 768);
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  let transform = [270, 275];
-
-  if (!isLargeScreen) {
-    transform = [210, 220];
-  }
-
-  const colorO = useTransform(scrollY, transform, ["#e35e5f", "#ffffff"]);
-  const colorN = useTransform(scrollY, [285, 295], ["#e35e5f", "#ffffff"]);
-  const colorA = useTransform(scrollY, [295, 305], ["#e35e5f", "#ffffff"]);
-  const colorS = useTransform(scrollY, [300, 310], ["#e35e5f", "#ffffff"]);
+  React.useEffect(() => {
+    if (isInView) {
+      controls.start({
+        color: "#000000",
+        transition: { duration: 2, repeat: Infinity, repeatType: "reverse" },
+      });
+    } else {
+      controls.start({
+        color: "#ffffff",
+        transition: { duration: 2, repeat: Infinity, repeatType: "reverse" },
+      });
+    }
+  }, [isInView, controls]);
 
   return (
-    <div className="z-10 bg-[#e35e5f] font-jura">
-      <motion.span
-        style={{ color: colorO }}
-        className="rounded-lg text-[2rem] font-bold ml-1"
-      >
-        O
-      </motion.span>
-      <motion.span
-        style={{ color: colorN }}
-        className="text-[2rem] font-bold ml-4"
-      >
-        N
-      </motion.span>
-      <motion.span style={{ color: colorA }} className="text-[2rem] font-bold">
-        A
-      </motion.span>
-      <motion.span
-        style={{ color: colorS }}
-        className="rounded-lg text-[2rem] font-bold mr-1"
-      >
-        S
-      </motion.span>
+    <div className="flex flex-col gap-14 font-bai" ref={container}>
+      <p className="text-2xl md:text-3xl font-bai">O Nas</p>
+      <h2 className="text-5xl md:text-6xl font-bold">
+        Wznosimy motorsport na{" "}
+        <motion.span animate={controls}>wyższy</motion.span> poziom.
+      </h2>
     </div>
   );
 };

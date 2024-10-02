@@ -58,7 +58,7 @@ const Header = () => {
   return (
     <motion.div
       style={{ y: y, opacity: opacity }}
-      className="min-h-[60px] sm:min-h-[75px] font-jura bg-black  sticky top-0 text-white z-30 flex "
+      className="h-[60px] sm:h-[75px] font-jura bg-black  sticky top-0 text-white z-30 flex "
     >
       <Navbar
         position="static"
