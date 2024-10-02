@@ -24,7 +24,7 @@ const About = () => {
   return (
     <div id="About">
       <div className="about-container">
-        <div className="flex flex-col gap-14 flex-1">
+        <div className="flex flex-col gap-5 md:gap-14 flex-1">
           <AboutTitle />
           {isWindowMedium ? null : <AboutImage />}
           <AboutQuote />
@@ -34,7 +34,11 @@ const About = () => {
       </div>
       <style jsx>{`
         #About {
-          background-image: radial-gradient(circle at 30% 70%,#850001, #e35e5f);
+          background-image: radial-gradient(
+            circle at 30% 70%,
+            #850001,
+            #e35e5f
+          );
         }
         .about-container {
           display: flex;
@@ -48,11 +52,17 @@ const About = () => {
           margin: 0 auto;
         }
         @media (max-width: 768px) {
-            #About {
+          .about-container {
             flex-direction: column;
             padding: 1rem;
-            background-image: radial-gradient(circle at 50% 70%,#850001, #e35e5f);
+            background-image: radial-gradient(
+              circle at 50% 70%,
+              #850001,
+              #e35e5f
+            );
+            gap: 1rem;
           }
+        }
       `}</style>
     </div>
   );

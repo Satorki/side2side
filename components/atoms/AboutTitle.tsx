@@ -1,6 +1,8 @@
 "use client";
 import React, { useRef } from "react";
 import { motion, useAnimation, useInView, useTransform } from "framer-motion";
+import { line } from "framer-motion/client";
+import AnimatedText from "./AnimatedText";
 
 const AboutTitle = () => {
   const container = useRef(null);
@@ -10,23 +12,22 @@ const AboutTitle = () => {
   React.useEffect(() => {
     if (isInView) {
       controls.start({
-        color: "#000000",
-        transition: { duration: 2, repeat: Infinity, repeatType: "reverse" },
+        color: "#e35e5f",
       });
     } else {
       controls.start({
         color: "#ffffff",
-        transition: { duration: 2, repeat: Infinity, repeatType: "reverse" },
       });
     }
   }, [isInView, controls]);
 
   return (
-    <div className="flex flex-col gap-14 font-bai" ref={container}>
+    <div className="flex flex-col gap-4 md:gap-14 font-bai" ref={container}>
       <p className="text-2xl md:text-3xl font-bai">O Nas</p>
       <h2 className="text-5xl md:text-6xl font-bold">
-        Wznosimy motorsport na{" "}
-        <motion.span animate={controls}>wyższy</motion.span> poziom.
+        Wznosimy motorsport na <span>
+          <AnimatedText text="wyższy" />
+        </span> poziom.
       </h2>
     </div>
   );
