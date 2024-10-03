@@ -1,9 +1,9 @@
 "use client";
 import AboutImage from "@/components/atoms/AboutImage";
 import AboutQuote from "@/components/atoms/AboutQuote";
-import AboutTitle from "@/components/atoms/AboutTitle";
 import React, { useEffect, useState } from "react";
 import ButtonAction from "@/components/atoms/ButtonAction";
+import SectionTitle from "@/components/atoms/SectionTitle";
 
 const About = () => {
   const [isWindowMedium, setIsWindowMedium] = useState(false);
@@ -22,10 +22,10 @@ const About = () => {
   }, []);
 
   return (
-    <div id="About">
+    <div id="about">
       <div className="about-container">
-        <div className="flex flex-col gap-5 md:gap-14 flex-1">
-          <AboutTitle />
+        <div className="flex flex-col gap-10 md:gap-14 flex-1">
+          <SectionTitle />
           {isWindowMedium ? null : <AboutImage />}
           <AboutQuote />
           <ButtonAction />
@@ -33,7 +33,7 @@ const About = () => {
         {isWindowMedium ? <AboutImage /> : null}
       </div>
       <style jsx>{`
-        #About {
+        #about {
           background-image: radial-gradient(
             circle at 30% 70%,
             #850001,
