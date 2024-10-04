@@ -104,7 +104,7 @@ const Header = () => {
             </NavbarItem>
           ))}
         </NavbarContent>
-        <NavbarMenu className="bg-black py-7 gap-10 bg-opacity-85 flex justify-center">
+        <NavbarMenu className="bg-black gap-10 bg-opacity-85 -mt-1 flex pt-40">
           {menuItems.map((item, index) => (
             <NavbarMenuItem key={`${item.name}-${index}`}>
               <Link className="text-white text-[1.5rem] underline underline-offset-8 flex justify-center font-jura font-thin tracking-wider">

@@ -20,7 +20,7 @@ const Hero = () => {
         }
         @media (max-width: 768px) {
           .hero-container {
-            margin-top: -60px;
+            margin-top: -59px;
           }
         }
       `}</style>

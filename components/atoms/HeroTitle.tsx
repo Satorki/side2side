@@ -12,9 +12,9 @@ const HeroTitle = () => {
       style={{ opacity, y }}
       className="absolute z-20 flex flex-col items-center w-full  top-[22%] overflow-hidden"
     >
-      <h1 className="text-6xl md:text-8xl flex tracking-tight font-bold font-libre">
+      <h1 className="text-6xl md:text-8xl 2xl:text-9xl flex tracking-tight font-bold font-libre">
         <motion.div
-          initial={{ x: -500, opacity: 0 }}
+          initial={{ x: -400, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{
             delay: 0.8,
@@ -41,7 +41,7 @@ const HeroTitle = () => {
           2
         </motion.div>
         <motion.div
-          initial={{ x: 500, opacity: 0 }}
+          initial={{ x: 400, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{
             delay: 1.5,
@@ -54,27 +54,13 @@ const HeroTitle = () => {
           SIDE
         </motion.div>
       </h1>
-      <div className="flex gap-2">
+      <div className="flex gap-2 font-medium">
         <motion.span
           animate={{ opacity: 1 }}
           initial={{ opacity: 0 }}
-          transition={{ delay: 2, duration: 0.5 }}
+          transition={{ delay: 2.2, duration: 0.8 }}
         >
-          Serwis
-        </motion.span>
-        <motion.span
-          animate={{ opacity: 1 }}
-          initial={{ opacity: 0 }}
-          transition={{ delay: 2.3, duration: 0.5 }}
-        >
-          Tunning
-        </motion.span>
-        <motion.span
-          animate={{ opacity: 1 }}
-          initial={{ opacity: 0 }}
-          transition={{ delay: 2.6, duration: 0.55 }}
-        >
-          Motorsport
+          SERWIS TUNING MOTORSPORT
         </motion.span>
       </div>
     </motion.div>
