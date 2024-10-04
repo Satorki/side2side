@@ -21,8 +21,12 @@ const Offer = () => {
             <OfferTab image={TunningImage} title="Tunning" />
             <OfferTab image={MotorsportImage} title="Motorsport" />
           </div>
-          <ButtonAction bgColor="#F10000" textColor="#ffffff" />
         </div>
+        <ButtonAction
+          bgColor="#F10000"
+          textColor="#ffffff"
+          text="Umów wizytę"
+        />
       </div>
 
       <style jsx>{`
@@ -35,7 +39,6 @@ const Offer = () => {
           display: flex;
           flex-direction: column;
           gap: 5rem;
-
           max-width: 1440px;
           margin: 0 auto;
         }
@@ -48,14 +51,9 @@ const Offer = () => {
           align-items: center;
         }
         @media (max-width: 768px) {
-          .about-container {
+          .offer-tabs {
             flex-direction: column;
             padding: 1rem;
-            background-image: radial-gradient(
-              circle at 50% 70%,
-              #850001,
-              #e35e5f
-            );
             gap: 1rem;
           }
         }
