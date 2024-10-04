@@ -1,7 +1,7 @@
 "use client";
 import AboutImage from "@/components/atoms/AboutImage";
-import AboutQuote from "@/components/atoms/AboutQuote";
-import AboutTitle from "@/components/atoms/SectionTitle";
+// import AboutQuote from "@/components/atoms/AboutQuote";
+// import AboutTitle from "@/components/atoms/SectionTitle";
 import CarPath from "@/components/atoms/CarPath";
 import Title from "@/components/atoms/Title";
 import React from "react";
@@ -14,7 +14,7 @@ const Projects = () => {
         <CarPath />
       </div>
       <div className="about-content">
-        <AboutQuote />
+        {/* <AboutQuote /> */}
         <AboutImage />
       </div>
       <style jsx>{`

@@ -12,14 +12,12 @@ const About = () => {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["start end", "start start"],
+    offset: ["start end", "end end"],
   });
-  const textAppears1 = useTransform(scrollYProgress, [0, 0.33], [-500, 0]);
-  const textAppears2 = useTransform(scrollYProgress, [0.33, 0.66], [-500, 0]);
-  const textAppears3 = useTransform(scrollYProgress, [0.66, 1], [-500, 0]);
-  const textOpacity1 = useTransform(scrollYProgress, [0.1, 0.33], [0, 1]);
-  const textOpacity2 = useTransform(scrollYProgress, [0.33, 0.66], [0, 1]);
-  const textOpacity3 = useTransform(scrollYProgress, [0.66, 1], [0, 1]);
+  const textAppears2 = useTransform(scrollYProgress, [0.33, 0.66], [-800, 0]);
+  const textAppears3 = useTransform(scrollYProgress, [0.7, 0.99], [-800, 0]);
+  const textOpacity2 = useTransform(scrollYProgress, [0.5, 0.66], [0, 1]);
+  const textOpacity3 = useTransform(scrollYProgress, [0.9, 0.99], [0, 1]);
 
   // SCREEN SIZE HANDLER
   const [isWindowMedium, setIsWindowMedium] = useState(false);
@@ -37,34 +35,32 @@ const About = () => {
   }, []);
 
   return (
-    <div id="about">
+    <div id="about" ref={container}>
       <div className="about-container">
         <div className="flex flex-col gap-10 md:gap-14 flex-1">
           <SectionTitle />
           {isWindowMedium ? null : <AboutImage />}
-          <div className="sticker">
-            dziala?
-            <motion.div style={{ x: textAppears1, opacity: textOpacity1 }}>
-              <AboutQuote
-                quote="Side2Side Motorsport powstało z pasji do motorsportu i potrzeby
+          <div>
+            <AboutQuote
+              quote="Side2Side Motorsport powstało z pasji do motorsportu i potrzeby
         oferowania wysokiej jakości serwisu pojazdów, zarówno tych codziennego
         użytku, jak i przeznaczonych do sportu."
-              />
-            </motion.div>
-            <motion.div style={{ x: textAppears2, opacity: textOpacity2 }}>
-              <AboutQuote
-                quote="Nasz zespół to doświadczeni mechanicy, specjalizujący się w obsłudze
+            />
+          </div>
+          <motion.div style={{ x: textAppears2, opacity: textOpacity2 }}>
+            <AboutQuote
+              quote="Nasz zespół to doświadczeni mechanicy, specjalizujący się w obsłudze
         pojazdów sportowych oraz flot firmowych."
-              />
-            </motion.div>
-            <motion.div style={{ x: textAppears3, opacity: textOpacity3 }}>
-              <AboutQuote
-                quote="Oferujemy pełne wsparcie techniczne, serwis i transport na imprezy
+            />
+          </motion.div>
+          <motion.div style={{ x: textAppears3, opacity: textOpacity3 }}>
+            <AboutQuote
+              quote="Oferujemy pełne wsparcie techniczne, serwis i transport na imprezy
         motoryzacyjne. Z naszą pasją i precyzją, Twoje auto zyska przewagę i
         niezawodność zarówno na torze, jak i poza nim."
-              />
-            </motion.div>
-          </div>
+            />
+          </motion.div>
+
           <ButtonAction
             bgColor="#000000"
             textColor="text-white"
@@ -73,8 +69,9 @@ const About = () => {
         </div>
         {isWindowMedium ? <AboutImage /> : null}
       </div>
-      <div className="about-2" ref={container}></div>
-      <div className="about-3"></div>
+
+      <div className="about-2"></div>
+
       <style jsx>{`
         #about {
           background-image: radial-gradient(
@@ -97,8 +94,7 @@ const About = () => {
           top: 75px;
         }
 
-        .about-2,
-        .about-3 {
+        .about-2 {
           height: 100vh;
         }
         @media (max-width: 768px) {
@@ -115,8 +111,10 @@ const About = () => {
           }
           .sticker {
             position: sticky;
-            top: 60px;
-            height: 100vh;
+            top: 65px;
+          }
+          .about-2 {
+            height: 0;
           }
         }
       `}</style>
