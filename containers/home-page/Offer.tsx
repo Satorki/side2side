@@ -1,13 +1,15 @@
 "use client";
 import ButtonAction from "@/components/atoms/ButtonAction";
-import ServicesTab from "@/components/molecules/ServicesTab";
-import React from "react";
+import OfferTab from "@/components/molecules/OfferTab";
+import SerwisImage from "../../public/images/Offer/offer3.jpeg";
+import TunningImage from "../../public/images/Offer/offer5.jpg";
+import MotorsportImage from "../../public/images/Offer/offer6.jpg";
 
 const Offer = () => {
   return (
     <div id="offer">
       <div className="offer-container">
-        <div className="flex flex-col gap-3 md:gap-5 font-bai">
+        <div className="flex flex-col  gap-4 md:gap-12 font-bai">
           <p className="text-2xl md:text-3xl font-bai">Oferta</p>
           <h2 className="text-5xl md:text-6xl font-bold">
             Najlepsza oferta na rynku.
@@ -15,16 +17,17 @@ const Offer = () => {
         </div>
         <div className="flex flex-col items-center gap-10 justify-center">
           <div className="offer-tabs">
-            <ServicesTab />
-            <ServicesTab />
-            <ServicesTab />
+            <OfferTab image={SerwisImage} title="Serwis" />
+            <OfferTab image={TunningImage} title="Tunning" />
+            <OfferTab image={MotorsportImage} title="Motorsport" />
           </div>
-          <ButtonAction />
+          <ButtonAction bgColor="#F10000" textColor="#ffffff" />
         </div>
       </div>
 
       <style jsx>{`
         #offer {
+          padding: 4rem;
           color: #fff;
           background: #323232;
         }
@@ -32,7 +35,7 @@ const Offer = () => {
           display: flex;
           flex-direction: column;
           gap: 5rem;
-          align-items: center;
+
           max-width: 1440px;
           margin: 0 auto;
         }

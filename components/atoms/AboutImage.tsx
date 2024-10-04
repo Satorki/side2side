@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Repairing from "../../public/images/crew.jpg";
+import Repairing from "../../public/images/about.jpg";
 
 const AboutImage = () => {
   return (

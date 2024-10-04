@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import LoadingBar from "react-top-loading-bar";
-import LogoImage from "../public/images/logo-long-no-bckg.png";
+import LogoImage from "../public/images/Logos/logo-long-no-bckg.png";
 
 const loading = () => {
   return (

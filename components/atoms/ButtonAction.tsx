@@ -1,16 +1,24 @@
-import { Button } from "@nextui-org/button";
+import { Button } from "@/components/ui/button"
 import { PhoneIncoming } from "lucide-react";
 import React from "react";
 
-const ButtonAction = () => {
+interface Props {
+  bgColor?: string;
+  textColor?: string;
+}
+
+const ButtonAction = ({ bgColor, textColor }: Props) => {
   return (
     <Button
-      className="bg-black text-white max-w-max"
-      radius="md"
-      size="md"
-      endContent={<PhoneIncoming />}
+      style={{
+        backgroundColor: bgColor ? bgColor : "#1976d2",
+        color: textColor ? textColor : "#fff",
+        borderRadius: 10,
+      }}
+      className="max-w-max text-xl py-5 px-6 flex gap-2 items-center"
     >
       Umów wizytę
+      <PhoneIncoming />
     </Button>
   );
 };

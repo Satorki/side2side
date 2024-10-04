@@ -5,7 +5,7 @@ const SectionTitle = () => {
     <div className="flex flex-col gap-4 md:gap-12 font-bai">
       <p className="text-2xl md:text-3xl font-bai">O Nas</p>
       <h2 className="text-5xl md:text-6xl font-bold">
-        Wznosimy motorsport na
+        Wznosimy motorsport na{" "}
         <span>
           <AnimatedText text="wyższy" />
         </span>{" "}

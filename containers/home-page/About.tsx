@@ -28,7 +28,7 @@ const About = () => {
           <SectionTitle />
           {isWindowMedium ? null : <AboutImage />}
           <AboutQuote />
-          <ButtonAction />
+          <ButtonAction bgColor="#000000" textColor="text-white" />
         </div>
         {isWindowMedium ? <AboutImage /> : null}
       </div>
@@ -47,7 +47,7 @@ const About = () => {
           gap: 5rem;
           align-items: center;
           color: #fff;
-          padding: 5rem;
+          padding: 4rem;
           max-width: 1440px;
           margin: 0 auto;
         }

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import LogoMini from "../../public/images/logo-left-side.png";
+import LogoMini from "../../public/images/Logos/logo-left-side.png";
 
 const LogoSmall = () => {
   return (
