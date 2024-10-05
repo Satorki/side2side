@@ -24,7 +24,7 @@ const About = () => {
 
   const textAppears1 = useTransform(
     scrollYProgress,
-    [0.0, 0.01, 0.03],
+    [-0.11, 0.01, 0.03],
     [1, 1.02, 1]
   );
   const textAppears2 = useTransform(
@@ -34,12 +34,12 @@ const About = () => {
   );
   const textAppears3 = useTransform(
     scrollYProgress,
-    [0.66, 0.77, 0.79],
+    [0.55, 0.66, 0.69],
     [1, 1.02, 1]
   );
 
-  const textOpacity1 = useTransform(scrollYProgress, [0.0, 0.11], [0.1, 1]);
-  const textOpacity2 = useTransform(scrollYProgress, [0.33, 0.55], [0.1, 1]);
+  const textOpacity1 = useTransform(scrollYProgress, [-0.11, 0.01], [0.1, 1]);
+  const textOpacity2 = useTransform(scrollYProgress, [0.22, 0.33], [0.1, 1]);
   const textOpacity3 = useTransform(scrollYProgress, [0.66, 0.77], [0.1, 1]);
 
   const containerOpacity = useTransform(scrollYProgressEnd, [0.8, 0], [1, 0]);
@@ -105,7 +105,6 @@ const About = () => {
       </div>
 
       <div className="about-2" ref={containerEnd}></div>
-
       <style jsx>{`
         #about {
           background-image: radial-gradient(
@@ -125,8 +124,8 @@ const About = () => {
           max-width: 1440px;
           margin: 0 auto;
           position: sticky;
-          top: 75px;
-          height: 85vh;
+          top: 80px;
+          height: 83vh;
         }
 
         .about-2 {

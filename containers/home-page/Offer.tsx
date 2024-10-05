@@ -17,9 +17,21 @@ const Offer = () => {
         </div>
         <div className="flex flex-col items-center gap-10 justify-center">
           <div className="offer-tabs">
-            <OfferTab image={SerwisImage} title="Serwis" />
-            <OfferTab image={TunningImage} title="Tunning" />
-            <OfferTab image={MotorsportImage} title="Motorsport" />
+            <OfferTab
+              image={SerwisImage}
+              title="SERWIS"
+              description="Oferujemy kompleksowy serwis dla pojazdów osobowych i dostawczych do 3,5 tony, zapewniając ich sprawność w codziennym użytkowaniu."
+            />
+            <OfferTab
+              image={TunningImage}
+              title="Tunning"
+              description="Specjalizujemy się w tuningu pojazdów, dostosowując je do indywidualnych preferencji klientów i zapewniając optymalne osiągi."
+            />
+            <OfferTab
+              image={MotorsportImage}
+              title="Motorsport"
+              description="Dla entuzjastów rajdów, wyścigów torowych i driftu oferujemy kompleksowe przygotowanie pojazdów do motorsportu."
+            />
           </div>
         </div>
         <ButtonAction
@@ -52,6 +64,12 @@ const Offer = () => {
           align-items: center;
         }
         @media (max-width: 768px) {
+          #offer {
+            padding: 1rem;
+          }
+          .offer-container {
+            gap: 1rem;
+          }
           .offer-tabs {
             flex-direction: column;
             padding: 1rem;

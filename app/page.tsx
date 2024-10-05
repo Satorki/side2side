@@ -11,13 +11,13 @@ export default function Home() {
     target: container,
     offset: ["start start", "end end"],
   });
-  const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
-  const y = useTransform(scrollYProgress, [0.5, 1], [0, -300]);
+  const y = useTransform(scrollYProgress, [0.5, 0.8, 1], [0, -300, 0]);
 
   return (
     <div>
       <Hero />
       <About />
+
       <motion.div style={{ y }}>
         <Offer />
       </motion.div>
