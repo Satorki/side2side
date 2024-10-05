@@ -12,12 +12,28 @@ const About = () => {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["start end", "end end"],
+    offset: ["start start", "end end"],
   });
-  const textAppears2 = useTransform(scrollYProgress, [0.33, 0.66], [-800, 0]);
-  const textAppears3 = useTransform(scrollYProgress, [0.7, 0.99], [-800, 0]);
-  const textOpacity2 = useTransform(scrollYProgress, [0.5, 0.66], [0, 1]);
-  const textOpacity3 = useTransform(scrollYProgress, [0.9, 0.99], [0, 1]);
+
+  const textAppears1 = useTransform(
+    scrollYProgress,
+    [0.0, 0.11, 0.13],
+    [1, 1.02, 1]
+  );
+  const textAppears2 = useTransform(
+    scrollYProgress,
+    [0.33, 0.55, 0.57],
+    [1, 1.02, 1]
+  );
+  const textAppears3 = useTransform(
+    scrollYProgress,
+    [0.66, 0.88, 0.9],
+    [1, 1.02, 1]
+  );
+
+  const textOpacity1 = useTransform(scrollYProgress, [0.0, 0.11], [0.1, 1]);
+  const textOpacity2 = useTransform(scrollYProgress, [0.33, 0.55], [0.1, 1]);
+  const textOpacity3 = useTransform(scrollYProgress, [0.66, 0.88], [0.1, 1]);
 
   // SCREEN SIZE HANDLER
   const [isWindowMedium, setIsWindowMedium] = useState(false);
@@ -40,27 +56,26 @@ const About = () => {
         <div className="flex flex-col gap-10 md:gap-14 flex-1">
           <SectionTitle />
           {isWindowMedium ? null : <AboutImage />}
-          <div>
+          <motion.div style={{ opacity: textOpacity1, scale: textAppears1 }}>
             <AboutQuote
               quote="Side2Side Motorsport powstało z pasji do motorsportu i potrzeby
         oferowania wysokiej jakości serwisu pojazdów, zarówno tych codziennego
         użytku, jak i przeznaczonych do sportu."
             />
-          </div>
-          <motion.div style={{ x: textAppears2, opacity: textOpacity2 }}>
+          </motion.div>
+          <motion.div style={{ opacity: textOpacity2, scale: textAppears2 }}>
             <AboutQuote
               quote="Nasz zespół to doświadczeni mechanicy, specjalizujący się w obsłudze
         pojazdów sportowych oraz flot firmowych."
             />
           </motion.div>
-          <motion.div style={{ x: textAppears3, opacity: textOpacity3 }}>
+          <motion.div style={{ opacity: textOpacity3, scale: textAppears3 }}>
             <AboutQuote
               quote="Oferujemy pełne wsparcie techniczne, serwis i transport na imprezy
         motoryzacyjne. Z naszą pasją i precyzją, Twoje auto zyska przewagę i
         niezawodność zarówno na torze, jak i poza nim."
             />
           </motion.div>
-
           <ButtonAction
             bgColor="#000000"
             textColor="text-white"
@@ -80,6 +95,15 @@ const About = () => {
             #e35e5f
           );
         }
+        .progress-bar {
+          position: fixed;
+          top: 75px;
+          right: 0;
+          height: 0px;
+          width: 10px;
+          background-color: #fff;
+          z-index: 100;
+        }
         .about-container {
           display: flex;
           flex-direction: row;
@@ -92,10 +116,11 @@ const About = () => {
           margin: 0 auto;
           position: sticky;
           top: 75px;
+          height: 100vh;
         }
 
         .about-2 {
-          height: 100vh;
+          height: 90vh;
         }
         @media (max-width: 768px) {
           .about-container {
