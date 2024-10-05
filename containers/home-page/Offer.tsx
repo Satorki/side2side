@@ -41,6 +41,7 @@ const Offer = () => {
           gap: 5rem;
           max-width: 1440px;
           margin: 0 auto;
+          z-index: 90;
         }
 
         .offer-tabs {

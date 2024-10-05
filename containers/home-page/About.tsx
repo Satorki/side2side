@@ -10,30 +10,40 @@ import SectionTitle from "@/components/atoms/SectionTitle";
 const About = () => {
   // QUOTES ANIMATION
   const container = useRef(null);
+  const containerEnd = useRef(null);
+
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start start", "end end"],
   });
 
+  const { scrollYProgress: scrollYProgressEnd } = useScroll({
+    target: containerEnd,
+    offset: ["start start", "end end"],
+  });
+
   const textAppears1 = useTransform(
     scrollYProgress,
-    [0.0, 0.11, 0.13],
+    [0.0, 0.01, 0.03],
     [1, 1.02, 1]
   );
   const textAppears2 = useTransform(
     scrollYProgress,
-    [0.33, 0.55, 0.57],
+    [0.22, 0.33, 0.35],
     [1, 1.02, 1]
   );
   const textAppears3 = useTransform(
     scrollYProgress,
-    [0.66, 0.88, 0.9],
+    [0.66, 0.77, 0.79],
     [1, 1.02, 1]
   );
 
   const textOpacity1 = useTransform(scrollYProgress, [0.0, 0.11], [0.1, 1]);
   const textOpacity2 = useTransform(scrollYProgress, [0.33, 0.55], [0.1, 1]);
-  const textOpacity3 = useTransform(scrollYProgress, [0.66, 0.88], [0.1, 1]);
+  const textOpacity3 = useTransform(scrollYProgress, [0.66, 0.77], [0.1, 1]);
+
+  const containerOpacity = useTransform(scrollYProgressEnd, [0.8, 0], [1, 0]);
+  const containerY = useTransform(scrollYProgressEnd, [0.8, 0], [0, 500]);
 
   // SCREEN SIZE HANDLER
   const [isWindowMedium, setIsWindowMedium] = useState(false);
@@ -53,7 +63,10 @@ const About = () => {
   return (
     <div id="about" ref={container}>
       <div className="about-container">
-        <div className="flex flex-col gap-10 md:gap-14 flex-1">
+        <motion.div
+          className="flex flex-col gap-10 md:gap-14 flex-1"
+          style={{ opacity: containerOpacity, y: containerY }}
+        >
           <SectionTitle />
           {isWindowMedium ? null : <AboutImage />}
           <motion.div style={{ opacity: textOpacity1, scale: textAppears1 }}>
@@ -81,11 +94,17 @@ const About = () => {
             textColor="text-white"
             text="Sprawdź"
           />
-        </div>
-        {isWindowMedium ? <AboutImage /> : null}
+        </motion.div>
+
+        <motion.div
+          style={{ opacity: containerOpacity, y: containerY }}
+          className="flex-1"
+        >
+          {isWindowMedium ? <AboutImage /> : null}
+        </motion.div>
       </div>
 
-      <div className="about-2"></div>
+      <div className="about-2" ref={containerEnd}></div>
 
       <style jsx>{`
         #about {
@@ -94,15 +113,6 @@ const About = () => {
             #850001,
             #e35e5f
           );
-        }
-        .progress-bar {
-          position: fixed;
-          top: 75px;
-          right: 0;
-          height: 0px;
-          width: 10px;
-          background-color: #fff;
-          z-index: 100;
         }
         .about-container {
           display: flex;
@@ -116,11 +126,11 @@ const About = () => {
           margin: 0 auto;
           position: sticky;
           top: 75px;
-          height: 100vh;
+          height: 85vh;
         }
 
         .about-2 {
-          height: 90vh;
+          height: 60vh;
         }
         @media (max-width: 768px) {
           .about-container {
@@ -132,14 +142,11 @@ const About = () => {
               #e35e5f
             );
             gap: 1rem;
-            position: static;
-          }
-          .sticker {
-            position: sticky;
-            top: 65px;
+            postion: relative;
+            height: auto;
           }
           .about-2 {
-            height: 0;
+            height: 0vh;
           }
         }
       `}</style>
