@@ -10,7 +10,6 @@ const AboutImage = () => {
         alt="side2side crew around the car"
         className="rounded-[25px] object-cover w-full h-full object-[42%]"
       />
-
     </div>
   );
 };

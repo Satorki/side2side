@@ -1,5 +1,4 @@
 "use client";
-"use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import AboutImage from "@/components/atoms/AboutImage";
 import AboutQuote from "@/components/atoms/AboutQuote";
