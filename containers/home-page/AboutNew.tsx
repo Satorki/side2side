@@ -1,6 +1,6 @@
-import AboutNewImage from "@/components/atoms/AboutNewImage";
-import AboutNewTitle from "@/components/atoms/AboutNewTitle";
+import ImageAbout from "@/components/atoms/ImageAbout";
 import ButtonAction from "@/components/atoms/ButtonAction";
+import TitleSection from "@/components/atoms/TitleSection";
 import AboutNewDescriptions from "@/components/molecules/AboutDescriptions";
 import React, { useEffect, useState } from "react";
 
@@ -22,10 +22,13 @@ const AboutNew = () => {
   return (
     <div id="about">
       <div className="about-container">
-        {isWindowMedium ? <AboutNewImage /> : null}
+        {isWindowMedium ? <ImageAbout /> : null}
         <div className="description-container">
-          <AboutNewTitle />
-          {isWindowMedium ? null : <AboutNewImage />}
+          <TitleSection
+            category="About"
+            title="Wznosimy motorsport na wyższy poziom."
+          />
+          {isWindowMedium ? null : <ImageAbout />}
           <AboutNewDescriptions />
           <ButtonAction text="Sprawdź" bgColor="#f10000" />
         </div>
