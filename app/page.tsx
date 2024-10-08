@@ -5,12 +5,13 @@ import OfferNew from "@/containers/OfferNew";
 import SerwisImage from "../public/images/Offer/offer3.jpeg";
 import TunningImage from "../public/images/Offer/offer5.jpg";
 import MotorsportImage from "../public/images/Offer/offer6.jpg";
+import Projects from "@/containers/home-page/Projects";
 
 export default function Home() {
   return (
     <div>
       {/* <Hero /> */}
-      <AboutNew />
+      {/* <AboutNew />
       <OfferNew
         category="Usługi"
         title="Sprawdzony Serwis"
@@ -53,8 +54,8 @@ export default function Home() {
         ]}
         ImageCurrent={TunningImage}
         isReversed={true}
-      />
-      <OfferNew
+      /> */}
+      {/* <OfferNew
         category="Usługi"
         title="Wsparcie Motorsport"
         description="Dla entuzjastów rajdów, wyścigów tornych i driftu oferujemy kompleksowe przygotowanie pojazdów do motorsportu."
@@ -72,7 +73,8 @@ export default function Home() {
           { id: 5, title: "Modyfikacje układów napędowych i aerodynamicznych" },
         ]}
         ImageCurrent={MotorsportImage}
-      />
+      /> */}
+      <Projects />
     </div>
   );
 }
