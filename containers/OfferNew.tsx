@@ -4,64 +4,63 @@ import ImageOffer from "@/components/atoms/ImageOffer";
 import List from "@/components/atoms/List";
 import TitleSection from "@/components/atoms/TitleSection";
 import React, { useEffect, useState } from "react";
-import SerwisImage from "../public/images/Offer/offer3.jpeg";
+import { StaticImageData } from "next/image";
 
-const OfferNew = () => {
-  // SCREEN SIZE HANDLER
+interface Props {
+  ImageCurrent: StaticImageData;
+  category: string;
+  title: string;
+  description: string;
+  listItems: { id: number; title: string }[];
+  isReversed?: boolean;
+}
+
+const OfferNew: React.FC<Props> = ({
+  ImageCurrent,
+  category,
+  title,
+  description,
+  listItems,
+  isReversed = false,
+}) => {
   const [isWindowMedium, setIsWindowMedium] = useState(false);
+
   useEffect(() => {
     const handleResize = () => {
       setIsWindowMedium(window.innerWidth >= 768);
     };
     window.addEventListener("resize", handleResize);
-
     handleResize();
-
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   return (
-    <div id="offer">
-      <div className="offer-container">
+    <div id="offer" className={`offer ${isReversed ? "reversed" : ""}`}>
+      <div className={`offer-container ${isReversed ? "reversed" : ""}`}>
         <div className="flex-1">
-          {isWindowMedium ? <ImageOffer ImageCurrent={SerwisImage} /> : null}
+          {isWindowMedium && <ImageOffer ImageCurrent={ImageCurrent} />}
         </div>
         <div className="flex flex-col gap-4 md:gap-12 flex-1">
-          <TitleSection category="Usługi" title="Sprawdzony Serwis" />
-          {isWindowMedium ? null : <ImageOffer ImageCurrent={SerwisImage} />}
-          <DescriptionSingle
-            isBold={true}
-            text="Oferujemy kompleksowy serwis dla pojazdów osobowych i dostawczych do 3,5 tony, zapewniając ich sprawność w codziennym użytkowaniu."
-          />
-          <List
-            items={[
-              { id: 1, title: "Regularne przeglądy techniczne" },
-              { id: 2, title: "Diagnostyka i naprawa układów mechanicznych" },
-              {
-                id: 3,
-                title: "Wymiana oleju, filtrów i płynów eksploatacyjnych",
-              },
-              {
-                id: 4,
-                title: "Serwis hamulców, zawieszenia i układu wydechowego",
-              },
-              {
-                id: 5,
-                title:
-                  "Obsługa flot pojazdów firmowych (przeglądy, umowy serwisowe)",
-              },
-            ]}
-          />
-
+          <TitleSection category={category} title={title} />
+          {!isWindowMedium && <ImageOffer ImageCurrent={ImageCurrent} />}
+          <DescriptionSingle isBold={true} text={description} />
+          <List items={listItems} />
           <ButtonAction bgColor="#000" textColor="#fff" text="Umów wizytę" />
         </div>
       </div>
       <style jsx>{`
-        #offer {
+        .offer {
           background-image: radial-gradient(
-            circle at 70% 70%,
+            circle at 70% 60%,
+            #850001,
+            #e35e5f
+          );
+        }
+        .offer.reversed {
+          background-image: radial-gradient(
+            circle at 25% 60%,
             #850001,
             #e35e5f
           );
@@ -77,13 +76,21 @@ const OfferNew = () => {
           max-width: 1440px;
           margin: 0 auto;
         }
+        .offer-container.reversed {
+          flex-direction: row-reverse;
+        }
         @media (max-width: 768px) {
           .offer-container {
             flex-direction: column;
             padding: 1rem;
             gap: 1rem;
-            height: auto;
           }
+          .offer-container.reversed {
+            flex-direction: column;
+            padding: 1rem;
+            gap: 1rem;
+          }
+        }
       `}</style>
     </div>
   );
