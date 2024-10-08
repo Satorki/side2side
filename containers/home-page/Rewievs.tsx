@@ -6,7 +6,7 @@ import React from "react";
 const Rewievs = () => {
   return (
     <div id="rewievs" className="rewievs">
-      <div className="flex flex-col gap-5 justify-center items-center max-w-[1440px] m-auto">
+      <div className="flex flex-col gap-5 justify-center items-center max-w-[1440px] mx-auto">
         <TitleSection category="Opinie" title="" />
         <div className="rewievs-container">
           <ReviewSingle

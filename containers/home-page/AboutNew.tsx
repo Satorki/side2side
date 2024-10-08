@@ -26,7 +26,7 @@ const AboutNew = () => {
         {isWindowMedium ? <ImageAbout /> : null}
         <div className="description-container">
           <TitleSection
-            category="About"
+            category="O Nas"
             title="Wznosimy motorsport na wyższy poziom."
           />
           {isWindowMedium ? null : <ImageAbout />}

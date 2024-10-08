@@ -6,7 +6,7 @@ import React from "react";
 const Projects = () => {
   return (
     <div id="projects" className="projects">
-      <div className="flex flex-col gap-4 justify-center items-center max-w-[1440px] m-auto">
+      <div className="flex flex-col gap-4 justify-center items-center max-w-[1440px] mx-auto">
         <TitleSection category="Projekty" title="" />
         <CarouselProject />
         <TitleSection category="" title="KickSter E36" />
