@@ -40,20 +40,20 @@ const CarouselProject = () => {
 
   return (
     <Carousel className="w-full flex flex-col justify-center items-center">
-      <CarouselContent className="max-w-[1440px]">
+      <CarouselContent className="flex items-center">
         {imageList.map((photo) => (
           <CarouselItem key={photo.id}>
-            <CardContent className="flex justify-center">
+            <CardContent className="w-full flex justify-center">
               <Image
                 src={photo.photo.src}
                 alt={`project1`}
-                className="w-full max-h-[50vh]"
+                className="object-cover w-full max-h-[50vh]"
               />
             </CardContent>
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious/>
+      <CarouselPrevious />
       <CarouselNext />
     </Carousel>
   );

@@ -1,11 +1,12 @@
 "use client";
 import AboutNew from "@/containers/home-page/AboutNew";
 import Hero from "@/containers/home-page/Hero";
-import OfferNew from "@/containers/OfferNew";
+import OfferNew from "@/containers/home-page/OfferNew";
 import SerwisImage from "../public/images/Offer/offer3.jpeg";
 import TunningImage from "../public/images/Offer/offer5.jpg";
 import MotorsportImage from "../public/images/Offer/offer6.jpg";
 import Projects from "@/containers/home-page/Projects";
+import Rewievs from "@/containers/home-page/Rewievs";
 
 export default function Home() {
   return (
@@ -74,7 +75,8 @@ export default function Home() {
         ]}
         ImageCurrent={MotorsportImage}
       /> */}
-      <Projects />
+      {/* <Projects /> */}
+      <Rewievs />
     </div>
   );
 }
