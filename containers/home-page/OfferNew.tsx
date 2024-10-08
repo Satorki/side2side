@@ -13,6 +13,7 @@ interface Props {
   description: string;
   listItems: { id: number; title: string }[];
   isReversed?: boolean;
+  withCheck?: boolean;
 }
 
 const OfferNew: React.FC<Props> = ({
@@ -22,6 +23,7 @@ const OfferNew: React.FC<Props> = ({
   description,
   listItems,
   isReversed = false,
+  withCheck,
 }) => {
   const [isWindowMedium, setIsWindowMedium] = useState(false);
 
@@ -46,24 +48,16 @@ const OfferNew: React.FC<Props> = ({
           <TitleSection category={category} title={title} />
           {!isWindowMedium && <ImageOffer ImageCurrent={ImageCurrent} />}
           <DescriptionSingle isBold={true} text={description} />
-          <List items={listItems} />
+          <List items={listItems} withCheck={withCheck} />
           <ButtonAction bgColor="#000" textColor="#fff" text="Umów wizytę" />
         </div>
       </div>
       <style jsx>{`
         .offer {
-          background-image: radial-gradient(
-            circle at 70% 60%,
-            #850001,
-            #e35e5f
-          );
+          background-color: #850001;
         }
         .offer.reversed {
-          background-image: radial-gradient(
-            circle at 25% 60%,
-            #850001,
-            #e35e5f
-          );
+          background-color: #850001;
         }
         .offer-container {
           display: flex;

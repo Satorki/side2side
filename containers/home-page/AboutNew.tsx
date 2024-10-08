@@ -3,6 +3,7 @@ import ButtonAction from "@/components/atoms/ButtonAction";
 import TitleSection from "@/components/atoms/TitleSection";
 import AboutNewDescriptions from "@/components/molecules/AboutDescriptions";
 import React, { useEffect, useState } from "react";
+import ButtonsSocial from "@/components/atoms/ButtonsSocial";
 
 const AboutNew = () => {
   const [isWindowMedium, setIsWindowMedium] = useState(false);
@@ -30,7 +31,10 @@ const AboutNew = () => {
           />
           {isWindowMedium ? null : <ImageAbout />}
           <AboutNewDescriptions />
-          <ButtonAction text="Sprawdź" bgColor="#f10000" />
+          <div className="flex justify-center items-center gap-2 border p-4">
+            <p>Obserwuj nas na: </p>
+            <ButtonsSocial />
+          </div>
         </div>
       </div>
 
