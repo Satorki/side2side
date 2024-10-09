@@ -1,9 +1,10 @@
 import ImageAbout from "@/components/atoms/ImageAbout";
-import ButtonAction from "@/components/atoms/ButtonAction";
 import TitleSection from "@/components/atoms/TitleSection";
-import AboutNewDescriptions from "@/components/molecules/AboutDescriptions";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ButtonsSocial from "@/components/atoms/ButtonsSocial";
+import { motion, useScroll, useTransform } from "framer-motion";
+import DescriptionSingle from "@/components/atoms/DescriptionSingle";
+import ButtonAction from "@/components/atoms/ButtonAction";
 
 const AboutNew = () => {
   const [isWindowMedium, setIsWindowMedium] = useState(false);
@@ -20,21 +21,129 @@ const AboutNew = () => {
     };
   }, []);
 
+  // ANIMATION
+  const container = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start start", "end end"],
+  });
+
+  // TITLE
+  const titleMoveUp = useTransform(
+    scrollYProgress,
+    [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
+    [200, 175, 150, 125, 100, 75, 50, 25, 0, 0, -50]
+  );
+
+  // QUOTE1
+  const quote1moveRight = useTransform(scrollYProgress, [0.2, 0.3], [-1000, 0]);
+  const quote1moveUp = useTransform(
+    scrollYProgress,
+    [0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
+    [150, 125, 100, 75, 50, 25, 0, 0, -50]
+  );
+  const quote1opacity = useTransform(scrollYProgress, [0.2, 0.3], [0, 1]);
+
+  // QUOTE2
+  const quote2moveRight = useTransform(scrollYProgress, [0.4, 0.5], [-1000, 0]);
+  const quote2moveUp = useTransform(
+    scrollYProgress,
+    [0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
+    [100, 75, 50, 25, 0, 0, -50]
+  );
+  const quote2opacity = useTransform(scrollYProgress, [0.4, 0.5], [0, 1]);
+
+  // QUOTE3
+  const quote3moveRight = useTransform(scrollYProgress, [0.6, 0.7], [-1000, 0]);
+  const quote3moveUp = useTransform(
+    scrollYProgress,
+    [0.6, 0.7, 0.8, 0.9, 1],
+    [50, 25, 0, 0, -50]
+  );
+  const quote3opacity = useTransform(scrollYProgress, [0.6, 0.7], [0, 1]);
+
+  // button
+  const buttonScaleUp = useTransform(scrollYProgress, [0.65, 0.75], [0, 1]);
+  const buttonMoveUp = useTransform(
+    scrollYProgress,
+    [0.65, 0.7, 0.8, 0.9, 1],
+    [50, 25, 0, 0, -50]
+  );
+  const buttonOpacity = useTransform(scrollYProgress, [0.65, 0.75], [0, 1]);
+
+  // SCREEN APPEARS
+  const screenAppears = useTransform(
+    scrollYProgress,
+    [0, 0.1, 0.8, 0.9, 1],
+    [500, -1500, -1500, -1500, 500]
+  );
+
+  // QUOTES DISAPPEARS
+
   return (
-    <div id="about">
+    <div id="about" ref={container}>
       <div className="about-container">
         {isWindowMedium ? <ImageAbout /> : null}
+        <motion.div
+          style={{
+            height: "100%",
+            background: `linear-gradient(to right, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 90%)`,
+            position: "absolute",
+            width: "2000px",
+            inset: 0,
+            x: screenAppears,
+          }}
+        ></motion.div>
         <div className="description-container">
-          <TitleSection
-            category="O Nas"
-            title="Wznosimy motorsport na wyższy poziom."
-          />
+          <motion.div style={{ y: titleMoveUp }}>
+            <TitleSection
+              category=""
+              title="Wznosimy motorsport na wyższy poziom."
+            />
+          </motion.div>
           {isWindowMedium ? null : <ImageAbout />}
-          <AboutNewDescriptions />
-          <div className="flex justify-center items-center gap-2 border p-4">
-            <p>Obserwuj nas na: </p>
-            <ButtonsSocial />
+          <div className="flex flex-col gap-3 text-xl font-bai leading-8 italic">
+            <motion.div
+              style={{
+                x: quote1moveRight,
+                opacity: quote1opacity,
+                y: quote1moveUp,
+              }}
+            >
+              <DescriptionSingle text="Właściciele pojazdów użytkowych, dostawczych i  sportowych, często stają przed wyzwaniami związanymi z ich serwisowaniem." />
+              <DescriptionSingle text="Problemy takie jak zużycie części, konieczność modyfikacji silnika czy optymalizacja układu zawieszenia mogą stanowić spore wyzwanie." />
+            </motion.div>
+
+            <motion.div
+              style={{
+                x: quote2moveRight,
+                opacity: quote2opacity,
+                y: quote2moveUp,
+              }}
+            >
+              <DescriptionSingle text="W Side2Side Motorsport oferujemy rozwiązania dostosowane do Twoich potrzeb." />
+            </motion.div>
+
+            <motion.div
+              style={{
+                x: quote3moveRight,
+                opacity: quote3opacity,
+                y: quote3moveUp,
+              }}
+            >
+              <DescriptionSingle text="Dzięki naszemu doświadczeniu możesz liczyć na profesjonalną obsługę i wsparcie techniczne na każdym etapie." />
+            </motion.div>
           </div>
+          <motion.div
+            style={{
+              scale: buttonScaleUp,
+              y: buttonMoveUp,
+              opacity: buttonOpacity,
+            }}
+          >
+            <ButtonAction bgColor="#850001" textColor="#FFF" text="Sprawdź" />
+          </motion.div>
         </div>
       </div>
 
@@ -58,10 +167,16 @@ const AboutNew = () => {
           color: white;
           padding-right: 25%;
           padding-left: 2rem;
+          
         }
         .about-container {
-          position: relative;
+          position: sticky;
+          top: 75px;
           height: 100vh;
+          overflow: hidden;
+        }
+        #about {
+          height: 300vh;
         }
         @media (min-width: 1440px) {
           .description-container {
