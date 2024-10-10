@@ -15,13 +15,13 @@ const AnimatedText = ({ text }: AnimatedTextProps) => {
         <motion.span
           key={index}
           initial={{ color: "#ffffff" }}
-          animate={{ color: "#000000" }}
+          animate={{ color: "#ff2424" }}
           transition={{
-            duration: 3,
-            delay: index * 0.5,
+            duration: 2,
+            delay: index * 0.3,
             repeat: Infinity,
             repeatType: "reverse",
-            repeatDelay: 5,
+            repeatDelay: 4,
           }}
         >
           {letter}

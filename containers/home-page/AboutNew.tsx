@@ -31,41 +31,29 @@ const AboutNew = () => {
   });
 
   // TITLE
-  const titleMoveUp = useTransform(
+  const titleMoveUpDesktop = useTransform(
     scrollYProgress,
-    [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
-    [200, 175, 150, 125, 100, 75, 50, 25, 0, 0, -50]
+    [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7],
+    [150, 125, 100, 75, 50, 25, 0, -50]
   );
 
-  // QUOTE1
+  // QUOTE
   const quote1moveRight = useTransform(scrollYProgress, [0.2, 0.3], [-1000, 0]);
   const quote1moveUp = useTransform(
     scrollYProgress,
-    [0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
-    [150, 125, 100, 75, 50, 25, 0, 0, -50]
+    [0.2, 0.3, 0.4, 0.5, 0.6, 0.7],
+    [100, 75, 50, 25, 0, -50]
   );
   const quote1opacity = useTransform(scrollYProgress, [0.2, 0.3], [0, 1]);
-
-  // QUOTE2
-  const quote2moveRight = useTransform(scrollYProgress, [0.4, 0.5], [-1000, 0]);
-  const quote2moveUp = useTransform(
+  const quote1scale = useTransform(
     scrollYProgress,
-    [0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
-    [100, 75, 50, 25, 0, 0, -50]
+    [0.35, 0.4, 0.45],
+    [1, 1.02, 1]
   );
-  const quote2opacity = useTransform(scrollYProgress, [0.4, 0.5], [0, 1]);
 
-  // QUOTE3
-  const quote3moveRight = useTransform(scrollYProgress, [0.6, 0.7], [-1000, 0]);
-  const quote3moveUp = useTransform(
-    scrollYProgress,
-    [0.6, 0.7, 0.8, 0.9, 1],
-    [50, 25, 0, 0, -50]
-  );
-  const quote3opacity = useTransform(scrollYProgress, [0.6, 0.7], [0, 1]);
-
-  // button
+  // BUTTON
   const buttonScaleUp = useTransform(scrollYProgress, [0.65, 0.75], [0, 1]);
+  const buttonScaleUpMobile = useTransform(scrollYProgress, [0.9, 0.1], [1, 0]);
   const buttonMoveUp = useTransform(
     scrollYProgress,
     [0.65, 0.7, 0.8, 0.9, 1],
@@ -80,52 +68,85 @@ const AboutNew = () => {
     [500, -1500, -1500, -1500, 500]
   );
 
-  // QUOTES DISAPPEARS
-
   return (
     <div id="about" ref={container}>
-      <div className="about-container">
-        {isWindowMedium ? <ImageAbout /> : null}
-        <motion.div
-          style={{
-            height: "100%",
-            background: `linear-gradient(to right, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 90%)`,
-            position: "absolute",
-            width: "2000px",
-            inset: 0,
-            x: screenAppears,
-          }}
-        ></motion.div>
-        <div className="description-container">
-          <motion.div style={{ y: titleMoveUp }}>
-            <TitleSection
-              category=""
-              title="Wznosimy motorsport na wyższy poziom."
-            />
-          </motion.div>
-          {isWindowMedium ? null : <ImageAbout />}
-          <div className="flex flex-col gap-3 text-xl font-bai leading-8 italic">
-            <motion.div
-              style={{
-                x: quote1moveRight,
-                opacity: quote1opacity,
-                y: quote1moveUp,
-              }}
-            >
-              <AboutDescriptions />
-            </motion.div>
-          </div>
+      {isWindowMedium ? (
+        <div className="about-container">
+          <ImageAbout />
           <motion.div
             style={{
-              scale: buttonScaleUp,
-              y: buttonMoveUp,
-              opacity: buttonOpacity,
+              height: "100%",
+              background: `linear-gradient(to right, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 90%)`,
+              position: "absolute",
+              width: "2000px",
+              inset: 0,
+              x: screenAppears,
             }}
-          >
-            <ButtonAction bgColor="#850001" textColor="#FFF" text="Sprawdź" />
-          </motion.div>
+          ></motion.div>
+          <div className="description-container">
+            <motion.div style={{ y: titleMoveUpDesktop }}>
+              <TitleSection
+                category=""
+                titleBegining="Wznosimy motorsport na"
+                titleAnimationText="wyższy"
+                titleEnding="poziom."
+              />
+            </motion.div>
+            <div className="flex flex-col gap-3 text-xl font-bai leading-8 italic">
+              <motion.div
+                style={{
+                  x: quote1moveRight,
+                  opacity: quote1opacity,
+                  y: quote1moveUp,
+                }}
+              >
+                <AboutDescriptions />
+              </motion.div>
+            </div>
+            <motion.div
+              style={{
+                scale: buttonScaleUp,
+                y: -50,
+                opacity: buttonOpacity,
+              }}
+            >
+              <ButtonAction bgColor="#850001" textColor="#FFF" text="Sprawdź" />
+            </motion.div>
+          </div>
         </div>
-      </div>
+      ) : (
+        <div className="about-container">
+          <div className="description-container">
+            <div>
+              <TitleSection
+                category=""
+                titleBegining="Wznosimy motorsport na"
+                titleAnimationText="wyższy"
+                titleEnding="poziom."
+              />
+            </div>
+            <ImageAbout />
+            <div className="flex flex-col gap-3 text-xl font-bai leading-8 italic">
+              <motion.div
+                style={{
+                  opacity: quote1opacity,
+                  scale: quote1scale,
+                }}
+              >
+                <AboutDescriptions />
+              </motion.div>
+            </div>
+            <motion.div
+              style={{
+                scale: buttonScaleUp,
+                opacity: buttonOpacity,
+              }}
+            >
+              <ButtonAction bgColor="#850001" textColor="#FFF" text="Sprawdź" />
+            </motion.div>
+          </div>
+        </div>
+      )}
 
       <style jsx>{`
         .description-container {
@@ -178,6 +199,9 @@ const AboutNew = () => {
             width: 100%;
             height: 100%;
             padding: 1rem;
+          }
+          #about {
+            height: 220vh;
           }
       `}</style>
     </div>

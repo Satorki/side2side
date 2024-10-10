@@ -59,6 +59,24 @@ const About = () => {
     };
   }, []);
 
+    // // QUOTE2
+    // const quote2moveRight = useTransform(scrollYProgress, [0.4, 0.5], [-1000, 0]);
+    // const quote2moveUp = useTransform(
+    //   scrollYProgress,
+    //   [0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
+    //   [100, 75, 50, 25, 0, 0, -50]
+    // );
+    // const quote2opacity = useTransform(scrollYProgress, [0.4, 0.5], [0, 1]);
+  
+    // // QUOTE3
+    // const quote3moveRight = useTransform(scrollYProgress, [0.6, 0.7], [-1000, 0]);
+    // const quote3moveUp = useTransform(
+    //   scrollYProgress,
+    //   [0.6, 0.7, 0.8, 0.9, 1],
+    //   [50, 25, 0, 0, -50]
+    // );
+    // const quote3opacity = useTransform(scrollYProgress, [0.6, 0.7], [0, 1]);
+
   return (
     <div id="about" ref={container}>
       <div className="about-container">
