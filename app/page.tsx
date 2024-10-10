@@ -26,7 +26,7 @@ export default function Home() {
       <motion.div style={{ opacity: opacityDown }}>
         <AboutNew />
       </motion.div>
-      <div ref={container} className="h-[200px]"></div>
+      <div ref={container} className="h-[100px]"></div>
       <Offers />
       <Projects />
       <Rewievs />

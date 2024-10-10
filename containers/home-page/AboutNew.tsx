@@ -5,6 +5,7 @@ import ButtonsSocial from "@/components/atoms/ButtonsSocial";
 import { motion, useScroll, useTransform } from "framer-motion";
 import DescriptionSingle from "@/components/atoms/DescriptionSingle";
 import ButtonAction from "@/components/atoms/ButtonAction";
+import AboutDescriptions from "@/components/molecules/AboutDescriptionsX";
 
 const AboutNew = () => {
   const [isWindowMedium, setIsWindowMedium] = useState(false);
@@ -75,7 +76,7 @@ const AboutNew = () => {
   // SCREEN APPEARS
   const screenAppears = useTransform(
     scrollYProgress,
-    [0, 0.1, 0.8, 0.9, 1],
+    [0, 0.4, 0.8, 0.85, 1],
     [500, -1500, -1500, -1500, 500]
   );
 
@@ -111,28 +112,7 @@ const AboutNew = () => {
                 y: quote1moveUp,
               }}
             >
-              <DescriptionSingle text="Właściciele pojazdów użytkowych, dostawczych i  sportowych, często stają przed wyzwaniami związanymi z ich serwisowaniem." />
-              <DescriptionSingle text="Problemy takie jak zużycie części, konieczność modyfikacji silnika czy optymalizacja układu zawieszenia mogą stanowić spore wyzwanie." />
-            </motion.div>
-
-            <motion.div
-              style={{
-                x: quote2moveRight,
-                opacity: quote2opacity,
-                y: quote2moveUp,
-              }}
-            >
-              <DescriptionSingle text="W Side2Side Motorsport oferujemy rozwiązania dostosowane do Twoich potrzeb." />
-            </motion.div>
-
-            <motion.div
-              style={{
-                x: quote3moveRight,
-                opacity: quote3opacity,
-                y: quote3moveUp,
-              }}
-            >
-              <DescriptionSingle text="Dzięki naszemu doświadczeniu możesz liczyć na profesjonalną obsługę i wsparcie techniczne na każdym etapie." />
+              <AboutDescriptions />
             </motion.div>
           </div>
           <motion.div
