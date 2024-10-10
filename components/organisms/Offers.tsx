@@ -7,7 +7,7 @@ const Offers = () => {
   return (
     <div id="offers">
       <OfferNew
-        category="Usługi"
+        category=""
         title="Sprawdzony Serwis"
         description="Oferujemy kompleksowy serwis dla pojazdów osobowych i dostawczych do 3,5 tony, zapewniając ich sprawność w codziennym użytkowaniu."
         listItems={[
@@ -30,8 +30,8 @@ const Offers = () => {
         ImageCurrent={SerwisImage}
       />
       <OfferNew
-        category="Usługi"
-        title="Specjalistyczny Tunning"
+        category=""
+        title="Bezpieczny Tunning"
         description="Specjalizujemy się w tuningu pojazdów, dostosowując je do indywidualnych preferencji klientów i zapewniając optymalne osiągi."
         listItems={[
           {
@@ -50,7 +50,7 @@ const Offers = () => {
         isReversed={true}
       />
       <OfferNew
-        category="Usługi"
+        category=""
         title="Wsparcie Motorsport"
         description="Dla entuzjastów rajdów, wyścigów tornych i driftu oferujemy kompleksowe przygotowanie pojazdów do motorsportu."
         listItems={[

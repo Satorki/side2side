@@ -80,9 +80,8 @@ const AboutNew = () => {
             <motion.div style={{ y: titleMoveUpDesktop }}>
               <TitleSection
                 category=""
-                titleBegining="Wznosimy motorsport na"
-                titleAnimationText="wyższy"
-                titleEnding="poziom."
+                titleBegining="Wznosimy motorsport na wyższy poziom."
+                titleEnding=""
               />
             </motion.div>
             <div className="flex flex-col gap-3 text-xl font-bai leading-8 italic">
@@ -103,7 +102,7 @@ const AboutNew = () => {
                 opacity: buttonOpacity,
               }}
             >
-              <ButtonAction bgColor="#850001" textColor="#FFF" text="Sprawdź" />
+              <ButtonAction bgColor="#d52727" textColor="#FFF" text="Sprawdź" />
             </motion.div>
           </div>
         </div>
@@ -113,9 +112,8 @@ const AboutNew = () => {
             <div>
               <TitleSection
                 category=""
-                titleBegining="Wznosimy motorsport na"
-                titleAnimationText="wyższy"
-                titleEnding="poziom."
+                titleBegining="Wznosimy motorsport wyższy na poziom."
+                titleEnding=""
               />
             </div>
             <ImageAbout />
@@ -135,7 +133,7 @@ const AboutNew = () => {
                 opacity: buttonOpacity,
               }}
             >
-              <ButtonAction bgColor="#850001" textColor="#FFF" text="Sprawdź" />
+              <ButtonAction bgColor="#d52727" textColor="#FFF" text="Sprawdź" />
             </motion.div>
           </div>
         </div>
@@ -194,7 +192,7 @@ const AboutNew = () => {
             padding: 1rem;
           }
           #about {
-            height: 200vh;
+            height: auto;
           }
       `}</style>
     </div>

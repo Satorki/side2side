@@ -5,6 +5,7 @@ import List from "@/components/atoms/List";
 import TitleSection from "@/components/atoms/TitleSection";
 import React, { useEffect, useState } from "react";
 import { StaticImageData } from "next/image";
+import FadeUp from "@/components/atoms/FadeUp";
 
 interface Props {
   ImageCurrent: StaticImageData;
@@ -48,7 +49,9 @@ const OfferNew: React.FC<Props> = ({
           <div className="description-container">
             <TitleSection category={category} titleBegining={title} />
             {!isWindowMedium && <ImageOffer ImageCurrent={ImageCurrent} />}
-            <DescriptionSingle isBold={true} text={description} />
+            <FadeUp delay={0.5} duration={2}>
+              <DescriptionSingle isBold={true} text={description} />
+            </FadeUp>
             <List items={listItems} withCheck={withCheck} />
             <ButtonAction bgColor="#000" textColor="#fff" text="Umów wizytę" />
           </div>
@@ -65,7 +68,6 @@ const OfferNew: React.FC<Props> = ({
           max-width: 1440px;
           margin: 0 auto;
           background-color: #c31111;
-          height: 100vh;
         }
         .offer-container.reversed {
           flex-direction: row-reverse;
@@ -77,9 +79,11 @@ const OfferNew: React.FC<Props> = ({
           gap: 2rem;
           padding: 2rem;
         }
+
         @media (max-width: 768px) {
           .offer-container {
             flex-direction: column;
+            height: auto;
           }
           .offer-container.reversed {
             flex-direction: column;
