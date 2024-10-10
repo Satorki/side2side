@@ -8,9 +8,9 @@ interface ListProps {
 
 const List: React.FC<ListProps> = ({ items, withCheck = true }) => {
   return (
-    <ul className="list-none p-0 m-0 space-y-2">
+    <ul className="list-none p-0 m-0">
       {items.map((item) => (
-        <li key={item.id} className="p-3  flex items-center gap-3">
+        <li key={item.id} className="flex items-center gap-1 py-1">
           {withCheck && <Check />}
           {item.title}
         </li>

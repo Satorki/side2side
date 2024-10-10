@@ -7,9 +7,13 @@ const Projects = () => {
   return (
     <div id="projects" className="projects">
       <div className="flex flex-col gap-4 justify-center items-center max-w-[1440px] mx-auto">
-        <TitleSection category="Projekty" title="" />
+        <TitleSection category="Projekty" titleBegining="" />
         <CarouselProject />
-        <TitleSection category="" title="KickSter E36" />
+        <TitleSection
+          category=""
+          titleBegining=""
+          titleAnimationText="KickSter E36"
+        />
         <DescriptionSingle text="Pomoc w stworzeniu samochodu dla Kickster" />
       </div>
       <style jsx>{`

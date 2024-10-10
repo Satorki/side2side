@@ -7,11 +7,11 @@ interface Props {
 
 const ImageOffer = ({ ImageCurrent }: Props) => {
   return (
-    <div className="flex-1 w-full h-[60vh]">
+    <div className="flex-1 w-full h-[70vh]">
       <Image
         src={ImageCurrent}
         alt="side2side crew around the car"
-        className="rounded-[25px] object-cover w-full h-full"
+        className="rounded-[25px] md:rounded-none object-cover w-full h-full"
       />
     </div>
   );

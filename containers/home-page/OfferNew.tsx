@@ -44,45 +44,45 @@ const OfferNew: React.FC<Props> = ({
         <div className="flex-1">
           {isWindowMedium && <ImageOffer ImageCurrent={ImageCurrent} />}
         </div>
-        <div className="flex flex-col gap-4 md:gap-12 flex-1">
-          <TitleSection category={category} title={title} />
-          {!isWindowMedium && <ImageOffer ImageCurrent={ImageCurrent} />}
-          <DescriptionSingle isBold={true} text={description} />
-          <List items={listItems} withCheck={withCheck} />
-          <ButtonAction bgColor="#000" textColor="#fff" text="Umów wizytę" />
+        <div className="flex-1">
+          <div className="description-container">
+            <TitleSection category={category} titleBegining={title} />
+            {!isWindowMedium && <ImageOffer ImageCurrent={ImageCurrent} />}
+            <DescriptionSingle isBold={true} text={description} />
+            <List items={listItems} withCheck={withCheck} />
+            <ButtonAction bgColor="#000" textColor="#fff" text="Umów wizytę" />
+          </div>
         </div>
+        <hr />
       </div>
       <style jsx>{`
-        .offer {
-          background-color: #850001;
-        }
-        .offer.reversed {
-          background-color: #850001;
-        }
         .offer-container {
           display: flex;
           flex-direction: row;
           justify-content: center;
-          gap: 5rem;
           align-items: center;
           color: #fff;
-          padding: 4rem;
           max-width: 1440px;
           margin: 0 auto;
+          background-color: #c31111;
+          height: 100vh;
         }
         .offer-container.reversed {
           flex-direction: row-reverse;
         }
+        .description-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 2rem;
+          padding: 2rem;
+        }
         @media (max-width: 768px) {
           .offer-container {
             flex-direction: column;
-            padding: 1rem;
-            gap: 1rem;
           }
           .offer-container.reversed {
             flex-direction: column;
-            padding: 1rem;
-            gap: 1rem;
           }
         }
       `}</style>

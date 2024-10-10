@@ -4,7 +4,7 @@ import AnimatedText from "./AnimatedText";
 interface TitleSectionProps {
   category: string;
   titleBegining: string;
-  titleEnding: string;
+  titleEnding?: string;
   titleAnimationText?: string;
   span?: string;
 }

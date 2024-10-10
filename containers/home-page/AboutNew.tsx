@@ -1,9 +1,7 @@
 import ImageAbout from "@/components/atoms/ImageAbout";
 import TitleSection from "@/components/atoms/TitleSection";
 import React, { useEffect, useRef, useState } from "react";
-import ButtonsSocial from "@/components/atoms/ButtonsSocial";
 import { motion, useScroll, useTransform } from "framer-motion";
-import DescriptionSingle from "@/components/atoms/DescriptionSingle";
 import ButtonAction from "@/components/atoms/ButtonAction";
 import AboutDescriptions from "@/components/molecules/AboutDescriptionsX";
 
@@ -54,11 +52,6 @@ const AboutNew = () => {
   // BUTTON
   const buttonScaleUp = useTransform(scrollYProgress, [0.65, 0.75], [0, 1]);
   const buttonScaleUpMobile = useTransform(scrollYProgress, [0.9, 0.1], [1, 0]);
-  const buttonMoveUp = useTransform(
-    scrollYProgress,
-    [0.65, 0.7, 0.8, 0.9, 1],
-    [50, 25, 0, 0, -50]
-  );
   const buttonOpacity = useTransform(scrollYProgress, [0.65, 0.75], [0, 1]);
 
   // SCREEN APPEARS
@@ -138,7 +131,7 @@ const AboutNew = () => {
             </div>
             <motion.div
               style={{
-                scale: buttonScaleUp,
+                scale: buttonScaleUpMobile,
                 opacity: buttonOpacity,
               }}
             >
@@ -201,7 +194,7 @@ const AboutNew = () => {
             padding: 1rem;
           }
           #about {
-            height: 220vh;
+            height: 200vh;
           }
       `}</style>
     </div>

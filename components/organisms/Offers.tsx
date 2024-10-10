@@ -1,11 +1,11 @@
 import OfferNew from "@/containers/home-page/OfferNew";
-import SerwisImage from "@/public/images/Offer/offer3.jpeg";
-import TunningImage from "@/public/images/Offer/offer5.jpg";
-import MotorsportImage from "@/public/images/Offer/offer6.jpg";
+import SerwisImage from "@/public/images/Additional/repairing.jpg";
+import TunningImage from "@/public/images/Projects/project4.jpg";
+import MotorsportImage from "@/public/images/Offer/offer9.jpg";
 
 const Offers = () => {
   return (
-    <div>
+    <div id="offers">
       <OfferNew
         category="Usługi"
         title="Sprawdzony Serwis"
@@ -68,6 +68,15 @@ const Offers = () => {
         ]}
         ImageCurrent={MotorsportImage}
       />
+      <style jsx>{`
+        #offers {
+          background-image: radial-gradient(
+            circle at 25% 25%,
+            #c31111,
+            #e23535
+          );
+        }
+      `}</style>
     </div>
   );
 };

@@ -7,7 +7,7 @@ const Rewievs = () => {
   return (
     <div id="rewievs" className="rewievs">
       <div className="flex flex-col gap-5 justify-center items-center max-w-[1440px] mx-auto">
-        <TitleSection category="Opinie" title="" />
+        <TitleSection category="Opinie" titleBegining="Nasi klienci" />
         <div className="rewievs-container">
           <ReviewSingle
             text="Kilukrotnie korzystałem z usług i nigdy się nie zawiodłem. Powierzony temat wykonany zawsze na 101%. Warszat prowadzony z dbałością o najdrobniejsze detale i przyjaznym podejściem dla klienta.
