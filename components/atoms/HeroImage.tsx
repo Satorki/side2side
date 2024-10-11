@@ -35,7 +35,7 @@ const HeroImage = ({ setIsLoaded }: Props) => {
           isImageLoaded ? "block" : "hidden"
         }`}
         priority={true}
-        onLoadingComplete={() => {
+        onLoad={() => {
           setIsImageLoaded(true);
           setIsLoaded(true);
         }}

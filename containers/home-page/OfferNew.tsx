@@ -79,11 +79,14 @@ const OfferNew: React.FC<Props> = ({
           gap: 2rem;
           padding: 2rem;
         }
+        #offer {
+          z-index: 10;
+        }
 
         @media (max-width: 768px) {
           .offer-container {
             flex-direction: column;
-            height: 100vh;
+            height: auto;
           }
           .description-container {
             padding: 1rem;
