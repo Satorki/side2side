@@ -32,11 +32,16 @@ const Header = () => {
     },
     {
       id: 3,
-      name: "REALIZACJE",
-      link: "/realizacje",
+      name: "PROJEKTY",
+      link: "/projekty",
     },
     {
       id: 4,
+      name: "OPINIE",
+      link: "/OPINIE",
+    },
+    {
+      id: 5,
       name: "KONTAKT",
       link: "/kontakt",
     },

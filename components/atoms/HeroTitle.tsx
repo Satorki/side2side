@@ -2,7 +2,11 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import React from "react";
 
-const HeroTitle = () => {
+interface Props {
+  isLoaded: boolean;
+}
+
+const HeroTitle = ({ isLoaded }: Props) => {
   const { scrollY } = useScroll();
   const opacity = useTransform(scrollY, [0, 150], [1, 0]);
   const y = useTransform(scrollY, [150, 0], [-100, 0]);
@@ -15,9 +19,9 @@ const HeroTitle = () => {
       <h1 className="text-6xl md:text-8xl 2xl:text-9xl flex tracking-tight font-bold font-libre">
         <motion.div
           initial={{ x: -400, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          animate={isLoaded ? { x: 0, opacity: 1 } : {}}
           transition={{
-            delay: 0.8,
+            delay: isLoaded ? 0.8 : 0,
             type: "spring",
             stiffness: 1000,
             damping: 100,
@@ -28,9 +32,9 @@ const HeroTitle = () => {
         </motion.div>
         <motion.div
           initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
+          animate={isLoaded ? { scale: 1 } : {}}
           transition={{
-            duration: 0.3,
+            duration: 0.8,
             type: "spring",
             stiffness: 100,
             damping: 30,
@@ -42,9 +46,9 @@ const HeroTitle = () => {
         </motion.div>
         <motion.div
           initial={{ x: 400, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          animate={isLoaded ? { x: 0, opacity: 1 } : {}}
           transition={{
-            delay: 1.5,
+            delay: isLoaded ? 1.5 : 0,
             type: "spring",
             stiffness: 1000,
             damping: 100,
@@ -56,9 +60,9 @@ const HeroTitle = () => {
       </h1>
       <div className="flex gap-2 font-medium">
         <motion.span
-          animate={{ opacity: 1 }}
+          animate={isLoaded ? { opacity: 1 } : { opacity: 0 }}
           initial={{ opacity: 0 }}
-          transition={{ delay: 2.2, duration: 0.8 }}
+          transition={{ delay: isLoaded ? 2.2 : 0, duration: 0.8 }}
         >
           SERWIS TUNING MOTORSPORT
         </motion.span>

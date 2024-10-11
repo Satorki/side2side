@@ -36,7 +36,11 @@ const AboutNew = () => {
   );
 
   // QUOTE
-  const quote1moveRight = useTransform(scrollYProgress, [0.2, 0.3], [-1000, 0]);
+  const quote1moveRight = useTransform(
+    scrollYProgress,
+    [0.2, 0.25],
+    [-1000, 0]
+  );
   const quote1moveUp = useTransform(
     scrollYProgress,
     [0.2, 0.3, 0.4, 0.5, 0.6, 0.7],
@@ -50,9 +54,14 @@ const AboutNew = () => {
   );
 
   // BUTTON
-  const buttonScaleUp = useTransform(scrollYProgress, [0.65, 0.75], [0, 1]);
+  const buttonScaleUp = useTransform(
+    scrollYProgress,
+    [0.65, 0.7, 0.7, 0.75],
+    [0, 1, 1.1, 1]
+  );
   const buttonScaleUpMobile = useTransform(scrollYProgress, [0.9, 0.1], [1, 0]);
   const buttonOpacity = useTransform(scrollYProgress, [0.65, 0.75], [0, 1]);
+  const buttonMoveUp = useTransform(scrollYProgress, [0], [-50]);
 
   // SCREEN APPEARS
   const screenAppears = useTransform(
@@ -80,7 +89,7 @@ const AboutNew = () => {
             <motion.div style={{ y: titleMoveUpDesktop }}>
               <TitleSection
                 category=""
-                titleBegining="Wznosimy motorsport na wyższy poziom."
+                titleBegining="Wznieś swój motorsport na wyższy poziom."
                 titleEnding=""
               />
             </motion.div>
@@ -98,7 +107,7 @@ const AboutNew = () => {
             <motion.div
               style={{
                 scale: buttonScaleUp,
-                y: -50,
+                y: buttonMoveUp,
                 opacity: buttonOpacity,
               }}
             >
@@ -112,7 +121,7 @@ const AboutNew = () => {
             <div>
               <TitleSection
                 category=""
-                titleBegining="Wznosimy motorsport wyższy na poziom."
+                titleBegining="Wznieś swój motorsport na wyższy poziom."
                 titleEnding=""
               />
             </div>
@@ -168,7 +177,7 @@ const AboutNew = () => {
           overflow: hidden;
         }
         #about {
-          height: 300vh;
+          height: 250vh;
         }
         @media (min-width: 1440px) {
           .description-container {
@@ -179,8 +188,7 @@ const AboutNew = () => {
           .about-container {
             display: flex;
             flex-direction: column;
-            padding: 1rem;
-            gap: 1rem;
+            padding: 1rem 0rem;
             positon: static;
             height: 100%;
           }
