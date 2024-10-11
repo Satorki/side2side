@@ -83,7 +83,10 @@ const OfferNew: React.FC<Props> = ({
         @media (max-width: 768px) {
           .offer-container {
             flex-direction: column;
-            height: auto;
+            height: 100vh;
+          }
+          .description-container {
+            padding: 1rem;
           }
           .offer-container.reversed {
             flex-direction: column;

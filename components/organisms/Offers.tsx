@@ -70,11 +70,7 @@ const Offers = () => {
       />
       <style jsx>{`
         #offers {
-          background-image: radial-gradient(
-            circle at 25% 25%,
-            #c31111,
-            #e23535
-          );
+          background: black;
         }
       `}</style>
     </div>

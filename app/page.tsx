@@ -9,7 +9,7 @@ import Rewievs from "@/containers/home-page/Rewievs";
 export default function Home() {
   return (
     <div>
-      {/* <Hero /> */}
+      <Hero />
       <AboutNew />
       <Offers />
       <Projects />
