@@ -7,7 +7,7 @@ import MotorsportImage from "@/public/images/Offer/offer9.jpg";
 const Offers = () => {
   return (
     <div id="offers" className="relative z-[1]">
-      <div className="h-[30vh] opacity-0"></div>
+      <div className="h-[10vh] opacity-0"></div>
       <div className="relative z-[2]">
         <OfferNew
           category=""
@@ -31,9 +31,10 @@ const Offers = () => {
             },
           ]}
           ImageCurrent={SerwisImage}
+          offerStyle="bg-red-600"
         />
       </div>
-      <div className="h-[30vh] opacity-0"></div>
+      <div className="h-[10vh] opacity-0"></div>
       <OfferNew
         category=""
         title="Bezpieczny Tunning"
@@ -53,8 +54,9 @@ const Offers = () => {
         ]}
         ImageCurrent={TunningImage}
         isReversed={true}
+        offerStyle="bg-[#323232]"
       />
-      <div className="h-[30vh] opacity-0"></div>
+      <div className="h-[10vh] opacity-0"></div>
       <OfferNew
         category=""
         title="Wsparcie Motorsport"
@@ -73,6 +75,7 @@ const Offers = () => {
           { id: 5, title: "Modyfikacje układów napędowych i aerodynamicznych" },
         ]}
         ImageCurrent={MotorsportImage}
+        offerStyle="bg-red-700"
       />
       <div className="h-[10vh] opacity-0"></div>
       <style jsx>{`

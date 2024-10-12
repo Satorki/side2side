@@ -15,6 +15,7 @@ interface Props {
   listItems: { id: number; title: string }[];
   isReversed?: boolean;
   withCheck?: boolean;
+  offerStyle?: string;
 }
 
 const OfferNew: React.FC<Props> = ({
@@ -25,6 +26,7 @@ const OfferNew: React.FC<Props> = ({
   listItems,
   isReversed = false,
   withCheck,
+  offerStyle = "",
 }) => {
   const [isWindowMedium, setIsWindowMedium] = useState(false);
 
@@ -41,7 +43,7 @@ const OfferNew: React.FC<Props> = ({
 
   return (
     <div id="offer" className={`offer ${isReversed ? "reversed" : ""}`}>
-      <div className={`offer-container ${isReversed ? "reversed" : ""}`}>
+      <div className={`offer-container ${isReversed ? "reversed" : ""} ${offerStyle}`}>
         <div className="flex-1">
           {isWindowMedium && <ImageOffer ImageCurrent={ImageCurrent} />}
         </div>
@@ -67,7 +69,6 @@ const OfferNew: React.FC<Props> = ({
           color: #fff;
           max-width: 1440px;
           margin: 0 auto;
-          background-color: #c31111;
         }
         .offer-container.reversed {
           flex-direction: row-reverse;
