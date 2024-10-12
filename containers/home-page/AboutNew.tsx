@@ -47,10 +47,10 @@ const AboutNew = () => {
     [100, 75, 50, 25, 0, -50]
   );
   const quote1opacity = useTransform(scrollYProgress, [0.2, 0.3], [0, 1]);
-  const quote1scale = useTransform(
+  const quote1moveUpMobile = useTransform(
     scrollYProgress,
-    [0.35, 0.4, 0.45],
-    [1, 1.02, 1]
+    [0, 0.3],
+    [100, 0]
   );
 
   // BUTTON
@@ -89,7 +89,7 @@ const AboutNew = () => {
             <motion.div style={{ y: titleMoveUpDesktop }}>
               <TitleSection
                 category=""
-                titleBegining="Wznieś swój motorsport na wyższy poziom."
+                titleBegining="Z nami Twój pojazd osiągnie pełnię możliwości."
                 titleEnding=""
               />
             </motion.div>
@@ -121,7 +121,7 @@ const AboutNew = () => {
             <div>
               <TitleSection
                 category=""
-                titleBegining="Wznieś swój motorsport na wyższy poziom."
+                titleBegining="Z nami Twój pojazd osiągnie pełnię możliwości."
                 titleEnding=""
               />
             </div>
@@ -130,7 +130,7 @@ const AboutNew = () => {
               <motion.div
                 style={{
                   opacity: quote1opacity,
-                  scale: quote1scale,
+                  y: quote1moveUpMobile,
                 }}
               >
                 <AboutDescriptions />

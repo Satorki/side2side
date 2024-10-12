@@ -6,7 +6,6 @@ import Hero from "@/containers/home-page/Hero";
 import Projects from "@/containers/home-page/Projects";
 import Rewievs from "@/containers/home-page/Rewievs";
 
-
 export default function Home() {
   return (
     <div>

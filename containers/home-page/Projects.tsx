@@ -6,7 +6,7 @@ import React from "react";
 const Projects = () => {
   return (
     <div id="projects" className="projects">
-      <div className="flex flex-col gap-4 justify-center items-center max-w-[1440px] mx-auto">
+      <div className="flex flex-col gap-4 justify-center items-center">
         <TitleSection category="Projekty" titleBegining="" />
         <CarouselProject />
         <TitleSection
@@ -24,7 +24,7 @@ const Projects = () => {
         }
         @media (max-width: 768px) {
           .projects {
-            padding: 2rem 4rem;
+            padding: 2rem 0rem;
           }
         }
       `}</style>

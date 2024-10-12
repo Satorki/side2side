@@ -18,10 +18,10 @@ const AnimatedText = ({ text }: AnimatedTextProps) => {
           animate={{ color: "#ff2424" }}
           transition={{
             duration: 2,
-            delay: index * 0.3,
+            delay: index * 0.2,
             repeat: Infinity,
             repeatType: "reverse",
-            repeatDelay: 4,
+            repeatDelay: 5,
           }}
         >
           {letter}

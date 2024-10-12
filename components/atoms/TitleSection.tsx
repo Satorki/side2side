@@ -19,7 +19,7 @@ const TitleSection = ({
     <div className="font-bai flex flex-col gap-4">
       <p className="text-2xl">{category}</p>
       <div className="flex items-center gap-2">
-        <h2 className="text-5xl font-semibold">
+        <h2 className="text-5xl font-semibold leading-[60px]">
           {titleBegining} <AnimatedText text={titleAnimationText ?? ""} />{" "}
           {titleEnding}
         </h2>

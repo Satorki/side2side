@@ -11,7 +11,7 @@ const ImageOffer = ({ ImageCurrent }: Props) => {
       <Image
         src={ImageCurrent}
         alt="side2side crew around the car"
-        className="rounded-[25px] md:rounded-none object-cover w-full h-full object-center"
+        className="rounded-[25px] md:rounded-none object-cover w-full h-full object-center shadow-md"
       />
     </div>
   );
