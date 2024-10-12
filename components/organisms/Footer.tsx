@@ -5,7 +5,7 @@ const Footer = () => {
     <div>
       {" "}
       <hr />
-      <div className="bg-black text-red-200 max-w-[1440px] mx-auto text-right">
+      <div className="bg-black text-white max-w-[1440px] mx-auto text-center p-10">
         <p className="pr-10">&copy; Copyright 2024 Satorki</p>
       </div>
     </div>

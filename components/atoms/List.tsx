@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import FadeUp from "@/components/atoms/FadeUp";
 
 interface ListProps {
@@ -7,11 +7,26 @@ interface ListProps {
 }
 
 const List: React.FC<ListProps> = ({ items, withCheck = true }) => {
+  const [clickedItemId, setClickedItemId] = useState<number | null>(null);
+
+  const handleOnClick = (id: number) => {
+    setClickedItemId(id);
+    setTimeout(() => {
+      setClickedItemId(null);
+    }, 1000);
+  };
+
   return (
     <ul className="list-none p-0 m-0">
-      {items.map((item, index) => (
-        <FadeUp delay={0.5} duration={1 + index} key={item.id}>
-          <li className="flex items-center gap-1 py-1 hover:scale-105 transition-all duration-300 ease-in cursor-pointer">
+      {items.map((item) => (
+        <FadeUp delay={0.5} duration={1 + item.id} key={item.id}>
+          <li
+            onClick={() => handleOnClick(item.id)}
+            style={{
+              color: clickedItemId === item.id ? "black" : undefined,
+            }}
+            className="flex items-center gap-1 py-1 hover:scale-105 transition-all duration-300 ease-in cursor-pointer"
+          >
             {withCheck}
             {item.title}
           </li>
@@ -23,3 +38,4 @@ const List: React.FC<ListProps> = ({ items, withCheck = true }) => {
 };
 
 export default List;
+

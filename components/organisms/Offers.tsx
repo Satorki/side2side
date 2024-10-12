@@ -35,7 +35,7 @@ const Offers = () => {
         />
       </div>
       <div className="h-[10vh] opacity-0"></div>
-      <OfferNew
+      {/* <OfferNew
         category=""
         title="Bezpieczny Tunning"
         description="Specjalizujemy się w tuningu pojazdów, dostosowując je do indywidualnych preferencji klientów i zapewniając optymalne osiągi."
@@ -77,7 +77,7 @@ const Offers = () => {
         ImageCurrent={MotorsportImage}
         offerStyle="bg-red-700"
       />
-      <div className="h-[10vh] opacity-0"></div>
+      <div className="h-[10vh] opacity-0"></div> */}
       <style jsx>{`
         #offers {
           background: black;

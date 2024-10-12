@@ -23,16 +23,14 @@ const CarouselProject = () => {
     centerPadding: "0px",
     infinite: true,
     slidesToShow: 3,
+    slidesToScroll: 1,
     speed: 500,
   };
   return (
-    <div className="max-w-[1200px] mx-auto my-10 w-[80%]">
+    <div className="max-w-[1440px] mx-auto my-10 w-[80%]">
       <Slider {...settings}>
         {images.map((image, index) => (
-          <div
-            key={index}
-            className="px-5 h-[30vh] mt-[15vh] focus:outline-none"
-          >
+          <div key={index} className="h-[30vh] mt-[15vh] focus:outline-none">
             <Image
               src={image}
               alt="project"
