@@ -1,6 +1,5 @@
 import CarouselProject from "@/components/atoms/CarouselProject";
 import DescriptionSingle from "@/components/atoms/DescriptionSingle";
-import TitleSection from "@/components/atoms/TitleSection";
 import React from "react";
 
 const Projects = () => {
@@ -10,7 +9,7 @@ const Projects = () => {
         <div className="font-bai flex flex-col gap-4 items-center">
           <p className="text-2xl">Projekty</p>
           <div className="flex items-center gap-2">
-            <h2 className="text-5xl font-semibold leading-[60px]">
+            <h2 className="text-5xl font-semibold leading-[60px] text-center">
               KickSter - BMW E46 2JZ
             </h2>
           </div>

@@ -7,33 +7,34 @@ import MotorsportImage from "@/public/images/Offer/offer9.jpg";
 const Offers = () => {
   return (
     <div id="offers" className="relative z-[1]">
-      <div className="relative z-[2]">
-        <OfferNew
-          category=""
-          AnimatedText="Sprawdzony"
-          title=" Serwis"
-          description="Oferujemy kompleksowy serwis dla pojazdów osobowych i dostawczych do 3,5 tony, zapewniając ich sprawność w codziennym użytkowaniu."
-          listItems={[
-            { id: 1, title: "Regularne przeglądy techniczne" },
-            { id: 2, title: "Diagnostyka i naprawa układów mechanicznych" },
-            {
-              id: 3,
-              title: "Wymiana oleju, filtrów i płynów eksploatacyjnych",
-            },
-            {
-              id: 4,
-              title: "Serwis hamulców, zawieszenia i układu wydechowego",
-            },
-            {
-              id: 5,
-              title:
-                "Obsługa flot pojazdów firmowych (przeglądy, umowy serwisowe)",
-            },
-          ]}
-          ImageCurrent={SerwisImage}
-          offerStyle="bg-red-600"
-        />
-      </div>
+      <OfferNew
+        category=""
+        AnimatedText="Sprawdzony"
+        title=" Serwis"
+        description="Oferujemy kompleksowy serwis dla pojazdów osobowych i dostawczych do 3,5 tony, zapewniając ich sprawność w codziennym użytkowaniu."
+        listItems={[
+          { id: 1, title: "Regularne przeglądy techniczne" },
+          { id: 2, title: "Diagnostyka i naprawa układów mechanicznych" },
+          {
+            id: 3,
+            title: "Wymiana oleju, filtrów i płynów eksploatacyjnych",
+          },
+          {
+            id: 4,
+            title: "Serwis hamulców, zawieszenia i układu wydechowego",
+          },
+          {
+            id: 5,
+            title:
+              "Obsługa flot pojazdów firmowych (przeglądy, umowy serwisowe)",
+          },
+        ]}
+        ImageCurrent={SerwisImage}
+        buttonText="Zadzwoń"
+        buttonBgColor="black"
+        buttonTextColor="white"
+        offerStyle="bg-red-600"
+      />
       <OfferNew
         category=""
         AnimatedText="Bezpieczny"
@@ -55,6 +56,9 @@ const Offers = () => {
         ImageCurrent={TunningImage}
         isReversed={true}
         offerStyle="bg-[#323232]"
+        buttonText="Umów wizytę"
+        buttonBgColor="black"
+        buttonTextColor="white"
       />
       <OfferNew
         category=""
@@ -76,6 +80,9 @@ const Offers = () => {
         ]}
         ImageCurrent={MotorsportImage}
         offerStyle="bg-black"
+        buttonText="Sprawdź"
+        buttonBgColor="red"
+        buttonTextColor="white"
       />
     </div>
   );

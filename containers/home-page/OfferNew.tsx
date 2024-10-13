@@ -6,7 +6,6 @@ import TitleSection from "@/components/atoms/TitleSection";
 import React, { useEffect, useState } from "react";
 import { StaticImageData } from "next/image";
 import FadeUp from "@/components/atoms/FadeUp";
-import AnimatedText from "@/components/atoms/AnimatedText";
 
 interface Props {
   ImageCurrent: StaticImageData;
@@ -18,6 +17,9 @@ interface Props {
   withCheck?: boolean;
   offerStyle?: string;
   AnimatedText?: string;
+  buttonText?: string;
+  buttonBgColor?: string;
+  buttonTextColor?: string;
 }
 
 const OfferNew: React.FC<Props> = ({
@@ -30,6 +32,9 @@ const OfferNew: React.FC<Props> = ({
   withCheck,
   offerStyle = "",
   AnimatedText,
+  buttonText,
+  buttonBgColor,
+  buttonTextColor,
 }) => {
   const [isWindowMedium, setIsWindowMedium] = useState(false);
 
@@ -60,7 +65,6 @@ const OfferNew: React.FC<Props> = ({
               titleBegining={title}
               titleAnimationText={AnimatedText}
             />
-            
 
             {!isWindowMedium && <ImageOffer ImageCurrent={ImageCurrent} />}
 
@@ -68,7 +72,11 @@ const OfferNew: React.FC<Props> = ({
               <DescriptionSingle isBold={true} text={description} />
             </FadeUp>
             <List items={listItems} withCheck={withCheck} />
-            <ButtonAction bgColor="#000" textColor="#fff" text="Umów wizytę" />
+            <ButtonAction
+              bgColor={buttonBgColor}
+              textColor={buttonTextColor}
+              text={buttonText}
+            />
           </div>
         </div>
         <hr />
@@ -103,7 +111,7 @@ const OfferNew: React.FC<Props> = ({
             height: auto;
           }
           .description-container {
-            padding: 1rem;
+            padding: 0rem 1.2rem 2rem 1.2rem;
           }
           .offer-container.reversed {
             flex-direction: column;

@@ -172,7 +172,7 @@ const CarouselProject = () => {
             transform: scale(1);
           }
           .slick-track {
-            height: 130vw;
+            height: 110vw;
             margin-top: 0rem;
           }
         }
