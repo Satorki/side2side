@@ -6,21 +6,21 @@ import React from "react";
 const Projects = () => {
   return (
     <div id="projects" className="projects">
-      <div className="flex flex-col gap-4 justify-center items-center">
-        <TitleSection category="Projekty" titleBegining="" />
-        <CarouselProject />
+      <div className="flex flex-col justify-center items-center">
         <TitleSection
-          category=""
+          category="Projekty"
           titleBegining=""
-          titleAnimationText="KickSter E36"
+          titleAnimationText=""
         />
-        <DescriptionSingle text="Pomoc w stworzeniu samochodu dla Kickster" />
+        <TitleSection titleBegining="KickSter - BMW E46 2JZ" />
+        <CarouselProject />
+        <DescriptionSingle text="" />
       </div>
       <style jsx>{`
         .projects {
           background-color: #323232;
           color: white;
-          padding: 2rem 5rem;
+          padding: 3rem 2rem;
         }
         @media (max-width: 768px) {
           .projects {

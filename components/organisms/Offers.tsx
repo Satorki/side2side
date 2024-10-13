@@ -1,17 +1,17 @@
 "use client";
 import OfferNew from "@/containers/home-page/OfferNew";
-import SerwisImage from "@/public/images/Additional/repairing.jpg";
-import TunningImage from "@/public/images/Projects/project4.jpg";
+import SerwisImage from "@/public/images/Offer/offer2.jpeg";
+import TunningImage from "@/public/images/Offer/offer5.jpg";
 import MotorsportImage from "@/public/images/Offer/offer9.jpg";
 
 const Offers = () => {
   return (
     <div id="offers" className="relative z-[1]">
-      <div className="h-[10vh] opacity-0"></div>
       <div className="relative z-[2]">
         <OfferNew
           category=""
-          title="Sprawdzony Serwis"
+          AnimatedText="Sprawdzony"
+          title=" Serwis"
           description="Oferujemy kompleksowy serwis dla pojazdów osobowych i dostawczych do 3,5 tony, zapewniając ich sprawność w codziennym użytkowaniu."
           listItems={[
             { id: 1, title: "Regularne przeglądy techniczne" },
@@ -34,10 +34,10 @@ const Offers = () => {
           offerStyle="bg-red-600"
         />
       </div>
-      <div className="h-[10vh] opacity-0"></div>
-      {/* <OfferNew
+      <OfferNew
         category=""
-        title="Bezpieczny Tunning"
+        AnimatedText="Bezpieczny"
+        title=" Tunning"
         description="Specjalizujemy się w tuningu pojazdów, dostosowując je do indywidualnych preferencji klientów i zapewniając optymalne osiągi."
         listItems={[
           {
@@ -56,10 +56,10 @@ const Offers = () => {
         isReversed={true}
         offerStyle="bg-[#323232]"
       />
-      <div className="h-[10vh] opacity-0"></div>
       <OfferNew
         category=""
-        title="Wsparcie Motorsport"
+        AnimatedText="Wsparcie"
+        title=" Motorsport"
         description="Dla entuzjastów rajdów, wyścigów tornych i driftu oferujemy kompleksowe przygotowanie pojazdów do motorsportu."
         listItems={[
           { id: 1, title: "Przygotowanie techniczne samochodów do zawodów" },
@@ -75,15 +75,8 @@ const Offers = () => {
           { id: 5, title: "Modyfikacje układów napędowych i aerodynamicznych" },
         ]}
         ImageCurrent={MotorsportImage}
-        offerStyle="bg-red-700"
+        offerStyle="bg-black"
       />
-      <div className="h-[10vh] opacity-0"></div> */}
-      <style jsx>{`
-        #offers {
-          background: black;
-          z-index: 10;
-        }
-      `}</style>
     </div>
   );
 };

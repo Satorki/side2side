@@ -18,6 +18,7 @@ const Contact = () => {
         ]}
         ImageCurrent={MapImage}
         withCheck={false}
+        isReversed
       />
     </div>
   );

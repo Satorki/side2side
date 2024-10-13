@@ -7,7 +7,6 @@ const Rewievs = () => {
   return (
     <div id="rewievs" className="rewievs">
       <div className="flex flex-col gap-5 justify-center items-center max-w-[1440px] mx-auto">
-        <TitleSection category="Opinie" titleBegining="Nasi klienci" />
         <div className="rewievs-container">
           <ReviewSingle
             text="Kilukrotnie korzystałem z usług i nigdy się nie zawiodłem. Powierzony temat wykonany zawsze na 101%. Warszat prowadzony z dbałością o najdrobniejsze detale i przyjaznym podejściem dla klienta.
@@ -31,14 +30,13 @@ Okazało się też, że serwisuje auta vipów jak na zdjęciu. Jednym słowem PO
             logo=""
           />
         </div>
-        <ReviewQuote />
       </div>
       <style jsx>{`
         .rewievs {
           background-image: radial-gradient(
-            circle 800px at 50% 70%,
+            circle 800px at 50% 50%,
             #850001,
-            #e35e5f
+            #e34040
           );
           color: white;
           padding: 2rem 5rem;

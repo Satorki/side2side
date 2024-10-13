@@ -6,6 +6,7 @@ import TitleSection from "@/components/atoms/TitleSection";
 import React, { useEffect, useState } from "react";
 import { StaticImageData } from "next/image";
 import FadeUp from "@/components/atoms/FadeUp";
+import AnimatedText from "@/components/atoms/AnimatedText";
 
 interface Props {
   ImageCurrent: StaticImageData;
@@ -16,6 +17,7 @@ interface Props {
   isReversed?: boolean;
   withCheck?: boolean;
   offerStyle?: string;
+  AnimatedText?: string;
 }
 
 const OfferNew: React.FC<Props> = ({
@@ -27,6 +29,7 @@ const OfferNew: React.FC<Props> = ({
   isReversed = false,
   withCheck,
   offerStyle = "",
+  AnimatedText
 }) => {
   const [isWindowMedium, setIsWindowMedium] = useState(false);
 
@@ -42,14 +45,14 @@ const OfferNew: React.FC<Props> = ({
   }, []);
 
   return (
-    <div id="offer" className={`offer ${isReversed ? "reversed" : ""}`}>
-      <div className={`offer-container ${isReversed ? "reversed" : ""} ${offerStyle}`}>
+    <div id="offer" className={`offer ${isReversed ? "reversed" : ""} ${offerStyle}`}>
+      <div className={`offer-container ${isReversed ? "reversed" : ""} `}>
         <div className="flex-1">
           {isWindowMedium && <ImageOffer ImageCurrent={ImageCurrent} />}
         </div>
         <div className="flex-1">
           <div className="description-container">
-            <TitleSection category={category} titleBegining={title} />
+            <TitleSection category={category} titleBegining={title} titleAnimationText={AnimatedText} />
             {!isWindowMedium && <ImageOffer ImageCurrent={ImageCurrent} />}
             <FadeUp delay={0.5} duration={2}>
               <DescriptionSingle isBold={true} text={description} />

@@ -12,7 +12,7 @@ const AboutDescriptions = () => {
 Niezależnie od tego, czy masz samochód dostawczy, sportowy, czy codzienny, wiemy, że utrzymanie go w doskonałej formie może być wyzwaniem."
       />
       <div className="text-2xl not-italic font-semibold mt-5 mb-1">
-      <AnimatedText text="Profesjonalizm" /> na każdym etapie.
+        Profesjonalizm na każdym etapie.
       </div>
       <DescriptionSingle
         text="
