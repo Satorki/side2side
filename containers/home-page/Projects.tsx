@@ -12,7 +12,7 @@ const Projects = () => {
           titleBegining=""
           titleAnimationText=""
         />
-        <TitleSection titleBegining="KickSter - BMW E46 2JZ" />
+        <TitleSection category="" titleBegining=" - KickSter" titleAnimationText="BMW E46 2JZ" />
         <CarouselProject />
         <DescriptionSingle text="" />
       </div>
@@ -21,6 +21,7 @@ const Projects = () => {
           background-color: #323232;
           color: white;
           padding: 3rem 2rem;
+          height: auto;
         }
         @media (max-width: 768px) {
           .projects {

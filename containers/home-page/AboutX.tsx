@@ -77,6 +77,82 @@ const About = () => {
     // );
     // const quote3opacity = useTransform(scrollYProgress, [0.6, 0.7], [0, 1]);
 
+    // const projects = [
+    //   {
+    //     image: a0,
+    //     title: "Custom Car",
+    //     description: "BMW E46 2JZ - 650 KM / 700 Nm",
+    //   },
+    //   {
+    //     image: a1,
+    //     title: "Car Repair",
+    //     description:
+    //       "Święta w warsztacie z karoserią @___kickster___ 🎄🎄🎄🎄 Przygotowania trwają - czasu bardzo mało 🤷",
+    //   },
+    //   {
+    //     image: a2,
+    //     title: "Car Maintenance",
+    //     description:
+    //       "Choć nowy warsztat jeszcze trzeba wykończyć, powoli szykujemy się do finalnego składania e46 2jz @___kickster___  😎",
+    //   },
+    //   {
+    //     image: a3,
+    //     title: "Car Accessories",
+    //     description:
+    //       "Nanosimy drobne poprawki i już niedługo lakierowanie karoserii 💪",
+    //   },
+    //   {
+    //     image: a4,
+    //     title: "Car Insurance",
+    //     description:
+    //       "Ostateczny przymiar pozycji kierowcy, zawieszenia i silnika 🔥",
+    //   },
+    //   {
+    //     image: a5,
+    //     title: "Custom Car",
+    //     description:
+    //       "Silnik w komorze jak i pierwsza części układu chłodzenia 🔥",
+    //   },
+    //   {
+    //     image: a6,
+    //     title: "Car Repair",
+    //     description:
+    //       "Na pokład E46 @___kickster___ wchodzą kolejne komponenty Kompletna elektronika od @ecumaster_official, którą zgra ze sobą @konopackiracing 😎",
+    //   },
+    //   {
+    //     image: a7,
+    //     title: "Car Maintenance",
+    //     description: "Majówka z 2JZ ✌️😎",
+    //   },
+    //   {
+    //     image: a7a,
+    //     title: "Car Accessories",
+    //     description: "2JZ Zmontowany",
+    //   },
+    //   {
+    //     image: a7b,
+    //     title: "Car Accessories",
+    //     description: "Turbo na 2JZ",
+    //   },
+    //   {
+    //     image: a7c,
+    //     title: "Car Accessories",
+    //     description: "Wszystko pod maską prawie kompletne",
+    //   },
+    //   {
+    //     image: a8,
+    //     title: "Car Accessories",
+    //     description:
+    //       "A więc zwieńczenie 6 miesięcy pracy i najważniejsze, auto podaje jak złe 🔥🔥🔥 Projekt przetestowany i można uznać za zakończony 💪 🔥 BMW E46 2JZ @___kickster___ by Side2Side Motorsport 🔥",
+    //   },
+    //   {
+    //     image: a9,
+    //     title: "Car Insurance",
+    //     description:
+    //       "👌 E46 świeżo zbudowana na ten sezon u nas w Side2Side Motorsport okazuje się bardzo szybką i konkurencyjna konstrukcją dzięki świetnie rozłożonej masie 💪",
+    //   },
+    // ];
+
   return (
     <div id="about" ref={container}>
       <div className="about-container">
