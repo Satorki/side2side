@@ -130,7 +130,7 @@ const CarouselProject = () => {
       </Slider>
       <style jsx global>{`
         .slick-center {
-          transform: scale(1.45) translateY(10%);
+          transform: scale(1.45) translateY(14%);
           z-index: 10;
           position: relative;
         }
@@ -145,11 +145,11 @@ const CarouselProject = () => {
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-top: 10rem;
+          margin-top: 5rem;
         }
         @media (max-width: 3200px) {
           .slick-track {
-            height: 80vh;
+            height: 82vh;
           }
         }
         @media (max-width: 1900px) {
@@ -169,7 +169,7 @@ const CarouselProject = () => {
         }
         @media (max-width: 768px) {
           .slick-center {
-            transform: scale(1) translateY(14%);
+            transform: scale(1);
           }
           .slick-track {
             height: 130vw;

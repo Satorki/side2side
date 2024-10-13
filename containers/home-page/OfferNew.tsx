@@ -29,7 +29,7 @@ const OfferNew: React.FC<Props> = ({
   isReversed = false,
   withCheck,
   offerStyle = "",
-  AnimatedText
+  AnimatedText,
 }) => {
   const [isWindowMedium, setIsWindowMedium] = useState(false);
 
@@ -45,15 +45,25 @@ const OfferNew: React.FC<Props> = ({
   }, []);
 
   return (
-    <div id="offer" className={`offer ${isReversed ? "reversed" : ""} ${offerStyle}`}>
+    <div
+      id="offer"
+      className={`offer ${isReversed ? "reversed" : ""} ${offerStyle}`}
+    >
       <div className={`offer-container ${isReversed ? "reversed" : ""} `}>
         <div className="flex-1">
           {isWindowMedium && <ImageOffer ImageCurrent={ImageCurrent} />}
         </div>
-        <div className="flex-1">
+        <div className="flex-1 overflow-hidden">
           <div className="description-container">
-            <TitleSection category={category} titleBegining={title} titleAnimationText={AnimatedText} />
+            <TitleSection
+              category={category}
+              titleBegining={title}
+              titleAnimationText={AnimatedText}
+            />
+            
+
             {!isWindowMedium && <ImageOffer ImageCurrent={ImageCurrent} />}
+
             <FadeUp delay={0.5} duration={2}>
               <DescriptionSingle isBold={true} text={description} />
             </FadeUp>

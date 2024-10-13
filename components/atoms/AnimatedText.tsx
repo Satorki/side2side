@@ -10,7 +10,7 @@ const AnimatedText = ({ text }: AnimatedTextProps) => {
   const letters = Array.from(text);
 
   return (
-    <div className="inline-block">
+    <div className="animated-text">
       {letters.map((letter, index) => (
         <motion.span
           key={index}
@@ -27,6 +27,13 @@ const AnimatedText = ({ text }: AnimatedTextProps) => {
           {letter}
         </motion.span>
       ))}
+      <style jsx>{`
+        .animated-text {
+          display: inline-block;
+          text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000,
+            1px -1px 0 #000;
+        }
+      `}</style>
     </div>
   );
 };
