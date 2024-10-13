@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import FadeUp from "@/components/atoms/FadeUp";
 
 interface ListProps {

@@ -1,4 +1,3 @@
-import AnimatedText from "../atoms/AnimatedText";
 import DescriptionSingle from "../atoms/DescriptionSingle";
 
 const AboutDescriptions = () => {
