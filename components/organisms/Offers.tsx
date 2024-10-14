@@ -2,7 +2,7 @@
 import OfferNew from "@/components/molecules/OfferNew";
 import SerwisImage from "@/public/images/Offer/offer2.jpeg";
 import TunningImage from "@/public/images/Offer/offer5.jpg";
-import MotorsportImage from "@/public/images/Offer/offer9.jpg";
+// import MotorsportImage from "@/public/images/Offer/offer9.jpg";
 import { PhoneIncoming } from "lucide-react";
 
 const Offers = () => {
@@ -62,7 +62,7 @@ const Offers = () => {
         buttonBgColor="black"
         buttonTextColor="white"
       />
-      <OfferNew
+      {/* <OfferNew
         category=""
         AnimatedText="Wsparcie"
         title=" Motorsport"
@@ -104,7 +104,7 @@ const Offers = () => {
         buttonText="Sprawdź"
         buttonBgColor="red"
         buttonTextColor="white"
-      />
+      /> */}
     </div>
   );
 };

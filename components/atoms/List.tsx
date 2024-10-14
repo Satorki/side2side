@@ -7,10 +7,10 @@ import {
 } from "@/components/ui/accordion";
 
 interface ListProps {
-  items: { id: number; title: string; content?: string }[];
+  items: { id: number; content?: string; title: string }[];
 }
 
-const List = ({ items }: ListProps) => {
+export const List = ({ items }: ListProps) => {
   return (
     <Accordion type="single" collapsible>
       {items.map((item) => (

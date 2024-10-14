@@ -14,7 +14,6 @@ interface Props {
   description: string;
   listItems: { id: number; title: string }[];
   isReversed?: boolean;
-  withCheck?: boolean;
   offerStyle?: string;
   AnimatedText?: string;
   buttonText?: string;
@@ -30,7 +29,6 @@ const OfferNew: React.FC<Props> = ({
   description,
   listItems,
   isReversed = false,
-  withCheck,
   offerStyle = "",
   AnimatedText,
   buttonText,
@@ -73,7 +71,7 @@ const OfferNew: React.FC<Props> = ({
             <FadeUp delay={0.5} duration={2}>
               <DescriptionSingle isBold={true} text={description} />
             </FadeUp>
-            <List items={listItems} withCheck={withCheck} />
+            <List items={listItems} />
             <ButtonAction
               bgColor={buttonBgColor}
               textColor={buttonTextColor}

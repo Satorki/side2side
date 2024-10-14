@@ -17,7 +17,6 @@ const Contact = () => {
           { id: 5, title: "side2side.garage@gmail.com" },
         ]}
         ImageCurrent={MapImage}
-        withCheck={false}
         isReversed
       />
     </div>

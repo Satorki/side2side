@@ -1,13 +1,48 @@
 import ButtonAction from "@/components/atoms/ButtonAction";
-import DescriptionSingle from "@/components/atoms/DescriptionSingle";
 import ImageOffer from "@/components/atoms/ImageOffer";
-import List from "@/components/atoms/List";
-import TitleSection from "@/components/atoms/TitleSection";
+// import DescriptionSingle from "@/components/atoms/DescriptionSingle";
+// import List from "@/components/atoms/List";
+// import TitleSection from "@/components/atoms/TitleSection";
 import React, { useEffect, useState } from "react";
-import { StaticImageData } from "next/image";
+import SerwisImage from "@/assets/images/serwis.png";
+
 import FadeUp from "@/components/atoms/FadeUp";
 
 const OfferService: React.FC = () => {
+
+
+//   <OfferNew
+//   category=""
+//   AnimatedText="Sprawdzony"
+//   title=" Serwis"
+//   description="Oferujemy kompleksowy serwis dla pojazdów osobowych i dostawczych do 3,5 tony, zapewniając ich sprawność w codziennym użytkowaniu."
+//   listItems={[
+//     { id: 1, title: "Regularne przeglądy techniczne" },
+//     { id: 2, title: "Diagnostyka i naprawa układów mechanicznych" },
+//     {
+//       id: 3,
+//       title: "Wymiana oleju, filtrów i płynów eksploatacyjnych",
+//     },
+//     {
+//       id: 4,
+//       title: "Serwis hamulców, zawieszenia i układu wydechowego",
+//     },
+//     {
+//       id: 5,
+//       title:
+//         "Obsługa flot pojazdów firmowych (przeglądy, umowy serwisowe)",
+//     },
+//   ]}
+//   ImageCurrent={SerwisImage}
+//   buttonText="Zadzwoń"
+//   buttonBgColor="black"
+//   buttonTextColor="white"
+//   buttonIcon={<PhoneIncoming />}
+//   offerStyle="bg-red-600"
+// />
+
+
+
   const [isWindowMedium, setIsWindowMedium] = useState(false);
 
   useEffect(() => {
@@ -25,18 +60,19 @@ const OfferService: React.FC = () => {
     <div id="offer">
       <div className="offer-container">
         <div className="flex-1">
-          {isWindowMedium && <ImageOffer />}
+          {/* {isWindowMedium && <ImageOffer  />} */}
         </div>
         <div className="flex-1 overflow-hidden">
           <div className="description-container">
-            <TitleSection />
+            {/* <TitleSection /> */}
 
-            {!isWindowMedium && <ImageOffer />}
+            {!isWindowMedium && <ImageOffer ImageCurrent={SerwisImage} />}
 
             <FadeUp delay={0.5} duration={2}>
-              <DescriptionSingle isBold={true} />
+              {/* <DescriptionSingle isBold={true} /> */}
+              test
             </FadeUp>
-            <List />
+            {/* <List /> */}
             <ButtonAction />
           </div>
         </div>
@@ -79,4 +115,3 @@ const OfferService: React.FC = () => {
 };
 
 export default OfferService;
-
