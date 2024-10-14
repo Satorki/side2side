@@ -134,9 +134,12 @@ const CarouselProject = () => {
           z-index: 10;
           position: relative;
         }
-        .slick-slide.slick-active:not(.slick-center) {
+        .slick-slide.slick-active:not(.slick-center) img {
           transform: scale(0.7);
           opacity: 0.4;
+        }
+        .slick-slide.slick-active:not(.slick-center) p {
+          opacity: 0;
         }
         .slick-slide {
           transition: transform 1s ease;
@@ -154,7 +157,7 @@ const CarouselProject = () => {
         }
         @media (max-width: 1900px) {
           .slick-track {
-            height: 70vh;
+            height: 75vh;
           }
         }
         @media (max-width: 1500px) {

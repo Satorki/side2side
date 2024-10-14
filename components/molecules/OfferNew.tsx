@@ -20,6 +20,7 @@ interface Props {
   buttonText?: string;
   buttonBgColor?: string;
   buttonTextColor?: string;
+  buttonIcon?: React.ReactNode;
 }
 
 const OfferNew: React.FC<Props> = ({
@@ -35,6 +36,7 @@ const OfferNew: React.FC<Props> = ({
   buttonText,
   buttonBgColor,
   buttonTextColor,
+  buttonIcon,
 }) => {
   const [isWindowMedium, setIsWindowMedium] = useState(false);
 
@@ -76,6 +78,7 @@ const OfferNew: React.FC<Props> = ({
               bgColor={buttonBgColor}
               textColor={buttonTextColor}
               text={buttonText}
+              icon={buttonIcon}
             />
           </div>
         </div>
@@ -100,9 +103,6 @@ const OfferNew: React.FC<Props> = ({
           justify-content: center;
           gap: 2rem;
           padding: 2rem;
-        }
-        #offer {
-          z-index: 10;
         }
 
         @media (max-width: 768px) {

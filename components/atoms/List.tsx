@@ -1,23 +1,29 @@
 import FadeUp from "@/components/atoms/FadeUp";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 interface ListProps {
-  items: { id: number; title: string }[];
-  withCheck?: boolean;
+  items: { id: number; title: string; content?: string }[];
 }
 
-const List = ({ items, withCheck = true }: ListProps) => {
+const List = ({ items }: ListProps) => {
   return (
-    <ul className="list-none p-0 m-0 overflow-hidden">
+    <Accordion type="single" collapsible>
       {items.map((item) => (
         <FadeUp delay={0.5} duration={1 + item.id} key={item.id}>
-          <li className="flex items-center gap-1 py-1 hover:scale-105 hover:translate-x-5 transition-all duration-300 ease-in cursor-pointer">
-            {withCheck}
-            {item.title}
-          </li>
-          <hr />
+          <AccordionItem value={`item-${item.id}`}>
+            <AccordionTrigger className="py-1 text-start hover:text-red-400 transition-all duration-300 ease-in cursor-pointer text-[1.1rem]">
+              {item.title}
+            </AccordionTrigger>
+            <AccordionContent>{item.content}</AccordionContent>
+          </AccordionItem>
         </FadeUp>
       ))}
-    </ul>
+    </Accordion>
   );
 };
 

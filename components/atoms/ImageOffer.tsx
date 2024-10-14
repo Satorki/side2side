@@ -7,7 +7,7 @@ interface Props {
 
 const ImageOffer = ({ ImageCurrent }: Props) => {
   return (
-    <div className="flex-1 w-full h-[70vh] scale-125 md:scale-100">
+    <div className="flex-1 w-full h-[70vh] py-5 md:py-0 scale-125 md:scale-100">
       <Image
         src={ImageCurrent}
         alt="side2side"

@@ -1,5 +1,5 @@
 import React from "react";
-import OfferNew from "./OfferNew";
+import OfferNew from "../../components/molecules/OfferNew";
 import MapImage from "@/public/images/map.png";
 
 const Contact = () => {

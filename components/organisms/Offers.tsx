@@ -1,12 +1,13 @@
 "use client";
-import OfferNew from "@/containers/home-page/OfferNew";
+import OfferNew from "@/components/molecules/OfferNew";
 import SerwisImage from "@/public/images/Offer/offer2.jpeg";
 import TunningImage from "@/public/images/Offer/offer5.jpg";
 import MotorsportImage from "@/public/images/Offer/offer9.jpg";
+import { PhoneIncoming } from "lucide-react";
 
 const Offers = () => {
   return (
-    <div id="offers" className="relative z-[1]">
+    <div id="offers">
       <OfferNew
         category=""
         AnimatedText="Sprawdzony"
@@ -33,6 +34,7 @@ const Offers = () => {
         buttonText="Zadzwoń"
         buttonBgColor="black"
         buttonTextColor="white"
+        buttonIcon={<PhoneIncoming />}
         offerStyle="bg-red-600"
       />
       <OfferNew
@@ -66,17 +68,36 @@ const Offers = () => {
         title=" Motorsport"
         description="Dla entuzjastów rajdów, wyścigów tornych i driftu oferujemy kompleksowe przygotowanie pojazdów do motorsportu."
         listItems={[
-          { id: 1, title: "Przygotowanie techniczne samochodów do zawodów" },
+          {
+            id: 1,
+            title: "Przygotowanie techniczne samochodów do zawodów",
+            content:
+              "Twoje auto potrzebuje precyzyjnych przygotowań, aby sprostać wymaganiom zawodów? Oferujemy kompleksowe przygotowanie techniczne, zapewniając, że każdy aspekt Twojego pojazdu będzie gotowy do startu – od silnika po zawieszenie.",
+          },
           {
             id: 2,
             title: "Tuning pod kątem specyficznych dyscyplin sportowych",
+            content:
+              "Każda dyscyplina motorsportu ma swoje wymagania. Niezależnie od tego, czy to rajdy, wyścigi torowe czy drift, dostosujemy Twój samochód do specyfiki zawodów, aby osiągnąć maksymalne wyniki w konkretnej konkurencji.",
           },
           {
             id: 3,
             title: "Obsługa techniczna pojazdów na eventach motoryzacyjnych",
+            content:
+              "Zapewniamy pełną obsługę techniczną Twojego pojazdu podczas eventów. Nasi specjaliści zadbają o sprawność auta, tak abyś mógł skupić się wyłącznie na zawodach i osiąganiu jak najlepszych wyników.",
           },
-          { id: 4, title: "Wsparcie techniczne podczas zawodów i pokazów" },
-          { id: 5, title: "Modyfikacje układów napędowych i aerodynamicznych" },
+          {
+            id: 4,
+            title: "Wsparcie techniczne podczas zawodów i pokazów",
+            content:
+              "Niezależnie od miejsca i czasu, nasze wsparcie techniczne podczas zawodów czy pokazów motoryzacyjnych jest dostępne dla Ciebie. Jesteśmy na miejscu, aby szybko i skutecznie rozwiązywać ewentualne problemy techniczne.",
+          },
+          {
+            id: 5,
+            title: "Modyfikacje układów napędowych i aerodynamicznych",
+            content:
+              "Oferujemy modyfikacje układów napędowych i aerodynamicznych, które zapewnią lepsze przyspieszenie, większą stabilność i optymalne osiągi na torze. Spraw, aby Twój pojazd był liderem na zawodach.",
+          },
         ]}
         ImageCurrent={MotorsportImage}
         offerStyle="bg-black"

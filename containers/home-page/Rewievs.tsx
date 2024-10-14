@@ -1,3 +1,4 @@
+import FadeUp from "@/components/atoms/FadeUp";
 import ReviewQuote from "@/components/atoms/ReviewQuote";
 import TitleSection from "@/components/atoms/TitleSection";
 import ReviewSingle from "@/components/molecules/ReviewSingle";
@@ -6,8 +7,17 @@ import React from "react";
 const Rewievs = () => {
   return (
     <div id="rewievs" className="rewievs">
-      <div className="flex flex-col gap-5 justify-center items-center max-w-[1440px] mx-auto">
+      <div className="flex flex-col gap-10 justify-center items-center max-w-[1440px] mx-auto">
+        <div className="font-bai flex flex-col gap-4 items-center">
+          <p className="text-2xl">Opinie</p>
+          <div className="flex items-center gap-2">
+            <h2 className="text-5xl font-semibold leading-[60px] text-center">
+              Sprawdz jak nas oceniają
+            </h2>
+          </div>
+        </div>
         <div className="rewievs-container">
+          
           <ReviewSingle
             text="Kilukrotnie korzystałem z usług i nigdy się nie zawiodłem. Powierzony temat wykonany zawsze na 101%. Warszat prowadzony z dbałością o najdrobniejsze detale i przyjaznym podejściem dla klienta.
 Reasumowując zdecydowanie polecam :)"
@@ -34,7 +44,7 @@ Okazało się też, że serwisuje auta vipów jak na zdjęciu. Jednym słowem PO
       <style jsx>{`
         .rewievs {
           background-image: radial-gradient(
-            circle 800px at 50% 50%,
+            circle 1000px at 50% 60%,
             #850001,
             #e34040
           );

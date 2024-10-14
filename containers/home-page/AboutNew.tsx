@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import ButtonAction from "@/components/atoms/ButtonAction";
 import AboutDescriptions from "@/components/molecules/AboutDescriptionsX";
+import { CornerRightDown } from "lucide-react";
 
 const AboutNew = () => {
   const [isWindowMedium, setIsWindowMedium] = useState(false);
@@ -47,11 +48,7 @@ const AboutNew = () => {
     [100, 75, 50, 25, 0, -50]
   );
   const quote1opacity = useTransform(scrollYProgress, [0.2, 0.3], [0, 1]);
-  const quote1moveUpMobile = useTransform(
-    scrollYProgress,
-    [0, 0.3],
-    [100, 0]
-  );
+  const quote1moveUpMobile = useTransform(scrollYProgress, [0, 0.3], [100, 0]);
 
   // BUTTON
   const buttonScaleUp = useTransform(
@@ -111,7 +108,12 @@ const AboutNew = () => {
                 opacity: buttonOpacity,
               }}
             >
-              <ButtonAction bgColor="#d52727" textColor="#FFF" text="Sprawdź" />
+              <ButtonAction
+                bgColor="#d52727"
+                textColor="#FFF"
+                text="Sprawdź"
+                icon={<CornerRightDown />}
+              />
             </motion.div>
           </div>
         </div>
