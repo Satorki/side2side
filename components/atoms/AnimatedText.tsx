@@ -21,7 +21,7 @@ const AnimatedText = ({ text }: AnimatedTextProps) => {
             delay: index * 0.2,
             repeat: Infinity,
             repeatType: "reverse",
-            repeatDelay: 5,
+            repeatDelay: 3,
           }}
         >
           {letter}

@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
-import { TextEffect } from "./TextEffect";
+
 import { useInView } from "framer-motion";
+import FadeUp from "./FadeUp";
 
 interface Props {
   text: string;
@@ -12,9 +13,7 @@ const ReviewText = ({ text }: Props) => {
 
   return (
     <div ref={ref} className="text-xl italic text-center">
-      <TextEffect per="word" preset="blur" trigger={isInView}>
-        {text}
-      </TextEffect>
+      <FadeUp delay={1}>{text}</FadeUp>
     </div>
   );
 };

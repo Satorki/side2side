@@ -12,11 +12,11 @@ interface ListProps {
 
 export const List = ({ items }: ListProps) => {
   return (
-    <Accordion type="single" collapsible>
+    <Accordion type="single" collapsible className="overflow-hidden">
       {items.map((item) => (
         <FadeUp delay={0.5} duration={1 + item.id} key={item.id}>
           <AccordionItem value={`item-${item.id}`}>
-            <AccordionTrigger className="py-1 text-start hover:text-red-400 transition-all duration-300 ease-in cursor-pointer text-[1.1rem]">
+            <AccordionTrigger className="py-1 text-start hover:text-red-400 transition-all duration-300 ease-in cursor-pointer text-[1.1rem] ">
               {item.title}
             </AccordionTrigger>
             <AccordionContent>{item.content}</AccordionContent>
