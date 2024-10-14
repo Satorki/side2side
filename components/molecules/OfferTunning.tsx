@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import ImageOffer from "../atoms/ImageOffer";
+import SerwisImage from "../../public/images/serwis.png";
 
 const OfferTunning = () => {
   //     <OfferNew
@@ -49,9 +51,9 @@ const OfferTunning = () => {
           <div className="description-container">
             {/* <TitleSection /> */}
 
-            {/* {!isWindowMedium && <ImageOffer ImageCurrent={SerwisImage} />}
+            {!isWindowMedium && <ImageOffer ImageCurrent={SerwisImage} />}
 
-            <FadeUp delay={0.5} duration={2}>
+            {/* <FadeUp delay={0.5} duration={2}>
               <DescriptionSingle isBold={true} text="Dla entuzjastów rajdów, wyścigów tornych i driftu oferujemy kompleksowe przygotowanie pojazdów do motorsportu." />
               test
             </FadeUp> */}

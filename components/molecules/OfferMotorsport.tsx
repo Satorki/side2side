@@ -79,11 +79,17 @@ const OfferMotorsport = () => {
                   isBold={true}
                   text="Dla entuzjastów rajdów, wyścigów tornych i driftu oferujemy kompleksowe przygotowanie pojazdów do motorsportu."
                 />
-                <BorderTrail transition={{ duration: 10 }} />
+                <BorderTrail
+                  transition={{
+                    duration: 10,
+                    repeat: Infinity,
+                    ease: "easeOut",
+                  }}
+                />
               </div>
             </FadeUp>
             <List items={listItems} />
-            <ButtonAction text="Sprawdź" bgColor="red" textColor="white" />
+            <ButtonAction text="Sprawdź" bgColor="red" textColor="white" icon={<PhoneIncoming />} />
           </div>
         </div>
         <hr />

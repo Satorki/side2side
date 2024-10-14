@@ -9,39 +9,35 @@ import SerwisImage from "@/assets/images/serwis.png";
 import FadeUp from "@/components/atoms/FadeUp";
 
 const OfferService: React.FC = () => {
-
-
-//   <OfferNew
-//   category=""
-//   AnimatedText="Sprawdzony"
-//   title=" Serwis"
-//   description="Oferujemy kompleksowy serwis dla pojazdów osobowych i dostawczych do 3,5 tony, zapewniając ich sprawność w codziennym użytkowaniu."
-//   listItems={[
-//     { id: 1, title: "Regularne przeglądy techniczne" },
-//     { id: 2, title: "Diagnostyka i naprawa układów mechanicznych" },
-//     {
-//       id: 3,
-//       title: "Wymiana oleju, filtrów i płynów eksploatacyjnych",
-//     },
-//     {
-//       id: 4,
-//       title: "Serwis hamulców, zawieszenia i układu wydechowego",
-//     },
-//     {
-//       id: 5,
-//       title:
-//         "Obsługa flot pojazdów firmowych (przeglądy, umowy serwisowe)",
-//     },
-//   ]}
-//   ImageCurrent={SerwisImage}
-//   buttonText="Zadzwoń"
-//   buttonBgColor="black"
-//   buttonTextColor="white"
-//   buttonIcon={<PhoneIncoming />}
-//   offerStyle="bg-red-600"
-// />
-
-
+  //   <OfferNew
+  //   category=""
+  //   AnimatedText="Sprawdzony"
+  //   title=" Serwis"
+  //   description="Oferujemy kompleksowy serwis dla pojazdów osobowych i dostawczych do 3,5 tony, zapewniając ich sprawność w codziennym użytkowaniu."
+  //   listItems={[
+  //     { id: 1, title: "Regularne przeglądy techniczne" },
+  //     { id: 2, title: "Diagnostyka i naprawa układów mechanicznych" },
+  //     {
+  //       id: 3,
+  //       title: "Wymiana oleju, filtrów i płynów eksploatacyjnych",
+  //     },
+  //     {
+  //       id: 4,
+  //       title: "Serwis hamulców, zawieszenia i układu wydechowego",
+  //     },
+  //     {
+  //       id: 5,
+  //       title:
+  //         "Obsługa flot pojazdów firmowych (przeglądy, umowy serwisowe)",
+  //     },
+  //   ]}
+  //   ImageCurrent={SerwisImage}
+  //   buttonText="Zadzwoń"
+  //   buttonBgColor="black"
+  //   buttonTextColor="white"
+  //   buttonIcon={<PhoneIncoming />}
+  //   offerStyle="bg-red-600"
+  // />
 
   const [isWindowMedium, setIsWindowMedium] = useState(false);
 
@@ -57,7 +53,7 @@ const OfferService: React.FC = () => {
   }, []);
 
   return (
-    <div id="offer">
+    <div id="offer-service">
       <div className="offer-container">
         <div className="flex-1">
           {/* {isWindowMedium && <ImageOffer  />} */}
@@ -95,7 +91,7 @@ const OfferService: React.FC = () => {
           gap: 2rem;
           padding: 2rem;
         }
-        #offer {
+        #offer-service {
           position: sticky;
           top: 75px;
         }
