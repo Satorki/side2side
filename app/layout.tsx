@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "../styles/globals.css";
 import Footer from "@/components/organisms/Footer";
 import Header from "@/components/organisms/Header";
-import Favicon from "../public/images/favicon-bigs.png";
+import Favicon from "@/public/images/Icons/favicon-bigs.png";
 
 export const metadata: Metadata = {
   title: "Side2Side",

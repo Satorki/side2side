@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import MotorsportImage from "@/public/images/Offer/offer9.jpg";
+import MotorsportImage from "@/public/images/Motorsport/offer9.jpg";
 import { PhoneIncoming } from "lucide-react";
 import ImageOffer from "../atoms/ImageOffer";
 import DescriptionSingle from "../atoms/DescriptionSingle";

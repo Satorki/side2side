@@ -1,12 +1,12 @@
 import ButtonAction from "@/components/atoms/ButtonAction";
 import ImageOffer from "@/components/atoms/ImageOffer";
 import React, { useEffect, useState } from "react";
-import SerwisImage from "@/public/images/Offer/offer2.jpeg";
+import SerwisImage from "@/public/images/Service/offer2.jpeg";
 
 import FadeUp from "@/components/atoms/FadeUp";
 import TitleSection from "../atoms/TitleSection";
 import DescriptionSingle from "../atoms/DescriptionSingle";
-import OfferServiceElements from "./OfferServiceElements";
+import OfferServiceElements from "../molecules/OfferServiceElements";
 import { PhoneCall } from "lucide-react";
 
 const OfferService: React.FC = () => {
@@ -27,19 +27,11 @@ const OfferService: React.FC = () => {
     <div id="offer-service">
       <div className="offer-container">
         <div className="flex-1">
-          {isWindowMedium && <ImageOffer ImageCurrent={SerwisImage} />}
-        </div>
-        <div className="flex-1 overflow-hidden">
-          <div className="description-container">
-            <div className="p-2">
-              <TitleSection
-                category="Oferta"
-                titleBegining="Profesjonalny Serwis"
-              />
-            </div>
-
-            {!isWindowMedium && <ImageOffer ImageCurrent={SerwisImage} />}
-
+          <div className="p-2">
+            <TitleSection
+              category="Oferta"
+              titleBegining="Profesjonalny Serwis"
+            />
             <FadeUp delay={0.5} duration={2}>
               <div className="px-4">
                 <DescriptionSingle
@@ -48,6 +40,13 @@ const OfferService: React.FC = () => {
                 />
               </div>
             </FadeUp>
+          </div>
+          {isWindowMedium && <ImageOffer ImageCurrent={SerwisImage} />}
+        </div>
+        <div className="flex-1 overflow-hidden">
+          <div className="description-container">
+            {!isWindowMedium && <ImageOffer ImageCurrent={SerwisImage} />}
+
             <OfferServiceElements />
             <div className="px-4">
               <ButtonAction

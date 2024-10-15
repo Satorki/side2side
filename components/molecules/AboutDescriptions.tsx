@@ -28,7 +28,7 @@ Oferujemy kompleksową obsługę – od rutynowych przeglądów po zaawansowane 
         />
       </div>
       <div className="py-2"></div>
-      <DescriptionSingle text=" Naszym celem jest serwisowanie, a także tworzenie pojazdów, które dostarczają niezapomnianych wrażeń na drodze i torze." />
+      <DescriptionSingle text="Naszym celem jest serwisowanie, a także tworzenie pojazdów, które dostarczają niezapomnianych wrażeń na drodze i torze." />
     </div>
   );
 };
