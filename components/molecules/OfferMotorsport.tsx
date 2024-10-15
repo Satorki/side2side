@@ -89,7 +89,12 @@ const OfferMotorsport = () => {
               </div>
             </FadeUp>
             <List items={listItems} />
-            <ButtonAction text="Sprawdź" bgColor="red" textColor="white" icon={<PhoneIncoming />} />
+            <ButtonAction
+              text="Sprawdź"
+              bgColor="red"
+              textColor="white"
+              icon={<PhoneIncoming />}
+            />
           </div>
         </div>
         <hr />

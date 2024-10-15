@@ -1,3 +1,4 @@
+import { BorderTrail } from "../atoms/BorderTrail";
 import DescriptionSingle from "../atoms/DescriptionSingle";
 
 const AboutDescriptions = () => {
@@ -7,16 +8,25 @@ const AboutDescriptions = () => {
         text="
 Niezależnie od tego, czy masz samochód dostawczy, sportowy, czy codzienny, wiemy, że utrzymanie go w doskonałej formie może być wyzwaniem."
       />
-      <div className="py-2"></div>
+      <div className="py-1"></div>
       <DescriptionSingle
         text="
 W Side2Side Motorsport łączymy miłość do motoryzacji z wieloletnim doświadczeniem. "
       />
-      <div className="py-2"></div>
-      <DescriptionSingle
-        text="
+      <div className="py-1"></div>
+      <div className="relative rounded-xl">
+        <DescriptionSingle
+          text="
 Oferujemy kompleksową obsługę – od rutynowych przeglądów po zaawansowane przygotowanie pojazdów do motorsportu."
-      />
+        />
+        <BorderTrail
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeOut",
+          }}
+        />
+      </div>
       <div className="py-2"></div>
       <DescriptionSingle text=" Naszym celem jest serwisowanie, a także tworzenie pojazdów, które dostarczają niezapomnianych wrażeń na drodze i torze." />
     </div>

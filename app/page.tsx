@@ -1,6 +1,6 @@
 "use client";
 import Offers from "@/components/organisms/Offers";
-import AboutNew from "@/containers/home-page/AboutNew";
+import About from "@/containers/home-page/About";
 import Contact from "@/containers/home-page/Contact";
 import Hero from "@/containers/home-page/Hero";
 import Projects from "@/containers/home-page/Projects";
@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <AboutNew />
+      <About />
       <Offers />
       <Projects />
       <Rewievs />
