@@ -45,9 +45,8 @@ const OfferServiceElements = () => {
   return (
     <div className="flex flex-col md:flex-row gap-5 px-3 md:gap-2 flex-wrap justify-between">
       {servicesList.map((service) => (
-        <FadeUp duration={service.id}>
+        <FadeUp duration={service.id} key={service.id}>
           <OfferServiceTab
-            key={service.id}
             icon={service.icon}
             title={service.title}
             description={service.description}
