@@ -1,13 +1,13 @@
 import OfferMotorsport from "../molecules/OfferMotorsport";
-// import OfferService from "../molecules/OfferService";
+import OfferService from "../molecules/OfferService";
 
 const Offers = () => {
   return (
     <div>
-      {/* <OfferService /> */}
+      <OfferService />
       <OfferMotorsport />
     </div>
-)
+  );
 };
 
 export default Offers;

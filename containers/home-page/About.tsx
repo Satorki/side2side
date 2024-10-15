@@ -17,7 +17,9 @@ const About = () => {
     };
   }, []);
   return (
-    <div id="about">{isWindowMedium ? <AboutDektop /> : <AboutMobile />}</div>
+    <div id="about" className="py-5">
+      {isWindowMedium ? <AboutDektop /> : <AboutMobile />}
+    </div>
   );
 };
 
