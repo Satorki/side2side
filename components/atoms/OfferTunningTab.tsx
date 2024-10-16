@@ -20,16 +20,20 @@ const OfferTunningTab = ({
     <div
       className={`flex ${
         imageUnder ? "flex-row" : "flex-col"
-      } gap-1 bg-zinc-900 rounded-2xl justify-center items-center relative`}
+      } gap-1 bg-zinc-900 rounded-2xl relative`}
     >
       <div className="flex flex-col gap-1 p-4 flex-1 z-20">
         <p className="text-xl font-bold">{title}</p>
         <p className="text-sm">{description}</p>
       </div>
       <div
-        className="absolute inset-0 w-[70%] z-10 rounded-xl"
+        className={`absolute inset-0 z-10 rounded-xl ${
+          imageUnder ? "w-[80%]" : "w-full"
+        } `}
         style={{
-          background: `linear-gradient(to right, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 90%)`,
+          background: `linear-gradient(to ${
+            imageUnder ? "right" : "bottom"
+          }, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 90%)`,
         }}
       ></div>
       <div className="z-0">
@@ -37,7 +41,7 @@ const OfferTunningTab = ({
           <Image
             src={imageSrc}
             alt={altInfo ?? ""}
-            className="rounded-2xl max-w-[300px] max-h-[300px] object-cover"
+            className="rounded-2xl w-full h-[300px] object-cover"
           />
         )}
       </div>

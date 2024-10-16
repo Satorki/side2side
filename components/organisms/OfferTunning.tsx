@@ -3,6 +3,8 @@ import FadeUp from "../atoms/FadeUp";
 import DescriptionSingle from "../atoms/DescriptionSingle";
 import TitleSection from "../atoms/TitleSection";
 import OfferTunningElements from "../molecules/OfferTunningElements";
+import AnimatedTransition from "../atoms/AnimatedTransition";
+import { Wrench } from "lucide-react";
 
 const OfferTunning = () => {
   // const [isWindowMedium, setIsWindowMedium] = useState(false);
@@ -20,6 +22,13 @@ const OfferTunning = () => {
 
   return (
     <div id="offer">
+      <AnimatedTransition
+        icon={
+          <Wrench className="text-white w-[75px] h-[75px] md:w-[200px] md:h-[200px] opacity-30" />
+        }
+        quote="TUNNING"
+        rotating={false}
+      />
       <div className="offer-container">
         <div className="overflow-hidden">
           <div className="description-container">

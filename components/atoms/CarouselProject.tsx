@@ -111,7 +111,7 @@ const CarouselProject = () => {
     ],
   };
   return (
-    <div className="w-[70%] max-w-[1440px] mx-auto">
+    <div className="w-[80%] max-w-[1440px] mx-auto">
       <Slider {...settings}>
         {projects.map((image, index) => (
           <div key={index} className="focus:outline-none">
@@ -130,7 +130,7 @@ const CarouselProject = () => {
       </Slider>
       <style jsx global>{`
         .slick-center {
-          transform: scale(1.45) translateY(14%);
+          transform: scale(1.45) translateY(5%);
           z-index: 10;
           position: relative;
         }
@@ -145,9 +145,10 @@ const CarouselProject = () => {
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-top: 8rem;
+          height: auto;
+          padding: 4rem 0 12rem 0;
         }
-        @media (max-width: 3200px) {
+        /* @media (max-width: 3200px) {
           .slick-track {
             height: 82vh;
           }
@@ -166,14 +167,13 @@ const CarouselProject = () => {
           .slick-track {
             height: 60vh;
           }
-        }
+        } */
         @media (max-width: 768px) {
           .slick-center {
             transform: scale(1);
           }
           .slick-track {
-            height: 110vw;
-            margin-top: 0rem;
+            padding: 1rem 0 1rem 0;
           }
         }
       `}</style>

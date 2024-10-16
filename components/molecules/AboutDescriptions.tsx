@@ -2,7 +2,7 @@ import DescriptionSingle from "../atoms/DescriptionSingle";
 
 const AboutDescriptions = () => {
   return (
-    <div className="flex flex-col text-xl font-bai leading-6">
+    <div className="flex flex-col text-xl font-bai leading-6 not-italic">
       <DescriptionSingle
         text="
 Niezależnie od tego, czy masz samochód dostawczy, sportowy, czy codzienny, wiemy, że utrzymanie go w doskonałej formie może być wyzwaniem."

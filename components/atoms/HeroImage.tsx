@@ -18,7 +18,7 @@ const HeroImage = ({ setIsLoaded }: Props) => {
 
   return (
     <motion.div
-      style={{ opacity: isImageLoaded ? opacity : 0, y }}
+      style={{ opacity: opacity, y }}
       className="w-full h-screen relative"
     >
       {!isImageLoaded && (

@@ -37,17 +37,17 @@ const AnimatedTransition = ({
     offset: ["start start", "start end"],
   });
 
-  const moveParameters = leftToRight ? [1, 0] : [0, 1];
+  const moveParameters = leftToRight ? [1, 0.4] : [0.4, 1];
   const rotateParameters = leftToRight ? [360 * 4, 0] : [0, 360 * 4];
   const isRotating = rotating ? [0, 1] : [0, 0];
 
   const moveX = useTransform(scrollYProgress, moveParameters, [
     offscreenX,
-    onscreenX,
+    onscreenX / 1.5,
   ]);
   const moveXQote = useTransform(scrollYProgress, moveParameters, [
-    offscreenX * 1.2,
-    onscreenX - onscreenX * 1.2,
+    offscreenX,
+    0,
   ]);
 
   const turnAround = useTransform(
@@ -57,19 +57,21 @@ const AnimatedTransition = ({
   );
 
   return (
-    <div className="overflow-hidden h-[30vh] pb-4 flex items-end" ref={container}>
+    <div className="overflow-hidden pb-4 relative" ref={container}>
       <motion.div
-        style={{ x: moveX, rotate: turnAround }}
+        style={{ x: moveX, rotate: turnAround, paddingRight: "3rem" }}
         className="w-[75px] h-[75px] md:w-[200px] md:h-[200px]"
       >
         {icon}
       </motion.div>
-      <div className="max-w-[1440px] mx-auto">
-        <motion.div style={{ x: moveXQote }}>
-          <p className="text-white text-3xl xl:text-9xl opacity-40 min-w-max">
-            {quote}
-          </p>
-        </motion.div>
+      <div className=" max-w-[1440px] mx-auto px-5">
+        <div className="absolute top-[20%]">
+          <motion.div style={{ x: moveXQote }}>
+            <p className="text-white text-3xl md:text-9xl opacity-40">
+              {quote}
+            </p>
+          </motion.div>
+        </div>
       </div>
     </div>
   );

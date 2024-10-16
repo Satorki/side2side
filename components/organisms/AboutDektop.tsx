@@ -124,7 +124,7 @@ const AboutDektop = () => {
         }
         .about-container {
           position: sticky;
-          top: 75px;
+          top: 0;
           height: 100vh;
           overflow: hidden;
         }

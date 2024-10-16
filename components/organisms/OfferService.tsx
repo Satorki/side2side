@@ -7,7 +7,8 @@ import FadeUp from "@/components/atoms/FadeUp";
 import TitleSection from "../atoms/TitleSection";
 import DescriptionSingle from "../atoms/DescriptionSingle";
 import OfferServiceElements from "../molecules/OfferServiceElements";
-import { PhoneCall } from "lucide-react";
+import { CircleDotDashed, PhoneCall } from "lucide-react";
+import AnimatedTransition from "../atoms/AnimatedTransition";
 
 const OfferService: React.FC = () => {
   const [isWindowMedium, setIsWindowMedium] = useState(false);
@@ -25,6 +26,12 @@ const OfferService: React.FC = () => {
 
   return (
     <div id="offer-service">
+      <AnimatedTransition
+        icon={
+          <CircleDotDashed className="text-white w-[75px] h-[75px] md:w-[200px] md:h-[200px] opacity-30" />
+        }
+        quote="SERWIS"
+      />
       <div className="offer-container">
         <div className="flex-1">
           <div className="p-4">

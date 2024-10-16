@@ -1,12 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import OfferTunningTab from "../atoms/OfferTunningTab";
 import Engine from "@/public/images/Tunning/silnik2.jpg";
-import Pipe from "@/public/images/Tunning/wydech.jpg";
-import Suspension from "@/public/images/Tunning/zawieszenie.jpg";
-import Breaks from "@/public/images/Tunning/hamulce.jpg";
+import Pipe from "@/public/images/Tunning/wydechA.jpg";
+import Suspension from "@/public/images/Tunning/zawieszenieA.jpg";
+import Breaks from "@/public/images/Tunning/hamulceA.jpg";
 import Electricity from "@/public/images/Tunning/elektryka.jpg";
 
 const OfferTunningElements = () => {
+  const [isWindowMedium, setIsWindowMedium] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsWindowMedium(window.innerWidth >= 768);
+    };
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+
   const tunningList = [
     {
       id: 1,
@@ -55,7 +70,7 @@ const OfferTunningElements = () => {
             description={item.description}
             imageSrc={item.imageSrc}
             altInfo={item.title}
-            imageUnder={true}
+            imageUnder={isWindowMedium}
           />
         ))}
       </div>

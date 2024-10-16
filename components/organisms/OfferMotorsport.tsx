@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import MotorsportImage from "@/public/images/Motorsport/offer9.jpg";
-import { PhoneIncoming } from "lucide-react";
+import { Drill, PhoneIncoming } from "lucide-react";
 import ImageOffer from "../atoms/ImageOffer";
 import DescriptionSingle from "../atoms/DescriptionSingle";
 import FadeUp from "../atoms/FadeUp";
@@ -9,6 +9,7 @@ import ButtonAction from "../atoms/ButtonAction";
 import List from "../atoms/List";
 import TitleSection from "../atoms/TitleSection";
 import { BorderTrail } from "../atoms/BorderTrail";
+import AnimatedTransition from "../atoms/AnimatedTransition";
 
 const OfferMotorsport = () => {
   const listItems = [
@@ -59,6 +60,13 @@ const OfferMotorsport = () => {
 
   return (
     <div id="offer-motorsport">
+      <AnimatedTransition
+        icon={
+          <Drill className="text-white w-[75px] h-[75px] md:w-[200px] md:h-[200px] opacity-30" />
+        }
+        rotating={false}
+        quote="MOTORSPORT"
+      />
       <div className="offer-container">
         <div className="flex-1 overflow-hidden">
           <div className="description-container">
@@ -114,18 +122,26 @@ const OfferMotorsport = () => {
           padding: 2rem;
         }
         #offer-motorsport {
+          padding: 2rem 0;
           height: 100vh;
           display: flex;
+          flex-direction: column;
+          justify-content: center;
           background-color: #000;
         }
 
         @media (max-width: 768px) {
           .offer-container {
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
             height: auto;
           }
           .description-container {
             padding: 2rem 1.2rem 2rem 1.2rem;
+          }
+          #offer-motorsport {
+            height: auto;
           }
         }
       `}</style>
