@@ -14,19 +14,12 @@ Niezależnie od tego, czy masz samochód dostawczy, sportowy, czy codzienny, wie
 W Side2Side Motorsport łączymy miłość do motoryzacji z wieloletnim doświadczeniem. "
       />
       <div className="py-1"></div>
-      <div className="relative rounded-xl">
-        <DescriptionSingle
-          text="
+
+      <DescriptionSingle
+        text="
 Oferujemy kompleksową obsługę – od rutynowych przeglądów po zaawansowane przygotowanie pojazdów do motorsportu."
-        />
-        <BorderTrail
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeOut",
-          }}
-        />
-      </div>
+      />
+
       <div className="py-2"></div>
       <DescriptionSingle text="Naszym celem jest serwisowanie, a także tworzenie pojazdów, które dostarczają niezapomnianych wrażeń na drodze i torze." />
     </div>

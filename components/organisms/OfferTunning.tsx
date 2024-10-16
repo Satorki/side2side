@@ -60,6 +60,7 @@ const OfferTunning = () => {
         }
         #offer {
           background-color: #323232;
+          padding: 3rem 0rem;
         }
 
         @media (max-width: 768px) {

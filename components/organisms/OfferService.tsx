@@ -27,18 +27,16 @@ const OfferService: React.FC = () => {
     <div id="offer-service">
       <div className="offer-container">
         <div className="flex-1">
-          <div className="p-2">
+          <div className="p-4">
             <TitleSection
               category="Oferta"
               titleBegining="Profesjonalny Serwis"
             />
             <FadeUp delay={0.5} duration={2}>
-              <div className="px-4">
-                <DescriptionSingle
-                  text="Oferujemy kompleksowy serwis dla pojazdów osobnych i dostawczych do 3,5 tony, zapewniając ich sprawność w codziennym użytkowaniu."
-                  isBold={true}
-                />
-              </div>
+              <DescriptionSingle
+                text="Oferujemy kompleksowy serwis dla pojazdów osobnych i dostawczych do 3,5 tony, zapewniając ich sprawność w codziennym użytkowaniu."
+                isBold={true}
+              />
             </FadeUp>
           </div>
           {isWindowMedium && <ImageOffer ImageCurrent={SerwisImage} />}
@@ -73,12 +71,12 @@ const OfferService: React.FC = () => {
         .description-container {
           display: flex;
           flex-direction: column;
-          justify-content: center;
+          align-items: start;
           gap: 1rem;
-          padding: 2rem;
         }
         #offer-service {
           background-color: #c13434;
+          padding: 2rem 0;
         }
 
         @media (max-width: 768px) {

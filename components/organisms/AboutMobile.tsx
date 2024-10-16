@@ -36,7 +36,7 @@ const AboutMobile = () => {
 
           <ImageAbout />
 
-          <div className="flex flex-col gap-3 text-xl font-bai leading-8 italic">
+          <div className="flex flex-col gap-3 text-xl font-bai leading-8 px-4 italic">
             <motion.div
               style={{
                 opacity: quote1opacity,
@@ -50,6 +50,7 @@ const AboutMobile = () => {
             style={{
               scale: buttonScaleUpMobile,
               opacity: buttonOpacity,
+              padding: "0rem 1rem",
             }}
           >
             <ButtonAction
