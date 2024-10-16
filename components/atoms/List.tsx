@@ -31,7 +31,7 @@ export const List = ({ items }: ListProps) => {
             value={`item-${item.id}`}
             className={`transition-opacity duration-300 ${
               activeItem && activeItem !== `item-${item.id}`
-                ? "opacity-40"
+                ? "opacity-60"
                 : "opacity-100"
             }`}
           >

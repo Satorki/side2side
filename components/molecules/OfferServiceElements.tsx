@@ -46,10 +46,11 @@ const OfferServiceElements = () => {
     <div className="flex flex-col md:flex-row gap-5 px-3 md:gap-2 flex-wrap justify-between">
       {servicesList.map((service, index) => (
         <FadeUp duration={service.id} key={service.id}>
-          
           <OfferServiceTab
             icon={service.icon}
             title={service.title}
+            delayAnimate={service.id}
+            durationAnimate={4}
             description={service.description}
             isLast={index === servicesList.length - 1}
           />

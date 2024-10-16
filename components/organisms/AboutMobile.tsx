@@ -15,17 +15,28 @@ const AboutMobile = () => {
     offset: ["start start", "end end"],
   });
 
-  const buttonScaleUpMobile = useTransform(scrollYProgress, [0.9, 0.1], [1, 0]);
-  const quote1moveUpMobile = useTransform(scrollYProgress, [0, 0.3], [100, 0]);
-  const quote1opacity = useTransform(scrollYProgress, [0.2, 0.3], [0, 1]);
-  const buttonOpacity = useTransform(scrollYProgress, [0.65, 0.75], [0, 1]);
+  const titleSpreadMobile = useTransform(scrollYProgress, [0, 0.2], [5, 300]);
+  const buttonScaleUpMobile = useTransform(scrollYProgress, [0.5, 1], [0, 1]);
+  const quote1moveUpMobile = useTransform(scrollYProgress, [0, 0.7], [-50, 0]);
+  const quote1opacity = useTransform(scrollYProgress, [0, 0.7], [0, 1]);
+  const buttonOpacity = useTransform(scrollYProgress, [0.65, 1], [0, 1]);
 
   return (
-    <div className="about-mobile" ref={container}>
-      <div className="about-container">
+    <div className="about-mobile">
+      <div className="about-container" ref={container}>
         <div className="description-container">
           <div className="relative h-[100vh]">
             <div className="sticky top-[40vh] p-2">
+              <motion.div
+                style={{
+                  borderLeft: "solid #d52727",
+                  borderLeftWidth: titleSpreadMobile,
+                  width: "100%",
+                  height: "5px",
+                }}
+              >
+                {" "}
+              </motion.div>
               <TitleSection
                 category=""
                 titleBegining="Z nami Twój pojazd osiągnie pełnię możliwości."

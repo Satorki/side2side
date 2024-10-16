@@ -75,8 +75,12 @@ const OfferService: React.FC = () => {
           gap: 1rem;
         }
         #offer-service {
-          background-color: #c13434;
+          background-color: #dc2626;
           padding: 2rem 0;
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
         }
 
         @media (max-width: 768px) {
@@ -88,6 +92,9 @@ const OfferService: React.FC = () => {
           .description-container {
             padding: 0rem;
             gap: 2rem;
+          }
+          #offer-service {
+            height: auto;
           }
         }
       `}</style>
