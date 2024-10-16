@@ -16,7 +16,7 @@ const AnimatedTransition = ({
   const [offscreenX, setOffscreenX] = useState(-700);
   const [onscreenX, setOnscreenX] = useState(2700);
 
-  const quote = "Profejsonalny Serwis";
+  const quote = "Serwis";
 
   useEffect(() => {
     const handleResize = () => {
@@ -45,9 +45,10 @@ const AnimatedTransition = ({
     offscreenX,
     onscreenX,
   ]);
-
-  const letterOpacity = (index: number) =>
-    useTransform(scrollYProgress, [0.6, 0], [index * -0.1, 0.7]);
+  const moveXQote = useTransform(scrollYProgress, moveParameters, [
+    offscreenX * 1.5,
+    onscreenX - onscreenX * 1.15,
+  ]);
 
   const turnAround = useTransform(
     scrollYProgress,
@@ -56,7 +57,7 @@ const AnimatedTransition = ({
   );
 
   return (
-    <div className="overflow-hidden" ref={container}>
+    <div className="overflow-hidden h-[20vh] flex items-end" ref={container}>
       <motion.div
         style={{ x: moveX, rotate: turnAround }}
         className="w-[75px] h-[75px] md:w-[200px] md:h-[200px]"
@@ -64,16 +65,9 @@ const AnimatedTransition = ({
         {icon}
       </motion.div>
       <div className="max-w-[1440px] mx-auto">
-        <motion.div className="absolute -translate-y-14 xl:-translate-y-40">
-          <p className="text-white text-3xl xl:text-9xl">
-            {quote.split("").map((letter, index) => (
-              <motion.span
-                key={index}
-                style={{ opacity: letterOpacity(index) }}
-              >
-                {letter}
-              </motion.span>
-            ))}
+        <motion.div style={{ x: moveXQote }}>
+          <p className="text-white text-3xl xl:text-9xl opacity-40 min-w-max">
+            {quote}
           </p>
         </motion.div>
       </div>

@@ -1,4 +1,3 @@
-import { BorderTrail } from "../atoms/BorderTrail";
 import DescriptionSingle from "../atoms/DescriptionSingle";
 
 const AboutDescriptions = () => {
