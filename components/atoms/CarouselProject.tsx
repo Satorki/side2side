@@ -111,17 +111,17 @@ const CarouselProject = () => {
     ],
   };
   return (
-    <div className="w-[80%] max-w-[1440px] mx-auto">
+    <div className="w-[70%] max-w-[1440px] mx-auto">
       <Slider {...settings}>
         {projects.map((image, index) => (
           <div key={index} className="focus:outline-none">
             <Image
               src={image.image}
               alt={image.title}
-              className="rounded-xl p-1 md:rounded-2xl transition-transform duration-300 object-cover object-center"
+              className="rounded-xl md:rounded-2xl transition-transform duration-300 object-cover object-center"
             />
-            <FadeUp delay={0.2}>
-              <p className="text-tiny pt-5 text-center font-bai">
+            <FadeUp delay={0.4}>
+              <p className="text-tiny pt-6 text-center font-bai">
                 {image.description}
               </p>
             </FadeUp>
@@ -134,12 +134,9 @@ const CarouselProject = () => {
           z-index: 10;
           position: relative;
         }
-        .slick-slide.slick-active:not(.slick-center) img {
+        .slick-slide.slick-active:not(.slick-center) {
           transform: scale(0.7);
           opacity: 0.4;
-        }
-        .slick-slide.slick-active:not(.slick-center) p {
-          opacity: 0;
         }
         .slick-slide {
           transition: transform 1s ease;
@@ -148,7 +145,7 @@ const CarouselProject = () => {
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-top: 5rem;
+          margin-top: 8rem;
         }
         @media (max-width: 3200px) {
           .slick-track {
@@ -162,12 +159,12 @@ const CarouselProject = () => {
         }
         @media (max-width: 1500px) {
           .slick-track {
-            height: 60vh;
+            height: 65vh;
           }
         }
         @media (max-width: 1100px) {
           .slick-track {
-            height: 50vh;
+            height: 60vh;
           }
         }
         @media (max-width: 768px) {

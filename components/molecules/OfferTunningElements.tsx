@@ -55,7 +55,7 @@ const OfferTunningElements = () => {
             description={item.description}
             imageSrc={item.imageSrc}
             altInfo={item.title}
-            imageUnder={false}
+            imageUnder={true}
           />
         ))}
       </div>

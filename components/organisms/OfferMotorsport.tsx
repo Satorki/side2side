@@ -60,9 +60,6 @@ const OfferMotorsport = () => {
   return (
     <div id="offer-motorsport">
       <div className="offer-container">
-        <div className="flex-1">
-          {isWindowMedium && <ImageOffer ImageCurrent={MotorsportImage} />}
-        </div>
         <div className="flex-1 overflow-hidden">
           <div className="description-container">
             <TitleSection
@@ -97,7 +94,7 @@ const OfferMotorsport = () => {
             />
           </div>
         </div>
-        <hr />
+        {isWindowMedium && <ImageOffer ImageCurrent={MotorsportImage} />}
       </div>
       <style jsx>{`
         .offer-container {
@@ -117,8 +114,8 @@ const OfferMotorsport = () => {
           padding: 2rem;
         }
         #offer-motorsport {
-          position: sticky;
-          top: 75px;
+          height: 100vh;
+          display: flex;
           background-color: #000;
         }
 

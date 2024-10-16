@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 interface Props {
   icon: JSX.Element;
+  quote?: string;
   leftToRight?: boolean;
   rotating?: boolean;
 }
@@ -11,12 +12,11 @@ const AnimatedTransition = ({
   icon,
   leftToRight = true,
   rotating = true,
+  quote,
 }: Props) => {
   const container = useRef(null);
   const [offscreenX, setOffscreenX] = useState(-700);
   const [onscreenX, setOnscreenX] = useState(2700);
-
-  const quote = "Serwis";
 
   useEffect(() => {
     const handleResize = () => {
@@ -46,8 +46,8 @@ const AnimatedTransition = ({
     onscreenX,
   ]);
   const moveXQote = useTransform(scrollYProgress, moveParameters, [
-    offscreenX * 1.5,
-    onscreenX - onscreenX * 1.15,
+    offscreenX * 1.2,
+    onscreenX - onscreenX * 1.2,
   ]);
 
   const turnAround = useTransform(
@@ -57,7 +57,7 @@ const AnimatedTransition = ({
   );
 
   return (
-    <div className="overflow-hidden h-[20vh] flex items-end" ref={container}>
+    <div className="overflow-hidden h-[30vh] pb-4 flex items-end" ref={container}>
       <motion.div
         style={{ x: moveX, rotate: turnAround }}
         className="w-[75px] h-[75px] md:w-[200px] md:h-[200px]"
