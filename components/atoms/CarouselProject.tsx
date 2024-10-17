@@ -94,10 +94,8 @@ const CarouselProject = () => {
 
   const settings = {
     className: "center",
-    centerMode: true,
     centerPadding: "0px",
-    infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 1.5,
     slidesToScroll: 1,
     speed: 500,
     responsive: [

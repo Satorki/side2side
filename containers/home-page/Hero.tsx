@@ -15,8 +15,8 @@ const Hero = () => {
     >
       <HeroTitle isLoaded={isLoaded} />
       <HeroImage setIsLoaded={setIsLoaded} />
-      <HeroSmoke />
-      <HeroArrow />
+      <HeroSmoke isLoaded={isLoaded} />
+      <HeroArrow isLoaded={isLoaded} />
       <style jsx>{`
         .hero-container {
           margin-top: -75px;

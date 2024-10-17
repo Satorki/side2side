@@ -25,7 +25,7 @@ Reasumowując zdecydowanie polecam :)"
             />
           </FadeUp>
 
-          <FadeUp delay={2}>
+          <FadeUp delay={1.5}>
             <ReviewSingle
               text="Korzystałem z pomocy dwa razy i za każdym razem byłem zadowolony. Miła obsługa, są słowni, dotrzymali umówionych terminów, mają umiarkowane ceny. Szybko stawiają trafną diagnozę i szybko usuwają usterki. Dzisiaj była wymiana czujnika położenia wałka rozrządu.
 Wczoraj szybka diagnoza bez kolejki, a dzisiaj 15 minut i zrobione. Rachunek też nie wysoki.
@@ -35,7 +35,7 @@ Okazało się też, że serwisuje auta vipów jak na zdjęciu. Jednym słowem PO
               logo=""
             />
           </FadeUp>
-          <FadeUp delay={3}>
+          <FadeUp delay={2}>
             <ReviewSingle
               text="Profesjonalne podejście do klienta. Przy remoncie który wykonywałem zlecili że sprawdzą i ewentualnie wymianią części za moją zgodą żeby zaoszczedzić kolejne rozbieranie i wycziąganie kolejny raz np silnika.Mechanik specjalizuje się w marce BMW ale inne auta nie są mu obce. Polecam."
               stars={5}

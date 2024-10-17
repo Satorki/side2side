@@ -4,15 +4,19 @@ import { FaArrowDown } from "react-icons/fa";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "@nextui-org/react";
 
-const HeroArrow = () => {
+interface Props {
+  isLoaded: boolean;
+}
+
+const HeroArrow = ({ isLoaded }: Props) => {
   const { scrollY } = useScroll();
   const opacity = useTransform(scrollY, [0, 200], [1, 0]);
   return (
     <motion.div
-      animate={{ y: 0, opacity: 1 }}
+      animate={isLoaded ? { y: 0, opacity: 1 } : {}}
       initial={{ y: 100, opacity: 0 }}
       transition={{
-        delay: 3,
+        delay: isLoaded ? 3 : 0,
         duration: 2,
         type: "spring",
         stiffness: 300,

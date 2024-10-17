@@ -70,7 +70,6 @@ const Header = () => {
         isBlurred={false}
         onMenuOpenChange={setIsMenuOpen}
         className="bg-black"
-        shouldHideOnScroll={true}
       >
         <NavbarContent>
           <NavbarBrand>

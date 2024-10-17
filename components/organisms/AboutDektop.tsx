@@ -18,32 +18,31 @@ const AboutDektop = () => {
   // TITLE
   const titleMoveUpDesktop = useTransform(
     scrollYProgress,
-    [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7],
-    [150, 125, 100, 75, 50, 25, 0, -50]
+    [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6],
+    [150, 125, 100, 75, 50, 25, 0]
   );
 
   // QUOTE
-  const quote1moveRight = useTransform(
-    scrollYProgress,
-    [0.2, 0.25],
-    [-1000, 0]
-  );
   const quote1moveUp = useTransform(
     scrollYProgress,
-    [0.2, 0.3, 0.4, 0.5, 0.6, 0.7],
-    [100, 75, 50, 25, 0, -50]
+    [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6],
+    [150, 125, 100, 75, 50, 25, 0]
   );
-  const quote1opacity = useTransform(scrollYProgress, [0.2, 0.3], [0, 1]);
+  const quote1opacity = useTransform(scrollYProgress, [0.1, 0.2], [0, 1]);
 
   // BUTTON
   const buttonScaleUp = useTransform(
     scrollYProgress,
-    [0.65, 0.7, 0.7, 0.75],
+    [0.2, 0.3, 0.3, 0.35],
     [0, 1, 1.1, 1]
   );
 
-  const buttonOpacity = useTransform(scrollYProgress, [0.65, 0.75], [0, 1]);
-  const buttonMoveUp = useTransform(scrollYProgress, [0], [-50]);
+  const buttonOpacity = useTransform(scrollYProgress, [0.3, 0.4], [0, 1]);
+  const buttonMoveUp = useTransform(
+    scrollYProgress,
+    [0.2, 0.3, 0.4, 0.5, 0.6],
+    [100, 75, 50, 25, 0]
+  );
 
   // SCREEN APPEARS
   const screenAppears = useTransform(
@@ -74,10 +73,9 @@ const AboutDektop = () => {
               titleEnding=""
             />
           </motion.div>
-          <div className="flex flex-col gap-3 text-xl font-bai leading-8 italic">
+          <div className="flex flex-col gap-3 text-lg font-bai leading-8 italic">
             <motion.div
               style={{
-                x: quote1moveRight,
                 opacity: quote1opacity,
                 y: quote1moveUp,
               }}

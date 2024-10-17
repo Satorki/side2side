@@ -58,7 +58,7 @@ const HeroTitle = ({ isLoaded }: Props) => {
           SIDE
         </motion.div>
       </h1>
-      <div className="flex gap-2 font-medium">
+      <div className="flex gap-2 font-bold">
         <motion.span
           animate={isLoaded ? { opacity: 1 } : { opacity: 0 }}
           initial={{ opacity: 0 }}
