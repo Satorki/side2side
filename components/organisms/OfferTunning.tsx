@@ -7,18 +7,6 @@ import AnimatedTransition from "../atoms/AnimatedTransition";
 import { Wrench } from "lucide-react";
 
 const OfferTunning = () => {
-  // const [isWindowMedium, setIsWindowMedium] = useState(false);
-
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setIsWindowMedium(window.innerWidth >= 768);
-  //   };
-  //   window.addEventListener("resize", handleResize);
-  //   handleResize();
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []);
 
   return (
     <div id="offer">

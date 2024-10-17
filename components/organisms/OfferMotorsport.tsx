@@ -45,11 +45,11 @@ const OfferMotorsport = () => {
     },
   ];
 
-  const [isWindowMedium, setIsWindowMedium] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsWindowMedium(window.innerWidth >= 768);
+      setIsDesktop(window.innerWidth >= 768);
     };
     window.addEventListener("resize", handleResize);
     handleResize();
@@ -76,7 +76,7 @@ const OfferMotorsport = () => {
               titleBegining=" Motorsport"
             />
 
-            {!isWindowMedium && <ImageOffer ImageCurrent={MotorsportImage} />}
+            {!isDesktop && <ImageOffer ImageCurrent={MotorsportImage} />}
 
             <FadeUp delay={0.5} duration={2}>
               <div className="relative p-2 rounded-xl">
@@ -102,7 +102,7 @@ const OfferMotorsport = () => {
             />
           </div>
         </div>
-        {isWindowMedium && <ImageOffer ImageCurrent={MotorsportImage} />}
+        {isDesktop && <ImageOffer ImageCurrent={MotorsportImage} />}
       </div>
       <style jsx>{`
         .offer-container {

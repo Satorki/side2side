@@ -13,14 +13,13 @@ import Rewievs from "@/containers/home-page/Rewievs";
 // DONE hero capital letters nie dziala taglajnem moze bold
 // DONE navbar scroll down wylanczyc
 
-// tekst na about za nisko wystarczy fade in
-// glowna historia to tekst
-// tekst wczesniej description
-// tekst na mobile troche za duzy czyli pomniejszyc dla description
-// tekst na kompie tez mniejszy
-// tekst
-// poltora przycisku gap pomiedzy abouta  serwice
-// gap wiekszyp pomiedzy quotes
+// DONE tekst na about za nisko wystarczy fade in
+// DONE glowna historia to tekst
+// DONE tekst wczesniej description
+// DONE tekst na mobile troche za duzy czyli pomniejszyc dla description
+// DONE tekst na kompie tez mniejszy
+// DONE poltora przycisku gap pomiedzy abouta  serwice
+// DONE gap wiekszyp pomiedzy quotes
 
 // font dla animaci serwis jai
 // animacje maja byc dodatkiem

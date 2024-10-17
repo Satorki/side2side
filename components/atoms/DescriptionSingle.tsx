@@ -6,7 +6,7 @@ interface Props {
 }
 
 const DescriptionSingle = ({ text, isBold }: Props) => {
-  return <p className={` ${isBold ? "font-bold" : ""} p-2`}>{text}</p>;
+  return <p className={` ${isBold ? "font-bold" : ""}`}>{text}</p>;
 };
 
 export default DescriptionSingle;
