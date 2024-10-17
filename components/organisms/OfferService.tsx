@@ -11,11 +11,11 @@ import { CircleDotDashed, PhoneCall } from "lucide-react";
 import AnimatedTransition from "../atoms/AnimatedTransition";
 
 const OfferService: React.FC = () => {
-  const [isWindowMedium, setIsWindowMedium] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsWindowMedium(window.innerWidth >= 768);
+      setIsDesktop(window.innerWidth >= 768);
     };
     window.addEventListener("resize", handleResize);
     handleResize();
@@ -35,10 +35,7 @@ const OfferService: React.FC = () => {
       <div className="offer-container">
         <div className="flex-1">
           <div className="p-4">
-            <TitleSection
-              category="Oferta"
-              titleBegining="Profesjonalny Serwis"
-            />
+            <TitleSection titleBegining="Profesjonalny Serwis" />
             <FadeUp delay={0.5} duration={2}>
               <DescriptionSingle
                 text="Oferujemy kompleksowy serwis dla pojazdów osobnych i dostawczych do 3,5 tony, zapewniając ich sprawność w codziennym użytkowaniu."
@@ -46,11 +43,11 @@ const OfferService: React.FC = () => {
               />
             </FadeUp>
           </div>
-          {isWindowMedium && <ImageOffer ImageCurrent={SerwisImage} />}
+          {isDesktop && <ImageOffer ImageCurrent={SerwisImage} />}
         </div>
         <div className="flex-1 overflow-hidden">
           <div className="description-container">
-            {!isWindowMedium && <ImageOffer ImageCurrent={SerwisImage} />}
+            {!isDesktop && <ImageOffer ImageCurrent={SerwisImage} />}
 
             <OfferServiceElements />
             <div className="px-4">
@@ -102,6 +99,7 @@ const OfferService: React.FC = () => {
           }
           #offer-service {
             height: auto;
+            margin: 0rem 0rem 0rem 2rem;
           }
         }
       `}</style>
