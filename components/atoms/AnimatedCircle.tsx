@@ -1,5 +1,4 @@
 "use client";
-
 import { CircleDotDashed } from "lucide-react";
 import { motion, useTransform, MotionValue } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -8,14 +7,12 @@ interface Props {
   scrollYProgress?: MotionValue<number>;
 }
 
-const AnimatedIcon = ({ scrollYProgress }: Props) => {
+const AnimatedCircle = ({ scrollYProgress }: Props) => {
   const [offscreenX, setOffscreenX] = useState(-700);
-  const [onscreenX, setOnscreenX] = useState(2700);
 
   useEffect(() => {
     const handleResize = () => {
       setOffscreenX(-window.innerWidth);
-      setOnscreenX(window.innerWidth);
     };
     window.addEventListener("resize", handleResize);
 
@@ -26,8 +23,16 @@ const AnimatedIcon = ({ scrollYProgress }: Props) => {
     };
   }, []);
 
-  const moveX = useTransform(scrollYProgress, [1, 0.4], [offscreenX, 0]);
-  const turnAround = useTransform(scrollYProgress, [0, 1], [360 * 4, 0]);
+  const moveX = useTransform(
+    scrollYProgress ?? new MotionValue(),
+    [1, 0.4],
+    [offscreenX, 0]
+  );
+  const turnAround = useTransform(
+    scrollYProgress ?? new MotionValue(),
+    [0, 1],
+    [360 * 4, 0]
+  );
 
   return (
     <motion.div
@@ -39,4 +44,4 @@ const AnimatedIcon = ({ scrollYProgress }: Props) => {
   );
 };
 
-export default AnimatedIcon;
+export default AnimatedCircle;

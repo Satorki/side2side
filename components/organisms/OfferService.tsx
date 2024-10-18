@@ -4,7 +4,7 @@ import FadeUp from "@/components/atoms/FadeUp";
 import TitleSection from "../atoms/TitleSection";
 import DescriptionSingle from "../atoms/DescriptionSingle";
 import OfferServiceElements from "../molecules/OfferServiceElements";
-import { CircleDotDashed, PhoneCall } from "lucide-react";
+import { PhoneCall } from "lucide-react";
 import AnimatedTransition from "../atoms/AnimatedTransition";
 import OfferLeftMenu from "../atoms/OfferLeftMenu";
 import AnimatedCircle from "../atoms/AnimatedCircle";
@@ -30,7 +30,7 @@ const OfferService: React.FC = () => {
         <AnimatedTransition quote="SERWIS" animatedIcon={<AnimatedCircle />} />
         <div className="offer-body">
           <div className="flex flex-col gap-10 md:gap-20">
-            <TitleSection titleBegining="Zaspokojamy potrzeby." />
+            <TitleSection titleBegining="Profesjonalna obsługa dostosowana do Ciebie." />
             <FadeUp delay={0.5} duration={2}>
               <DescriptionSingle
                 text="Oferujemy kompleksowy serwis dla pojazdów osobnych i dostawczych do 3,5 tony, zapewniając ich sprawność w codziennym użytkowaniu."
@@ -70,7 +70,7 @@ const OfferService: React.FC = () => {
             color: #fff;
             max-width: 1440px;
             margin: 0 auto;
-            gap: 4rem;
+            gap: 2rem;
           }
           .description-container {
             display: flex;
@@ -83,6 +83,7 @@ const OfferService: React.FC = () => {
             flex-direction: column;
             justify-content: center;
             padding: 0rem 2rem 4rem 5rem;
+            height: 100vh;
           }
 
           @media (max-width: 768px) {

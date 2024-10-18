@@ -1,6 +1,5 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { CircleDotDashed } from "lucide-react";
 import React, { useEffect, useRef, useState } from "react";
 
 interface Props {
@@ -15,12 +14,10 @@ const AnimatedTransition = ({
 }: Props) => {
   const container = useRef(null);
   const [offscreenX, setOffscreenX] = useState(-700);
-  const [onscreenX, setOnscreenX] = useState(2700);
 
   useEffect(() => {
     const handleResize = () => {
       setOffscreenX(-window.innerWidth);
-      setOnscreenX(window.innerWidth);
     };
     window.addEventListener("resize", handleResize);
 
@@ -37,15 +34,10 @@ const AnimatedTransition = ({
   });
 
   const moveParameters = leftToRight ? [1, 0.4] : [0.4, 1];
-  const rotateParameters = leftToRight ? [360 * 4, 0] : [0, 360 * 4];
-
-  const moveX = useTransform(scrollYProgress, moveParameters, [offscreenX, 0]);
   const moveXQote = useTransform(scrollYProgress, moveParameters, [
     offscreenX - 200,
     0,
   ]);
-
-  const turnAround = useTransform(scrollYProgress, [0, 1], rotateParameters);
 
   return (
     <div className="overflow-hidden w-full relative font-bai" ref={container}>

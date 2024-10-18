@@ -3,11 +3,11 @@ import React, { useEffect, useState } from "react";
 import FadeUp from "@/components/atoms/FadeUp";
 import TitleSection from "../atoms/TitleSection";
 import DescriptionSingle from "../atoms/DescriptionSingle";
-import OfferServiceElements from "../molecules/OfferServiceElements";
-import { CircleDotDashed, PhoneCall } from "lucide-react";
+import { PhoneCall } from "lucide-react";
 import AnimatedTransition from "../atoms/AnimatedTransition";
 import OfferLeftMenu from "../atoms/OfferLeftMenu";
-import AnimatedIcon from "../atoms/AnimatedCircle";
+import AnimatedProgress from "../atoms/AnimatedProgress";
+import OfferTunningSlider from "../atoms/OfferTunningSlider";
 
 const OfferService: React.FC = () => {
   const [isDesktop, setIsDesktop] = useState(false);
@@ -27,31 +27,34 @@ const OfferService: React.FC = () => {
     <div>
       <OfferLeftMenu whichIsHighlighted={1} />
       <div id="offer-service">
-        <AnimatedTransition quote="TUNNING"  />
+        <AnimatedTransition
+          quote="TUNNING"
+          animatedIcon={<AnimatedProgress />}
+        />
         <div className="offer-body">
-          <div className="flex flex-col gap-10 md:gap-20">
-            <TitleSection titleBegining="Zaspokojamy potrzeby." />
+          <div className="flex flex-col gap-5 md:gap-20 md:pl-20">
+            <TitleSection titleBegining="Lepsze osiągi, większa radość z jazdy." />
             <FadeUp delay={0.5} duration={2}>
               <DescriptionSingle
-                text="Oferujemy kompleksowy serwis dla pojazdów osobnych i dostawczych do 3,5 tony, zapewniając ich sprawność w codziennym użytkowaniu."
+                text="Tuningujemy z pasją, by Twój pojazd osiągał maksimum możliwości."
                 isBold={true}
               />
             </FadeUp>
+
             {isDesktop && (
               <ButtonAction
-                text="Umów wizytę"
+                text="Sprawdź Nas"
                 bgColor="#000"
                 textColor="#fff"
                 icon={<PhoneCall />}
               />
             )}
           </div>
-
+          <OfferTunningSlider />
           <div className="description-container">
-            <OfferServiceElements />
             {!isDesktop && (
               <ButtonAction
-                text="Umów wizytę"
+                text="Sprawdź Nas"
                 bgColor="#000"
                 textColor="#fff"
                 icon={<PhoneCall />}
@@ -64,13 +67,13 @@ const OfferService: React.FC = () => {
         <style jsx>{`
           .offer-body {
             display: flex;
-            flex-direction: row;
-            justify-content: center;
+            flex-direction: row-reverse;
             align-items: center;
+            justify-content: space-between;
             color: #fff;
+            width: 100%;
             max-width: 1440px;
             margin: 0 auto;
-            gap: 4rem;
           }
           .description-container {
             display: flex;
@@ -83,15 +86,16 @@ const OfferService: React.FC = () => {
             flex-direction: column;
             justify-content: center;
             padding: 0rem 2rem 4rem 5rem;
+            height: 100vh;
           }
 
           @media (max-width: 768px) {
             .offer-body {
               flex-direction: column;
               height: auto;
-            }
-            .description-container {
-              gap: 2rem;
+              justify-content: center;
+              align-items: flex-start;
+              gap: 1rem;
             }
             #offer-service {
               height: auto;

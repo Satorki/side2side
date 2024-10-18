@@ -43,7 +43,7 @@ const OfferServiceElements = () => {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row gap-5 md:gap-20 flex-wrap">
+    <div className="flex flex-col md:flex-row gap-5 md:gap-10 flex-wrap">
       {servicesList.map((service) => (
         <FadeUp duration={service.id} key={service.id}>
           <OfferServiceTab

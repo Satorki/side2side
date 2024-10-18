@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
 
 interface OfferServiceTabProps {
   icon?: JSX.Element;
@@ -16,7 +15,7 @@ const OfferServiceTab = ({
 }: OfferServiceTabProps) => {
   return (
     <div
-      className={`flex flex-col gap-2 hover:scale-105 transition-all ease-in-out duration-500 cursor-pointer active:scale-95 2xl:max-w-[300px]`}
+      className={`flex flex-col gap-2 hover:scale-105 transition-all ease-in-out duration-500 cursor-pointer active:scale-95 lg:max-w-[240px]`}
     >
       {icon}
       <p className="text-xl font-bold">{title}</p>
