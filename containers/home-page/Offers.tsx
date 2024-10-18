@@ -6,7 +6,7 @@ import OfferLeftMenu from "@/components/atoms/OfferLeftMenu";
 const Offers = () => {
   return (
     <div>
-      <OfferLeftMenu />
+
       <OfferService />
 
       <OfferTunning />
