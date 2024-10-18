@@ -87,11 +87,11 @@ const About = () => {
 
         <div className="description-container">
           <motion.div style={{ y: isDesktop ? titleMoveUpDesktop : "" }}>
-            <TitleSection
-              category=""
-              titleBegining="Z nami Twój pojazd osiągnie pełnię możliwości."
-              titleEnding=""
-            />
+            <div className="font-bai flex flex-col gap-4">
+              <h2 className="text-4xl font-semibold leading-[50px]">
+                Z nami Twój pojazd osiągnie pełnie możliwości.
+              </h2>
+            </div>
           </motion.div>
 
           {!isDesktop && (
@@ -181,7 +181,7 @@ const About = () => {
           .about-container {
             display: flex;
             flex-direction: column;
-            padding: 1rem 0rem;
+            padding: 2rem 0rem 1rem 0rem;
             height: auto;
           }
           .about-mobile {
