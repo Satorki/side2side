@@ -4,7 +4,7 @@ import React from "react";
 interface OfferServiceTabProps {
   icon?: JSX.Element;
   title: string;
-  description: string;
+  description?: string;
   isLast?: boolean;
 }
 

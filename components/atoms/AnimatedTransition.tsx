@@ -41,7 +41,8 @@ const AnimatedTransition = ({
 
   return (
     <div className="overflow-hidden w-full relative font-bai" ref={container}>
-      <div className="max-w-[1440px] mx-auto w-full flex items-center justify-between">
+      <div className="max-w-[1200px] mx-auto w-full flex items-center justify-between">
+        {animatedIcon && React.cloneElement(animatedIcon, { scrollYProgress })}
         <div>
           <motion.div style={{ x: moveXQote }}>
             <p className="text-white text-[52px] md:text-[9rem] opacity-40">
@@ -49,7 +50,6 @@ const AnimatedTransition = ({
             </p>
           </motion.div>
         </div>
-        {animatedIcon && React.cloneElement(animatedIcon, { scrollYProgress })}
       </div>
     </div>
   );

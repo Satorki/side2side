@@ -49,7 +49,6 @@ const OfferServiceElements = () => {
           <OfferServiceTab
             icon={service.icon}
             title={service.title}
-            description={service.description}
           />
         </FadeUp>
       ))}

@@ -29,7 +29,7 @@ const OfferService: React.FC = () => {
       <div id="offer-service">
         <AnimatedTransition quote="SERWIS" animatedIcon={<AnimatedCircle />} />
         <div className="offer-body">
-          <div className="flex flex-col gap-10 md:gap-20">
+          <div className="flex flex-col gap-5 md:gap-10">
             <TitleSection titleBegining="Profesjonalna obsługa dostosowana do Ciebie." />
             <FadeUp delay={0.5} duration={2}>
               <DescriptionSingle
@@ -68,9 +68,9 @@ const OfferService: React.FC = () => {
             justify-content: center;
             align-items: center;
             color: #fff;
-            max-width: 1440px;
+            max-width: 1200px;
             margin: 0 auto;
-            gap: 2rem;
+            gap: 5rem;
           }
           .description-container {
             display: flex;
@@ -84,19 +84,21 @@ const OfferService: React.FC = () => {
             justify-content: center;
             padding: 0rem 2rem 4rem 5rem;
             height: 100vh;
+            
           }
 
           @media (max-width: 768px) {
             .offer-body {
               flex-direction: column;
               height: auto;
+              gap: 2rem;
             }
             .description-container {
               gap: 2rem;
             }
             #offer-service {
               height: auto;
-              padding: 0rem 1rem 0rem 3.5rem;
+              padding: 1rem 1rem 1rem 3.5rem;
               overflow: hidden;
             }
           }
