@@ -13,12 +13,12 @@ const OfferLeftMenu = ({ whichIsHighlighted }: Props) => {
     target: container,
     offset: ["start start", "start end"],
   });
-  const height = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
+  const height = useTransform(scrollYProgress, [1, 0.1], [0, 0]);
 
   return (
     <div ref={container} className="sticky top-[59px] md:top-[74px]">
       <motion.div style={{ height }}>
-        <div className=" h-screen left-0 w-10 md:w-14 flex flex-col items-center justify-center bg-[#444444] font-bai text-white z-10">
+        <div className="h-screen w-10 md:w-14 pt-[70px] flex flex-col bg-[#444444] font-bai text-white z-10">
           <div className="flex flex-col gap-16 items-center">
             {offerList.map((offer, index) => (
               <p

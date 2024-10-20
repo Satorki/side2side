@@ -84,7 +84,6 @@ const OfferService: React.FC = () => {
             justify-content: center;
             padding: 0rem 2rem 4rem 5rem;
             height: 100vh;
-            
           }
 
           @media (max-width: 768px) {

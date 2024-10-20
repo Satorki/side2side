@@ -9,6 +9,9 @@ import ButtonAction from "../atoms/ButtonAction";
 import List from "../atoms/List";
 import TitleSection from "../atoms/TitleSection";
 import { BorderTrail } from "../atoms/BorderTrail";
+import OfferLeftMenu from "../atoms/OfferLeftMenu";
+import AnimatedTransition from "../atoms/AnimatedTransition";
+import AnimatedCircle from "../atoms/AnimatedCircle";
 // import AnimatedTransition from "../atoms/AnimatedTransition";
 
 const OfferMotorsport = () => {
@@ -59,85 +62,89 @@ const OfferMotorsport = () => {
   }, []);
 
   return (
-    <div id="offer-motorsport">
-      <div className="offer-container">
-        <div className="flex-1 overflow-hidden">
-          <div className="description-container">
-            <TitleSection
-              category="Oferta"
-              titleAnimationText="Wsparcie"
-              titleBegining=" Motorsport"
-            />
+    <div>
+      <OfferLeftMenu whichIsHighlighted={2} />
+      <div id="offer-motorsport">
+      <AnimatedTransition quote="MOTORSPORT" animatedIcon={<AnimatedCircle />} />
+        <div className="offer-container">
+          <div className="flex-1 overflow-hidden">
+            <div className="description-container">
+              <TitleSection
+                category="Oferta"
+                titleAnimationText="Wsparcie"
+                titleBegining=" Motorsport"
+              />
 
-            {!isDesktop && <ImageOffer ImageCurrent={MotorsportImage} />}
+              {!isDesktop && <ImageOffer ImageCurrent={MotorsportImage} />}
 
-            <FadeUp delay={0.5} duration={2}>
-              <div className="relative p-2 rounded-xl">
-                <DescriptionSingle
-                  isBold={true}
-                  text="Dla entuzjastów rajdów, wyścigów tornych i driftu oferujemy kompleksowe przygotowanie pojazdów do motorsportu."
-                />
-                <BorderTrail
-                  transition={{
-                    duration: 10,
-                    repeat: Infinity,
-                    ease: "easeOut",
-                  }}
-                />
-              </div>
-            </FadeUp>
-            <List items={listItems} />
-            <ButtonAction
-              text="Sprawdź"
-              bgColor="red"
-              textColor="white"
-              icon={<PhoneIncoming />}
-            />
+              <FadeUp delay={0.5} duration={2}>
+                <div className="relative p-2 rounded-xl">
+                  <DescriptionSingle
+                    isBold={true}
+                    text="Dla entuzjastów rajdów, wyścigów tornych i driftu oferujemy kompleksowe przygotowanie pojazdów do motorsportu."
+                  />
+                  <BorderTrail
+                    transition={{
+                      duration: 10,
+                      repeat: Infinity,
+                      ease: "easeOut",
+                    }}
+                  />
+                </div>
+              </FadeUp>
+              <List items={listItems} />
+              <ButtonAction
+                text="Sprawdź"
+                bgColor="red"
+                textColor="white"
+                icon={<PhoneIncoming />}
+              />
+            </div>
           </div>
+          {isDesktop && <ImageOffer ImageCurrent={MotorsportImage} />}
         </div>
-        {isDesktop && <ImageOffer ImageCurrent={MotorsportImage} />}
-      </div>
-      <style jsx>{`
-        .offer-container {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-          color: #fff;
-          max-width: 1440px;
-          margin: 0 auto;
-        }
-        .description-container {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          gap: 2rem;
-          padding: 2rem;
-        }
-        #offer-motorsport {
-          padding: 2rem 0;
-          height: 100vh;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          background-color: #000;
-        }
-
-        @media (max-width: 768px) {
+        <style jsx>{`
           .offer-container {
-            flex-direction: column;
+            display: flex;
+            flex-direction: row;
             justify-content: center;
             align-items: center;
-            height: auto;
+            color: #fff;
+            max-width: 1440px;
+            margin: 0 auto;
           }
           .description-container {
-            padding: 2rem 1.2rem 2rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+            padding: 2rem;
           }
           #offer-motorsport {
-            height: auto;
+            padding: 2rem 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #000;
           }
-        }
-      `}</style>
+
+          @media (max-width: 768px) {
+            .offer-container {
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              height: auto;
+            }
+            .description-container {
+              padding: 2rem 1.2rem 2rem 1.2rem;
+            }
+            #offer-motorsport {
+              height: auto;
+            }
+          }
+        `}</style>
+      </div>
     </div>
   );
 };

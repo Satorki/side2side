@@ -54,6 +54,7 @@ Okazało się też, że serwisuje auta vipów jak na zdjęciu. Jednym słowem PO
           );
           color: white;
           padding: 2rem 5rem;
+          z-index: 20;
         }
         .rewievs-container {
           display: flex;
