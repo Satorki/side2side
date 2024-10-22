@@ -6,8 +6,7 @@ import DescriptionSingle from "../atoms/DescriptionSingle";
 import OfferServiceElements from "../molecules/OfferServiceElements";
 import { PhoneCall } from "lucide-react";
 import AnimatedTransition from "../atoms/AnimatedTransition";
-import OfferLeftMenu from "../atoms/OfferLeftMenu";
-import AnimatedCircle from "../atoms/AnimatedCircle";
+import AnimatedWrench from "../atoms/AnimatedWrench";
 
 const OfferService: React.FC = () => {
   const [isDesktop, setIsDesktop] = useState(false);
@@ -24,85 +23,81 @@ const OfferService: React.FC = () => {
   }, []);
 
   return (
-    <div>
-      <OfferLeftMenu whichIsHighlighted={0} />
-      <div id="offer-service">
-        <AnimatedTransition quote="SERWIS" animatedIcon={<AnimatedCircle />} />
-        <div className="offer-body">
-          <div className="flex flex-col gap-5 md:gap-10">
-            <TitleSection titleBegining="Profesjonalna obsługa dostosowana do Ciebie." />
-            <FadeUp delay={0.5} duration={2}>
-              <DescriptionSingle
-                text="Oferujemy kompleksowy serwis dla pojazdów osobnych i dostawczych do 3,5 tony, zapewniając ich sprawność w codziennym użytkowaniu."
-                isBold={true}
-              />
-            </FadeUp>
-            {isDesktop && (
-              <ButtonAction
-                text="Umów wizytę"
-                bgColor="#000"
-                textColor="#fff"
-                icon={<PhoneCall />}
-              />
-            )}
-          </div>
-
-          <div className="description-container">
-            <OfferServiceElements />
-            {!isDesktop && (
-              <ButtonAction
-                text="Umów wizytę"
-                bgColor="#000"
-                textColor="#fff"
-                icon={<PhoneCall />}
-              />
-            )}
-          </div>
-
-          <hr />
+    <div id="offer-service">
+      <AnimatedTransition quote="SERWIS" animatedIcon={<AnimatedWrench />} />
+      <div className="offer-body">
+        <div className="flex flex-col gap-5 md:gap-10">
+          <TitleSection titleBegining="Profesjonalna obsługa dostosowana do Ciebie." />
+          <FadeUp delay={0.5} duration={2}>
+            <DescriptionSingle
+              text="Oferujemy kompleksowy serwis dla pojazdów osobnych i dostawczych do 3,5 tony, zapewniając ich sprawność w codziennym użytkowaniu."
+              isBold={true}
+            />
+          </FadeUp>
+          {isDesktop && (
+            <ButtonAction
+              text="Umów wizytę"
+              bgColor="#000"
+              textColor="#fff"
+              icon={<PhoneCall />}
+            />
+          )}
         </div>
-        <style jsx>{`
+
+        <div className="description-container">
+          <OfferServiceElements />
+          {!isDesktop && (
+            <ButtonAction
+              text="Umów wizytę"
+              bgColor="#000"
+              textColor="#fff"
+              icon={<PhoneCall />}
+            />
+          )}
+        </div>
+
+        <hr />
+      </div>
+      <style jsx>{`
+        #offer-service {
+          background-color: #dc2626;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 4rem;
+        }
+        .offer-body {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          color: #fff;
+          max-width: 1200px;
+          margin: 0 auto;
+          gap: 5rem;
+        }
+        .description-container {
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+        }
+
+        @media (max-width: 768px) {
           .offer-body {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            max-width: 1200px;
-            margin: 0 auto;
-            gap: 5rem;
+            flex-direction: column;
+            height: auto;
+            gap: 2rem;
           }
           .description-container {
-            display: flex;
-            flex-direction: column;
-            align-items: start;
+            gap: 2rem;
           }
           #offer-service {
-            background-color: #dc2626;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 0rem 2rem 4rem 5rem;
-            height: 100vh;
+            height: auto;
+            padding: 2rem;
+            overflow: hidden;
           }
-
-          @media (max-width: 768px) {
-            .offer-body {
-              flex-direction: column;
-              height: auto;
-              gap: 2rem;
-            }
-            .description-container {
-              gap: 2rem;
-            }
-            #offer-service {
-              height: auto;
-              padding: 1rem 1rem 1rem 3.5rem;
-              overflow: hidden;
-            }
-          }
-        `}</style>
-      </div>
+        }
+      `}</style>
     </div>
   );
 };

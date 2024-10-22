@@ -8,7 +8,7 @@ const ImageAbout = () => {
       <Image
         src={CrewImage}
         alt="side2side crew around the car"
-        className="object-cover rounded-xl md:object-[20%]"
+        className="object-cover rounded-2xl shadow-lg"
       />
     </div>
   );

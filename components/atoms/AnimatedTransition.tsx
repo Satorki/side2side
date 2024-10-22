@@ -41,15 +41,16 @@ const AnimatedTransition = ({
 
   return (
     <div className="overflow-hidden w-full relative font-bai" ref={container}>
-      <div className="max-w-[1200px] mx-auto w-full flex items-center justify-between">
-        {animatedIcon && React.cloneElement(animatedIcon, { scrollYProgress })}
+      <div className="max-w-[1200px] mx-auto w-full flex items-center justify-between text-white">
         <div>
-          <motion.div style={{ x: moveXQote }}>
-            <p className="text-white text-[52px] md:text-[9rem] opacity-40">
+          <motion.div style={{ x: moveXQote }} className="flex items-center">
+            <p className="-rotate-90 text-[0.6rem] md:text-[1.5rem] mx-[-0.9rem] md:mx-[-2.4rem] opacity-40 font-bold">OFERTA</p>
+            <p className="text-[52px] md:text-[9rem] opacity-40 leading-none">
               {quote}
             </p>
           </motion.div>
         </div>
+        {animatedIcon && React.cloneElement(animatedIcon, { scrollYProgress })}
       </div>
     </div>
   );

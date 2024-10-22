@@ -69,7 +69,6 @@ const About = () => {
   return (
     <div id="about">
       <div className="about-container">
-        
         {isDesktop && (
           <>
             <ImageAbout />
@@ -78,7 +77,7 @@ const About = () => {
 
         <div className="description-container">
           <div className="font-bai flex flex-col gap-4">
-            <h2 className="text-4xl font-semibold leading-[50px]">
+            <h2 className="text-4xl font-semibold">
               Z nami Twój pojazd osiągnie pełnie możliwości.
             </h2>
           </div>
@@ -101,14 +100,13 @@ const About = () => {
       </div>
       <style jsx>{`
         #about {
-          margin: 2rem;
+          background-color: #323232;
+          padding: 4rem 0rem;
         }
         .description-container {
           display: flex;
           flex-direction: column;
-          justify-content: center;
-          align-items: start;
-          gap: 3rem;
+          gap: 2.5rem;
           color: white;
         }
         .about-container {
@@ -121,15 +119,11 @@ const About = () => {
           max-width: 1200px;
           margin: 0 auto;
         }
-        @media (min-width: 1440px) {
-          .description-container {
-            padding-left: 20%;
-          }
-        }
         @media (max-width: 768px) {
+          #about {
+            padding: 1rem 0rem;
+          }
           .description-container {
-            position: static;
-            background: black;
             width: 100%;
             height: auto;
             color: white;

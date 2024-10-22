@@ -14,7 +14,7 @@ const OffersAll = () => {
           </h2>
         </div>
         <LineAnimation />
-        <div className="flex flex-col md:flex-row gap-4">
+        <div className="tabs-container">
           <OfferAllTab
             icon={<Wrench className="w-1/2 h-auto" />}
             title="SERWIS"
@@ -72,11 +72,21 @@ const OffersAll = () => {
           flex-direction: column;
           color: white;
           padding: 2rem;
-          gap: 1rem;
+          gap: 1.5rem;
+        }
+
+        .tabs-container {
+          display: flex;
+          flex-direction: row;
+          gap: 4rem;
+          margin: 3rem 0 0 0;
         }
         @media (max-width: 768px) {
           #offersAll {
-            padding: 1rem 0;
+            padding: 1rem 0rem;
+          }
+          .tabs-container {
+            flex-direction: column;
           }
         }
       `}</style>
