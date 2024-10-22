@@ -5,6 +5,7 @@ import About from "@/containers/home-page/About";
 import Hero from "@/containers/home-page/Hero";
 // import Projects from "@/containers/home-page/Projects";
 import Rewievs from "@/containers/home-page/Rewievs";
+import OffersAll from "@/containers/home-page/OffersAll";
 
 // powinno sie uzywac dwoc fontow
 // skojarzeniami operowac a nie wprost
@@ -52,10 +53,9 @@ export default function Home() {
   return (
     <div>
       <Hero />
+      <OffersAll />
       <About />
-
       <Offers />
-
       {/* <Projects /> */}
       <Rewievs />
       {/* <Contact /> */}

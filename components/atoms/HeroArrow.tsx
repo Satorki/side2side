@@ -27,7 +27,7 @@ const HeroArrow = ({ isLoaded }: Props) => {
       style={{ opacity }}
     >
       <Link
-        className="rounded-full bg-slate-300 bg-opacity-40 flex justify-center items-center w-10 h-10 text-black mb-4 pt-1 cursor-pointer transition-all duration-300 ease-out hover:-translate-y-4"
+        className="rounded-full bg-slate-300 bg-opacity-40 flex justify-center items-center w-10 h-10 text-black mb-20 pt-1 cursor-pointer transition-all duration-300 ease-out hover:-translate-y-4"
         href="#About"
       >
         <FaArrowDown className="text-2xl" />
