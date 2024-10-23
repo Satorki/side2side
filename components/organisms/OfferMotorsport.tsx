@@ -64,19 +64,16 @@ const OfferMotorsport = () => {
   return (
     <div id="offer-motorsport">
       <AnimatedTransition
-        quote="MOTOR SPORT"
+        quote="MOTORSPORT"
         animatedIcon={<AnimatedCircle />}
       />
       <div className="offer-container">
         <div className="flex-1 overflow-hidden">
           <div className="description-container">
             <TitleSection
-              category="Oferta"
               titleAnimationText="Wsparcie"
               titleBegining=" Motorsport"
             />
-
-            {!isDesktop && <ImageOffer ImageCurrent={MotorsportImage} />}
 
             <FadeUp delay={0.5} duration={2}>
               <div>
@@ -95,7 +92,7 @@ const OfferMotorsport = () => {
             />
           </div>
         </div>
-        {isDesktop && <ImageOffer ImageCurrent={MotorsportImage} />}
+
       </div>
       <style jsx>{`
         .offer-container {
@@ -104,7 +101,7 @@ const OfferMotorsport = () => {
           justify-content: center;
           align-items: center;
           color: #fff;
-          max-width: 1440px;
+          max-width: 1200px;
           margin: 0 auto;
         }
         .description-container {
@@ -112,7 +109,6 @@ const OfferMotorsport = () => {
           flex-direction: column;
           justify-content: center;
           gap: 2rem;
-          padding: 2rem;
         }
         #offer-motorsport {
           display: flex;

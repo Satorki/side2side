@@ -52,12 +52,12 @@ import OffersAll from "@/containers/home-page/OffersAll";
 export default function Home() {
   return (
     <div>
-      <Hero />
-      <OffersAll />
-      <About />
+      {/* <Hero /> */}
+      {/* <OffersAll /> */}
+      {/* <About /> */}
       <Offers />
       {/* <Projects /> */}
-      <Rewievs />
+      {/* <Rewievs /> */}
       {/* <Contact /> */}
     </div>
   );

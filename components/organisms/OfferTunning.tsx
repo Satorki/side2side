@@ -5,7 +5,6 @@ import TitleSection from "../atoms/TitleSection";
 import DescriptionSingle from "../atoms/DescriptionSingle";
 import { PhoneCall } from "lucide-react";
 import AnimatedTransition from "../atoms/AnimatedTransition";
-import OfferLeftMenu from "../atoms/OfferLeftMenuX";
 import AnimatedProgress from "../atoms/AnimatedProgress";
 import OfferTunningSlider from "../atoms/OfferTunningSlider";
 
@@ -27,7 +26,7 @@ const OfferService: React.FC = () => {
     <div id="offer-service">
       <AnimatedTransition quote="TUNING" animatedIcon={<AnimatedProgress />} />
       <div className="offer-body">
-        <div className="flex flex-col gap-5 md:gap-10 md:pl-20">
+        <div className="flex flex-col gap-5 md:gap-10">
           <TitleSection titleBegining="Lepsze osiągi, większa radość z jazdy." />
           <FadeUp delay={0.5} duration={2}>
             <DescriptionSingle
@@ -67,7 +66,7 @@ const OfferService: React.FC = () => {
           justify-content: space-between;
           color: #fff;
           width: 100%;
-          max-width: 1440px;
+          max-width: 1200px;
           margin: 0 auto;
         }
         .description-container {
@@ -88,7 +87,6 @@ const OfferService: React.FC = () => {
             height: auto;
             justify-content: center;
             align-items: flex-start;
-            gap: 1rem;
           }
           #offer-service {
             height: auto;
