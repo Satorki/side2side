@@ -6,7 +6,6 @@ import DescriptionSingle from "../atoms/DescriptionSingle";
 import { PhoneCall } from "lucide-react";
 import AnimatedTransition from "../atoms/AnimatedTransition";
 import AnimatedProgress from "../atoms/AnimatedProgress";
-import OfferTunningSlider from "../atoms/OfferTunningSliderX";
 
 const OfferTunning: React.FC = () => {
   const [isDesktop, setIsDesktop] = useState(false);

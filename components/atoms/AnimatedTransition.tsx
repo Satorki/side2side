@@ -38,9 +38,6 @@ const AnimatedTransition = ({
     offscreenX - 200,
     0,
   ]);
-  const moveYQuote = useTransform(scrollYProgress, moveParameters, [200, 0]);
-  const opacity = useTransform(scrollYProgress, moveParameters, [0, 1]);
-  const scale = useTransform(scrollYProgress, moveParameters, [0, 1]);
 
   return (
     <div className="overflow-hidden w-full relative font-bai" ref={container}>

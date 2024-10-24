@@ -15,7 +15,6 @@ import car2 from "@/public/images/Tunning/car2a.jpg";
 import car3 from "@/public/images/Tunning/car3a.jpg";
 import car4 from "@/public/images/Tunning/car4a.jpg";
 import car5 from "@/public/images/Tunning/car5a.jpg";
-import { dot } from "node:test/reporters";
 
 const OfferTunningSlider = () => {
   const tunningList = [

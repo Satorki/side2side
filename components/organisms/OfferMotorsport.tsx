@@ -1,18 +1,13 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import MotorsportImage from "@/public/images/Motorsport/offer9.jpg";
 import { PhoneIncoming } from "lucide-react";
-import ImageOffer from "../atoms/ImageOffer";
 import DescriptionSingle from "../atoms/DescriptionSingle";
 import FadeUp from "../atoms/FadeUp";
 import ButtonAction from "../atoms/ButtonAction";
 import List from "../atoms/List";
 import TitleSection from "../atoms/TitleSection";
-import { BorderTrail } from "../atoms/BorderTrail";
-import OfferLeftMenu from "../atoms/OfferLeftMenuX";
 import AnimatedTransition from "../atoms/AnimatedTransition";
 import AnimatedCircle from "../atoms/AnimatedCircle";
-// import AnimatedTransition from "../atoms/AnimatedTransition";
 
 const OfferMotorsport = () => {
   const listItems = [
