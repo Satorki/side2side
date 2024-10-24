@@ -8,7 +8,7 @@ import AnimatedTransition from "../atoms/AnimatedTransition";
 import AnimatedProgress from "../atoms/AnimatedProgress";
 import OfferTunningSlider from "../atoms/OfferTunningSlider";
 
-const OfferService: React.FC = () => {
+const OfferTunning: React.FC = () => {
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const OfferService: React.FC = () => {
   }, []);
 
   return (
-    <div id="offer-service">
+    <div id="offer-tunning">
       <AnimatedTransition quote="TUNING" animatedIcon={<AnimatedProgress />} />
       <div className="offer-body">
         <div className="flex flex-col gap-5 md:gap-10">
@@ -59,6 +59,13 @@ const OfferService: React.FC = () => {
         <hr />
       </div>
       <style jsx>{`
+        #offer-tunning {
+          background-color: #303030;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 4rem;
+        }
         .offer-body {
           display: flex;
           flex-direction: row-reverse;
@@ -67,18 +74,12 @@ const OfferService: React.FC = () => {
           color: #fff;
           width: 100%;
           max-width: 1200px;
-          margin: 0 auto;
+          margin: 2rem auto;
         }
         .description-container {
           display: flex;
           flex-direction: column;
           align-items: start;
-        }
-        #offer-service {
-          background-color: #303030;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
         }
 
         @media (max-width: 768px) {
@@ -88,7 +89,7 @@ const OfferService: React.FC = () => {
             justify-content: center;
             align-items: flex-start;
           }
-          #offer-service {
+          #offer-Tunning {
             height: auto;
             padding: 2rem;
             overflow: hidden;
@@ -99,4 +100,4 @@ const OfferService: React.FC = () => {
   );
 };
 
-export default OfferService;
+export default OfferTunning;

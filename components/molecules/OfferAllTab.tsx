@@ -4,7 +4,7 @@ interface OfferAllTabProps {
   icon: JSX.Element;
   title: string;
   description: string;
-  button: JSX.Element;
+  button?: JSX.Element;
   bgColor?: string;
 }
 
@@ -17,8 +17,10 @@ const OfferAllTab = ({
 }: OfferAllTabProps) => {
   return (
     <div
-      className="flex flex-col justify-between  gap-2 p-4 rounded shadow-md hover:shadow-lg transition-shadow flex-1 rounded-3xl"
-      style={{ backgroundColor: bgColor }}
+      className="flex flex-col justify-between  gap-3 p-4 shadow-md hover:shadow-lg transition-shadow flex-1 rounded-2xl"
+      style={{
+        background: `linear-gradient(to left top, ${bgColor}, #323232)`,
+      }}
     >
       <div>{icon}</div>
       <h2 className="text-xl font-bold">{title}</h2>

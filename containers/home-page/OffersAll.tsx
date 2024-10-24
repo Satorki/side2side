@@ -19,42 +19,18 @@ const OffersAll = () => {
             icon={<Wrench className="w-1/2 h-auto" />}
             title="SERWIS"
             description="Oferujemy kompleksowy serwis dla pojazdów osobnych i dostawczych do 3,5 tony, zapewniając ich sprawność w codziennym użytkowaniu."
-            button={
-              <ButtonAction
-                bgColor="#ddff00"
-                textColor="#000000"
-                text="Zobacz"
-                icon={<ArrowDown />}
-              />
-            }
             bgColor="#AD1A1B"
           />
           <OfferAllTab
             icon={<SignalHigh className="w-1/2 h-auto" />}
             title="TUNNING"
             description="Nasze usługi tuningowe obejmują modyfikację silnika, optymalizację układu wydechowego, ulepszenia zawieszenia i montaż zaawansowanych systemów elektronicznych."
-            button={
-              <ButtonAction
-                bgColor="#ddff00"
-                textColor="#000000"
-                text="Zobacz"
-                icon={<ArrowDown />}
-              />
-            }
             bgColor="#444444"
           />
           <OfferAllTab
             icon={<CircleDotDashed className="w-1/2 h-auto" />}
             title="MOTORSPORT"
             description="Dla entuzjastów rajdów, wyścigów tornych i driftu oferujemy kompleksowe przygotowanie pojazdów do motorsportu."
-            button={
-              <ButtonAction
-                bgColor="#ddff00"
-                textColor="#000000"
-                text="Zobacz"
-                icon={<ArrowDown />}
-              />
-            }
             bgColor="#000000"
           />
         </div>
@@ -62,7 +38,6 @@ const OffersAll = () => {
       <style jsx>{`
         #offersAll {
           width: 100%;
-          background-color: #323232;
           padding: 4rem 0;
         }
         .offer-container {

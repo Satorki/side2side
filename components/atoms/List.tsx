@@ -5,7 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface ListProps {
   items: { id: number; content?: string; title: string }[];
@@ -14,6 +14,12 @@ interface ListProps {
 export const List = ({ items }: ListProps) => {
   const [activeItem, setActiveItem] = useState<string | null>(null);
 
+  useEffect(() => {
+    if (items.length > 0) {
+      setActiveItem(`item-${items[0].id}`);
+    }
+  }, [items]);
+
   const handleItemClick = (value: string) => {
     setActiveItem((prev) => (prev === value ? null : value));
   };
@@ -21,8 +27,9 @@ export const List = ({ items }: ListProps) => {
   return (
     <Accordion
       type="single"
-      collapsible
-      className="overflow-hidden"
+      value={activeItem ?? ""}
+      collapsible={false}
+      className="overflow-hidden w-full"
       onValueChange={(value) => handleItemClick(value)}
     >
       {items.map((item) => (
@@ -31,11 +38,11 @@ export const List = ({ items }: ListProps) => {
             value={`item-${item.id}`}
             className={`transition-opacity duration-300 ${
               activeItem && activeItem !== `item-${item.id}`
-                ? "opacity-60"
+                ? "opacity-75"
                 : "opacity-100"
             }`}
           >
-            <AccordionTrigger className="py-1 text-start hover:text-red-400 transition-all duration-300 ease-in cursor-pointer text-[1.1rem] ">
+            <AccordionTrigger className="py-1 text-start hover:text-red-400 transition-all duration-300 ease-in cursor-pointer text-[1.1rem] font-bold">
               {item.title}
             </AccordionTrigger>
             <AccordionContent>{item.content}</AccordionContent>

@@ -68,33 +68,47 @@ const OfferMotorsport = () => {
         animatedIcon={<AnimatedCircle />}
       />
       <div className="offer-container">
-        <div className="flex-1 overflow-hidden">
-          <div className="description-container">
-            <TitleSection
-              titleAnimationText="Wsparcie"
-              titleBegining=" Motorsport"
+        <div className="flex flex-col flex-1 gap-5 md:gap-10">
+          <TitleSection
+            titleAnimationText="Wsparcie"
+            titleBegining=" w rywalizacji."
+          />
+          <FadeUp delay={0.5} duration={2}>
+            <DescriptionSingle
+              isBold={true}
+              text="Dla entuzjastów rajdów, wyścigów tornych i driftu oferujemy kompleksowe przygotowanie pojazdów do motorsportu."
             />
-
-            <FadeUp delay={0.5} duration={2}>
-              <div>
-                <DescriptionSingle
-                  isBold={true}
-                  text="Dla entuzjastów rajdów, wyścigów tornych i driftu oferujemy kompleksowe przygotowanie pojazdów do motorsportu."
-                />
-              </div>
-            </FadeUp>
-            <List items={listItems} />
+          </FadeUp>
+          {isDesktop && (
             <ButtonAction
               text="Sprawdź"
               bgColor="red"
               textColor="white"
               icon={<PhoneIncoming />}
             />
-          </div>
+          )}
         </div>
-
+        <div className="description-container">
+          <List items={listItems} />
+          {!isDesktop && (
+            <ButtonAction
+              text="Sprawdź"
+              bgColor="red"
+              textColor="white"
+              icon={<PhoneIncoming />}
+            />
+          )}
+        </div>
       </div>
       <style jsx>{`
+        #offer-motorsport {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          background-color: #000;
+          padding: 4rem;
+        }
+
         .offer-container {
           display: flex;
           flex-direction: row;
@@ -102,20 +116,15 @@ const OfferMotorsport = () => {
           align-items: center;
           color: #fff;
           max-width: 1200px;
-          margin: 0 auto;
+          margin: 2rem auto;
+          gap: 5rem;
         }
         .description-container {
           display: flex;
           flex-direction: column;
-          justify-content: center;
-          gap: 2rem;
-        }
-        #offer-motorsport {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          background-color: #000;
-          padding: 2rem;
+          align-items: start;
+          flex: 1;
+          width: 100%;
         }
 
         @media (max-width: 768px) {

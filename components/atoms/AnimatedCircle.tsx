@@ -37,9 +37,9 @@ const AnimatedCircle = ({ scrollYProgress }: Props) => {
   return (
     <motion.div
       style={{ x: moveX, rotate: turnAround }}
-      className="w-[43px] h-[43px] md:w-[150px] md:h-[150px]"
+      className="w-[43px] h-[43px] md:w-[120px] md:h-[120px]"
     >
-      <CircleDotDashed className="text-white w-[43px] h-[43px] md:w-[150px] md:h-[150px] opacity-30" />
+      <CircleDotDashed className="text-white w-[43px] h-[43px] md:w-[120px] md:h-[120px] opacity-30" />
     </motion.div>
   );
 };

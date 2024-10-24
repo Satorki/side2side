@@ -73,7 +73,7 @@ const OfferService: React.FC = () => {
           align-items: center;
           color: #fff;
           max-width: 1200px;
-          margin: 0 auto;
+          margin: 2rem auto;
           gap: 5rem;
         }
         .description-container {

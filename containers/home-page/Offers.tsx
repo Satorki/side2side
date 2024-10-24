@@ -8,7 +8,7 @@ const Offers = () => {
     <div>
 
       <OfferService />
-      <WalkingText />
+      
       <OfferTunning />
 
       <OfferMotorsport />

@@ -100,7 +100,6 @@ const About = () => {
       </div>
       <style jsx>{`
         #about {
-          background-color: #323232;
           padding: 4rem 0rem;
         }
         .description-container {
