@@ -19,7 +19,7 @@ const OfferAllTab = ({
     <div
       className="flex flex-col justify-between  gap-3 p-4 shadow-md hover:shadow-lg transition-shadow flex-1 rounded-2xl"
       style={{
-        background: `linear-gradient(to left top, ${bgColor}, #323232)`,
+        background: `linear-gradient(to right bottom, #323232, ${bgColor}, #323232)`,
       }}
     >
       <div>{icon}</div>

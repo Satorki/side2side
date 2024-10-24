@@ -20,31 +20,31 @@ const OfferMotorsport = () => {
       id: 1,
       title: "Przygotowanie techniczne samochodów do zawodów",
       content:
-        "Twoje auto potrzebuje precyzyjnych przygotowań, aby sprostać wymaganiom zawodów? Oferujemy kompleksowe przygotowanie techniczne, zapewniając, że każdy aspekt Twojego pojazdu będzie gotowy do startu – od silnika po zawieszenie.",
+        "Kompleksowe przygotowanie Twojego auta do zawodów – od silnika po zawieszenie, aby było gotowe do startu.",
     },
     {
       id: 2,
       title: "Tuning pod kątem specyficznych dyscyplin sportowych",
       content:
-        "Każda dyscyplina motorsportu ma swoje wymagania. Niezależnie od tego, czy to rajdy, wyścigi torowe czy drift, dostosujemy Twój samochód do specyfiki zawodów, aby osiągnąć maksymalne wyniki w konkretnej konkurencji.",
+        "Dostosowujemy Twój samochód do wymagań rajdów, wyścigów czy driftu, aby maksymalizować wyniki.",
     },
     {
       id: 3,
       title: "Obsługa techniczna pojazdów na eventach motoryzacyjnych",
       content:
-        "Zapewniamy pełną obsługę techniczną Twojego pojazdu podczas eventów. Nasi specjaliści zadbają o sprawność auta, tak abyś mógł skupić się wyłącznie na zawodach i osiąganiu jak najlepszych wyników.",
+        "Pełna obsługa techniczna podczas eventów, abyś mógł skupić się na osiąganiu najlepszych wyników.",
     },
     {
       id: 4,
       title: "Wsparcie techniczne podczas zawodów i pokazów",
       content:
-        "Niezależnie od miejsca i czasu, nasze wsparcie techniczne podczas zawodów czy pokazów motoryzacyjnych jest dostępne dla Ciebie. Jesteśmy na miejscu, aby szybko i skutecznie rozwiązywać ewentualne problemy techniczne.",
+        "Nasze wsparcie techniczne jest dostępne na miejscu, aby szybko rozwiązać wszelkie problemy.",
     },
     {
       id: 5,
       title: "Modyfikacje układów napędowych i aerodynamicznych",
       content:
-        "Oferujemy modyfikacje układów napędowych i aerodynamicznych, które zapewnią lepsze przyspieszenie, większą stabilność i optymalne osiągi na torze. Spraw, aby Twój pojazd był liderem na zawodach.",
+        "Modyfikacje, które zwiększają przyspieszenie, stabilność i osiągi Twojego pojazdu na torze.",
     },
   ];
 
@@ -64,7 +64,7 @@ const OfferMotorsport = () => {
   return (
     <div id="offer-motorsport">
       <AnimatedTransition
-        quote="MOTORSPORT"
+        quote="Motorsport"
         animatedIcon={<AnimatedCircle />}
       />
       <div className="offer-container">
@@ -124,7 +124,6 @@ const OfferMotorsport = () => {
           flex-direction: column;
           align-items: start;
           flex: 1;
-          width: 100%;
         }
 
         @media (max-width: 768px) {
@@ -133,8 +132,14 @@ const OfferMotorsport = () => {
             justify-content: center;
             align-items: center;
             height: auto;
+            gap: 2rem;
+            margin: 0;
+          }
+          .description-container {
+            gap: 2rem;
           }
           #offer-motorsport {
+            padding: 2rem;
             height: auto;
           }
         }

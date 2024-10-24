@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Check } from "lucide-react";
 import { useEffect, useState } from "react";
 
 interface ListProps {
@@ -42,9 +43,12 @@ export const List = ({ items }: ListProps) => {
                 : "opacity-100"
             }`}
           >
-            <AccordionTrigger className="py-1 text-start hover:text-red-400 transition-all duration-300 ease-in cursor-pointer text-[1.1rem] font-bold">
-              {item.title}
-            </AccordionTrigger>
+            <div className="flex gap-5 items-center relative">
+              <div><Check /></div>
+              <AccordionTrigger className="py-1 text-start hover:text-[#ffffff] transition-all duration-300 ease-in cursor-pointer text-[1.1rem] font-bold">
+                {item.title}
+              </AccordionTrigger>
+            </div>
             <AccordionContent>{item.content}</AccordionContent>
           </AccordionItem>
         </FadeUp>

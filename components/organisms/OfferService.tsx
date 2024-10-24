@@ -24,9 +24,9 @@ const OfferService: React.FC = () => {
 
   return (
     <div id="offer-service">
-      <AnimatedTransition quote="SERWIS" animatedIcon={<AnimatedWrench />} />
+      <AnimatedTransition quote="Serwis" animatedIcon={<AnimatedWrench />} />
       <div className="offer-body">
-        <div className="flex flex-col gap-5 md:gap-10">
+        <div className="flex flex-col flex-1 gap-5 md:gap-10">
           <TitleSection titleBegining="Profesjonalna obsługa dostosowana do Ciebie." />
           <FadeUp delay={0.5} duration={2}>
             <DescriptionSingle
@@ -79,14 +79,15 @@ const OfferService: React.FC = () => {
         .description-container {
           display: flex;
           flex-direction: column;
-          align-items: start;
+          flex: 1;
         }
 
         @media (max-width: 768px) {
           .offer-body {
             flex-direction: column;
             height: auto;
-            gap: 2rem;
+            gap: 0;
+            margin: 0;
           }
           .description-container {
             gap: 2rem;

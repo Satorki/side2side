@@ -86,7 +86,7 @@ const OfferTunningSlider = () => {
                 className="w-full h-auto rounded-xl object-cover"
               />
               <FadeUp delay={0.2}>
-                <div className="flex flex-col gap-2 mt-14 p-5 h-[30vh] bg-[#373333] rounded-xl">
+                <div className="flex flex-col gap-2 mt-14 p-5 rounded-xl">
                   <p className="text-xl font-bold">{image.title}</p>
                   <p>{image.description}</p>
                 </div>
@@ -99,20 +99,22 @@ const OfferTunningSlider = () => {
         {`
           :global(.slick-slider) {
             width: 70%;
-            max-width: 500px;
+            max-width: 70vw;
           }
           :global(.slick-next) {
             margin-right: 2rem;
+            height: 40%;
           }
 
           :global(.slick-prev) {
-            margin-left: 2rem;
+            margin: 0 0 0 2rem;
+            height: 40%;
           }
 
           :global(ul.slick-dots) {
             display: flex;
             justify-content: center;
-            margin-top: 20px;
+            height: 40%;
           }
           :global(.slick-dots li) {
             margin-top: 20px;

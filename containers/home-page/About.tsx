@@ -120,7 +120,7 @@ const About = () => {
         }
         @media (max-width: 768px) {
           #about {
-            padding: 1rem 0rem;
+            padding: 0rem;
           }
           .description-container {
             width: 100%;

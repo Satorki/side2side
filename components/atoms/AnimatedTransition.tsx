@@ -50,7 +50,7 @@ const AnimatedTransition = ({
             <p className="-rotate-90 text-[0.6rem] md:text-[1.5rem] mx-[-0.9rem] md:mx-[-2.4rem] opacity-40 font-bold">
               OFERTA
             </p>
-            <p className="text-[52px] md:text-[9rem] opacity-40 leading-none">
+            <p className="text-[52px] md:text-[9rem] opacity-40 leading-none tracking-tighter">
               {quote}
             </p>
           </motion.div>

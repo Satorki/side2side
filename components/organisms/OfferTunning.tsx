@@ -6,7 +6,7 @@ import DescriptionSingle from "../atoms/DescriptionSingle";
 import { PhoneCall } from "lucide-react";
 import AnimatedTransition from "../atoms/AnimatedTransition";
 import AnimatedProgress from "../atoms/AnimatedProgress";
-import OfferTunningSlider from "../atoms/OfferTunningSlider";
+import OfferTunningSlider from "../atoms/OfferTunningSliderX";
 
 const OfferTunning: React.FC = () => {
   const [isDesktop, setIsDesktop] = useState(false);
@@ -24,7 +24,7 @@ const OfferTunning: React.FC = () => {
 
   return (
     <div id="offer-tunning">
-      <AnimatedTransition quote="TUNING" animatedIcon={<AnimatedProgress />} />
+      <AnimatedTransition quote="Tuning" animatedIcon={<AnimatedProgress />} />
       <div className="offer-body">
         <div className="flex flex-col gap-5 md:gap-10">
           <TitleSection titleBegining="Lepsze osiągi, większa radość z jazdy." />
@@ -44,7 +44,7 @@ const OfferTunning: React.FC = () => {
             />
           )}
         </div>
-        <OfferTunningSlider />
+
         <div className="description-container">
           {!isDesktop && (
             <ButtonAction
@@ -88,11 +88,13 @@ const OfferTunning: React.FC = () => {
             height: auto;
             justify-content: center;
             align-items: flex-start;
+            gap: 0;
+            margin: 0;
           }
-          #offer-Tunning {
+          #offer-tunning {
             height: auto;
-            padding: 2rem;
             overflow: hidden;
+            padding: 2rem;
           }
         }
       `}</style>
