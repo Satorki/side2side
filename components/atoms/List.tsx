@@ -29,7 +29,7 @@ export const List = ({ items }: ListProps) => {
     <Accordion
       type="single"
       value={activeItem ?? ""}
-      collapsible={false}
+      collapsible={true}
       className="overflow-hidden w-full"
       onValueChange={(value) => handleItemClick(value)}
     >
@@ -44,12 +44,16 @@ export const List = ({ items }: ListProps) => {
             }`}
           >
             <div className="flex gap-5 items-center relative">
-              <div><Check /></div>
+              <div>
+                <Check />
+              </div>
               <AccordionTrigger className="py-1 text-start hover:text-[#ffffff] transition-all duration-300 ease-in cursor-pointer text-[1.1rem] font-bold">
                 {item.title}
               </AccordionTrigger>
             </div>
-            <AccordionContent className="pl-[2.7rem]">{item.content}</AccordionContent>
+            <AccordionContent className="pl-[2.7rem]">
+              {item.content}
+            </AccordionContent>
           </AccordionItem>
         </FadeUp>
       ))}

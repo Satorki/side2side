@@ -58,10 +58,12 @@ const OfferMotorsport = () => {
 
   return (
     <div id="offer-motorsport">
+
       <AnimatedTransition
         quote="MOTORSPORT"
         animatedIcon={<AnimatedCircle />}
       />
+
       <div className="offer-container">
         <div className="flex flex-col flex-1 gap-5 md:gap-10">
           <TitleSection
@@ -74,6 +76,7 @@ const OfferMotorsport = () => {
               text="Dla entuzjastów rajdów, wyścigów tornych i driftu oferujemy kompleksowe przygotowanie pojazdów do motorsportu."
             />
           </FadeUp>
+
           {isDesktop && (
             <ButtonAction
               text="Sprawdź"
@@ -83,6 +86,7 @@ const OfferMotorsport = () => {
             />
           )}
         </div>
+
         <div className="description-container">
           <List items={listItems} />
           {!isDesktop && (
@@ -94,6 +98,7 @@ const OfferMotorsport = () => {
             />
           )}
         </div>
+        
       </div>
       <style jsx>{`
         #offer-motorsport {

@@ -75,8 +75,6 @@ const OfferService: React.FC = () => {
             </div>
           )}
         </div>
-
-        <hr />
       </div>
       <style jsx>{`
         #offer-service {

@@ -78,7 +78,7 @@ const About = () => {
         <div className="description-container">
           <div className="font-bai flex flex-col gap-4">
             <h2 className="text-4xl font-semibold">
-              Z nami Twój pojazd osiągnie pełnie możliwości.
+              Twoje auto, nasza pasja – pełen potencjał na drodze i torze.
             </h2>
           </div>
 
@@ -132,7 +132,7 @@ const About = () => {
           .about-container {
             display: flex;
             flex-direction: column;
-            padding: 2rem 0rem 1rem 0rem;
+            padding: 0rem 0rem 1rem 0rem;
             height: auto;
           }
           .about-mobile {

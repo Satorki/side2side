@@ -6,6 +6,7 @@ import DescriptionSingle from "../atoms/DescriptionSingle";
 import { PhoneCall } from "lucide-react";
 import AnimatedTransition from "../atoms/AnimatedTransition";
 import AnimatedProgress from "../atoms/AnimatedProgress";
+import OfferTunningElements from "../molecules/OfferTunningElements";
 
 const OfferTunning: React.FC = () => {
   const [isDesktop, setIsDesktop] = useState(false);
@@ -23,9 +24,11 @@ const OfferTunning: React.FC = () => {
 
   return (
     <div id="offer-tunning">
+
       <AnimatedTransition quote="TUNING" animatedIcon={<AnimatedProgress />} />
+
       <div className="offer-body">
-        <div className="flex flex-col gap-5 md:gap-10">
+        <div className="flex flex-col gap-5 md:gap-10 flex-1">
           <TitleSection titleBegining="Lepsze osiągi, większa radość z jazdy." />
           <FadeUp delay={0.5} duration={2}>
             <DescriptionSingle
@@ -43,8 +46,9 @@ const OfferTunning: React.FC = () => {
             />
           )}
         </div>
-
+        
         <div className="description-container">
+        <OfferTunningElements />
           {!isDesktop && (
             <ButtonAction
               text="Sprawdź Nas"
@@ -54,8 +58,6 @@ const OfferTunning: React.FC = () => {
             />
           )}
         </div>
-
-        <hr />
       </div>
       <style jsx>{`
         #offer-tunning {
@@ -74,11 +76,12 @@ const OfferTunning: React.FC = () => {
           width: 100%;
           max-width: 1200px;
           margin: 2rem auto;
+          gap: 2rem;
         }
         .description-container {
           display: flex;
           flex-direction: column;
-          align-items: start;
+          flex: 1;
         }
 
         @media (max-width: 768px) {
@@ -87,13 +90,15 @@ const OfferTunning: React.FC = () => {
             height: auto;
             justify-content: center;
             align-items: flex-start;
-            gap: 0;
             margin: 0;
           }
           #offer-tunning {
             height: auto;
             overflow: hidden;
             padding: 2rem;
+          }
+          .description-container {
+           gap: 2rem;
           }
         }
       `}</style>
