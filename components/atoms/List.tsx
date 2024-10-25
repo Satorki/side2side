@@ -6,7 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Check } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 interface ListProps {
   items: { id: number; content?: string; title: string }[];

@@ -1,33 +1,13 @@
 "use client";
 import { Wrench } from "lucide-react";
 import { motion, useTransform, MotionValue } from "framer-motion";
-import { useEffect, useState } from "react";
 
 interface Props {
   scrollYProgress?: MotionValue<number>;
 }
 
 const AnimatedWrench = ({ scrollYProgress }: Props) => {
-  const [offscreenX, setOffscreenX] = useState(-700);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setOffscreenX(-window.innerWidth);
-    };
-    window.addEventListener("resize", handleResize);
-
-    handleResize();
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  const moveX = useTransform(
-    scrollYProgress ?? new MotionValue(),
-    [1, 0.4],
-    [offscreenX, 0]
-  );
   const turnAround = useTransform(
     scrollYProgress ?? new MotionValue(),
     [0, 0.3, 0.4, 0.6, 0.8, 1],

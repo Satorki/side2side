@@ -7,7 +7,7 @@ import Hero from "@/containers/home-page/Hero";
 import Rewievs from "@/containers/home-page/Rewievs";
 import OffersAll from "@/containers/home-page/OffersAll";
 import WalkingText from "@/components/atoms/WalkingText";
-import NumbersSection from "@/components/atoms/NumbersSection";
+// import NumbersSection from "@/components/atoms/NumbersSection";
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
       <WalkingText />
       <About />
       <Offers />
-      <NumbersSection />
+      {/* <NumbersSection /> */}
       {/* <Projects /> */}
       <Rewievs />
       {/* <Contact /> */}

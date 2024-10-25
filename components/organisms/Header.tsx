@@ -10,7 +10,6 @@ import {
   NavbarMenuItem,
   Link,
   DropdownTrigger,
-  Button,
   DropdownMenu,
   DropdownItem,
   Dropdown,
@@ -18,7 +17,6 @@ import {
 import LogoBig from "../atoms/LogoBig";
 import LogoSmall from "../atoms/LogoSmall";
 import { motion, useScroll, useTransform } from "framer-motion";
-import ButtonAction from "../atoms/ButtonAction";
 import { ChevronDown } from "lucide-react";
 
 const Header = () => {

@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import Engine from "@/public/images/Tunning/silnik2.jpg";
 import Pipe from "@/public/images/Tunning/wydechA.jpg";
 import Suspension from "@/public/images/Tunning/zawieszenieA.jpg";
@@ -7,19 +6,6 @@ import Electricity from "@/public/images/Tunning/elektryka.jpg";
 import OfferTunningTab from "../atoms/OfferTunningTab";
 
 const OfferTunningElements = () => {
-  const [isWindowMedium, setIsWindowMedium] = useState(false);
-  useEffect(() => {
-    const handleResize = () => {
-      setIsWindowMedium(window.innerWidth >= 768);
-    };
-    window.addEventListener("resize", handleResize);
-
-    handleResize();
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   const tunningList = [
     {
