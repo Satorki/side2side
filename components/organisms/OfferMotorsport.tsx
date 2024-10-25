@@ -59,7 +59,7 @@ const OfferMotorsport = () => {
   return (
     <div id="offer-motorsport">
       <AnimatedTransition
-        quote="Motorsport"
+        quote="MOTORSPORT"
         animatedIcon={<AnimatedCircle />}
       />
       <div className="offer-container">

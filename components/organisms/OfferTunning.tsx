@@ -23,7 +23,7 @@ const OfferTunning: React.FC = () => {
 
   return (
     <div id="offer-tunning">
-      <AnimatedTransition quote="Tuning" animatedIcon={<AnimatedProgress />} />
+      <AnimatedTransition quote="TUNING" animatedIcon={<AnimatedProgress />} />
       <div className="offer-body">
         <div className="flex flex-col gap-5 md:gap-10">
           <TitleSection titleBegining="Lepsze osiągi, większa radość z jazdy." />

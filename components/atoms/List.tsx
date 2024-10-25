@@ -15,11 +15,11 @@ interface ListProps {
 export const List = ({ items }: ListProps) => {
   const [activeItem, setActiveItem] = useState<string | null>(null);
 
-  useEffect(() => {
-    if (items.length > 0) {
-      setActiveItem(`item-${items[0].id}`);
-    }
-  }, [items]);
+  // useEffect(() => {
+  //   if (items.length > 0) {
+  //     setActiveItem(`item-${items[0].id}`);
+  //   }
+  // }, [items]);
 
   const handleItemClick = (value: string) => {
     setActiveItem((prev) => (prev === value ? null : value));
@@ -49,7 +49,7 @@ export const List = ({ items }: ListProps) => {
                 {item.title}
               </AccordionTrigger>
             </div>
-            <AccordionContent>{item.content}</AccordionContent>
+            <AccordionContent className="pl-[2.7rem]">{item.content}</AccordionContent>
           </AccordionItem>
         </FadeUp>
       ))}

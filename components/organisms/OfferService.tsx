@@ -4,7 +4,7 @@ import FadeUp from "@/components/atoms/FadeUp";
 import TitleSection from "../atoms/TitleSection";
 import DescriptionSingle from "../atoms/DescriptionSingle";
 import OfferServiceElements from "../molecules/OfferServiceElements";
-import { PhoneCall } from "lucide-react";
+import { Car, PhoneCall } from "lucide-react";
 import AnimatedTransition from "../atoms/AnimatedTransition";
 import AnimatedWrench from "../atoms/AnimatedWrench";
 
@@ -24,7 +24,7 @@ const OfferService: React.FC = () => {
 
   return (
     <div id="offer-service">
-      <AnimatedTransition quote="Serwis" animatedIcon={<AnimatedWrench />} />
+      <AnimatedTransition quote="SERWIS" animatedIcon={<AnimatedWrench />} />
       <div className="offer-body">
         <div className="flex flex-col flex-1 gap-5 md:gap-10">
           <TitleSection titleBegining="Profesjonalna obsługa dostosowana do Ciebie." />
@@ -35,24 +35,44 @@ const OfferService: React.FC = () => {
             />
           </FadeUp>
           {isDesktop && (
-            <ButtonAction
-              text="Umów wizytę"
-              bgColor="#000"
-              textColor="#fff"
-              icon={<PhoneCall />}
-            />
+            <div className="flex flex-col gap-2">
+              <ButtonAction
+                text="Zadzwoń"
+                bgColor="#000"
+                textColor="#fff"
+                icon={<PhoneCall />}
+              />
+
+              <p className="pl-2 text-lg">lub zarezerwuj przez:</p>
+              <ButtonAction
+                text="Motointegrator"
+                bgColor="#f4f4b3"
+                textColor="#000000"
+                icon={<Car />}
+              />
+            </div>
           )}
         </div>
 
         <div className="description-container">
           <OfferServiceElements />
           {!isDesktop && (
-            <ButtonAction
-              text="Umów wizytę"
-              bgColor="#000"
-              textColor="#fff"
-              icon={<PhoneCall />}
-            />
+            <div className="flex flex-col gap-2">
+              <ButtonAction
+                text="Zadzwoń"
+                bgColor="#000"
+                textColor="#fff"
+                icon={<PhoneCall />}
+              />
+
+              <p className="pl-2 text-lg">lub zarezerwuj przez:</p>
+              <ButtonAction
+                text="Motointegrator"
+                bgColor="#fff"
+                textColor="#000000"
+                icon={<Car />}
+              />
+            </div>
           )}
         </div>
 
@@ -90,6 +110,7 @@ const OfferService: React.FC = () => {
             margin: 0;
           }
           .description-container {
+            padding: 2rem 0rem;
             gap: 2rem;
           }
           #offer-service {

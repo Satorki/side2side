@@ -9,10 +9,17 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   Link,
+  DropdownTrigger,
+  Button,
+  DropdownMenu,
+  DropdownItem,
+  Dropdown,
 } from "@nextui-org/react";
 import LogoBig from "../atoms/LogoBig";
 import LogoSmall from "../atoms/LogoSmall";
 import { motion, useScroll, useTransform } from "framer-motion";
+import ButtonAction from "../atoms/ButtonAction";
+import { ChevronDown } from "lucide-react";
 
 const Header = () => {
   const { scrollY } = useScroll();
@@ -101,20 +108,63 @@ const Header = () => {
           </NavbarBrand>
         </NavbarContent>
         <NavbarContent className="hidden md:flex gap-4" justify="end">
-          {menuItems.map((item, index) => (
-            <NavbarItem key={`${item.name}-${index}`}>
-              <Link href="{item.link}" className="text-white text-[1.3rem]">
-                {item.name}
-              </Link>
+          {menuItems.map((item) => (
+            <NavbarItem key={item.id}>
+              {item.id === 2 ? (
+                <Dropdown>
+                  <DropdownTrigger>
+                    <Link className="text-white text-[1.3rem] cursor-pointer">
+                      {item.name} <ChevronDown />
+                    </Link>
+                  </DropdownTrigger>
+                  <DropdownMenu
+                    className="text-white bg-black rounded-xl"
+                    itemClasses={{
+                      base: "gap-4",
+                    }}
+                  >
+                    <DropdownItem key="SERWIS">SERWIS</DropdownItem>
+                    <DropdownItem key="TUNING">TUNING</DropdownItem>
+                    <DropdownItem key="MOTORSPORT">MOTORSPORT</DropdownItem>
+                  </DropdownMenu>
+                </Dropdown>
+              ) : (
+                <Link href={item.link} className="text-white text-[1.3rem]">
+                  {item.name}
+                </Link>
+              )}
             </NavbarItem>
           ))}
         </NavbarContent>
-        <NavbarMenu className="bg-black gap-10 bg-opacity-85 -mt-1 flex pt-40">
-          {menuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item.name}-${index}`}>
-              <Link className="text-white text-[1.5rem] underline underline-offset-8 flex justify-center font-jura font-thin tracking-wider">
-                {item.name}
-              </Link>
+
+        <NavbarMenu className="bg-black gap-8 bg-opacity-85 -mt-1 flex justify-center">
+          {menuItems.map((item) => (
+            <NavbarMenuItem key={item.id}>
+              {item.id === 2 ? (
+                <div className="flex items-center justify-center">
+                  <p className="transfom -translate-x-8 text-white -rotate-90 text-[1rem] mx-[-5rem] tracking-[1rem]">
+                    OFERTA
+                  </p>
+                  <div className="flex flex-col gap-5">
+                    <Link className="text-white text-[1.5rem] underline underline-offset-8 flex justify-center font-jura font-thin tracking-wider">
+                      SERWIS
+                    </Link>
+                    <Link className="text-white text-[1.5rem] underline underline-offset-8 flex justify-center font-jura font-thin tracking-wider">
+                      TUNNING
+                    </Link>
+                    <Link className="text-white text-[1.5rem] underline underline-offset-8 flex justify-center font-jura font-thin tracking-wider">
+                      MOTORSPORT
+                    </Link>
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  href={item.link}
+                  className="text-white text-[1.5rem]  flex justify-center font-jura font-thin tracking-wider"
+                >
+                  {item.name}
+                </Link>
+              )}
             </NavbarMenuItem>
           ))}
         </NavbarMenu>
