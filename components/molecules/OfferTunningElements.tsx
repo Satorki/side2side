@@ -6,7 +6,6 @@ import Electricity from "@/public/images/Tunning/elektryka.jpg";
 import OfferTunningTab from "../atoms/OfferTunningTab";
 
 const OfferTunningElements = () => {
-
   const tunningList = [
     {
       id: 1,
@@ -24,10 +23,10 @@ const OfferTunningElements = () => {
     },
     {
       id: 3,
-      title: "Ulepszenia zawieszenia",
+      title: "Montaż zaawansowanych systemów elektronicznych",
       description:
-        "Poczuj różnicę w komforcie i stabilności jazdy dzięki naszym zaawansowanym ulepszeniom zawieszenia. Niezależnie od tego, czy potrzebujesz lepszej przyczepności na torze, czy bardziej komfortowej jazdy po mieście, dostosujemy zawieszenie do Twoich potrzeb.",
-      imageSrc: Suspension,
+        "Nowoczesne pojazdy wymagają nowoczesnych rozwiązań. Oferujemy montaż zaawansowanych systemów elektronicznych, takich jak systemy sterowania, wspomagania jazdy czy telemetrii, które zwiększają precyzję i efektywność pojazdu.",
+      imageSrc: Electricity,
     },
     {
       id: 4,
@@ -38,33 +37,18 @@ const OfferTunningElements = () => {
     },
     {
       id: 5,
-      title: "Montaż zaawansowanych systemów elektronicznych",
+      title: "Ulepszenia zawieszenia",
       description:
-        "Nowoczesne pojazdy wymagają nowoczesnych rozwiązań. Oferujemy montaż zaawansowanych systemów elektronicznych, takich jak systemy sterowania, wspomagania jazdy czy telemetrii, które zwiększają precyzję i efektywność pojazdu.",
-      imageSrc: Electricity,
+        "Poczuj różnicę w komforcie i stabilności jazdy dzięki naszym zaawansowanym ulepszeniom zawieszenia. Niezależnie od tego, czy potrzebujesz lepszej przyczepności na torze, czy bardziej komfortowej jazdy po mieście, dostosujemy zawieszenie do Twoich potrzeb.",
+      imageSrc: Suspension,
     },
   ];
 
   return (
-    <div className="flex flex-col gap-5">
-      <div className="flex gap-5 flex-col md:flex-row">
-        {tunningList.slice(0, 2).map((item) => (
-          <OfferTunningTab
-            key={item.id}
-            number={item.id}
-            title={item.title}
-          />
-        ))}
-      </div>
-      <div className="flex gap-5 flex-col md:flex-row">
-        {tunningList.slice(2, 5).map((item) => (
-          <OfferTunningTab
-            key={item.id}
-            number={item.id}
-            title={item.title}
-          />
-        ))}
-      </div>
+    <div className="flex gap-5 flex-col md:flex-row justify-between flex-wrap items-start">
+      {tunningList.map((item) => (
+        <OfferTunningTab key={item.id} number={item.id} title={item.title} />
+      ))}
     </div>
   );
 };

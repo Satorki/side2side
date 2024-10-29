@@ -62,13 +62,14 @@ const OfferMotorsport = () => {
       <AnimatedTransition
         quote="MOTORSPORT"
         animatedIcon={<AnimatedCircle />}
+        mustScaleDown
       />
 
       <div className="offer-container">
         <div className="flex flex-col flex-1 gap-5 md:gap-10">
           <TitleSection
             titleAnimationText="Wsparcie"
-            titleBegining=" w rywalizacji."
+            titleEnding=" w rywalizacji."
           />
           <FadeUp delay={0.5} duration={2}>
             <DescriptionSingle

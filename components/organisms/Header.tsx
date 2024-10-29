@@ -140,20 +140,20 @@ const Header = () => {
             <NavbarMenuItem key={item.id}>
               {item.id === 2 ? (
                 <div className="flex items-center justify-center">
-                  <p className="transfom -translate-x-8 text-white -rotate-90 text-[1rem] mx-[-5rem] tracking-[1rem]">
-                    OFERTA
-                  </p>
                   <div className="flex flex-col gap-5">
                     <Link className="text-white text-[1.5rem] underline underline-offset-8 flex justify-center font-jura font-thin tracking-wider">
                       SERWIS
                     </Link>
                     <Link className="text-white text-[1.5rem] underline underline-offset-8 flex justify-center font-jura font-thin tracking-wider">
-                      TUNNING
+                      TUNING
                     </Link>
                     <Link className="text-white text-[1.5rem] underline underline-offset-8 flex justify-center font-jura font-thin tracking-wider">
                       MOTORSPORT
                     </Link>
                   </div>
+                  <p className="transfom translate-x-10 text-white rotate-90 text-[1rem] mx-[-3.5rem] tracking-[0.5rem] opacity-50">
+                    OFERTA
+                  </p>
                 </div>
               ) : (
                 <Link

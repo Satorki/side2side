@@ -6,7 +6,7 @@ interface Props {
 
 const ReviewText = ({ text }: Props) => {
   return (
-    <div className="text-xl italic text-center">
+    <div className="italic">
       <FadeUp delay={1}>{text}</FadeUp>
     </div>
   );

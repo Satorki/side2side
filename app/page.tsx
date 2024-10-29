@@ -1,13 +1,14 @@
 "use client";
 import Offers from "@/containers/home-page/Offers";
 import About from "@/containers/home-page/About";
-// import Contact from "@/containers/home-page/Contact";
+import Contact from "@/containers/home-page/Contact";
 import Hero from "@/containers/home-page/Hero";
 // import Projects from "@/containers/home-page/Projects";
 import Rewievs from "@/containers/home-page/Rewievs";
 import OffersAll from "@/containers/home-page/OffersAll";
 import WalkingText from "@/components/atoms/WalkingText";
-// import NumbersSection from "@/components/atoms/NumbersSection";
+import NumberSection from "@/components/molecules/NumberSection";
+
 
 export default function Home() {
   return (
@@ -17,10 +18,10 @@ export default function Home() {
       <WalkingText />
       <About />
       <Offers />
-      {/* <NumbersSection /> */}
+      <NumberSection />
       {/* <Projects /> */}
       <Rewievs />
-      {/* <Contact /> */}
+      <Contact />
     </div>
   );
 }

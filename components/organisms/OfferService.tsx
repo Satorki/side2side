@@ -22,58 +22,43 @@ const OfferService: React.FC = () => {
     };
   }, []);
 
+  const showButtons = () => (
+    <div className="flex flex-col gap-2">
+    <ButtonAction
+      text="Zadzwoń"
+      bgColor="#000"
+      textColor="#fff"
+      icon={<PhoneCall />}
+    />
+
+    <p className="pl-2 text-lg">lub zarezerwuj przez:</p>
+    <ButtonAction
+      text="Motointegrator"
+      bgColor="#f4f4b3"
+      textColor="#000000"
+      icon={<Car />}
+    />
+  </div>
+  )
+
   return (
     <div id="offer-service">
       <AnimatedTransition quote="SERWIS" animatedIcon={<AnimatedWrench />} />
       <div className="offer-body">
         <div className="flex flex-col flex-1 gap-5 md:gap-10">
-          <TitleSection titleBegining="Profesjonalna obsługa dostosowana do Ciebie." />
+          <TitleSection titleBegining="Profesjonalna " titleAnimationText="obsługa" titleEnding="dostosowana do Ciebie." />
           <FadeUp delay={0.5} duration={2}>
             <DescriptionSingle
               text="Oferujemy kompleksowy serwis dla pojazdów osobnych i dostawczych do 3,5 tony, zapewniając ich sprawność w codziennym użytkowaniu."
               isBold={true}
             />
           </FadeUp>
-          {isDesktop && (
-            <div className="flex flex-col gap-2">
-              <ButtonAction
-                text="Zadzwoń"
-                bgColor="#000"
-                textColor="#fff"
-                icon={<PhoneCall />}
-              />
-
-              <p className="pl-2 text-lg">lub zarezerwuj przez:</p>
-              <ButtonAction
-                text="Motointegrator"
-                bgColor="#f4f4b3"
-                textColor="#000000"
-                icon={<Car />}
-              />
-            </div>
-          )}
+          {isDesktop && showButtons()}
         </div>
 
         <div className="description-container">
           <OfferServiceElements />
-          {!isDesktop && (
-            <div className="flex flex-col gap-2">
-              <ButtonAction
-                text="Zadzwoń"
-                bgColor="#000"
-                textColor="#fff"
-                icon={<PhoneCall />}
-              />
-
-              <p className="pl-2 text-lg">lub zarezerwuj przez:</p>
-              <ButtonAction
-                text="Motointegrator"
-                bgColor="#fff"
-                textColor="#000000"
-                icon={<Car />}
-              />
-            </div>
-          )}
+          {!isDesktop && showButtons()}
         </div>
       </div>
       <style jsx>{`

@@ -29,7 +29,7 @@ const OfferTunning: React.FC = () => {
 
       <div className="offer-body">
         <div className="flex flex-col gap-5 md:gap-10 flex-1">
-          <TitleSection titleBegining="Lepsze osiągi, większa radość z jazdy." />
+          <TitleSection titleBegining="Lepsze osiągi, większa " titleAnimationText="radość" titleEnding=" z jazdy." />
           <FadeUp delay={0.5} duration={2}>
             <DescriptionSingle
               text="Tuningujemy z pasją, by Twój pojazd osiągał maksimum możliwości."
@@ -70,13 +70,12 @@ const OfferTunning: React.FC = () => {
         .offer-body {
           display: flex;
           flex-direction: row-reverse;
-          align-items: center;
           justify-content: space-between;
           color: #fff;
           width: 100%;
           max-width: 1200px;
           margin: 2rem auto;
-          gap: 2rem;
+          gap: 4rem;
         }
         .description-container {
           display: flex;
@@ -91,6 +90,7 @@ const OfferTunning: React.FC = () => {
             justify-content: center;
             align-items: flex-start;
             margin: 0;
+            gap: 2rem;
           }
           #offer-tunning {
             height: auto;

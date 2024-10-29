@@ -6,11 +6,13 @@ interface Props {
   quote?: string;
   leftToRight?: boolean;
   animatedIcon?: JSX.Element;
+  mustScaleDown?: boolean;
 }
 const AnimatedTransition = ({
   leftToRight = true,
   quote,
   animatedIcon,
+  mustScaleDown,
 }: Props) => {
   const container = useRef(null);
   const [offscreenX, setOffscreenX] = useState(-700);
@@ -41,7 +43,11 @@ const AnimatedTransition = ({
 
   return (
     <div className="overflow-hidden w-full relative font-bai" ref={container}>
-      <div className="scale-75 xl:scale-100 transform origin-left max-w-[1200px] mx-auto w-full flex items-center justify-between text-white py-5">
+      <div
+        className={`transform origin-left max-w-[1200px] mx-auto w-full flex items-center justify-between text-white py-5 xl:scale-100 ${
+          mustScaleDown ? "scale-75" : "scale-100"
+        }`}
+      >
         <div className="">
           <motion.div style={{ x: moveXQuote }} className="flex items-center">
             <p className="-rotate-90 text-[0.6rem] md:text-[1.5rem] mx-[-0.9rem] md:mx-[-2.4rem] opacity-40 font-bold">

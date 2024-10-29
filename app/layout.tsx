@@ -19,7 +19,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href={Favicon.src} />
       </head>
-      <body className="bg-[#323232]">
+      <body className="bg-[#424141]">
         <Header />
         <main>{children}</main>
         <Footer />

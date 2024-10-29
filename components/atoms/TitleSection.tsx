@@ -20,8 +20,8 @@ const TitleSection = ({
       <p className="text-2xl">{category}</p>
       <div className="flex items-center gap-2">
         <h2 className="text-4xl md:text-5xl xl:text-6xl font-semibold">
-          <AnimatedText text={titleAnimationText ?? ""} />
           {titleBegining}
+          <AnimatedText text={titleAnimationText ?? ""} />
           {titleEnding}
         </h2>
       </div>

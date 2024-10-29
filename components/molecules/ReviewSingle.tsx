@@ -11,8 +11,9 @@ interface Props {
 
 const ReviewSingle = ({ text, stars, name, logo }: Props) => {
   return (
-    <div className="flex-1 flex flex-col gap-5 items-center">
+    <div className="flex-1 flex flex-col gap-2">
       <ReviewText text={text} />
+      <hr />
       <ReviewAutor name={name} stars={stars} logo={logo} />
     </div>
   );

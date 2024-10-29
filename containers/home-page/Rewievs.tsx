@@ -1,19 +1,13 @@
 import FadeUp from "@/components/atoms/FadeUp";
+import TitleSection from "@/components/atoms/TitleSection";
 import ReviewSingle from "@/components/molecules/ReviewSingle";
 import React from "react";
 
 const Rewievs = () => {
   return (
-    <div id="rewievs" className="rewievs">
-      <div className="flex flex-col gap-10 justify-center items-center max-w-[1440px] mx-auto">
-        <div className="font-bai flex flex-col gap-4 items-center">
-          <p className="text-2xl">Opinie</p>
-          <div className="flex items-center gap-2">
-            <h2 className="text-5xl font-semibold leading-[60px] text-center">
-              Sprawdz jak nas oceniają
-            </h2>
-          </div>
-        </div>
+    <div id="rewievs">
+      <div className="flex flex-col gap-10 justify-center items-center max-w-[1200px] mx-auto">
+        <TitleSection titleBegining="Sprawdź jak nas oceniają " />
         <div className="rewievs-container">
           <FadeUp delay={1}>
             <ReviewSingle
@@ -46,7 +40,7 @@ Okazało się też, że serwisuje auta vipów jak na zdjęciu. Jednym słowem PO
         </div>
       </div>
       <style jsx>{`
-        .rewievs {
+        #rewievs {
           background-image: radial-gradient(
             circle 1000px at 50% 60%,
             #850001,
@@ -62,7 +56,7 @@ Okazało się też, że serwisuje auta vipów jak na zdjęciu. Jednym słowem PO
           justify-content: space-between;
         }
         @media (max-width: 768px) {
-          .rewievs {
+          #rewievs {
             padding: 2rem 2rem;
           }
           .rewievs-container {
