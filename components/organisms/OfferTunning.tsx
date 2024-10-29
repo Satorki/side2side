@@ -23,7 +23,7 @@ const OfferTunning: React.FC = () => {
   }, []);
 
   return (
-    <div id="offer-tunning">
+    <div id="offer-tuning">
 
       <AnimatedTransition quote="TUNING" animatedIcon={<AnimatedProgress />} />
 
@@ -60,7 +60,7 @@ const OfferTunning: React.FC = () => {
         </div>
       </div>
       <style jsx>{`
-        #offer-tunning {
+        #offer-tuning {
           background-color: #303030;
           display: flex;
           flex-direction: column;
@@ -92,7 +92,7 @@ const OfferTunning: React.FC = () => {
             margin: 0;
             gap: 2rem;
           }
-          #offer-tunning {
+          #offer-tuning {
             height: auto;
             overflow: hidden;
             padding: 2rem;

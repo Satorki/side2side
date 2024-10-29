@@ -18,6 +18,7 @@ import LogoBig from "../atoms/LogoBig";
 import LogoSmall from "../atoms/LogoSmall";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import { Link as ScrollLink } from "react-scroll";
 
 const Header = () => {
   const { scrollY } = useScroll();
@@ -28,27 +29,27 @@ const Header = () => {
     {
       id: 1,
       name: "O NAS",
-      link: "/o-nas",
+      link: "/#about",
     },
     {
       id: 2,
       name: "OFERTA",
-      link: "/oferta",
+      link: "/#offer-service",
     },
     {
       id: 3,
       name: "PROJEKTY",
-      link: "/projekty",
+      link: "/#projects",
     },
     {
       id: 4,
       name: "OPINIE",
-      link: "/OPINIE",
+      link: "/#rewievs",
     },
     {
       id: 5,
       name: "KONTAKT",
-      link: "/kontakt",
+      link: "/#contact",
     },
   ];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -121,15 +122,47 @@ const Header = () => {
                       base: "gap-4",
                     }}
                   >
-                    <DropdownItem key="SERWIS">SERWIS</DropdownItem>
-                    <DropdownItem key="TUNING">TUNING</DropdownItem>
-                    <DropdownItem key="MOTORSPORT">MOTORSPORT</DropdownItem>
+                    <DropdownItem key="SERWIS">
+                      <ScrollLink
+                        to="offer-service"
+                        smooth={true}
+                        duration={500}
+                        className="text-white text-[1.1rem]"
+                      >
+                        SERWIS
+                      </ScrollLink>
+                    </DropdownItem>
+                    <DropdownItem key="TUNING">
+                      <ScrollLink
+                        to="offer-tuning"
+                        smooth={true}
+                        duration={500}
+                        className="text-white text-[1.1rem]"
+                      >
+                        TUNING
+                      </ScrollLink>
+                    </DropdownItem>
+                    <DropdownItem key="MOTORSPORT">
+                      <ScrollLink
+                        to="offer-motorsport"
+                        smooth={true}
+                        duration={500}
+                        className="text-white text-[1.1rem]"
+                      >
+                        MOTORSPORT
+                      </ScrollLink>
+                    </DropdownItem>
                   </DropdownMenu>
                 </Dropdown>
               ) : (
-                <Link href={item.link} className="text-white text-[1.3rem]">
+                <ScrollLink
+                  to={item.link.replace("/#", "")}
+                  smooth={true}
+                  duration={500}
+                  className="text-white text-[1.3rem]"
+                >
                   {item.name}
-                </Link>
+                </ScrollLink>
               )}
             </NavbarItem>
           ))}
@@ -141,27 +174,47 @@ const Header = () => {
               {item.id === 2 ? (
                 <div className="flex items-center justify-center">
                   <div className="flex flex-col gap-5">
-                    <Link className="text-white text-[1.5rem] underline underline-offset-8 flex justify-center font-jura font-thin tracking-wider">
+                    <ScrollLink
+                      to="offer-service"
+                      smooth={true}
+                      duration={500}
+                      className="text-white text-[1.5rem] underline underline-offset-8 flex justify-center font-jura font-thin tracking-wider"
+                    >
                       SERWIS
-                    </Link>
-                    <Link className="text-white text-[1.5rem] underline underline-offset-8 flex justify-center font-jura font-thin tracking-wider">
+                    </ScrollLink>
+
+                    <ScrollLink
+                      to="offer-tuning"
+                      smooth={true}
+                      duration={500}
+                      className="text-white text-[1.5rem] underline underline-offset-8 flex justify-center font-jura font-thin tracking-wider"
+                    >
                       TUNING
-                    </Link>
-                    <Link className="text-white text-[1.5rem] underline underline-offset-8 flex justify-center font-jura font-thin tracking-wider">
+                    </ScrollLink>
+
+                    <ScrollLink
+                      to="offer-motorsport"
+                      smooth={true}
+                      duration={500}
+                      className="text-white text-[1.5rem] underline underline-offset-8 flex justify-center font-jura font-thin tracking-wider"
+                    >
                       MOTORSPORT
-                    </Link>
+                    </ScrollLink>
                   </div>
                   <p className="transfom translate-x-10 text-white rotate-90 text-[1rem] mx-[-3.5rem] tracking-[0.5rem] opacity-50">
                     OFERTA
                   </p>
                 </div>
               ) : (
-                <Link
-                  href={item.link}
+                <ScrollLink
+                  to={item.link.replace("/#", "")}
+                  smooth={true}
+                  offset={-65}
+                  duration={500}
                   className="text-white text-[1.5rem]  flex justify-center font-jura font-thin tracking-wider"
                 >
                   {item.name}
-                </Link>
+                </ScrollLink>
               )}
             </NavbarMenuItem>
           ))}

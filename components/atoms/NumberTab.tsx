@@ -37,7 +37,7 @@ const NumberTab = ({
         }}
         value={value}
       />
-      <p className="">
+      <p className="text-center">
         {titleUp}
         <br />
         {titleDown}

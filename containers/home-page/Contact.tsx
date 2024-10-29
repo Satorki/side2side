@@ -18,7 +18,7 @@ const Contact = () => {
     { id: 4, title: "Email:", descriptionUp: "side2side.garage@gmail.com" },
   ];
   return (
-    <div className="max-w-[1200px] mx-auto my-8 text-white font-bai">
+    <div id="contact" className="max-w-[1200px] mx-auto my-8 text-white font-bai">
       <div className="flex flex-col gap-4 px-8">
         <div className="flex flex-col gap-4 md:flex-row">
           <div className="flex-1">

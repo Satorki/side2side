@@ -9,7 +9,6 @@ import OffersAll from "@/containers/home-page/OffersAll";
 import WalkingText from "@/components/atoms/WalkingText";
 import NumberSection from "@/components/molecules/NumberSection";
 
-
 export default function Home() {
   return (
     <div>

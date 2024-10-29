@@ -8,11 +8,11 @@ const WalkingText = () => {
       </div>
       <div className="text-2xl md:text-7xl text-white opacity-70">
         <InfiniteSlider gap={24} duration={50} reverse>
-          <p className="px-1 py-5 md:py-10">Audi</p>
+          <p className="px-1 py-5 md:py-10">AUDI</p>
           <p className="px-1 py-5 md:py-10">BMW</p>
-          <p className="px-1 py-5 md:py-10">Nissan</p>
-          <p className="px-1 py-5 md:py-10">Toyota</p>
-          <p className="px-1 py-5 md:py-10">Volkswagen</p>
+          <p className="px-1 py-5 md:py-10">NISSAN</p>
+          <p className="px-1 py-5 md:py-10">TOYOTA</p>
+          <p className="px-1 py-5 md:py-10">VOLKSWAGEN</p>
         </InfiniteSlider>
       </div>
     </div>

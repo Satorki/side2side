@@ -20,52 +20,6 @@ const About = () => {
     };
   }, []);
 
-  // ANIMATION
-  const container = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ["start start", "end end"],
-  });
-
-  // TITLE
-  const titleMoveUpDesktop = useTransform(
-    scrollYProgress,
-    [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6],
-    [150, 125, 100, 75, 50, 25, 0]
-  );
-
-  // QUOTE
-  const quote1moveUp = useTransform(
-    scrollYProgress,
-    [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6],
-    [150, 125, 100, 75, 50, 25, 0]
-  );
-  const quote1opacity = useTransform(scrollYProgress, [0.1, 0.2], [0, 1]);
-
-  // BUTTON
-  const buttonScaleUp = useTransform(
-    scrollYProgress,
-    [0.1, 0.2, 0.2, 0.25],
-    [0, 1, 1.1, 1]
-  );
-  const buttonOpacity = useTransform(scrollYProgress, [0.1, 0.2], [0, 1]);
-  const buttonMoveUp = useTransform(
-    scrollYProgress,
-    [0.2, 0.3, 0.4, 0.5, 0.6],
-    [100, 75, 50, 25, 0]
-  );
-
-  // SCREEN APPEARS
-  const screenAppears = useTransform(
-    scrollYProgress,
-    [0.8, 0.85, 1],
-    [-1500, -1500, 500]
-  );
-
-  // LOADING BAR
-  const scrollBar = useTransform(scrollYProgress, [0, 0.6], [0, 300]);
-
   return (
     <div id="about">
       <div className="about-container">
