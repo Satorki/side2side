@@ -1,5 +1,4 @@
 import React from "react";
-import { CarouselItem } from "./Carousel";
 import Image from "next/image";
 
 interface CarouselTabProps {
@@ -14,7 +13,7 @@ const CarouselTab = ({ image, title, description }: CarouselTabProps) => {
       <Image
         src={image}
         alt={title}
-        className="object-cover object-center w-full h-full"
+        className="object-cover object-center w-full h-full rounded-xl"
       />
 
       <p className="absolute bottom-0 left-0 right-0 rounded-xl bg-white p-2  font-bai bg-opacity-60 text-center text-black">

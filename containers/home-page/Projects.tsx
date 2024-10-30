@@ -1,3 +1,5 @@
+import DescriptionSingle from "@/components/atoms/DescriptionSingle";
+import FadeUp from "@/components/atoms/FadeUp";
 import TitleSection from "@/components/atoms/TitleSection";
 import ProjectsCarousel from "@/components/molecules/ProjectsCarousel";
 import React from "react";
@@ -5,15 +7,27 @@ import React from "react";
 const Projects = () => {
   return (
     <div id="projects">
+      <div className="px-4 pb-4 flex flex-col gap-4">
+        <TitleSection
+          titleBegining="Projekty "
+          titleAnimationText="od A do Z"
+        />
+        <FadeUp delay={0.5} duration={2}>
+          <DescriptionSingle
+            text="Stworzymy dla Ciebie zwycięzajce samochody."
+            isBold={true}
+          />
+        </FadeUp>
+      </div>
       <div className="flex flex-col justify-center items-center max-w-[1200px] mx-auto">
         <ProjectsCarousel />
       </div>
 
       <style jsx>{`
         #projects {
-          background-color: #303030;
+          background-color: #000;
           color: white;
-          padding: 2rem 2rem;
+          padding: 2rem;
           display: flex;
           flex-direction: column;
         }

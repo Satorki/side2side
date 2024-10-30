@@ -1,7 +1,6 @@
 import FadeUp from "@/components/atoms/FadeUp";
 import {
   Accordion,
-  AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";

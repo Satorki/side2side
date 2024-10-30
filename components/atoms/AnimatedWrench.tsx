@@ -22,7 +22,7 @@ const AnimatedWrench = ({ scrollYProgress }: Props) => {
   return (
     <motion.div
       style={{ opacity, rotate: turnAround }}
-      className="transform origin-top-right top-3 right-10 absolute"
+      className="transform origin-top-right top-8 right-10 absolute"
     >
       <Wrench className="text-white w-[43px] h-[43px] md:w-[130px] md:h-[130px] opacity-30" />
     </motion.div>

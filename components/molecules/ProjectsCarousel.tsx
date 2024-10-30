@@ -5,7 +5,6 @@ import {
   CarouselItem,
   CarouselNavigation,
 } from "../atoms/Carousel";
-import a0 from "../../public/images/Project/0.jpg";
 import a1 from "../../public/images/Project/1a.jpg";
 import a2 from "../../public/images/Project/2a.jpg";
 import a3 from "../../public/images/Project/3.jpg";
@@ -53,7 +52,7 @@ const ProjectsCarousel = () => {
       image: a6,
       title: "Car Repair",
       description:
-        "Na pokład E46 wchodzą kolejne komponenty Kompletna elektronika od Ecumaster, którą zgra ze sobą KonopackiRacing.",
+        "Kompletna elektronika od Ecumaster, którą zgra ze sobą KonopackiRacing.",
     },
     {
       image: a7,
@@ -97,11 +96,11 @@ const ProjectsCarousel = () => {
           classNameButton="bg-zinc-800 *:stroke-zinc-50 dark:bg-zinc-200 dark:*:stroke-zinc-800"
           alwaysShow
         />
-        <CarouselContent className="-ml-4 md:mr-24">
+        <CarouselContent className="-ml-6">
           {imageList.map((item, index) => (
             <CarouselItem
               key={index}
-              className=" xl:basis-1/3 md:basis-1/2"
+              className="xl:basis-1/3 md:basis-1/2 pl-6"
             >
               <CarouselTab
                 image={item.image}
@@ -112,6 +111,11 @@ const ProjectsCarousel = () => {
           ))}
         </CarouselContent>
       </Carousel>
+      <div className="absolute -bottom-16 right-10 ">
+        <h2 className="text-2xl md:text-3xl xl:text-4xl font-semibold">
+          Kickster E45 2JZ
+        </h2>
+      </div>
     </div>
   );
 };
