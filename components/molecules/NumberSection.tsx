@@ -7,7 +7,7 @@ const NumberSection = () => {
       <div className="flex flex-row justify-between gap-4 px-8">
       <NumberTab titleUp="Obsłużonych" titleDown="klientów" value={999} />
       <NumberTab titleUp="Naprawionych" titleDown="samochodów" value={700} />
-      <NumberTab titleUp="Naprawionych" titleDown="samochodów" value={1000} />
+      <NumberTab titleUp="Lat" titleDown="na rynku" value={5} />
       </div>
     </div>
   );

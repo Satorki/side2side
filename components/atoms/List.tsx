@@ -51,9 +51,9 @@ export const List = ({ items }: ListProps) => {
                 {item.title}
               </AccordionTrigger>
             </div>
-            <AccordionContent className="pl-[2.7rem]">
+            {/* <AccordionContent className="pl-[2.7rem]">
               {item.content}
-            </AccordionContent>
+            </AccordionContent> */}
           </AccordionItem>
         </FadeUp>
       ))}

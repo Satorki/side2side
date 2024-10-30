@@ -64,7 +64,7 @@ const About = () => {
         }
         .about-container {
           display: flex;
-          flex-direction: row;
+          flex-direction: row-reverse;
           justify-content: space-between;
           align-items: center;
           gap: 3rem;

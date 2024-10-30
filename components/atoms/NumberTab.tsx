@@ -29,14 +29,17 @@ const NumberTab = ({
       ref={ref}
       className="flex flex-col gap-2 w-full items-center justify-center text-white"
     >
-      <AnimatedNumber
-        className="inline-flex items-center font-mono text-2xl md:text-4xl"
-        springOptions={{
-          bounce: 0,
-          duration: 4000,
-        }}
-        value={value}
-      />
+      <div className="flex justify-center items-center gap-1">
+        <AnimatedNumber
+          className="inline-flex items-center font-mono text-2xl md:text-4xl"
+          springOptions={{
+            bounce: 0,
+            duration: 4000,
+          }}
+          value={value}
+        />
+        <p className="text-3xl">+</p>
+      </div>
       <p className="text-center">
         {titleUp}
         <br />

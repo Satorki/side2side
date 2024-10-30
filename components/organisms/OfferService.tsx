@@ -63,7 +63,7 @@ const OfferService: React.FC = () => {
       </div>
       <style jsx>{`
         #offer-service {
-          background-color: #dc2626;
+          background-color: #ba0a0a;
           display: flex;
           flex-direction: column;
           justify-content: center;

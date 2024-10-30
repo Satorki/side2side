@@ -37,9 +37,10 @@ const AnimatedTransition = ({
 
   const moveParameters = leftToRight ? [1, 0.4] : [0.4, 1];
   const moveXQuote = useTransform(scrollYProgress, moveParameters, [
-    offscreenX - 200,
+    offscreenX + 200,
     0,
   ]);
+  const opacity = useTransform(scrollYProgress, [0.6, 0.4], [0, 1]);
 
   return (
     <div className="overflow-hidden w-full relative font-bai" ref={container}>
@@ -49,7 +50,7 @@ const AnimatedTransition = ({
         }`}
       >
         <div className="">
-          <motion.div style={{ x: moveXQuote }} className="flex items-center">
+          <motion.div style={{ x: moveXQuote, opacity }} className="flex items-center">
             <p className="-rotate-90 text-[0.6rem] md:text-[1.5rem] mx-[-0.9rem] md:mx-[-2.4rem] opacity-40 font-bold">
               OFERTA
             </p>

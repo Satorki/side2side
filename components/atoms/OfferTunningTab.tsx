@@ -12,9 +12,9 @@ const OfferTunningTab = ({
   description,
 }: OfferTunningTabProps) => {
   return (
-    <div className="flex flex-col gap-2 font-bai md:max-w-[250px]">
-      <div className="text-2xl">{number}</div>
-      <div className="text-xl font-bold">{title}</div>
+    <div className="flex flex-col gap-2 font-bai md:max-w-[250px] shadow-xl rounded-2xl hover:scale-95 transition-all ease-in-out duration-300 cursor-pointer p-4">
+      <div className="text-[1.2rem]">{number}</div>
+      <div className="text-[1.1rem] font-bold">{title}</div>
       <div>{description}</div>
     </div>
   );

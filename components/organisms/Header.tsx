@@ -168,7 +168,7 @@ const Header = () => {
           ))}
         </NavbarContent>
 
-        <NavbarMenu className="bg-black gap-8 bg-opacity-85 -mt-1 flex justify-center">
+        <NavbarMenu className="bg-black gap-6 bg-opacity-85 -mt-1 flex pt-20">
           {menuItems.map((item) => (
             <NavbarMenuItem key={item.id}>
               {item.id === 2 ? (
@@ -178,6 +178,7 @@ const Header = () => {
                       to="offer-service"
                       smooth={true}
                       duration={500}
+                      onClick={() => setIsMenuOpen(false)}
                       className="text-white text-[1.5rem] underline underline-offset-8 flex justify-center font-jura font-thin tracking-wider"
                     >
                       SERWIS
