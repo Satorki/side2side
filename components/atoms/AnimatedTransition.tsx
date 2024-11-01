@@ -37,7 +37,7 @@ const AnimatedTransition = ({
 
   const moveParameters = leftToRight ? [1, 0.4] : [0.4, 1];
   const moveXQuote = useTransform(scrollYProgress, moveParameters, [
-    offscreenX + 200,
+    200,
     0,
   ]);
   const opacity = useTransform(scrollYProgress, [0.6, 0.4], [0, 1]);

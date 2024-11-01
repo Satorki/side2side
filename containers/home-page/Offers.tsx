@@ -8,9 +8,7 @@ const Offers = () => {
   return (
     <div>
       <OfferService />
-      <NumberSection />
       <OfferTunning />
-      <WalkingText />
       <OfferMotorsport />
     </div>
   );

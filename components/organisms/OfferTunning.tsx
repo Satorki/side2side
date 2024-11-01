@@ -61,7 +61,7 @@ const OfferTunning: React.FC = () => {
       </div>
       <style jsx>{`
         #offer-tuning {
-          background-color: #303030;
+          /* background-color: #303030; */
           display: flex;
           flex-direction: column;
           justify-content: center;

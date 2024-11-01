@@ -9,14 +9,15 @@ interface CarouselTabProps {
 
 const CarouselTab = ({ image, title, description }: CarouselTabProps) => {
   return (
-    <div className="flex relative">
+    <div className="flex relative opacity-90">
       <Image
         src={image}
         alt={title}
         className="object-cover object-center w-full h-full rounded-xl"
+        loading="lazy"
       />
 
-      <p className="absolute bottom-0 left-0 right-0 rounded-xl bg-white p-2  font-bai bg-opacity-60 text-center text-black">
+      <p className="absolute bottom-0 left-0 right-0 rounded-xl bg-white p-2  font-bai bg-opacity-80 text-center text-black">
         {description}
       </p>
     </div>

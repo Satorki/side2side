@@ -112,7 +112,7 @@ const ProjectsCarousel = () => {
         </CarouselContent>
       </Carousel>
       <div className="absolute -bottom-16 right-10 ">
-        <h2 className="text-2xl md:text-3xl xl:text-4xl font-semibold">
+        <h2 className="text-2xl md:text-3xl xl:text-4xl font-semibold text-[#d52727]">
           Kickster E45 2JZ
         </h2>
       </div>

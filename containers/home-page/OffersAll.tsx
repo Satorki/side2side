@@ -1,4 +1,9 @@
 import ButtonAction from "@/components/atoms/ButtonAction";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/atoms/Carousel";
 import LineAnimation from "@/components/atoms/LineAnimation";
 import OfferAllTab from "@/components/molecules/OfferAllTab";
 import { ArrowDown, CircleDotDashed, SignalHigh, Wrench } from "lucide-react";
@@ -15,27 +20,45 @@ const OffersAll = () => {
         </div>
         <LineAnimation />
         <div className="tabs-container">
-          <OfferAllTab
-            icon={<Wrench className="w-1/2 h-auto" />}
-            title="SERWIS"
-            description="Oferujemy kompleksowy serwis dla pojazdów osobnych i dostawczych do 3,5 tony, zapewniając ich sprawność w codziennym użytkowaniu."
-            bgColor="rgba(173, 26, 27, 0.5)"
-            button={<ButtonAction text="Przejdź" icon={<ArrowDown />} bgColor="#d52727" />}
-          />
-          <OfferAllTab
-            icon={<SignalHigh className="w-1/2 h-auto" />}
-            title="TUNNING"
-            description="Prawdziwa wydajność zaczyna się tam, gdzie kończą się kompromisy. Tuning to sztuka precyzji. Zajmujemy się modyfikacjami — od wydechu po silnik. "
-            bgColor="rgba(68, 68, 68,0.5)"
-            button={<ButtonAction text="Przejdź" icon={<ArrowDown />} bgColor="#d52727" />}
-          />
-          <OfferAllTab
-            icon={<CircleDotDashed className="w-1/2 h-auto" />}
-            title="MOTORSPORT"
-            description="Dla entuzjastów rajdów, wyścigów tornych i driftu oferujemy kompleksowe przygotowanie pojazdów do motorsportu."
-            bgColor="rgba(0, 0, 0,0.5)"
-            button={<ButtonAction text="Przejdź" icon={<ArrowDown />} bgColor="#d52727" />}
-          />
+                <OfferAllTab
+                  icon={<Wrench className="w-1/2 h-auto" />}
+                  title="SERWIS"
+                  description="Oferujemy kompleksowy serwis dla pojazdów osobnych i dostawczych do 3,5 tony, zapewniając ich sprawność w codziennym użytkowaniu."
+                  bgColor="rgba(173, 26, 27, 0.5)"
+                  button={
+                    <ButtonAction
+                      text="Przejdź"
+                      icon={<ArrowDown />}
+                      bgColor="#d52727"
+                    />
+                  }
+                />
+                <OfferAllTab
+                  icon={<SignalHigh className="w-1/2 h-auto" />}
+                  title="TUNNING"
+                  description="Prawdziwa wydajność zaczyna się tam, gdzie kończą się kompromisy. Tuning to sztuka precyzji. Zajmujemy się modyfikacjami — od wydechu po silnik. "
+                  bgColor="rgba(68, 68, 68,0.5)"
+                  button={
+                    <ButtonAction
+                      text="Przejdź"
+                      icon={<ArrowDown />}
+                      bgColor="#d52727"
+                    />
+                  }
+                />
+                <OfferAllTab
+                  icon={<CircleDotDashed className="w-1/2 h-auto" />}
+                  title="MOTORSPORT"
+                  description="Dla entuzjastów rajdów, wyścigów tornych i driftu oferujemy kompleksowe przygotowanie pojazdów do motorsportu."
+                  bgColor="rgba(0, 0, 0,0.5)"
+                  button={
+                    <ButtonAction
+                      text="Przejdź"
+                      icon={<ArrowDown />}
+                      bgColor="#d52727"
+                    />
+                  }
+                />
         </div>
       </div>
       <style jsx>{`

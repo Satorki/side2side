@@ -9,8 +9,8 @@ const Projects = () => {
     <div id="projects">
       <div className="px-4 pb-4 flex flex-col gap-4">
         <TitleSection
-          titleBegining="Projekty "
-          titleAnimationText="od A do Z"
+          titleBegining="Projekty od A do Z"
+          titleAnimationText=""
         />
         <FadeUp delay={0.5} duration={2}>
           <DescriptionSingle
@@ -25,11 +25,13 @@ const Projects = () => {
 
       <style jsx>{`
         #projects {
-          background-color: #000;
+          /* background-color: #000; */
           color: white;
           padding: 2rem;
           display: flex;
           flex-direction: column;
+          max-width: 1200px;
+          margin: 0 auto;
         }
         @media (max-width: 768px) {
           #projects {

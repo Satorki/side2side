@@ -4,6 +4,7 @@ import Suspension from "@/public/images/Tunning/zawieszenieA.jpg";
 import Breaks from "@/public/images/Tunning/hamulceA.jpg";
 import Electricity from "@/public/images/Tunning/elektryka.jpg";
 import OfferTunningTab from "../atoms/OfferTunningTab";
+import FadeUp from "../atoms/FadeUp";
 
 const OfferTunningElements = () => {
   const tunningList = [
@@ -47,7 +48,9 @@ const OfferTunningElements = () => {
   return (
     <div className="flex gap-5 flex-col md:flex-row justify-between flex-wrap items-start">
       {tunningList.map((item) => (
-        <OfferTunningTab key={item.id} number={item.id} title={item.title} />
+        <FadeUp delay={0.5} duration={1 + item.id} key={item.id}>
+          <OfferTunningTab number={item.id} title={item.title} />
+        </FadeUp>
       ))}
     </div>
   );

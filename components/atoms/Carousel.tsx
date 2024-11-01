@@ -330,7 +330,7 @@ function CarouselItem({ children, className }: CarouselItemProps) {
   return (
     <motion.div
       className={cn(
-        "w-full min-w-0 shrink-0 grow-0 overflow-hidden rounded-2xl ",
+        "w-full min-w-0 shrink-0 grow-0 overflow-hidden rounded-2xl",
         className
       )}
     >

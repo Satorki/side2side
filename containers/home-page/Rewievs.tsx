@@ -41,11 +41,11 @@ Okazało się też, że serwisuje auta vipów jak na zdjęciu. Jednym słowem PO
       </div>
       <style jsx>{`
         #rewievs {
-          background-image: radial-gradient(
+          /* background-image: radial-gradient(
             circle 1000px at 50% 60%,
             #850001,
             #e34040
-          );
+          ); */
           color: white;
           padding: 2rem 5rem;
           z-index: 20;

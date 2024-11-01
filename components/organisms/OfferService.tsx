@@ -26,7 +26,7 @@ const OfferService: React.FC = () => {
     <div className="flex flex-col gap-2">
     <ButtonAction
       text="Zadzwoń"
-      bgColor="#000"
+      bgColor="#ff2424"
       textColor="#fff"
       icon={<PhoneCall />}
     />
@@ -34,8 +34,8 @@ const OfferService: React.FC = () => {
     <p className="pl-2 text-lg">lub zarezerwuj przez:</p>
     <ButtonAction
       text="Motointegrator"
-      bgColor="#f4f4b3"
-      textColor="#000000"
+      bgColor="#ff2424"
+      textColor="#fff"
       icon={<Car />}
     />
   </div>
@@ -46,7 +46,7 @@ const OfferService: React.FC = () => {
       <AnimatedTransition quote="SERWIS" animatedIcon={<AnimatedWrench />} />
       <div className="offer-body">
         <div className="flex flex-col flex-1 gap-5 md:gap-10">
-          <TitleSection titleBegining="Profesjonalna " titleAnimationText="obsługa" titleEnding="dostosowana do Ciebie." />
+          <TitleSection titleBegining="Profesjonalna obsługa" titleEnding="dostosowana do Ciebie." />
           <FadeUp delay={0.5} duration={2}>
             <DescriptionSingle
               text="Oferujemy kompleksowy serwis dla pojazdów osobnych i dostawczych do 3,5 tony, zapewniając ich sprawność w codziennym użytkowaniu."
@@ -63,7 +63,7 @@ const OfferService: React.FC = () => {
       </div>
       <style jsx>{`
         #offer-service {
-          background-color: #ba0a0a;
+          /* background-color: #ba0a0a; */
           display: flex;
           flex-direction: column;
           justify-content: center;
