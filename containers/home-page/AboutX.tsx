@@ -3,7 +3,7 @@ import TitleSection from "@/components/atoms/TitleSection";
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import ButtonAction from "@/components/atoms/ButtonAction";
-import AboutDescriptions from "@/components/molecules/AboutDescriptions";
+import AboutDescriptions from "@/components/molecules/AboutDescriptionsX";
 import { CornerRightDown } from "lucide-react";
 
 const About = () => {

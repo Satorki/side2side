@@ -25,7 +25,7 @@ const Projects = () => {
 
       <style jsx>{`
         #projects {
-          /* background-color: #000; */
+          background-color: #302d2d;
           color: white;
           padding: 2rem;
           display: flex;

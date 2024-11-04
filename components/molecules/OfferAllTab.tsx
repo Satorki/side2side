@@ -17,9 +17,9 @@ const OfferAllTab = ({
 }: OfferAllTabProps) => {
   return (
     <div
-      className="flex flex-col justify-between  gap-3 p-4 shadow-md hover:shadow-lg transition-shadow flex-1 rounded-2xl relative"
+      className="flex flex-col justify-between  gap-3 p-8 shadow-lg flex-1 rounded-2xl relative"
       style={{
-        background: `linear-gradient(to right bottom, #323232, ${bgColor}, #323232)`,
+        background: `linear-gradient(to right bottom, #575757, ${bgColor},#575757)`,
       }}
     >
       <div>{icon}</div>

@@ -3,8 +3,11 @@ import ImageAbout from "@/components/atoms/ImageAbout";
 import React, { useEffect, useRef, useState } from "react";
 import { useScroll, useTransform } from "framer-motion";
 import ButtonAction from "@/components/atoms/ButtonAction";
-import AboutDescriptions from "@/components/molecules/AboutDescriptions";
+import AboutDescriptions from "@/components/molecules/AboutDescriptionsX";
 import { CornerRightDown } from "lucide-react";
+import TitleSection from "@/components/atoms/TitleSection";
+import FadeUp from "@/components/atoms/FadeUp";
+import DescriptionSingle from "@/components/atoms/DescriptionSingle";
 
 const About = () => {
   const [isDesktop, setIsDesktop] = useState(false);
@@ -30,19 +33,16 @@ const About = () => {
         )}
 
         <div className="description-container">
-          <div className="font-bai flex flex-col gap-4">
-            <h2 className="text-4xl font-semibold">
-              Twoje auto, nasza pasja – pełen potencjał na drodze i torze.
-            </h2>
-          </div>
-
+          <TitleSection titleBegining="Twoje auto, nasza pasja – pełen potencjał na drodze i torze. " />
           {!isDesktop && (
             <>
               <ImageAbout />
             </>
           )}
           <div>
-            <AboutDescriptions />
+            <FadeUp delay={1}>
+              <DescriptionSingle text="Wiemy, że Twój samochód to coś więcej niż tylko pojazd – to pasja i styl życia. Naszą misją jest dostarczanie usług, które zapewnią niezawodność i wyjątkowe osiągi w każdych warunkach. W Side2Side Motorsport łączymy precyzję, doświadczenie i miłość do motoryzacji, by wyjść naprzeciw każdemu wyzwaniu."/>
+            </FadeUp>
           </div>
           <ButtonAction
             bgColor="#d52727"
@@ -54,10 +54,11 @@ const About = () => {
       </div>
       <style jsx>{`
         #about {
-          padding: 4rem 0rem;
+          margin: 10rem 0;
         }
         .description-container {
           display: flex;
+          flex: 1;
           flex-direction: column;
           gap: 2.5rem;
           color: white;
@@ -74,7 +75,7 @@ const About = () => {
         }
         @media (max-width: 768px) {
           #about {
-            padding: 0rem;
+            margin: 2rem 0;
           }
           .description-container {
             width: 100%;

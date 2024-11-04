@@ -6,6 +6,8 @@ import Hero from "@/containers/home-page/Hero";
 import Projects from "@/containers/home-page/Projects";
 import Rewievs from "@/containers/home-page/Rewievs";
 import OffersAll from "@/containers/home-page/OffersAll";
+import WalkingText from "@/components/atoms/WalkingText";
+import NumberSection from "@/components/molecules/NumberSection";
 
 export default function Home() {
   return (
@@ -13,7 +15,9 @@ export default function Home() {
       <Hero />
       <OffersAll />
       <About />
+      
       <Offers />
+      <NumberSection />
       <Projects />
       <Rewievs />
       <Contact />

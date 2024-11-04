@@ -6,7 +6,8 @@ import WalkingText from "@/components/atoms/WalkingText";
 
 const Offers = () => {
   return (
-    <div>
+    <div className="bg-[#302d2d]">
+      <WalkingText />
       <OfferService />
       <OfferTunning />
       <OfferMotorsport />

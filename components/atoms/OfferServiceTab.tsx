@@ -15,7 +15,7 @@ const OfferServiceTab = ({
 }: OfferServiceTabProps) => {
   return (
     <div
-      className={`flex gap-3 hover:scale-105 transition-all ease-in-out duration-300 cursor-pointer`}
+      className={`flex gap-3 hover:scale-105 hover:translate-x-5 transition-all ease-in-out duration-300`}
     >
       <p className="text-xl ">{icon}</p>
       <p className="text-[1.1rem]">{title}</p>

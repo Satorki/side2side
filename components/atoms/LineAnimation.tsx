@@ -10,7 +10,7 @@ const LineAnimation = () => {
             width: 0,
           },
           visible: {
-            width: "75%",
+            width: "100%",
           },
         }}
         initial="hidden"

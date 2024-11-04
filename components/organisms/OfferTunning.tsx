@@ -24,12 +24,15 @@ const OfferTunning: React.FC = () => {
 
   return (
     <div id="offer-tuning">
-
       <AnimatedTransition quote="TUNING" animatedIcon={<AnimatedProgress />} />
 
       <div className="offer-body">
         <div className="flex flex-col gap-5 md:gap-10 flex-1">
-          <TitleSection titleBegining="Lepsze osiągi, większa " titleAnimationText="radość" titleEnding=" z jazdy." />
+          <TitleSection
+            titleBegining="Lepsze osiągi, większa "
+            titleAnimationText="radość"
+            titleEnding=" z jazdy."
+          />
           <FadeUp delay={0.5} duration={2}>
             <DescriptionSingle
               text="Tuningujemy z pasją, by Twój pojazd osiągał maksimum możliwości."
@@ -40,20 +43,20 @@ const OfferTunning: React.FC = () => {
           {isDesktop && (
             <ButtonAction
               text="Sprawdź Nas"
-              bgColor="#000"
-              textColor="#fff"
+            bgColor="#d52727"
+            textColor="#FFF"
               icon={<PhoneCall />}
             />
           )}
         </div>
-        
+
         <div className="description-container">
-        <OfferTunningElements />
+          <OfferTunningElements />
           {!isDesktop && (
             <ButtonAction
               text="Sprawdź Nas"
-              bgColor="#000"
-              textColor="#fff"
+            bgColor="#d52727"
+            textColor="#FFF"
               icon={<PhoneCall />}
             />
           )}
@@ -69,7 +72,7 @@ const OfferTunning: React.FC = () => {
         }
         .offer-body {
           display: flex;
-          flex-direction: row-reverse;
+          flex-direction: row;
           justify-content: space-between;
           color: #fff;
           width: 100%;
@@ -98,7 +101,7 @@ const OfferTunning: React.FC = () => {
             padding: 2rem;
           }
           .description-container {
-           gap: 2rem;
+            gap: 2rem;
           }
         }
       `}</style>

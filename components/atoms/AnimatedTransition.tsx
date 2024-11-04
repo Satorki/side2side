@@ -43,7 +43,7 @@ const AnimatedTransition = ({
   const opacity = useTransform(scrollYProgress, [0.6, 0.4], [0, 1]);
 
   return (
-    <div className="overflow-hidden w-full relative font-bai" ref={container}>
+    <div className="overflow-hidden w-full relative font-jura" ref={container}>
       <div
         className={`transform origin-left max-w-[1200px] mx-auto w-full flex items-center justify-between text-white py-5 xl:scale-100 ${
           mustScaleDown ? "scale-75" : "scale-100"

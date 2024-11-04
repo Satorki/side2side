@@ -14,7 +14,7 @@ const HeroArrow = ({ isLoaded }: Props) => {
   return (
     <motion.div
       animate={isLoaded ? { y: 0, opacity: 1 } : {}}
-      initial={{ y: 100, opacity: 0 }}
+      initial={{ y: 200, opacity: 0 }}
       transition={{
         delay: isLoaded ? 3 : 0,
         duration: 2,

@@ -1,7 +1,7 @@
 import ButtonAction from "@/components/atoms/ButtonAction";
 import ImageAbout from "@/components/atoms/ImageAbout";
 import TitleSection from "@/components/atoms/TitleSection";
-import AboutDescriptions from "@/components/molecules/AboutDescriptions";
+import AboutDescriptions from "@/components/molecules/AboutDescriptionsX";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { CornerRightDown } from "lucide-react";
 import { useRef } from "react";

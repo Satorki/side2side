@@ -24,29 +24,32 @@ const OfferService: React.FC = () => {
 
   const showButtons = () => (
     <div className="flex flex-col gap-2">
-    <ButtonAction
-      text="Zadzwoń"
-      bgColor="#ff2424"
-      textColor="#fff"
-      icon={<PhoneCall />}
-    />
-
-    <p className="pl-2 text-lg">lub zarezerwuj przez:</p>
-    <ButtonAction
-      text="Motointegrator"
-      bgColor="#ff2424"
-      textColor="#fff"
-      icon={<Car />}
-    />
-  </div>
-  )
+      <ButtonAction
+        text="Zadzwoń"
+            bgColor="#d52727"
+            textColor="#FFF"
+        icon={<PhoneCall />}
+      />
+      
+      <DescriptionSingle text="lub zarezerwuj przez:" isBold />
+      <ButtonAction
+        text="Motointegrator"
+            bgColor="#d52727"
+            textColor="#FFF"
+        icon={<Car />}
+      />
+    </div>
+  );
 
   return (
     <div id="offer-service">
       <AnimatedTransition quote="SERWIS" animatedIcon={<AnimatedWrench />} />
       <div className="offer-body">
         <div className="flex flex-col flex-1 gap-5 md:gap-10">
-          <TitleSection titleBegining="Profesjonalna obsługa" titleEnding="dostosowana do Ciebie." />
+          <TitleSection
+            titleBegining="Profesjonalna obsługa"
+            titleEnding="dostosowana do Ciebie."
+          />
           <FadeUp delay={0.5} duration={2}>
             <DescriptionSingle
               text="Oferujemy kompleksowy serwis dla pojazdów osobnych i dostawczych do 3,5 tony, zapewniając ich sprawność w codziennym użytkowaniu."
@@ -67,11 +70,11 @@ const OfferService: React.FC = () => {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          padding: 4rem;
+          margin: 10rem 4rem;
         }
         .offer-body {
           display: flex;
-          flex-direction: row;
+          flex-direction: row-reverse;
           justify-content: center;
           align-items: center;
           color: #fff;
@@ -98,7 +101,7 @@ const OfferService: React.FC = () => {
           }
           #offer-service {
             height: auto;
-            padding: 2rem;
+            margin: 2rem;
             overflow: hidden;
           }
         }
