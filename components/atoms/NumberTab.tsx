@@ -42,7 +42,7 @@ const NumberTab = ({
         />
         <p className="text-3xl">{symbol}</p>
       </div>
-      <p className="text-center leading-6 tracking-wide">
+      <p className="text-sm text-center leading-6 tracking-wide">
         {titleUp}
         <br />
         {titleDown}

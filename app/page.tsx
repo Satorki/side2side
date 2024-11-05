@@ -8,18 +8,20 @@ import Rewievs from "@/containers/home-page/Rewievs";
 import OffersAll from "@/containers/home-page/OffersAll";
 import WalkingText from "@/components/atoms/WalkingText";
 import NumberSection from "@/components/molecules/NumberSection";
+import Image from "next/image";
+import BackImage from "@/public/images/Additional/background1.jpg";
 
 export default function Home() {
   return (
     <div>
       {/* <Hero /> */}
-      {/* <OffersAll /> */}
+      <OffersAll />
       <About />
       <Offers />
-      {/* <NumberSection /> */}
-      {/* <Projects /> */}
-      {/* <Rewievs /> */}
-      {/* <Contact /> */}
+      <NumberSection />
+      <Projects />
+      <Rewievs />
+      <Contact />
     </div>
   );
 }

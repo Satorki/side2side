@@ -91,11 +91,6 @@ const ProjectsCarousel = () => {
   return (
     <div className="relative w-full px-4 mb-16">
       <Carousel>
-        <CarouselNavigation
-          className="absolute -bottom-20 left-auto top-auto w-full justify-start gap-2"
-          classNameButton="bg-zinc-800 *:stroke-zinc-50 dark:bg-zinc-200 dark:*:stroke-zinc-800"
-          alwaysShow
-        />
         <CarouselContent className="-ml-6">
           {imageList.map((item, index) => (
             <CarouselItem
@@ -110,12 +105,8 @@ const ProjectsCarousel = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
+        <CarouselNavigation alwaysShow />
       </Carousel>
-      <div className="absolute -bottom-16 right-10 ">
-        <h2 className="text-2xl md:text-3xl xl:text-4xl font-semibold text-[#d52727]">
-          Kickster E45 2JZ
-        </h2>
-      </div>
     </div>
   );
 };
