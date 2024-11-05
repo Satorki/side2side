@@ -107,7 +107,7 @@ const OfferMotorsport = () => {
           flex-direction: column;
           justify-content: center;
           /* background-color: #000; */
-          padding: 10rem 4rem
+          padding: 4rem 4rem
         }
 
         .offer-container {
@@ -140,7 +140,7 @@ const OfferMotorsport = () => {
             gap: 2rem;
           }
           #offer-motorsport {
-            padding: 2rem 0rem
+            padding: 2rem 2rem;
             height: auto;
           }
         }

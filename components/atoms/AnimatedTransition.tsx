@@ -37,32 +37,34 @@ const AnimatedTransition = ({
 
   const moveParameters = leftToRight ? [1, 0.4] : [0.4, 1];
   const moveXQuote = useTransform(scrollYProgress, moveParameters, [
-    200,
+    offscreenX,
     0,
   ]);
   const opacity = useTransform(scrollYProgress, [0.6, 0.4], [0, 1]);
 
   return (
-    <div className="overflow-hidden w-full relative font-jura" ref={container}>
-      <div
-        className={`transform origin-left max-w-[1200px] mx-auto w-full flex items-center justify-between text-white py-5 xl:scale-100 ${
-          mustScaleDown ? "scale-75" : "scale-100"
+    <div className="max-w-[1200px] mx-auto w-full flex items-center font-jura text-white font-bold">
+      <p
+        className={`-rotate-90 text-[0.7rem] md:text-[1.6rem] mx-[-0.9rem] md:mx-[-2.2rem] opacity-40 font-bold tracking-wider xl:scale-100 mt-1 md:mt-2 ${
+          mustScaleDown ? "scale-[0.65]" : "scale-100"
         }`}
       >
-        <div className="">
-          <motion.div
-            style={{ x: moveXQuote, opacity }}
-            className="flex items-center"
-          >
-            <p className="-rotate-90 text-[0.6rem] md:text-[1.5rem] mx-[-0.9rem] md:mx-[-2.4rem] opacity-40 font-bold">
-              OFERTA
-            </p>
-            <p className="text-[52px] md:text-[9rem] opacity-40 leading-none tracking-tighter">
+        OFERTA
+      </p>
+      <div className="overflow-hidden w-full" ref={container}>
+        <div
+          className={` origin-left w-full flex items-center justify-between text-white xl:scale-100 pr-2 ${
+            mustScaleDown ? "scale-[0.65]" : "scale-100"
+          }`}
+        >
+          <motion.div style={{ x: moveXQuote }}>
+            <p className="text-[4rem] md:text-[9rem] opacity-40 leading-none tracking-tighter">
               {quote}
             </p>
           </motion.div>
+          {animatedIcon &&
+            React.cloneElement(animatedIcon, { scrollYProgress })}
         </div>
-        {animatedIcon && React.cloneElement(animatedIcon, { scrollYProgress })}
       </div>
     </div>
   );

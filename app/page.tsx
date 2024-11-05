@@ -12,15 +12,14 @@ import NumberSection from "@/components/molecules/NumberSection";
 export default function Home() {
   return (
     <div>
-      <Hero />
-      <OffersAll />
+      {/* <Hero /> */}
+      {/* <OffersAll /> */}
       <About />
-      
       <Offers />
-      <NumberSection />
-      <Projects />
-      <Rewievs />
-      <Contact />
+      {/* <NumberSection /> */}
+      {/* <Projects /> */}
+      {/* <Rewievs /> */}
+      {/* <Contact /> */}
     </div>
   );
 }
