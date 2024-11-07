@@ -19,7 +19,7 @@ const OfferAllTab = ({
     <div
       className="flex flex-col justify-between  gap-3 p-8 shadow-lg flex-1 rounded-2xl relative"
       style={{
-        background: `linear-gradient(to right bottom, #575757, ${bgColor},#575757)`,
+        background: `${bgColor}`,
       }}
     >
       <div>{icon}</div>

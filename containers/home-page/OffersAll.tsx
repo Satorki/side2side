@@ -21,7 +21,7 @@ const OffersAll = () => {
             icon={<Wrench className="w-1/2 h-auto" />}
             title="SERWIS"
             description="Kompleksowy serwis samochodów osobowych i dostawczych do 3,5 tony – dbamy o niezawodność i komfort jazdy na co dzień."
-            bgColor="rgba(30, 30, 30, 0.6)"
+            bgColor="rgba(10, 10, 10, 0.6)"
             button={
               <ButtonAction
                 text="Przejdź"
@@ -34,7 +34,7 @@ const OffersAll = () => {
             icon={<SignalHigh className="w-1/2 h-auto" />}
             title="TUNNING"
             description="Prawdziwe osiągi zaczynają się tam, gdzie kończą się kompromisy. Specjalizujemy się w precyzyjnych modyfikacjach: od wydechu po silnik."
-            bgColor="rgba(40, 40, 40, 0.6)"
+            bgColor="rgba(20, 20, 20, 0.6)"
             button={
               <ButtonAction
                 text="Przejdź"
@@ -47,7 +47,7 @@ const OffersAll = () => {
             icon={<CircleDotDashed className="w-1/2 h-auto" />}
             title="MOTORSPORT"
             description="Dla fanów rajdów, wyścigów i driftu oferujemy przygotowanie pojazdów, które spełnią najwyższe wymagania motorsportu."
-            bgColor="rgba(20, 20, 20, 0.6)"
+            bgColor="rgba(30, 30, 30, 0.6)"
             button={
               <ButtonAction
                 text="Przejdź"
@@ -61,7 +61,7 @@ const OffersAll = () => {
       <style jsx>{`
         #offersAll {
           width: 100%;
-          margin: 10rem 0;
+          padding: 10rem 0;
         }
         .offer-container {
           max-width: 1200px;
@@ -81,8 +81,7 @@ const OffersAll = () => {
         }
         @media (max-width: 768px) {
           #offersAll {
-            padding: 0rem;
-            margin: 2rem 0;
+            padding: 2rem 0;
           }
           .tabs-container {
             flex-direction: column;

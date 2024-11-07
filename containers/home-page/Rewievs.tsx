@@ -7,7 +7,9 @@ const Rewievs = () => {
   return (
     <div id="rewievs">
       <div className="flex flex-col gap-10 justify-center items-center max-w-[1200px] mx-auto">
+        <div className="py-8">
         <TitleSection titleBegining="Sprawdź jak nas oceniają " />
+        </div>
         <div className="rewievs-container">
           <FadeUp delay={1}>
             <ReviewSingle
@@ -47,7 +49,7 @@ Okazało się też, że serwisuje auta vipów jak na zdjęciu. Jednym słowem PO
             #e34040
           ); */
           color: white;
-          padding: 2rem 5rem;
+          padding: 10rem 5rem;
           z-index: 20;
         }
         .rewievs-container {

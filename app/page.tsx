@@ -8,20 +8,23 @@ import Rewievs from "@/containers/home-page/Rewievs";
 import OffersAll from "@/containers/home-page/OffersAll";
 import WalkingText from "@/components/atoms/WalkingText";
 import NumberSection from "@/components/molecules/NumberSection";
-import Image from "next/image";
-import BackImage from "@/public/images/Additional/background1.jpg";
 
 export default function Home() {
   return (
     <div>
       {/* <Hero /> */}
-      <OffersAll />
-      <About />
+      <div className="relative z-20 bg-gradient-to-tr from-[#353030] to-[#575757]">
+        <OffersAll />
+        <About />
+      </div>
       <Offers />
+
       <NumberSection />
-      <Projects />
-      <Rewievs />
-      <Contact />
+      <div className="relative z-20  bg-gradient-to-tr from-[#353030] to-[#575757]">
+        <Projects />
+        <Rewievs />
+        <Contact />
+      </div>
     </div>
   );
 }

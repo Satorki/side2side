@@ -6,7 +6,7 @@ import WalkingText from "@/components/atoms/WalkingText";
 
 const Offers = () => {
   return (
-    <div className="bg-[#302d2d]">
+    <div className="bg-[#302d2d] relative z-20">
       <WalkingText />
       <OfferService />
       <OfferTunning />

@@ -54,7 +54,7 @@ const About = () => {
       </div>
       <style jsx>{`
         #about {
-          margin: 10rem 0;
+          padding: 10rem 0;
         }
         .description-container {
           display: flex;
@@ -75,7 +75,7 @@ const About = () => {
         }
         @media (max-width: 768px) {
           #about {
-            margin: 2rem 0;
+            padding: 2rem 0;
           }
           .description-container {
             width: 100%;

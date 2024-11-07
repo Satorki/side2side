@@ -8,7 +8,7 @@ const Projects = () => {
   return (
     <div id="projects">
       <div className="text-white p-8 flex flex-col max-w-[1200px] mx-auto">
-        <div className="px-4 pb-4 flex flex-col gap-4">
+      <div className="flex flex-col flex-1 gap-5 md:gap-10">
           <TitleSection
             titleBegining="Projekty od A do Z"
             titleAnimationText=""
@@ -33,7 +33,7 @@ const Projects = () => {
       </div>
       <style jsx>{`
         #projects {
-          margin: 10rem 0;
+          padding: 10rem 0;
         }
         @media (max-width: 768px) {
           #projects {
