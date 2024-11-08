@@ -77,7 +77,6 @@ const OfferService: React.FC = () => {
           flex-direction: row-reverse;
           justify-content: center;
           align-items: center;
-          color: #fff;
           max-width: 1200px;
           margin: 2rem auto;
           gap: 5rem;

@@ -44,7 +44,7 @@ const AnimatedCircle = ({ scrollYProgress }: Props) => {
       style={{ rotate: turnAround, opacity }}
       className="w-[43px] h-[43px] md:w-[120px] md:h-[120px]"
     >
-      <Wrench className="text-white w-[43px] h-[43px] md:w-[120px] md:h-[120px] opacity-30" />
+      <Wrench className=" w-[43px] h-[43px] md:w-[120px] md:h-[120px] opacity-30" />
     </motion.div>
   );
 };

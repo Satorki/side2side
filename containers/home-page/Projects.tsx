@@ -15,7 +15,7 @@ const Projects = () => {
           />
           <FadeUp delay={0.5} duration={2}>
             <DescriptionSingle
-              text="Stworzymy dla Ciebie zwycięzajce samochody."
+              text="Stworzymy dla Ciebie zwyciężające samochody."
               isBold={true}
             />
           </FadeUp>
@@ -25,9 +25,8 @@ const Projects = () => {
             />
           </FadeUp>
           <FadeUp delay={1.1} duration={2}>
-          <DescriptionSingle
-            text="Sprawdź jak to wygldalo:"
-          />
+          <p className="text-red-600 w-auto font-bold">Zobacz jak to wyglądało:</p>
+          
         </FadeUp>
         </div>
 
@@ -44,7 +43,7 @@ const Projects = () => {
         }
         @media (max-width: 768px) {
           #projects {
-            padding: 2rem 0rem;
+            padding: 4rem 0rem;
           }
         }
       `}</style>

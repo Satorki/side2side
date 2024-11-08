@@ -3,14 +3,17 @@ import OfferMotorsport from "../../components/organisms/OfferMotorsport";
 import OfferService from "../../components/organisms/OfferService";
 import NumberSection from "@/components/molecules/NumberSection";
 import WalkingText from "@/components/atoms/WalkingText";
+import BgTransition from "@/components/atoms/BgTransition";
 
 const Offers = () => {
   return (
-    <div className="bg-[#302d2d] relative z-20">
+    <div className="bg-[#232121] relative z-20 text-white">
+      <BgTransition>
       <WalkingText />
       <OfferService />
       <OfferTunning />
       <OfferMotorsport />
+      </BgTransition>
     </div>
   );
 };

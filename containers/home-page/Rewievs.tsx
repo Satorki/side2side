@@ -7,11 +7,11 @@ const Rewievs = () => {
   return (
     <div id="rewievs">
       <div className="flex flex-col gap-10 justify-center items-center max-w-[1200px] mx-auto">
-        <div className="py-8">
+        <div className="pt-8">
         <TitleSection titleBegining="Sprawdź jak nas oceniają " />
         </div>
         <div className="rewievs-container">
-          <FadeUp delay={1}>
+          <FadeUp delay={0.3}>
             <ReviewSingle
               text="Kilukrotnie korzystałem z usług i nigdy się nie zawiodłem. Powierzony temat wykonany zawsze na 101%. Warszat prowadzony z dbałością o najdrobniejsze detale i przyjaznym podejściem dla klienta.
 Reasumowując zdecydowanie polecam :)"
@@ -21,7 +21,7 @@ Reasumowując zdecydowanie polecam :)"
             />
           </FadeUp>
 
-          <FadeUp delay={1.1}>
+          <FadeUp delay={0.4}>
             <ReviewSingle
               text="Korzystałem z pomocy dwa razy i za każdym razem byłem zadowolony. Miła obsługa, są słowni, dotrzymali umówionych terminów, mają umiarkowane ceny. Szybko stawiają trafną diagnozę i szybko usuwają usterki. Dzisiaj była wymiana czujnika położenia wałka rozrządu.
 Wczoraj szybka diagnoza bez kolejki, a dzisiaj 15 minut i zrobione. Rachunek też nie wysoki.
@@ -31,7 +31,7 @@ Okazało się też, że serwisuje auta vipów jak na zdjęciu. Jednym słowem PO
               logo=""
             />
           </FadeUp>
-          <FadeUp delay={1.2}>
+          <FadeUp delay={0.5}>
             <ReviewSingle
               text="Profesjonalne podejście do klienta. Przy remoncie który wykonywałem zlecili że sprawdzą i ewentualnie wymianią części za moją zgodą żeby zaoszczedzić kolejne rozbieranie i wycziąganie kolejny raz np silnika.Mechanik specjalizuje się w marce BMW ale inne auta nie są mu obce. Polecam."
               stars={5}
@@ -59,7 +59,7 @@ Okazało się też, że serwisuje auta vipów jak na zdjęciu. Jednym słowem PO
         }
         @media (max-width: 768px) {
           #rewievs {
-            padding: 2rem 2rem;
+            padding: 4rem 2rem;
           }
           .rewievs-container {
             flex-direction: column;

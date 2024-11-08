@@ -5,7 +5,7 @@ import CrewImage from "@/public/images/About/about.jpg";
 const ImageAbout = () => {
   return (
     <div className="relative z-0 flex-1">
-      <div className="absolute w-[90%] h-[90%] bg-white opacity-20 -top-5 -right-5 rounded-2xl z-0"></div>
+      <div className="absolute w-[90%] h-[90%] bg-black opacity-40 -top-5 -right-5 rounded-2xl z-0"></div>
       <div className="relative mr-2 mt-2 z-10">
         <Image
           src={CrewImage}
