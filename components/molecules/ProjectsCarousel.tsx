@@ -2,6 +2,7 @@ import React from "react";
 import {
   Carousel,
   CarouselContent,
+  CarouselIndicator,
   CarouselItem,
   CarouselNavigation,
 } from "../atoms/Carousel";
@@ -89,13 +90,13 @@ const ProjectsCarousel = () => {
   ];
 
   return (
-    <div className="relative w-full px-4 mb-16">
-      <Carousel>
-        <CarouselContent className="-ml-6">
+    <div className="relative w-full">
+      <Carousel >
+        <CarouselContent className="-ml-6 max-w-[1100px]">
           {imageList.map((item, index) => (
             <CarouselItem
               key={index}
-              className="xl:basis-1/3 md:basis-1/2 pl-6"
+              className="md:basis-1/2 pl-6"
             >
               <CarouselTab
                 image={item.image}
@@ -106,6 +107,7 @@ const ProjectsCarousel = () => {
           ))}
         </CarouselContent>
         <CarouselNavigation alwaysShow />
+        <CarouselIndicator classNameButton="w-2.5 h-2.5" />
       </Carousel>
     </div>
   );

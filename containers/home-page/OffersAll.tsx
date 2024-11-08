@@ -21,7 +21,7 @@ const OffersAll = () => {
             icon={<Wrench className="w-1/2 h-auto" />}
             title="SERWIS"
             description="Kompleksowy serwis samochodów osobowych i dostawczych do 3,5 tony – dbamy o niezawodność i komfort jazdy na co dzień."
-            bgColor="rgba(10, 10, 10, 0.6)"
+            bgColor="rgba(30, 30, 30, 0.6)"
             button={
               <ButtonAction
                 text="Przejdź"
@@ -47,7 +47,7 @@ const OffersAll = () => {
             icon={<CircleDotDashed className="w-1/2 h-auto" />}
             title="MOTORSPORT"
             description="Dla fanów rajdów, wyścigów i driftu oferujemy przygotowanie pojazdów, które spełnią najwyższe wymagania motorsportu."
-            bgColor="rgba(30, 30, 30, 0.6)"
+            bgColor="rgba(10, 10, 10, 0.6)"
             button={
               <ButtonAction
                 text="Przejdź"

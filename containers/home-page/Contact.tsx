@@ -40,8 +40,8 @@ const Contact = () => {
               {contactList.map((item) => (
                 <div key={item.id} className="flex flex-col pt-5">
                   <p className="text-xl font-bold">{item.title}</p>
-                  <p className="pt-1">{item.descriptionUp}</p>
-                  <p>{item.descriptionDown}</p>
+                  <div className="pt-1">{item.descriptionUp}</div>
+                  <div>{item.descriptionDown}</div>
                 </div>
               ))}
             </div>

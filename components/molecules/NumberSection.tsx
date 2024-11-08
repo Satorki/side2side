@@ -7,7 +7,7 @@ const NumberSection = () => {
   return (
     <div>
       <div className="fixed top-0 left-0 w-full h-screen opacity-25">
-        <Image src={BackImage} alt="Person Standing" fill objectFit="cover" />
+        <Image src={BackImage} alt="Person Standing" fill />
       </div>
       <div className="relative z-20 max-w-[1200px] mx-auto py-40 text-white font-bai">
         <div className="flex flex-col md:flex-row justify-between gap-20 md:gap-10 px-8">

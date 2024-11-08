@@ -129,14 +129,14 @@ function CarouselNavigation({
   return (
     <div
       className={cn(
-        "pointer-events-none absolute left-[-12.5%] top-1/2 flex w-[125%] -translate-y-1/2 justify-between px-2",
+        "absolute pointer-events-none flex w-full items-center gap-5 mt-5",
         className
       )}
     >
       <button
         type="button"
         className={cn(
-          "pointer-events-auto h-fit w-fit rounded-full bg-zinc-50 p-2 transition-opacity duration-300 dark:bg-zinc-950 hover:bg-zinc-100 border",
+          "pointer-events-auto h-fit w-fit rounded-full bg-zinc-700 p-2 transition-opacity duration-300 dark:bg-zinc-950 hover:bg-zinc-100 border",
           alwaysShow
             ? "opacity-100"
             : "opacity-0 group-hover/hover:opacity-100",
@@ -160,7 +160,7 @@ function CarouselNavigation({
       <button
         type="button"
         className={cn(
-          "pointer-events-auto h-fit w-fit rounded-full bg-zinc-50 p-2 transition-opacity duration-300 dark:bg-zinc-950 hover:bg-zinc-100 border",
+          "pointer-events-auto h-fit w-fit rounded-full bg-zinc-750 p-2 transition-opacity duration-300 dark:bg-zinc-950 hover:bg-zinc-100 border",
           alwaysShow
             ? "opacity-100"
             : "opacity-0 group-hover/hover:opacity-100",
@@ -199,7 +199,7 @@ function CarouselIndicator({
   return (
     <div
       className={cn(
-        "absolute bottom-0 z-10 flex w-full items-center justify-center",
+        "absolute mt-8 z-10 flex w-full items-center justify-end md:justify-center",
         className
       )}
     >

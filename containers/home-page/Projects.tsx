@@ -8,7 +8,7 @@ const Projects = () => {
   return (
     <div id="projects">
       <div className="text-white p-8 flex flex-col max-w-[1200px] mx-auto">
-      <div className="flex flex-col flex-1 gap-5 md:gap-10">
+      <div className="flex flex-col flex-1 gap-5 md:gap-10 py-3">
           <TitleSection
             titleBegining="Projekty od A do Z"
             titleAnimationText=""
@@ -24,12 +24,19 @@ const Projects = () => {
               text="We współpracy z naszym serwisem został stworzony od postaw samochód dla KickSter'a - BMW E45 2JZ - 650 KM / 700 Nm przystosowany do zawodów driftowych."
             />
           </FadeUp>
+          <FadeUp delay={1.1} duration={2}>
+          <DescriptionSingle
+            text="Sprawdź jak to wygldalo:"
+          />
+        </FadeUp>
         </div>
-        
-        <div className="flex flex-col justify-center items-center max-w-[1200px] mx-auto">
+
+        <div className="flex flex-col justify-center items-center">
           
           <ProjectsCarousel />
+          
         </div>
+        
       </div>
       <style jsx>{`
         #projects {
