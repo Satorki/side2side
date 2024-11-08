@@ -1,9 +1,4 @@
 import ButtonAction from "@/components/atoms/ButtonAction";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/atoms/Carousel";
 import LineAnimation from "@/components/atoms/LineAnimation";
 import TitleSection from "@/components/atoms/TitleSection";
 import OfferAllTab from "@/components/molecules/OfferAllTab";

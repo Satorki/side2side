@@ -40,7 +40,6 @@ const AnimatedTransition = ({
     offscreenX,
     0,
   ]);
-  const opacity = useTransform(scrollYProgress, [0.6, 0.4], [0, 1]);
 
   return (
     <div className="max-w-[1200px] mx-auto w-full flex items-center font-jura  font-bold">
