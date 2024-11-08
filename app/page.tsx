@@ -11,19 +11,16 @@ import NumberSection from "@/components/molecules/NumberSection";
 
 export default function Home() {
 
-  const colorTransition = 9;
-
-
   return (
     <div>
-      {/* <Hero /> */}
       <div className="relative z-20 bg-gradient-to-r from-[#231b1b] to-[#575757]">
+        <Hero />
         <OffersAll />
         <About />
       </div>
       <Offers />
       <NumberSection />
-      <div className="relative z-20  bg-gradient-to-r from-[#353030] to-[#575757]">
+      <div className="relative z-20  bg-gradient-to-r from-[#575757] to-[#231b1b]">
         <Projects />
         <Rewievs />
         <Contact />

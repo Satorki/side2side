@@ -10,7 +10,7 @@ const BgTransition = ({ children }: BgTransitionProps) => {
     <motion.div
       variants={{
         hidden: {
-          backgroundImage: "linear-gradient(to right, #353030, #575757)",
+          backgroundImage: "linear-gradient(to right, #231b1b, #575757)",
         },
         visible: {
           backgroundImage: "linear-gradient(to right, #232121, #232121)",

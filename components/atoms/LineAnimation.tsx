@@ -16,7 +16,7 @@ const LineAnimation = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 2, delay: 2 }}
+        transition={{ duration: 2, delay: 0.5 }}
         style={{
           height: "5px",
           backgroundColor: "#d52727",
