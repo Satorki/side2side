@@ -7,7 +7,7 @@ import BgTransition from "@/components/atoms/BgTransition";
 
 const Offers = () => {
   return (
-    <div className="bg-[#232121] relative z-20 text-white">
+    <div className="bg-[#060606] relative z-20 text-white">
       <BgTransition>
       <WalkingText />
       <OfferService />
