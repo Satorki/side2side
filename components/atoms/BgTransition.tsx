@@ -13,7 +13,7 @@ const BgTransition = ({ children }: BgTransitionProps) => {
           backgroundImage: "linear-gradient(to right, #231b1b, #575757)",
         },
         visible: {
-          backgroundImage: "linear-gradient(to right, #080808, #070606)",
+          backgroundImage: "linear-gradient(to right, #575757, #575757)",
         },
       }}
       initial="hidden"
