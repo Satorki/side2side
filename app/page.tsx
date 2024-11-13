@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className="relative z-20 bg-gradient-to-r from-[#231b1b] to-[#575757]">
+      <div className="relative z-20 bg-[#4d4a4a]">
         <Hero />
         <OffersAll />
         <About />

@@ -10,7 +10,13 @@ interface Props {
   hasBorderTrail?: boolean;
 }
 
-const ButtonAction = ({ bgColor, textColor, text, icon, hasBorderTrail }: Props) => {
+const ButtonAction = ({
+  bgColor,
+  textColor,
+  text,
+  icon,
+  hasBorderTrail,
+}: Props) => {
   return (
     <div>
       <Button
@@ -23,7 +29,7 @@ const ButtonAction = ({ bgColor, textColor, text, icon, hasBorderTrail }: Props)
       >
         {text}
         {icon}
-        {hasBorderTrail && <BorderTrail />} 
+        {hasBorderTrail && <BorderTrail />}
       </Button>
     </div>
   );

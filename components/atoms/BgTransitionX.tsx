@@ -11,24 +11,25 @@ const BgTransition = ({ children }: BgTransitionProps) => {
 
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["start start", "end start"], // Adjusted offset for timing
+    offset: ["start start", "end end"],
   });
 
   const changeBackground = useTransform(
     scrollYProgress,
-    [0, 0.1, 1], // Define specific points for transition
-    [
-      "linear-gradient(to right, #231b1b, #575757)", // Initial gradient
-      "linear-gradient(to right, #575757, #575757)", // Intermediate state
-      "#575757", // Final solid color
-    ]
+    [0, 0.1, 1],
+    ["#4d4a4a", "#ab9e9e", "#aa9c9c"]
+  );
+  const changeTextColor = useTransform(
+    scrollYProgress,
+    [0, 0.1, 1],
+    ["white", "white", "black"]
   );
 
   return (
     <motion.div
       ref={container}
-      style={{ backgroundImage: changeBackground }}
-      transition={{ duration: 1, ease: "easeInOut" }}
+      style={{ backgroundColor: changeBackground }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
     >
       {children}
     </motion.div>
