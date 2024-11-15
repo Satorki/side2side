@@ -74,6 +74,7 @@ const Header = () => {
       <Navbar
         position="static"
         isBlurred={false}
+        isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
         className="bg-black"
       >
@@ -108,7 +109,7 @@ const Header = () => {
         </NavbarContent>
         <NavbarContent className="hidden md:flex gap-4" justify="end">
           {menuItems.map((item) => (
-            <NavbarItem key={item.id}>
+            <NavbarItem key={item.id} className="cursor-pointer">
               {item.id === 2 ? (
                 <Dropdown>
                   <DropdownTrigger>
@@ -127,7 +128,8 @@ const Header = () => {
                         to="offer-service"
                         smooth={true}
                         duration={500}
-                        className="text-white text-[1.1rem]"
+                        offset={-79}
+                        className="text-white text-[1.1rem] w-10"
                       >
                         SERWIS
                       </ScrollLink>
@@ -176,6 +178,7 @@ const Header = () => {
                   <div className="flex flex-col gap-5">
                     <ScrollLink
                       to="offer-service"
+                      offset={-60}
                       smooth={true}
                       duration={500}
                       onClick={() => setIsMenuOpen(false)}
@@ -186,8 +189,10 @@ const Header = () => {
 
                     <ScrollLink
                       to="offer-tuning"
+                      offset={-45}
                       smooth={true}
                       duration={500}
+                      onClick={() => setIsMenuOpen(false)}
                       className="text-white text-[1.5rem] underline underline-offset-8 flex justify-center font-jura font-thin tracking-wider"
                     >
                       TUNING
@@ -195,8 +200,10 @@ const Header = () => {
 
                     <ScrollLink
                       to="offer-motorsport"
+                      offset={-45}
                       smooth={true}
                       duration={500}
+                      onClick={() => setIsMenuOpen(false)}
                       className="text-white text-[1.5rem] underline underline-offset-8 flex justify-center font-jura font-thin tracking-wider"
                     >
                       MOTORSPORT
@@ -210,8 +217,9 @@ const Header = () => {
                 <ScrollLink
                   to={item.link.replace("/#", "")}
                   smooth={true}
-                  offset={-65}
+                  offset={-10}
                   duration={500}
+                  onClick={() => setIsMenuOpen(false)}
                   className="text-white text-[1.5rem]  flex justify-center font-jura font-thin tracking-wider"
                 >
                   {item.name}

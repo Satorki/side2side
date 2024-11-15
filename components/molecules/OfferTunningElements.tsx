@@ -38,7 +38,7 @@ const OfferTunningElements = () => {
     },
     {
       id: 5,
-      title: "Ulepszenia zawieszenia",
+      title: "Ulepszenia zawieszenia do poprawy stabilizacji",
       description:
         "Poczuj różnicę w komforcie i stabilności jazdy dzięki naszym zaawansowanym ulepszeniom zawieszenia. Niezależnie od tego, czy potrzebujesz lepszej przyczepności na torze, czy bardziej komfortowej jazdy po mieście, dostosujemy zawieszenie do Twoich potrzeb.",
       imageSrc: Suspension,

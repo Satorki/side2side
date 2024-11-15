@@ -1,25 +1,30 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 interface BgTransitionProps {
   children: React.ReactNode;
 }
 
 const BgTransition = ({ children }: BgTransitionProps) => {
+  const container = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start start", "end end"],
+  });
+
+  const changeBackground = useTransform(
+    scrollYProgress,
+    [0, 0.1, 1],
+    ["#645B4A", "#1D2321", "#1D2321"]
+  );
+
   return (
     <motion.div
-      variants={{
-        hidden: {
-          backgroundImage: "linear-gradient(to right, #231b1b, #575757)",
-        },
-        visible: {
-          backgroundImage: "linear-gradient(to right, #575757, #575757)",
-        },
-      }}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 1, delay: 0 }}
+      ref={container}
+      style={{ backgroundColor: changeBackground }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
     >
       {children}
     </motion.div>

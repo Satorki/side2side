@@ -47,6 +47,8 @@ const About = () => {
             textColor="#FFF"
             text="Sprawdź"
             icon={<CornerRightDown />}
+            address="offer-service"
+            offset={-79}
           />
         </div>
       </div>

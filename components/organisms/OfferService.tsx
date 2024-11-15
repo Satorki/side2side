@@ -26,17 +26,20 @@ const OfferService: React.FC = () => {
     <div className="flex flex-col gap-2">
       <ButtonAction
         text="Zadzwoń"
-            bgColor="#d52727"
-            textColor="#FFF"
+        bgColor="#d52727"
+        textColor="#FFF"
         icon={<PhoneCall />}
+        hasBorderTrail
+        address="tel: +48 533 025 109"
       />
-      
+
       <DescriptionSingle text="lub zarezerwuj przez:" isBold />
       <ButtonAction
         text="Motointegrator"
-            bgColor="#d52727"
-            textColor="#FFF"
+        bgColor="#d52727"
+        textColor="#FFF"
         icon={<Car />}
+        address="https://motointegrator.com/pl/pl/warsztat/nowe-tloki/95dvzzlm-side2side-motorsport"
       />
     </div>
   );

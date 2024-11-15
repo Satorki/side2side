@@ -9,7 +9,6 @@ import OffersAll from "@/containers/home-page/OffersAll";
 import NumberSection from "@/components/molecules/NumberSection";
 
 export default function Home() {
-
   return (
     <div>
       <div className="relative z-20 bg-[#645B4A]">

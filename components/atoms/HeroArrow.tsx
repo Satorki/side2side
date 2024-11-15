@@ -2,7 +2,7 @@
 import React from "react";
 import { FaArrowDown } from "react-icons/fa";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Link } from "@nextui-org/react";
+import { Link } from "react-scroll";
 
 interface Props {
   isLoaded: boolean;
@@ -27,8 +27,10 @@ const HeroArrow = ({ isLoaded }: Props) => {
       style={{ opacity }}
     >
       <Link
+        to="offersAll"
+        smooth={true}
+        duration={1000}
         className="rounded-full bg-slate-300 bg-opacity-40 flex justify-center items-center w-10 h-10 text-black mb-20 pt-1 cursor-pointer transition-all duration-300 ease-out hover:-translate-y-4"
-        href="#About"
       >
         <FaArrowDown className="text-2xl" />
       </Link>

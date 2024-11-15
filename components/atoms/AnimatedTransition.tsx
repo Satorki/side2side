@@ -52,7 +52,7 @@ const AnimatedTransition = ({
       </p>
       <div className="overflow-hidden w-full" ref={container}>
         <div
-          className={` origin-left w-full flex items-center justify-between  xl:scale-100 pr-2 ${
+          className={` origin-left w-full flex items-center justify-between xl:scale-100 ${
             mustScaleDown ? "scale-[0.65]" : "scale-100"
           }`}
         >
@@ -61,8 +61,10 @@ const AnimatedTransition = ({
               {quote}
             </p>
           </motion.div>
-          {animatedIcon &&
-            React.cloneElement(animatedIcon, { scrollYProgress })}
+          <div className="translate-y-1">
+            {animatedIcon &&
+              React.cloneElement(animatedIcon, { scrollYProgress })}
+          </div>
         </div>
       </div>
     </div>

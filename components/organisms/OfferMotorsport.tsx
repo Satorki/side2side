@@ -58,7 +58,6 @@ const OfferMotorsport = () => {
 
   return (
     <div id="offer-motorsport">
-
       <AnimatedTransition
         quote="MOTORSPORT"
         animatedIcon={<AnimatedCircle />}
@@ -84,6 +83,7 @@ const OfferMotorsport = () => {
               bgColor="red"
               textColor="white"
               icon={<PhoneIncoming />}
+              address="tel: +48 533 025 109"
             />
           )}
         </div>
@@ -96,10 +96,10 @@ const OfferMotorsport = () => {
               bgColor="red"
               textColor="white"
               icon={<PhoneIncoming />}
+              address="tel: +48 533 025 109"
             />
           )}
         </div>
-        
       </div>
       <style jsx>{`
         #offer-motorsport {
@@ -107,7 +107,7 @@ const OfferMotorsport = () => {
           flex-direction: column;
           justify-content: center;
           /* background-color: #000; */
-          padding: 10rem 4rem
+          padding: 10rem 4rem;
         }
 
         .offer-container {

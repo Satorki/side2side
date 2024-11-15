@@ -43,21 +43,24 @@ const OfferTunning: React.FC = () => {
           {isDesktop && (
             <ButtonAction
               text="Umów konsultację"
-            bgColor="#d52727"
-            textColor="#FFF"
+              bgColor="#d52727"
+              textColor="#FFF"
               icon={<PhoneCall />}
+              address="tel: +48 533 025 109"
             />
           )}
         </div>
 
         <div className="description-container">
           <OfferTunningElements />
+
           {!isDesktop && (
             <ButtonAction
               text="Umów konsultację"
-            bgColor="#d52727"
-            textColor="#FFF"
+              bgColor="#d52727"
+              textColor="#FFF"
               icon={<PhoneCall />}
+              address="tel: +48 533 025 109"
             />
           )}
         </div>
@@ -74,6 +77,7 @@ const OfferTunning: React.FC = () => {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
+          align-items: center;
           color: #fff;
           width: 100%;
           max-width: 1200px;

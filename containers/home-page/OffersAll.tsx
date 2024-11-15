@@ -1,9 +1,6 @@
-import ButtonAction from "@/components/atoms/ButtonAction";
 import LineAnimation from "@/components/atoms/LineAnimation";
 import TitleSection from "@/components/atoms/TitleSection";
-import OfferAllTab from "@/components/molecules/OfferAllTab";
 import OffersAllCarousel from "@/components/organisms/OffersAllCarousel";
-import { ArrowDown, CircleDotDashed, SignalHigh, Wrench } from "lucide-react";
 import React from "react";
 
 const OffersAll = () => {

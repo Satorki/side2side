@@ -1,29 +1,62 @@
 import TitleSection from "@/components/atoms/TitleSection";
+import { DoorOpen, Mail, MapPin, PhoneIcon, Share2 } from "lucide-react";
+import Link from "next/link";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 const Contact = () => {
   const contactList = [
     {
       id: 1,
+      icon: <MapPin />,
       title: "Adres:",
       descriptionUp: "59A,",
       descriptionDown: "64-200 Nowe Tłoki",
     },
     {
       id: 2,
+      icon: <DoorOpen />,
       title: "Otwarte od Poniedziałku do Piątku",
       descriptionUp: "",
       descriptionDown: "W godzinach: 08:00 - 16:00",
     },
-    { id: 3, title: "Telefon:", descriptionUp: "533 025 109" },
-    { id: 4, title: "Email:", descriptionUp: "side2side.garage@gmail.com" },
+    {
+      id: 3,
+      icon: <PhoneIcon />,
+      title: "Telefon:",
+      descriptionUp: (
+        <Link
+          href="tel:+48 533 025 109"
+          className="active:font-bold hover:text-[#d52727] underline underline-offset-2"
+        >
+          +48 533 025 109
+        </Link>
+      ),
+    },
     {
       id: 4,
+      icon: <Mail />,
+      title: "Email:",
+      descriptionUp: (
+        <Link
+          href={"mailto:side2side.garage@gmail.com"}
+          className="active:font-bold hover:text-[#d52727] underline underline-offset-2"
+        >
+          side2side.garage@gmail.com
+        </Link>
+      ),
+    },
+    {
+      id: 4,
+      icon: <Share2 />,
       title: "Social:",
       descriptionUp: (
         <div className="flex gap-4">
-          <FaFacebook className="text-3xl hover:text-black" />
-          <FaInstagram className="text-3xl hover:text-black" />
+          <Link href={"https://www.facebook.com/S2SMotorsport"}>
+            <FaFacebook className="text-3xl active:font-bold hover:text-[#d52727] cursor-pointer" />
+          </Link>
+          <Link href={"https://www.instagram.com/side2side_motorsport/"}>
+            <FaInstagram className="text-3xl active:font-bold hover:text-[#d52727] cursor-pointer" />
+          </Link>
         </div>
       ),
     },
@@ -38,10 +71,13 @@ const Contact = () => {
                 <TitleSection titleBegining="Czekamy na Twoją wizytę" />
               </div>
               {contactList.map((item) => (
-                <div key={item.id} className="flex flex-col pt-5">
-                  <p className="text-xl font-bold">{item.title}</p>
-                  <div className="pt-1">{item.descriptionUp}</div>
-                  <div>{item.descriptionDown}</div>
+                <div className="flex gap-4 pt-5" key={item.id}>
+                  <div>{item.icon}</div>
+                  <div className="flex flex-col">
+                    <p className="text-xl font-bold">{item.title}</p>
+                    <div className="pt-1">{item.descriptionUp}</div>
+                    <div>{item.descriptionDown}</div>
+                  </div>
                 </div>
               ))}
             </div>

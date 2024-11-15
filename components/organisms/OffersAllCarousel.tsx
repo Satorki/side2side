@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Carousel, CarouselContent, CarouselIndicator, CarouselItem, CarouselNavigation } from "../atoms/Carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselIndicator,
+  CarouselItem,
+} from "../atoms/Carousel";
 import OfferAllTab from "../molecules/OfferAllTab";
 import { ArrowDown, CircleDotDashed, SignalHigh, Wrench } from "lucide-react";
 import ButtonAction from "../atoms/ButtonAction";
@@ -26,17 +31,29 @@ const OffersAllCarousel = () => {
         "Oferujemy Kompleksowy serwis samochodów osobowych i dostawczych do 3,5 tony – dbamy o niezawodność i komfort jazdy na co dzień.",
       bgColor: "rgba(30, 30, 30, 0.6)",
       button: (
-        <ButtonAction text="Przejdź" icon={<ArrowDown />} bgColor="#d52727" />
+        <ButtonAction
+          text="Przejdź"
+          icon={<ArrowDown />}
+          bgColor="#d52727"
+          address="offer-service"
+          offset={-79}
+        />
       ),
     },
     {
       icon: <SignalHigh className="w-1/2 h-auto" />,
-      title: "TUNNING",
+      title: "TUNING",
       description:
         "Prawdziwe osiągi zaczynają się tam, gdzie kończą się kompromisy. Specjalizujemy się w precyzyjnych modyfikacjach: od wydechu po silnik.",
       bgColor: "rgba(20, 20, 20, 0.6)",
       button: (
-        <ButtonAction text="Przejdź" icon={<ArrowDown />} bgColor="#d52727" />
+        <ButtonAction
+          text="Przejdź"
+          icon={<ArrowDown />}
+          bgColor="#d52727"
+          address="offer-tuning"
+          offset={-40}
+        />
       ),
     },
     {
@@ -46,7 +63,13 @@ const OffersAllCarousel = () => {
         "Dla miłośników rajdów, wyścigów i driftu oferujemy kompleksowe przygotowanie pojazdów w różnych dziedzinach, zapewniając niezawodność i wyjątkowe osiągi.",
       bgColor: "rgba(10, 10, 10, 0.6)",
       button: (
-        <ButtonAction text="Przejdź" icon={<ArrowDown />} bgColor="#d52727" />
+        <ButtonAction
+          text="Przejdź"
+          icon={<ArrowDown />}
+          bgColor="#d52727"
+          address="offer-motorsport"
+          offset={-40}
+        />
       ),
     },
   ];
