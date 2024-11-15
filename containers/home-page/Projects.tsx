@@ -7,7 +7,7 @@ import React from "react";
 const Projects = () => {
   return (
     <div id="projects">
-      <div className="text-white px-8 flex flex-col max-w-[1200px] mx-auto">
+      <div className="text-white px-8 md:px-0 flex flex-col max-w-[1200px] mx-auto">
       <div className="flex flex-col flex-1 gap-5 md:gap-10 py-3">
           <TitleSection
             titleBegining="Projekty od A do Z"

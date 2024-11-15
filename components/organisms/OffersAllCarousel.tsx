@@ -23,7 +23,7 @@ const OffersAllCarousel = () => {
       icon: <Wrench className="w-1/2 h-auto" />,
       title: "SERWIS",
       description:
-        "Kompleksowy serwis samochodów osobowych i dostawczych do 3,5 tony – dbamy o niezawodność i komfort jazdy na co dzień.",
+        "Oferujemy Kompleksowy serwis samochodów osobowych i dostawczych do 3,5 tony – dbamy o niezawodność i komfort jazdy na co dzień.",
       bgColor: "rgba(30, 30, 30, 0.6)",
       button: (
         <ButtonAction text="Przejdź" icon={<ArrowDown />} bgColor="#d52727" />
@@ -43,7 +43,7 @@ const OffersAllCarousel = () => {
       icon: <CircleDotDashed className="w-1/2 h-auto" />,
       title: "MOTORSPORT",
       description:
-        "Dla fanów rajdów, wyścigów i driftu oferujemy przygotowanie pojazdów, które spełnią najwyższe wymagania motorsportu.",
+        "Dla miłośników rajdów, wyścigów i driftu oferujemy kompleksowe przygotowanie pojazdów w różnych dziedzinach, zapewniając niezawodność i wyjątkowe osiągi.",
       bgColor: "rgba(10, 10, 10, 0.6)",
       button: (
         <ButtonAction text="Przejdź" icon={<ArrowDown />} bgColor="#d52727" />

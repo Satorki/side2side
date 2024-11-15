@@ -6,9 +6,9 @@ import React from "react";
 const Rewievs = () => {
   return (
     <div id="rewievs">
-      <div className="flex flex-col gap-10 justify-center items-center max-w-[1200px] mx-auto">
+      <div className="flex flex-col gap-5 md:gap-10 justify-center items-center max-w-[1200px] mx-auto">
         <div className="pt-8">
-        <TitleSection titleBegining="Sprawdź jak nas oceniają " />
+        <TitleSection titleBegining="Opinie naszych klientów" />
         </div>
         <div className="rewievs-container">
           <FadeUp delay={0.3}>
@@ -49,7 +49,7 @@ Okazało się też, że serwisuje auta vipów jak na zdjęciu. Jednym słowem PO
             #e34040
           ); */
           color: white;
-          padding: 10rem 5rem;
+          padding: 10rem 0;
           z-index: 20;
         }
         .rewievs-container {
@@ -59,7 +59,7 @@ Okazało się też, że serwisuje auta vipów jak na zdjęciu. Jednym słowem PO
         }
         @media (max-width: 768px) {
           #rewievs {
-            padding: 2rem 2rem;
+            padding: 4rem 2rem;
           }
           .rewievs-container {
             flex-direction: column;

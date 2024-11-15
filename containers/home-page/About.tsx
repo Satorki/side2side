@@ -1,9 +1,7 @@
 import ImageAbout from "@/components/atoms/ImageAbout";
 // import TitleSection from "@/components/atoms/TitleSection";
-import React, { useEffect, useRef, useState } from "react";
-import { useScroll, useTransform } from "framer-motion";
+import React, { useEffect, useState } from "react";
 import ButtonAction from "@/components/atoms/ButtonAction";
-import AboutDescriptions from "@/components/molecules/AboutDescriptionsX";
 import { CornerRightDown } from "lucide-react";
 import TitleSection from "@/components/atoms/TitleSection";
 import FadeUp from "@/components/atoms/FadeUp";
@@ -54,7 +52,7 @@ const About = () => {
       </div>
       <style jsx>{`
         #about {
-          padding: 10rem 0;
+          padding: 5rem 0;
         }
         .description-container {
           display: flex;

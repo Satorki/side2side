@@ -31,11 +31,11 @@ const Contact = () => {
   return (
     <div id="contact">
       <div className="max-w-[1200px] mx-auto text-white font-bai">
-        <div className="flex flex-col gap-4 px-8">
-          <div className="flex flex-col gap-4 md:flex-row">
+        <div className="flex flex-col px-8 md:px-0">
+          <div className="flex flex-col gap-8 md:flex-row">
             <div className="flex-1">
-              <div className="py-8">
-                <TitleSection titleBegining="Odwiedź nas" />
+              <div className="md:py-4">
+                <TitleSection titleBegining="Czekamy na Twoją wizytę" />
               </div>
               {contactList.map((item) => (
                 <div key={item.id} className="flex flex-col pt-5">

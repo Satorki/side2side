@@ -154,7 +154,7 @@ function CarouselNavigation({
       >
         <ChevronLeft
           className="stroke-zinc-300 dark:stroke-zinc-50"
-          size={16}
+          size={20}
         />
       </button>
       <button
@@ -178,7 +178,7 @@ function CarouselNavigation({
       >
         <ChevronRight
           className="stroke-zinc-300 dark:stroke-zinc-50"
-          size={16}
+          size={20}
         />
       </button>
     </div>
