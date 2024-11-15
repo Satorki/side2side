@@ -17,7 +17,7 @@ const OfferAllTab = ({
 }: OfferAllTabProps) => {
   return (
     <div
-      className="flex flex-col justify-between  gap-3 p-8 shadow-lg flex-1 rounded-2xl relative"
+      className="flex flex-col justify-between gap-3 p-8 shadow-lg flex-1 rounded-2xl relative"
       style={{
         background: `${bgColor}`,
       }}

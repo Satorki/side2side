@@ -17,12 +17,7 @@ const BgTransition = ({ children }: BgTransitionProps) => {
   const changeBackground = useTransform(
     scrollYProgress,
     [0, 0.1, 1],
-    ["#4d4a4a", "#ab9e9e", "#aa9c9c"]
-  );
-  const changeTextColor = useTransform(
-    scrollYProgress,
-    [0, 0.1, 1],
-    ["white", "white", "black"]
+    ["#645B4A", "#1D2321", "#1D2321"]
   );
 
   return (

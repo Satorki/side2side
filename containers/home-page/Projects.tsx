@@ -7,7 +7,7 @@ import React from "react";
 const Projects = () => {
   return (
     <div id="projects">
-      <div className="text-white p-8 flex flex-col max-w-[1200px] mx-auto">
+      <div className="text-white px-8 flex flex-col max-w-[1200px] mx-auto">
       <div className="flex flex-col flex-1 gap-5 md:gap-10 py-3">
           <TitleSection
             titleBegining="Projekty od A do Z"
@@ -25,7 +25,7 @@ const Projects = () => {
             />
           </FadeUp>
           <FadeUp delay={1.1} duration={2}>
-          <p className="text-red-600 w-auto font-bold">Zobacz jak to wyglądało:</p>
+          <p className="w-auto font-bold">Sprawdź jak to wyglądało:</p>
           
         </FadeUp>
         </div>
@@ -43,7 +43,7 @@ const Projects = () => {
         }
         @media (max-width: 768px) {
           #projects {
-            padding: 4rem 0rem;
+            padding: 2rem 0rem;
           }
         }
       `}</style>

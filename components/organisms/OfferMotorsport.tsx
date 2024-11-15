@@ -140,7 +140,7 @@ const OfferMotorsport = () => {
             gap: 2rem;
           }
           #offer-motorsport {
-            padding: 2rem 2rem;
+            padding: 2rem 2rem 3rem 2rem;
             height: auto;
           }
         }

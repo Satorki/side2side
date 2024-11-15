@@ -59,7 +59,7 @@ Okazało się też, że serwisuje auta vipów jak na zdjęciu. Jednym słowem PO
         }
         @media (max-width: 768px) {
           #rewievs {
-            padding: 4rem 2rem;
+            padding: 2rem 2rem;
           }
           .rewievs-container {
             flex-direction: column;

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Carousel, CarouselContent, CarouselItem } from "../atoms/Carousel";
+import { Carousel, CarouselContent, CarouselIndicator, CarouselItem, CarouselNavigation } from "../atoms/Carousel";
 import OfferAllTab from "../molecules/OfferAllTab";
 import { ArrowDown, CircleDotDashed, SignalHigh, Wrench } from "lucide-react";
 import ButtonAction from "../atoms/ButtonAction";
@@ -54,9 +54,9 @@ const OffersAllCarousel = () => {
   return (
     <>
       {!isDesktop ? (
-        <div className="relative w-full px-4">
+        <div className="relative w-full">
           <Carousel>
-            <CarouselContent className="-ml-4">
+            <CarouselContent className="-ml-4 max-w-[300px]">
               {carouselItems.map((item, index) => (
                 <CarouselItem key={index} className="md:basis-1/3 pl-4">
                   <OfferAllTab
@@ -69,6 +69,7 @@ const OffersAllCarousel = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
+            <CarouselIndicator className="absolute w-full justify-center" />
           </Carousel>
         </div>
       ) : (

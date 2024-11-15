@@ -71,6 +71,9 @@ const Contact = () => {
           .map {
             height: 50vh;
           }
+          #contact {
+            padding: 2rem 0;
+          }
         }
       `}</style>
     </div>

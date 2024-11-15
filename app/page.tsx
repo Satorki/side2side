@@ -12,14 +12,14 @@ export default function Home() {
 
   return (
     <div>
-      <div className="relative z-20 bg-[#4d4a4a]">
+      <div className="relative z-20 bg-[#645B4A]">
         <Hero />
         <OffersAll />
         <About />
       </div>
       <Offers />
       <NumberSection />
-      <div className="relative z-20  bg-gradient-to-r from-[#575757] to-[#231b1b]">
+      <div className="relative z-20 bg-[#645B4A]">
         <Projects />
         <Rewievs />
         <Contact />
