@@ -7,12 +7,18 @@ import { ArrowDownRight } from "lucide-react";
 import Image from "next/image";
 import React, { useState } from "react";
 import CompleteCar from "@/public/images/Project/project10.jpg";
-import leftCar from "@/public/images/Project/8.jpg";
-import rightCar from "@/public/images/Project/8.jpg";
-import { Button } from "react-scroll";
+import leftCar from "@/public/images/Project/3.jpg";
+import rightCar from "@/public/images/Project/7aaa.jpg";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Projects = () => {
   const [showCarousel, setShowCarousel] = useState(false);
+
+  const fadeVariants = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: { opacity: 1, scale: 1 },
+    exit: { opacity: 0, scale: 0.95 },
+  };
 
   return (
     <div id="projects">
@@ -33,31 +39,56 @@ const Projects = () => {
           </FadeUp>
           <FadeUp delay={1.1} duration={2}>
             <ButtonAction
-              text="Sprawdź jak to wyglądało"
+              text="Tak to wyglądało"
               bgColor="#d52727"
               textColor="#FFF"
               icon={<ArrowDownRight />}
               hasBorderTrail
-              onClick={() => setShowCarousel(true)}
+              onClick={() => setShowCarousel((prev) => !prev)}
             />
           </FadeUp>
         </div>
 
-        <div className="flex flex-col justify-center items-center">
+        <AnimatePresence mode="wait">
           {!showCarousel ? (
-            <div className="flex justify-around items-center w-full">
-              <div className="">BMW E45 2JZ</div>
+            <motion.div
+              className="flex items-center w-full justify-center overflow-hidden"
+              key="image"
+              variants={fadeVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              transition={{ duration: 0.7 }}
+            >
+              <Image
+                src={leftCar}
+                alt="left car"
+                className="h-[30vh] rounded-2xl -mr-10 w-auto opacity-90"
+              />
               <Image
                 src={CompleteCar}
                 alt="complete car"
-                className="rounded-2xl shadow-lg h-[50vh] w-auto object-cover"
+                className="rounded-2xl shadow-lg h-[50vh] w-auto object-cover z-20"
               />
-              <div className="">640 KM / 700 Nm</div>
-            </div>
+              <Image
+                src={rightCar}
+                alt="right car"
+                className="h-[30vh] rounded-2xl -ml-10 w-auto opacity-90"
+              />
+            </motion.div>
           ) : (
-            <ProjectsCarousel />
+            <motion.div
+              key="carousel"
+              variants={fadeVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              transition={{ duration: 0.7 }}
+            >
+              <ProjectsCarousel />
+            </motion.div>
           )}
-        </div>
+        </AnimatePresence>
       </div>
       <style jsx>{`
         #projects {
