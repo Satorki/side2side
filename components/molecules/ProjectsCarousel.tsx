@@ -6,7 +6,6 @@ import {
   CarouselItem,
   CarouselNavigation,
 } from "../atoms/Carousel";
-import a1 from "../../public/images/Project/1a.jpg";
 import a2 from "../../public/images/Project/2a.jpg";
 import a3 from "../../public/images/Project/3.jpg";
 import a4 from "../../public/images/Project/4a.jpg";
@@ -86,13 +85,10 @@ const ProjectsCarousel = () => {
 
   return (
     <div className="relative w-full">
-      <Carousel >
+      <Carousel>
         <CarouselContent className="-ml-6 max-w-[1100px]">
           {imageList.map((item, index) => (
-            <CarouselItem
-              key={index}
-              className="md:basis-1/2 pl-6"
-            >
+            <CarouselItem key={index} className="md:basis-1/2 pl-6">
               <CarouselTab
                 image={item.image}
                 title={item.title}
