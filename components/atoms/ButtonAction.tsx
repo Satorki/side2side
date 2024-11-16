@@ -10,6 +10,7 @@ interface Props {
   hasBorderTrail?: boolean;
   address?: string;
   offset?: number;
+  onClick?: () => void;
 }
 
 const ButtonAction = ({
@@ -20,6 +21,7 @@ const ButtonAction = ({
   hasBorderTrail,
   address = "",
   offset = 0,
+  onClick: onclick,
 }: Props) => {
   const isExternal =
     address.startsWith("http://") ||
@@ -48,6 +50,7 @@ const ButtonAction = ({
       smooth={true}
       offset={offset}
       duration={1000}
+      onClick={onclick}
       style={{
         backgroundColor: bgColor ? bgColor : "#1976d2",
         color: textColor ? textColor : "#fff",

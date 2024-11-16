@@ -6,13 +6,11 @@ import BgTransition from "@/components/atoms/BgTransition";
 
 const Offers = () => {
   return (
-    <div className="relative z-20 text-white">
-      <BgTransition>
-        <WalkingText />
-        <OfferService />
-        <OfferTunning />
-        <OfferMotorsport />
-      </BgTransition>
+    <div className="text-white">
+      <WalkingText />
+      <OfferService />
+      <OfferTunning />
+      <OfferMotorsport />
     </div>
   );
 };

@@ -23,11 +23,6 @@ import CarouselTab from "../atoms/CarouselTab";
 const ProjectsCarousel = () => {
   const imageList = [
     {
-      image: a1,
-      title: "Car Repair",
-      description: "Karosieria na warsztacie.",
-    },
-    {
       image: a3,
       title: "Car Accessories",
       description:

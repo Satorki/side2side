@@ -7,6 +7,7 @@ import Projects from "@/containers/home-page/Projects";
 import Rewievs from "@/containers/home-page/Rewievs";
 import OffersAll from "@/containers/home-page/OffersAll";
 import NumberSection from "@/components/molecules/NumberSection";
+import BgTransition from "@/components/atoms/BgTransition";
 
 export default function Home() {
   return (
@@ -14,9 +15,13 @@ export default function Home() {
       <div className="relative z-20 bg-[#645B4A]">
         <Hero />
         <OffersAll />
-        <About />
       </div>
-      <Offers />
+      <div className="relative z-20 bg-[#645B4A]">
+        <BgTransition>
+          <About />
+          <Offers />
+        </BgTransition>
+      </div>
       <NumberSection />
       <div className="relative z-20 bg-[#645B4A]">
         <Projects />
