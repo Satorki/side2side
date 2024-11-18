@@ -50,7 +50,8 @@ const OfferService: React.FC = () => {
       <div className="offer-body">
         <div className="flex flex-col flex-1 gap-5 md:gap-10">
           <TitleSection
-            titleBegining="Profesjonalna obsługa"
+            titleBegining="Profesjonalna "
+            titleAnimationText="obsługa"
             titleEnding="dostosowana do Ciebie."
           />
           <FadeUp delay={0.5} duration={2}>

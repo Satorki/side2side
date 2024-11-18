@@ -106,7 +106,6 @@ const OfferMotorsport = () => {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          /* background-color: #000; */
           padding: 10rem 4rem;
         }
 
