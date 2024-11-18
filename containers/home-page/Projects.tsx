@@ -3,7 +3,7 @@ import DescriptionSingle from "@/components/atoms/DescriptionSingle";
 import FadeUp from "@/components/atoms/FadeUp";
 import TitleSection from "@/components/atoms/TitleSection";
 import ProjectsCarousel from "@/components/molecules/ProjectsCarousel";
-import { ArrowDownRight } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import React, { useState } from "react";
 import CompleteCar from "@/public/images/Project/project10.jpg";
@@ -39,10 +39,10 @@ const Projects = () => {
           </FadeUp>
           <FadeUp delay={1.1} duration={2}>
             <ButtonAction
-              text="Tak to wyglądało"
+              text="Sprawdź jak to wyglądało "
               bgColor="#d52727"
               textColor="#FFF"
-              icon={<ArrowDownRight />}
+              icon={<ArrowLeft />}
               hasBorderTrail
               onClick={() => setShowCarousel((prev) => !prev)}
             />

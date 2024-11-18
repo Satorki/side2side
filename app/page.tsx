@@ -15,8 +15,6 @@ export default function Home() {
       <div className="relative z-20 bg-[#645B4A]">
         <Hero />
         <OffersAll />
-      </div>
-      <div className="relative z-20 bg-[#645B4A]">
         <BgTransition>
           <About />
           <Offers />

@@ -15,6 +15,7 @@ const CarouselTab = ({ image, title, description }: CarouselTabProps) => {
         alt={title}
         className="object-cover object-center w-full h-full rounded-xl"
         loading="lazy"
+        placeholder="blur"
       />
 
       <p className="absolute bottom-0 left-0 right-0 rounded-b-xl bg-white p-2  font-bai bg-opacity-80 text-center text-black h-[20%]  md:h-[11%]">

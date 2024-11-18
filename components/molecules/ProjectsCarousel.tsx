@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -18,8 +18,15 @@ import a7c from "../../public/images/Project/7ca.jpg";
 import a8 from "../../public/images/Project/8a.jpg";
 import a9 from "../../public/images/Project/9.jpg";
 import CarouselTab from "../atoms/CarouselTab";
+import { Spinner } from "@nextui-org/react";
 
 const ProjectsCarousel = () => {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
   const imageList = [
     {
       image: a3,
@@ -85,21 +92,27 @@ const ProjectsCarousel = () => {
 
   return (
     <div className="relative w-full">
-      <Carousel>
-        <CarouselContent className="-ml-6 max-w-[1100px]">
-          {imageList.map((item, index) => (
-            <CarouselItem key={index} className="md:basis-1/2 pl-6">
-              <CarouselTab
-                image={item.image}
-                title={item.title}
-                description={item.description}
-              />
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselNavigation alwaysShow />
-        <CarouselIndicator classNameButton="w-2.5 h-2.5" />
-      </Carousel>
+      {loading ? (
+        <div className="flex justify-center items-center h-64">
+          <Spinner size="lg" />
+        </div>
+      ) : (
+        <Carousel>
+          <CarouselContent className="-ml-6 max-w-[1100px]">
+            {imageList.map((item, index) => (
+              <CarouselItem key={index} className="md:basis-1/2 pl-6">
+                <CarouselTab
+                  image={item.image}
+                  title={item.title}
+                  description={item.description}
+                />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselNavigation alwaysShow />
+          <CarouselIndicator classNameButton="w-2.5 h-2.5" />
+        </Carousel>
+      )}
     </div>
   );
 };
