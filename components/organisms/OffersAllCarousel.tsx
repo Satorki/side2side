@@ -28,7 +28,7 @@ const OffersAllCarousel = () => {
       icon: <Wrench className="w-1/2 h-auto" />,
       title: "SERWIS",
       description:
-        "Oferujemy Kompleksowy serwis samochodów osobowych i dostawczych do 3,5 tony – dbamy o niezawodność i komfort jazdy na co dzień.",
+        "Oferujemy kompleksowy serwis samochodów osobowych i dostawczych do 3,5 tony – dbamy o niezawodność i komfort jazdy na co dzień.",
       bgColor: "rgba(30, 30, 30, 0.6)",
       button: (
         <ButtonAction

@@ -64,7 +64,7 @@ const HeroTitle = ({ isLoaded }: Props) => {
           initial={{ opacity: 0 }}
           transition={{ delay: isLoaded ? 2.2 : 0, duration: 0.8 }}
         >
-          Serwis Tunning Motorsport
+          Serwis Tuning Motorsport
         </motion.span>
       </div>
     </motion.div>

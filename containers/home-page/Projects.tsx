@@ -35,7 +35,7 @@ const Projects = () => {
             />
           </FadeUp>
           <FadeUp delay={0.8} duration={2}>
-            <DescriptionSingle text="We współpracy z naszym serwisem został stworzony od postaw samochód dla KickSter'a - BMW E45 2JZ - 650 KM / 700 Nm przystosowany do zawodów driftowych." />
+            <DescriptionSingle text="We współpracy z naszym serwisem został stworzony od postaw samochód dla Kickster'a - BMW E46 2JZ - 650 KM / 700 Nm przystosowany do zawodów driftingowych." />
           </FadeUp>
           <FadeUp delay={1.1} duration={2}>
             <ButtonAction

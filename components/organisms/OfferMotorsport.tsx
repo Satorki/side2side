@@ -73,7 +73,7 @@ const OfferMotorsport = () => {
           <FadeUp delay={0.5} duration={2}>
             <DescriptionSingle
               isBold={true}
-              text="Dla entuzjastów rajdów, wyścigów tornych i driftu oferujemy kompleksowe przygotowanie pojazdów do motorsportu."
+              text="Dla entuzjastów rajdów, wyścigów torowych i driftu oferujemy kompleksowe przygotowanie pojazdów do motorsportu."
             />
           </FadeUp>
 

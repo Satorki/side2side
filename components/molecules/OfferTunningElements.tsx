@@ -10,7 +10,7 @@ const OfferTunningElements = () => {
   const tunningList = [
     {
       id: 1,
-      title: "Modyfikacje silnika (chip tuning, zmiana mapy silnika)",
+      title: "Modyfikacje silnika (chip tuning, turbo, zmiana silnika)",
       description:
         "Chcesz, aby Twój silnik działał wydajniej i dynamiczniej? Oferujemy modyfikacje takie jak chip tuning i zmiana mapy silnika, aby dostosować jego osiągi do Twoich wymagań. Więcej mocy i lepsza reakcja na pedał gazu to tylko początek.",
       imageSrc: Engine,

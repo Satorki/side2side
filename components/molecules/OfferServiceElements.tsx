@@ -5,6 +5,7 @@ import {
   Car,
   CircleDot,
   Disc3,
+  DoorClosed,
   Droplets,
   Squircle,
   TestTubeDiagonal,
@@ -59,6 +60,13 @@ const OfferServiceElements = () => {
     },
     {
       id: 8,
+      title: "Usługa door to door transport auta od i do klienta po serwisie",
+      description:
+        "Zadbaj o bezpieczeństwo i komfort, serwisując kluczowe układy, takie jak hamulce czy zawieszenie.",
+      icon: <DoorClosed />,
+    },
+    {
+      id: 9,
       title: "Obsługa flot pojazdów firmowych",
       description:
         "Kompleksowa obsługa flot – indywidualne umowy serwisowe i regularne przeglądy zapewniają ciągłość działania Twojej floty.",
