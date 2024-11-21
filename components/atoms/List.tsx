@@ -1,11 +1,13 @@
 import FadeUp from "@/components/atoms/FadeUp";
 import {
   Accordion,
+  AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Check } from "lucide-react";
 import { useState } from "react";
+import ImageAbout from "./ImageAbout";
 
 interface ListProps {
   items: { id: number; content?: string; title: string }[];
@@ -46,13 +48,14 @@ export const List = ({ items }: ListProps) => {
               <div>
                 <Check />
               </div>
-              <AccordionTrigger className="py-1 text-start hover:text-[#ffffff] transition-all duration-300 ease-in cursor-pointer text-[1.1rem] font-bold">
+              <AccordionTrigger className="py-1 text-start hover:text-[#ffffff] transition-all duration-300 ease-in cursor-pointer text-[1.1rem]">
                 {item.title}
               </AccordionTrigger>
             </div>
-            {/* <AccordionContent className="pl-[2.7rem]">
+            <AccordionContent className="pl-[2.7rem]">
+              <ImageAbout />
               {item.content}
-            </AccordionContent> */}
+            </AccordionContent>
           </AccordionItem>
         </FadeUp>
       ))}
