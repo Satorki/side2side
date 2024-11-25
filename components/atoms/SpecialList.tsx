@@ -30,11 +30,11 @@ export const SpecialList = ({ items }: SpecialListProps) => {
 
   const [activeItem, setActiveItem] = useState<string | null>(null);
 
-  useEffect(() => {
-    if (items.length > 0) {
-      setActiveItem(`item-${items[0].id}`);
-    }
-  }, [items]);
+  // useEffect(() => {
+  //   if (items.length > 0) {
+  //     setActiveItem(`item-${items[0].id}`);
+  //   }
+  // }, [items]);
 
   const handleItemClick = (value: string) => {
     setActiveItem((prev) => (prev === value ? null : value));
@@ -59,16 +59,16 @@ export const SpecialList = ({ items }: SpecialListProps) => {
             }`}
           >
             <div>
-              <AccordionTrigger className="py-1 text-start hover:text-[#ffffff] transition-all duration-300 ease-in cursor-pointer text-[1.1rem]">
+              <AccordionTrigger className="items-center py-1 text-start hover:text-[#ffffff] transition-all duration-300 ease-in cursor-pointer text-[1.1rem]">
                 {item.title}
               </AccordionTrigger>
             </div>
-            <AccordionContent className="flex flex-col items-center space-y-4">
+            <AccordionContent className="flex flex-col space-y-4 pt-2">
               {item.gallery && item.gallery.length > 0 && (
-                <div className="w-[50vh]">
+                <div className="w-[80vw] md:w-[50vh]">
                   <Slider {...settings}>
                     {item.gallery.map((image, index) => (
-                      <div key={index} className="w-full h-full pt-5">
+                      <div key={index} className="w-full h-full">
                         <Image
                           src={image}
                           alt={`Image ${index}`}
@@ -76,7 +76,7 @@ export const SpecialList = ({ items }: SpecialListProps) => {
                           width={1000}
                           height={1000}
                         />
-                        <p className="pt-5">{item.content}</p>
+                        <p className="pt-3">{item.content}</p>
                       </div>
                     ))}
                   </Slider>

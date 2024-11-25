@@ -93,12 +93,13 @@ const OfferSpecial = () => {
       <AnimatedTransition quote="SPECJALNA" mustScaleDown />
 
       <div className="offer-container">
-        <div className="flex flex-col gap-5 md:gap-10">
+        <div className="flex flex-col gap-5 md:gap-10 flex-1">
           <TitleSection titleAnimationText="Dodatkowe" titleEnding=" uslugi" />
           <FadeUp delay={0.5} duration={2}>
             <DescriptionSingle
               isBold={true}
-              text="Dla wymagajcych klientow mamy specjalne usługi."
+              text="Oferujemy szeroki zakres usług, które pomogą Ci zadbać o Twój pojazd,
+          od konserwacji po zaawansowane remonty."
             />
           </FadeUp>
 
