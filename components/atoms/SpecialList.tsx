@@ -30,11 +30,11 @@ export const SpecialList = ({ items }: SpecialListProps) => {
 
   const [activeItem, setActiveItem] = useState<string | null>(null);
 
-  // useEffect(() => {
-  //   if (items.length > 0) {
-  //     setActiveItem(`item-${items[0].id}`);
-  //   }
-  // }, [items]);
+  useEffect(() => {
+    if (items.length > 0) {
+      setActiveItem(`item-${items[0].id}`);
+    }
+  }, [items]);
 
   const handleItemClick = (value: string) => {
     setActiveItem((prev) => (prev === value ? null : value));

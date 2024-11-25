@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div>
       <div className="relative z-20 bg-[#645B4A]">
-        {/* <Hero /> */}
+        <Hero />
         <OffersAll />
         <BgTransition>
           <About />
