@@ -6,9 +6,25 @@ import DescriptionSingle from "../atoms/DescriptionSingle";
 import ButtonAction from "../atoms/ButtonAction";
 import { PhoneCall } from "lucide-react";
 import SpecialList from "../atoms/SpecialList";
-import chassis1 from "@/public/images/Special/chassis1.jpg";
-import chassis2 from "@/public/images/Special/chassis2.jpg";
-import chassis3 from "@/public/images/Special/chassis3.jpg";
+import chassis1 from "@/public/images/Special/chassis1a.jpg";
+import chassis2 from "@/public/images/Special/chassis2a.jpg";
+import chassis3 from "@/public/images/Special/chassis3a.jpg";
+import chassis4 from "@/public/images/Special/chassis4a.jpg";
+import chassis5 from "@/public/images/Special/chassis5a.jpg";
+import chassis6 from "@/public/images/Special/chassis6a.jpg";
+import chassis7 from "@/public/images/Special/chassis7a.jpg";
+import brakes1 from "@/public/images/Special/brakes1a.jpg";
+import brakes2 from "@/public/images/Special/brakes2a.jpg";
+import brakes3 from "@/public/images/Special/brakes3a.jpg";
+import injectors1 from "@/public/images/Special/injectors1a.jpg";
+import engine1 from "@/public/images/Special/engine1a.jpg";
+import engine2 from "@/public/images/Special/engine2a.jpg";
+import engine3 from "@/public/images/Special/engine3a.jpg";
+import engine4 from "@/public/images/Special/engine4a.jpg";
+import engine5 from "@/public/images/Special/engine5a.jpg";
+import engine6 from "@/public/images/Special/engine6a.jpg";
+import engine7 from "@/public/images/Special/engine7a.jpg";
+import engine8 from "@/public/images/Special/engine8a.jpg";
 
 const OfferSpecial = () => {
   const listItems = [
@@ -17,26 +33,45 @@ const OfferSpecial = () => {
       title: "Regeneracja zacisków hamulcowych",
       content:
         "Nasza usługa regeneracji zacisków hamulcowych obejmuje kompleksowe czyszczenie, wymianę uszczelnień oraz testy szczelności, aby zapewnić optymalną wydajność hamulców.",
-      gallery:[]
+      gallery: [brakes1.src, brakes2.src, brakes3.src],
     },
     {
       id: 2,
       title: "Konserwacja podwozia",
       content:
         "Oferujemy profesjonalną konserwację podwozia, która chroni przed korozją i uszkodzeniami mechanicznymi, zapewniając dłuższą żywotność pojazdu.",
-      gallery:[chassis1, chassis2, chassis3]
+      gallery: [
+        chassis1.src,
+        chassis2.src,
+        chassis3.src,
+        chassis4.src,
+        chassis5.src,
+        chassis6.src,
+        chassis7.src,
+      ],
     },
     {
       id: 3,
       title: "Czyszczenie wtrysków benzynowych",
       content:
         "Czyszczenie wtrysków benzynowych poprawia spalanie paliwa, zwiększa moc silnika i zmniejsza zużycie paliwa. Używamy nowoczesnych technologii, aby przywrócić wtryski do pierwotnej sprawności.",
+      gallery: [injectors1.src],
     },
     {
       id: 4,
       title: "Remonty kapitalne silników",
       content:
         "Remonty kapitalne silników obejmują kompleksową diagnostykę, wymianę zużytych części oraz precyzyjne regulacje, które przywracają silnikowi pełną moc i niezawodność.",
+      gallery: [
+        engine1.src,
+        engine2.src,
+        engine3.src,
+        engine4.src,
+        engine5.src,
+        engine6.src,
+        engine7.src,
+        engine8.src,
+      ],
     },
   ];
 
@@ -58,7 +93,7 @@ const OfferSpecial = () => {
       <AnimatedTransition quote="SPECJALNA" mustScaleDown />
 
       <div className="offer-container">
-        <div className="flex flex-col flex-1 gap-5 md:gap-10">
+        <div className="flex flex-col gap-5 md:gap-10">
           <TitleSection titleAnimationText="Dodatkowe" titleEnding=" uslugi" />
           <FadeUp delay={0.5} duration={2}>
             <DescriptionSingle
@@ -102,6 +137,7 @@ const OfferSpecial = () => {
         .offer-container {
           display: flex;
           flex-direction: row;
+          justify-content: space-between;
           align-items: center;
           color: #fff;
           max-width: 1200px;

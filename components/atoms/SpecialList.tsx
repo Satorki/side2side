@@ -1,3 +1,4 @@
+"use client";
 import FadeUp from "@/components/atoms/FadeUp";
 import {
   Accordion,
@@ -6,14 +7,27 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useEffect, useState } from "react";
-import { Carousel, CarouselContent, CarouselItem } from "./Carousel";
-import CarouselTab from "./CarouselTab";
+import Slider from "react-slick";
+import Image from "next/image";
 
 interface SpecialListProps {
   items: { id: number; content?: string; title: string; gallery?: string[] }[];
 }
 
 export const SpecialList = ({ items }: SpecialListProps) => {
+  const settings = {
+    infinite: true,
+    fade: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    cssEase: "linear",
+    nextArrow: <></>,
+    prevArrow: <></>,
+  };
+
   const [activeItem, setActiveItem] = useState<string | null>(null);
 
   useEffect(() => {
@@ -31,7 +45,7 @@ export const SpecialList = ({ items }: SpecialListProps) => {
       type="single"
       value={activeItem ?? ""}
       collapsible={true}
-      className="overflow-hidden w-full font-bai"
+      className="overflow-hidden font-bai"
       onValueChange={(value) => handleItemClick(value)}
     >
       {items.map((item) => (
@@ -49,23 +63,25 @@ export const SpecialList = ({ items }: SpecialListProps) => {
                 {item.title}
               </AccordionTrigger>
             </div>
-            <AccordionContent>
+            <AccordionContent className="flex flex-col items-center space-y-4">
               {item.gallery && item.gallery.length > 0 && (
-                <Carousel initialIndex={0} className="w-full">
-                  <CarouselContent>
+                <div className="w-[50vh]">
+                  <Slider {...settings}>
                     {item.gallery.map((image, index) => (
-                      <CarouselItem key={index} className="md:basis-1/2 pl-6">
-                        <CarouselTab
-                          image={image}
-                          title=""
-                          description=""
+                      <div key={index} className="w-full h-full pt-5">
+                        <Image
+                          src={image}
+                          alt={`Image ${index}`}
+                          className="object-cover object-center w-full h-full rounded-xl"
+                          width={1000}
+                          height={1000}
                         />
-                      </CarouselItem>
+                        <p className="pt-5">{item.content}</p>
+                      </div>
                     ))}
-                  </CarouselContent>
-                </Carousel>
+                  </Slider>
+                </div>
               )}
-              <p className="mb-4">{item.content}</p>
             </AccordionContent>
           </AccordionItem>
         </FadeUp>
