@@ -5,8 +5,10 @@ import FadeUp from "../atoms/FadeUp";
 import DescriptionSingle from "../atoms/DescriptionSingle";
 import ButtonAction from "../atoms/ButtonAction";
 import { PhoneCall } from "lucide-react";
-import ImageAbout from "../atoms/ImageAbout";
 import SpecialList from "../atoms/SpecialList";
+import chassis1 from "@/public/images/Special/chassis1.jpg";
+import chassis2 from "@/public/images/Special/chassis2.jpg";
+import chassis3 from "@/public/images/Special/chassis3.jpg";
 
 const OfferSpecial = () => {
   const listItems = [
@@ -14,31 +16,27 @@ const OfferSpecial = () => {
       id: 1,
       title: "Regeneracja zacisków hamulcowych",
       content:
-        "Kompleksowe przygotowanie Twojego auta do zawodów – od silnika po zawieszenie, aby było gotowe do startu.",
+        "Nasza usługa regeneracji zacisków hamulcowych obejmuje kompleksowe czyszczenie, wymianę uszczelnień oraz testy szczelności, aby zapewnić optymalną wydajność hamulców.",
+      gallery:[]
     },
     {
       id: 2,
       title: "Konserwacja podwozia",
       content:
-        "Dostosowujemy Twój samochód do wymagań rajdów, wyścigów czy driftu, aby maksymalizować wyniki.",
+        "Oferujemy profesjonalną konserwację podwozia, która chroni przed korozją i uszkodzeniami mechanicznymi, zapewniając dłuższą żywotność pojazdu.",
+      gallery:[chassis1, chassis2, chassis3]
     },
     {
       id: 3,
-      title: "Czyszczeie wtrysów benzynowych",
+      title: "Czyszczenie wtrysków benzynowych",
       content:
-        "Pełna obsługa techniczna podczas eventów, abyś mógł skupić się na osiąganiu najlepszych wyników.",
+        "Czyszczenie wtrysków benzynowych poprawia spalanie paliwa, zwiększa moc silnika i zmniejsza zużycie paliwa. Używamy nowoczesnych technologii, aby przywrócić wtryski do pierwotnej sprawności.",
     },
     {
       id: 4,
       title: "Remonty kapitalne silników",
       content:
-        "Nasze wsparcie techniczne jest dostępne na miejscu, aby szybko rozwiązać wszelkie problemy.",
-    },
-    {
-      id: 5,
-      title: "Modyfikacje układów napędowych i aerodynamicznych",
-      content:
-        "Modyfikacje, które zwiększają przyspieszenie, stabilność i osiągi Twojego pojazdu na torze.",
+        "Remonty kapitalne silników obejmują kompleksową diagnostykę, wymianę zużytych części oraz precyzyjne regulacje, które przywracają silnikowi pełną moc i niezawodność.",
     },
   ];
 
@@ -68,8 +66,7 @@ const OfferSpecial = () => {
               text="Dla wymagajcych klientow mamy specjalne usługi."
             />
           </FadeUp>
-          
-          <SpecialList items={listItems} />
+
           {isDesktop && (
             <ButtonAction
               text="Skontaktuj się"
@@ -82,6 +79,7 @@ const OfferSpecial = () => {
         </div>
 
         <div className="description-container">
+          <SpecialList items={listItems} />
           {!isDesktop && (
             <ButtonAction
               text="Sprawdź"
@@ -103,8 +101,7 @@ const OfferSpecial = () => {
 
         .offer-container {
           display: flex;
-          flex-direction: row-reverse;
-          justify-content: center;
+          flex-direction: row;
           align-items: center;
           color: #fff;
           max-width: 1200px;
