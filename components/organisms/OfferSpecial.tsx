@@ -6,34 +6,44 @@ import DescriptionSingle from "../atoms/DescriptionSingle";
 import ButtonAction from "../atoms/ButtonAction";
 import { PhoneCall } from "lucide-react";
 import SpecialList from "../atoms/SpecialList";
-import chassis1 from "@/public/images/Special/chassis1a.jpg";
-import chassis2 from "@/public/images/Special/chassis2a.jpg";
-import chassis3 from "@/public/images/Special/chassis3a.jpg";
-import chassis4 from "@/public/images/Special/chassis4a.jpg";
-import chassis5 from "@/public/images/Special/chassis5a.jpg";
-import chassis6 from "@/public/images/Special/chassis6a.jpg";
-import chassis7 from "@/public/images/Special/chassis7a.jpg";
-import brakes1 from "@/public/images/Special/brakes1a.jpg";
-import brakes2 from "@/public/images/Special/brakes2a.jpg";
-import brakes3 from "@/public/images/Special/brakes3a.jpg";
-import injectors1 from "@/public/images/Special/injectors1a.jpg";
-import engine1 from "@/public/images/Special/engine1a.jpg";
-import engine2 from "@/public/images/Special/engine2a.jpg";
-import engine3 from "@/public/images/Special/engine3a.jpg";
-import engine4 from "@/public/images/Special/engine4a.jpg";
-import engine5 from "@/public/images/Special/engine5a.jpg";
-import engine6 from "@/public/images/Special/engine6a.jpg";
-import engine7 from "@/public/images/Special/engine7a.jpg";
-import engine8 from "@/public/images/Special/engine8a.jpg";
+import chassis1 from "@/public/images/Special/chassis1b.jpg";
+import chassis2 from "@/public/images/Special/chassis2b.jpg";
+import chassis3 from "@/public/images/Special/chassis3b.jpg";
+import chassis4 from "@/public/images/Special/chassis4b.jpg";
+import chassis5 from "@/public/images/Special/chassis5b.jpg";
+import chassis6 from "@/public/images/Special/chassis6b.jpg";
+import chassis7 from "@/public/images/Special/chassis7b.jpg";
+import brakes1 from "@/public/images/Special/brakes1b.jpg";
+import brakes2 from "@/public/images/Special/brakes2b.jpg";
+import brakes3 from "@/public/images/Special/brakes3b.jpg";
+import injectors1 from "@/public/images/Special/injectors1b.jpg";
+import engine1 from "@/public/images/Special/engine1b.jpg";
+import engine2 from "@/public/images/Special/engine2b.jpg";
+import engine3 from "@/public/images/Special/engine3b.jpg";
+import engine4 from "@/public/images/Special/engine4b.jpg";
+import engine5 from "@/public/images/Special/engine5b.jpg";
+import engine6 from "@/public/images/Special/engine6b.jpg";
+import engine7 from "@/public/images/Special/engine7b.jpg";
+import engine8 from "@/public/images/Special/engine8b.jpg";
+import AnimatedStar from "../atoms/AnimatedStar";
 
 const OfferSpecial = () => {
   const listItems = [
     {
       id: 1,
-      title: "Regeneracja zacisków hamulcowych",
+      title: "Remonty kapitalne silników",
       content:
-        "Nasza usługa regeneracji zacisków hamulcowych obejmuje kompleksowe czyszczenie, wymianę uszczelnień oraz testy szczelności, aby zapewnić optymalną wydajność hamulców.",
-      gallery: [brakes1.src, brakes2.src, brakes3.src],
+        "Remonty kapitalne silników obejmują kompleksową diagnostykę, wymianę zużytych części oraz precyzyjne regulacje, które przywracają silnikowi pełną moc i niezawodność.",
+      gallery: [
+        engine1.src,
+        engine2.src,
+        engine7.src,
+        engine3.src,
+        engine4.src,
+        engine5.src,
+        engine6.src,
+        engine8.src,
+      ],
     },
     {
       id: 2,
@@ -41,8 +51,8 @@ const OfferSpecial = () => {
       content:
         "Oferujemy profesjonalną konserwację podwozia, która chroni przed korozją i uszkodzeniami mechanicznymi, zapewniając dłuższą żywotność pojazdu.",
       gallery: [
-        chassis1.src,
         chassis2.src,
+        chassis1.src,
         chassis3.src,
         chassis4.src,
         chassis5.src,
@@ -59,19 +69,10 @@ const OfferSpecial = () => {
     },
     {
       id: 4,
-      title: "Remonty kapitalne silników",
+      title: "Regeneracja zacisków hamulcowych",
       content:
-        "Remonty kapitalne silników obejmują kompleksową diagnostykę, wymianę zużytych części oraz precyzyjne regulacje, które przywracają silnikowi pełną moc i niezawodność.",
-      gallery: [
-        engine1.src,
-        engine2.src,
-        engine3.src,
-        engine4.src,
-        engine5.src,
-        engine6.src,
-        engine7.src,
-        engine8.src,
-      ],
+        "Nasza usługa regeneracji zacisków hamulcowych obejmuje kompleksowe czyszczenie, wymianę uszczelnień oraz testy szczelności, aby zapewnić optymalną wydajność hamulców.",
+      gallery: [brakes1.src, brakes2.src, brakes3.src],
     },
   ];
 
@@ -89,12 +90,16 @@ const OfferSpecial = () => {
   }, []);
 
   return (
-    <div id="offer-motorsport">
-      <AnimatedTransition quote="SPECJALNA" mustScaleDown />
+    <div id="offer-special">
+      <AnimatedTransition
+        quote="SPECJALNA"
+        mustScaleDown
+        animatedIcon={<AnimatedStar />}
+      />
 
       <div className="offer-container">
         <div className="flex flex-col gap-5 md:gap-10 flex-1">
-          <TitleSection titleAnimationText="Dodatkowe" titleEnding=" uslugi" />
+          <TitleSection titleAnimationText="Dodatkowe" titleEnding=" usługi" />
           <FadeUp delay={0.5} duration={2}>
             <DescriptionSingle
               isBold={true}
@@ -105,7 +110,7 @@ const OfferSpecial = () => {
 
           {isDesktop && (
             <ButtonAction
-              text="Skontaktuj się"
+              text="Umów wizytę"
               bgColor="red"
               textColor="white"
               icon={<PhoneCall />}
@@ -118,7 +123,7 @@ const OfferSpecial = () => {
           <SpecialList items={listItems} />
           {!isDesktop && (
             <ButtonAction
-              text="Sprawdź"
+              text="Umów wizytę"
               bgColor="red"
               textColor="white"
               icon={<PhoneCall />}
@@ -128,7 +133,7 @@ const OfferSpecial = () => {
         </div>
       </div>
       <style jsx>{`
-        #offer-motorsport {
+        #offer-special {
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -148,7 +153,7 @@ const OfferSpecial = () => {
         .description-container {
           display: flex;
           flex-direction: column;
-          align-items: start;
+          width: 100%;
           flex: 1;
         }
 
@@ -164,7 +169,7 @@ const OfferSpecial = () => {
           .description-container {
             gap: 2rem;
           }
-          #offer-motorsport {
+          #offer-special {
             padding: 2rem 2rem 3rem 2rem;
             height: auto;
           }

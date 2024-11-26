@@ -1,4 +1,3 @@
-"use client";
 import FadeUp from "@/components/atoms/FadeUp";
 import {
   Accordion,
@@ -22,10 +21,8 @@ export const SpecialList = ({ items }: SpecialListProps) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000,
-    cssEase: "linear",
-    nextArrow: <></>,
-    prevArrow: <></>,
+    autoplaySpeed: 3000,
+    arrows: false,
   };
 
   const [activeItem, setActiveItem] = useState<string | null>(null);
@@ -54,34 +51,35 @@ export const SpecialList = ({ items }: SpecialListProps) => {
             value={`item-${item.id}`}
             className={`transition-opacity duration-300 ${
               activeItem && activeItem !== `item-${item.id}`
-                ? "opacity-60"
+                ? "opacity-40"
                 : "opacity-100"
             }`}
           >
             <div>
-              <AccordionTrigger className="items-center py-1 text-start hover:text-[#ffffff] transition-all duration-300 ease-in cursor-pointer text-[1.1rem]">
+              <AccordionTrigger className="items-center py-1 text-start hover:text-[#ffffff] transition-all duration-300 ease-in cursor-pointer font-bold text-md">
                 {item.title}
               </AccordionTrigger>
             </div>
-            <AccordionContent className="flex flex-col space-y-4 pt-2">
+            <AccordionContent className="flex flex-col items-center space-y-4 pt-2">
               {item.gallery && item.gallery.length > 0 && (
-                <div className="w-[80vw] md:w-[50vh]">
+                <div className="w-[80vw] md:w-[55vh]">
                   <Slider {...settings}>
                     {item.gallery.map((image, index) => (
-                      <div key={index} className="w-full h-full">
+                      <div key={index}>
                         <Image
                           src={image}
                           alt={`Image ${index}`}
-                          className="object-cover object-center w-full h-full rounded-xl"
-                          width={1000}
-                          height={1000}
+                          className="object-cover object-center rounded-xl"
+                          width={920}
+                          height={540}
+                          loading="lazy"
                         />
-                        <p className="pt-3">{item.content}</p>
                       </div>
                     ))}
                   </Slider>
                 </div>
               )}
+              <p>{item.content}</p>
             </AccordionContent>
           </AccordionItem>
         </FadeUp>

@@ -154,6 +154,17 @@ const Header = () => {
                         MOTORSPORT
                       </ScrollLink>
                     </DropdownItem>
+                    <DropdownItem key="SPECJALNA">
+                      <ScrollLink
+                        to="offer-special"
+                        smooth={true}
+                        duration={500}
+                        onClick={() => setIsMenuOpen(false)}
+                        className="text-white text-[1.1rem]"
+                      >
+                        SPECJALNA
+                      </ScrollLink>
+                    </DropdownItem>
                   </DropdownMenu>
                 </Dropdown>
               ) : (
@@ -207,6 +218,17 @@ const Header = () => {
                       className="text-white text-[1.5rem] underline underline-offset-8 flex justify-center font-jura font-thin tracking-wider"
                     >
                       MOTORSPORT
+                    </ScrollLink>
+
+                    <ScrollLink
+                      to="offer-special"
+                      offset={-45}
+                      smooth={true}
+                      duration={500}
+                      onClick={() => setIsMenuOpen(false)}
+                      className="text-white text-[1.5rem] underline underline-offset-8 flex justify-center font-jura font-thin tracking-wider"
+                    >
+                      SPECJALNA
                     </ScrollLink>
                   </div>
                   <p className="transfom translate-x-10 text-white rotate-90 text-[1rem] mx-[-3.5rem] tracking-[0.5rem] opacity-50">
