@@ -11,7 +11,7 @@ import BgTransition from "@/components/atoms/BgTransition";
 
 export default function Home() {
   return (
-    <div>
+    <div id="home">
       <div className="relative z-20 bg-[#645B4A]">
         <Hero />
         <OffersAll />

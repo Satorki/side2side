@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React from "react";
 import { Link as ScrollLink } from "react-scroll";
 
@@ -14,7 +14,8 @@ const Footer = () => {
         </div>
         <nav className="flex space-x-6 mt-4 md:mt-0">
           <ScrollLink
-            to={"/about"}
+            to="about"
+            offset={-45}
             smooth={true}
             duration={500}
             className="text-gray-400 hover:text-white text-sm cursor-pointer"
@@ -22,7 +23,8 @@ const Footer = () => {
             O Nas
           </ScrollLink>
           <ScrollLink
-            to={"/offer-service"}
+            to="offer-service"
+            offset={-45}
             smooth={true}
             duration={500}
             className="text-gray-400 hover:text-white text-sm cursor-pointer"
@@ -30,7 +32,8 @@ const Footer = () => {
             Oferta
           </ScrollLink>
           <ScrollLink
-            to={"/contact"}
+            to="contact"
+            offset={-45}
             smooth={true}
             duration={500}
             className="text-gray-400 hover:text-white text-sm cursor-pointer"
