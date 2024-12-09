@@ -6,7 +6,7 @@ import Favicon from "@/public/images/Icons/favicon-bigs.png";
 
 export const metadata: Metadata = {
   title: "Side2Side",
-  description: "Side2Side website",
+  description: "Side2Side Profesjonalny Serwis Tuning Motorsport",
 };
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href={Favicon.src} />
       </head>
-      <body className="bg-gradient-to-tr from-[#353030] to-[#575757]">
+      <body>
         <Header />
         <main>{children}</main>
         <Footer />

@@ -12,20 +12,16 @@ import BgTransition from "@/components/atoms/BgTransition";
 export default function Home() {
   return (
     <div id="home">
-      <div className="relative z-20 bg-[#645B4A]">
-        <Hero />
-        <OffersAll />
-        <BgTransition>
-          <About />
-          <Offers />
-        </BgTransition>
-      </div>
+      <Hero />
+      <OffersAll />
+      <BgTransition>
+        <About />
+        <Offers />
+      </BgTransition>
       <NumberSection />
-      <div className="relative z-20 bg-[#645B4A]">
-        <Projects />
-        <Rewievs />
-        <Contact />
-      </div>
+      <Projects />
+      <Rewievs />
+      <Contact />
     </div>
   );
 }

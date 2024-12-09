@@ -43,8 +43,6 @@ const About = () => {
             </FadeUp>
           </div>
           <ButtonAction
-            bgColor="#d52727"
-            textColor="#FFF"
             text="Sprawdź"
             icon={<CornerRightDown />}
             address="offer-service"
@@ -61,7 +59,7 @@ const About = () => {
           flex: 1;
           flex-direction: column;
           gap: 2.5rem;
-          color: white;
+          color: var(--color-text);
         }
         .about-container {
           display: flex;
@@ -80,7 +78,6 @@ const About = () => {
           .description-container {
             width: 100%;
             height: auto;
-            color: white;
             gap: 1.5rem;
             padding: 2rem;
           }

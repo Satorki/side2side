@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <div
       id="hero"
-      className="hero-container h-screen bg-black overflow-hidden relative"
+      className="hero-container h-screen bg-[--color-black] overflow-hidden relative"
     >
       <HeroTitle isLoaded={isLoaded} />
       <HeroImage setIsLoaded={setIsLoaded} />

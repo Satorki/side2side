@@ -17,15 +17,17 @@ const OffersAll = () => {
         #offersAll {
           width: 100%;
           padding: 10rem 0;
+          background-color: var(--color-background1);
         }
         .offer-container {
           max-width: 1200px;
           margin: 0 auto;
           display: flex;
           flex-direction: column;
-          color: white;
+          color: var(--color-text);
           padding: 2rem;
           gap: 1.5rem;
+          
         }
 
         .tabs-container {

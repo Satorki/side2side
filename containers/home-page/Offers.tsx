@@ -6,7 +6,7 @@ import OfferSpecial from "@/components/organisms/OfferSpecial";
 
 const Offers = () => {
   return (
-    <div className="text-white">
+    <div className="text-[var(--color-text)]">
       <WalkingText />
       <OfferService />
       <OfferTunning />

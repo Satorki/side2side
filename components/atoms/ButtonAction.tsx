@@ -34,7 +34,7 @@ const ButtonAction = ({
       target={address.startsWith("http") ? "_blank" : undefined}
       rel={address.startsWith("http") ? "noopener noreferrer" : undefined}
       style={{
-        backgroundColor: bgColor ? bgColor : "#1976d2",
+        backgroundColor: bgColor ?? "var(--color-action)",
         color: textColor ? textColor : "#fff",
         borderRadius: 10,
       }}
@@ -52,7 +52,7 @@ const ButtonAction = ({
       duration={1000}
       onClick={onclick}
       style={{
-        backgroundColor: bgColor ? bgColor : "#1976d2",
+        backgroundColor: bgColor ?? "var(--color-action)",
         color: textColor ? textColor : "#fff",
         borderRadius: 10,
       }}

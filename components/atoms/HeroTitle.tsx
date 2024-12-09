@@ -40,7 +40,7 @@ const HeroTitle = ({ isLoaded }: Props) => {
             damping: 30,
             mass: 1,
           }}
-          className="text-[--red]"
+          className="text-[#d30000]"
         >
           2
         </motion.div>

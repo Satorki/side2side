@@ -34,7 +34,6 @@ const OffersAllCarousel = () => {
         <ButtonAction
           text="Przejdź"
           icon={<ArrowDown />}
-          bgColor="#d52727"
           address="offer-service"
           offset={-79}
         />
@@ -50,7 +49,6 @@ const OffersAllCarousel = () => {
         <ButtonAction
           text="Przejdź"
           icon={<ArrowDown />}
-          bgColor="#d52727"
           address="offer-tuning"
           offset={-40}
         />
@@ -66,7 +64,6 @@ const OffersAllCarousel = () => {
         <ButtonAction
           text="Przejdź"
           icon={<ArrowDown />}
-          bgColor="#d52727"
           address="offer-motorsport"
           offset={-40}
         />

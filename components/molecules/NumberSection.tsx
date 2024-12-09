@@ -6,7 +6,7 @@ import BackImage from "@/public/images/Service/offer5.jpg";
 const NumberSection = () => {
   return (
     <div>
-      <div className="fixed top-0 left-0 w-full h-screen opacity-25">
+      <div className="fixed top-0 left-0 w-full h-screen opacity-25 -z-10">
         <Image src={BackImage} alt="Person Standing" fill className="object-cover" />
       </div>
       <div className="relative z-20 max-w-[1200px] mx-auto py-20 md:py-40 text-white font-bai">
