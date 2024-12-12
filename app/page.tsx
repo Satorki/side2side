@@ -8,6 +8,7 @@ import Rewievs from "@/containers/home-page/Rewievs";
 import OffersAll from "@/containers/home-page/OffersAll";
 import NumberSection from "@/components/molecules/NumberSection";
 import BgTransition from "@/components/atoms/BgTransition";
+import WalkingText from "@/components/atoms/WalkingText";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <OffersAll />
       <BgTransition>
         <About />
+        <WalkingText />
         <Offers />
       </BgTransition>
       <NumberSection />
