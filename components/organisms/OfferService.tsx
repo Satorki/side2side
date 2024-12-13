@@ -56,7 +56,7 @@ const OfferService: React.FC = () => {
           />
           <FadeUp delay={0.5} duration={2}>
             <DescriptionSingle
-              text="Oferujemy kompleksowy serwis dla pojazdów osobnych i dostawczych do 3,5 tony, zapewniając ich sprawność w codziennym użytkowaniu."
+              text="Oferujemy kompleksowy serwis dla pojazdów osobowych i dostawczych do 3,5 tony, zapewniając ich sprawność w codziennym użytkowaniu."
               isBold={true}
             />
           </FadeUp>

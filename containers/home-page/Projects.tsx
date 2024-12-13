@@ -52,13 +52,13 @@ const Projects = () => {
         <AnimatePresence mode="wait">
           {!showCarousel ? (
             <motion.div
-              className="flex items-center w-full justify-center overflow-hidden"
+              className="flex items-center w-full h-1/2 justify-center overflow-hidden"
               key="image"
               variants={fadeVariants}
               initial="hidden"
               animate="visible"
               exit="exit"
-              transition={{ duration: 0.7 }}
+              transition={{ duration: 0.3 }}
             >
               <Image
                 src={leftCar}

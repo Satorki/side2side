@@ -9,8 +9,22 @@ import tmcImage from "@/public/images/Company-Logos/tmc0.png";
 import wacheImage from "@/public/images/Company-Logos/wache0.png";
 import fmicImage from "@/public/images/Company-Logos/fmic0.png";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const WalkingText = () => {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 768);
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const images = [
     {
       index: 0,
@@ -59,18 +73,18 @@ const WalkingText = () => {
       image: fmicImage,
       alt: "FMIC Performance logo",
       link: "https://www.fmic.pl",
-    }
+    },
   ];
 
   return (
-    <div className="pt-36 pb-10">
-      <div className="max-w-[1200px] mx-auto px-8 font-bai text-white pb-10">
+    <div className="pt-20 md:pt-36 pb-20">
+      <div className="max-w-[1200px] mx-auto px-8 font-bai text-white pb-4 md:pb-10">
         <h3 className="text-xl md:text-3xl font-semibold">
           Współpracują z nami:
         </h3>
       </div>
       <div className="text-[var(--color-text)] font-bai tracking-tighter">
-        <InfiniteSlider gap={40} reverse duration={40} durationOnHover={90}>
+        <InfiniteSlider gap={20} reverse duration={40} durationOnHover={90}>
           {images.map((image) => (
             <Link
               key={image.index}
@@ -84,11 +98,36 @@ const WalkingText = () => {
                 alt={image.alt}
                 width={1000}
                 height={1000}
-                className="w-[250px] h-auto object-contain hover:scale-105 transition-all duration-300 ease-in-out"
+                className="w-[150px] md:w-[250px] h-auto object-contain hover:scale-105 transition-all duration-300 ease-in-out"
               />
             </Link>
           ))}
         </InfiniteSlider>
+
+        {!isDesktop && (
+          <InfiniteSlider gap={10} duration={40} durationOnHover={90}>
+            {images
+              .slice(2)
+              .concat(images.slice(0, 2))
+              .map((image) => (
+                <Link
+                  key={image.index}
+                  href={image.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center"
+                >
+                  <Image
+                    src={image.image}
+                    alt={image.alt}
+                    width={1000}
+                    height={1000}
+                    className="w-[150px] md:w-[250px] h-auto object-contain hover:scale-105 transition-all duration-300 ease-in-out"
+                  />
+                </Link>
+              ))}
+          </InfiniteSlider>
+        )}
       </div>
     </div>
   );
