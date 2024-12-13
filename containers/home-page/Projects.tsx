@@ -93,6 +93,7 @@ const Projects = () => {
       <style jsx>{`
         #projects {
           padding: 10rem 0;
+          background-color: var(--color-background1);
         }
         @media (max-width: 768px) {
           #projects {

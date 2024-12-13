@@ -6,7 +6,7 @@ import Favicon from "@/public/images/Icons/favicon-bigs.png";
 
 export const metadata: Metadata = {
   title: "Side2Side",
-  description: "Side2Side Profesjonalny Serwis Tuning Motorsport",
+  description: "Side2Side Profesjonalny Serwis, Profesjonalny Tuning, Obsługa Motorsport",
 };
 
 export default function RootLayout({

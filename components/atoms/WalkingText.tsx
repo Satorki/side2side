@@ -7,6 +7,7 @@ import krawczykImage from "@/public/images/Company-Logos/krawczyk0.png";
 import swagierImage from "@/public/images/Company-Logos/swagier0.png";
 import tmcImage from "@/public/images/Company-Logos/tmc0.png";
 import wacheImage from "@/public/images/Company-Logos/wache0.png";
+import fmicImage from "@/public/images/Company-Logos/fmic0.png";
 import Link from "next/link";
 
 const WalkingText = () => {
@@ -53,6 +54,12 @@ const WalkingText = () => {
       alt: "Wache logo",
       link: "https://www.wache.pl",
     },
+    {
+      index: 7,
+      image: fmicImage,
+      alt: "FMIC Performance logo",
+      link: "https://www.fmic.pl",
+    }
   ];
 
   return (

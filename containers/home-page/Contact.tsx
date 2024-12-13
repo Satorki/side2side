@@ -96,6 +96,7 @@ const Contact = () => {
       <style jsx>{`
         #contact {
           padding: 10rem 0;
+          background-color: var(--color-background1);
         }
 
         .map {

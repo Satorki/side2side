@@ -43,14 +43,10 @@ Okazało się też, że serwisuje auta vipów jak na zdjęciu. Jednym słowem PO
       </div>
       <style jsx>{`
         #rewievs {
-          /* background-image: radial-gradient(
-            circle 1000px at 50% 60%,
-            #850001,
-            #e34040
-          ); */
           color: white;
           padding: 10rem 0;
           z-index: 20;
+          background-color: var(--color-background1);
         }
         .rewievs-container {
           display: flex;
