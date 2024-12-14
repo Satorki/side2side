@@ -83,7 +83,7 @@ const WalkingText = () => {
           Współpracują z nami:
         </h3>
       </div>
-      <div className="text-[var(--color-text)] font-bai tracking-tighter">
+      {isDesktop ? (
         <InfiniteSlider gap={20} reverse duration={40} durationOnHover={90}>
           {images.map((image) => (
             <Link
@@ -103,32 +103,48 @@ const WalkingText = () => {
             </Link>
           ))}
         </InfiniteSlider>
-
-        {!isDesktop && (
-          <InfiniteSlider gap={10} duration={40} durationOnHover={90}>
-            {images
-              .slice(2)
-              .concat(images.slice(0, 2))
-              .map((image) => (
-                <Link
-                  key={image.index}
-                  href={image.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center"
-                >
-                  <Image
-                    src={image.image}
-                    alt={image.alt}
-                    width={1000}
-                    height={1000}
-                    className="w-[150px] md:w-[250px] h-auto object-contain hover:scale-105 transition-all duration-300 ease-in-out"
-                  />
-                </Link>
-              ))}
+      ) : (
+        <div className="flex flex-col gap-4">
+          <InfiniteSlider gap={20} reverse duration={40} durationOnHover={90}>
+            {images.slice(0, 3).map((image) => (
+              <Link
+                key={image.index}
+                href={image.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center"
+              >
+                <Image
+                  src={image.image}
+                  alt={image.alt}
+                  width={1000}
+                  height={1000}
+                  className="w-[150px] md:w-[250px] h-auto object-contain hover:scale-105 transition-all duration-300 ease-in-out"
+                />
+              </Link>
+            ))}
           </InfiniteSlider>
-        )}
-      </div>
+          <InfiniteSlider gap={10} duration={40} durationOnHover={90}>
+            {images.slice(3).map((image) => (
+              <Link
+                key={image.index}
+                href={image.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center"
+              >
+                <Image
+                  src={image.image}
+                  alt={image.alt}
+                  width={1000}
+                  height={1000}
+                  className="w-[150px] md:w-[250px] h-auto object-contain hover:scale-105 transition-all duration-300 ease-in-out"
+                />
+              </Link>
+            ))}
+          </InfiniteSlider>
+        </div>
+      )}
     </div>
   );
 };
