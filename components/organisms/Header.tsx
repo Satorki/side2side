@@ -173,6 +173,7 @@ const Header = () => {
                   smooth={true}
                   duration={500}
                   className="text-white text-[1.3rem]"
+                  href={item.link}
                 >
                   {item.name}
                 </ScrollLink>
@@ -243,6 +244,7 @@ const Header = () => {
                   duration={500}
                   onClick={() => setIsMenuOpen(false)}
                   className="text-white text-[1.5rem]  flex justify-center font-jura font-thin tracking-wider"
+                  href={item.link}
                 >
                   {item.name}
                 </ScrollLink>

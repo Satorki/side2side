@@ -51,6 +51,7 @@ const ButtonAction = ({
       offset={offset}
       duration={1000}
       onClick={onclick}
+      href={address}
       style={{
         backgroundColor: bgColor ?? "var(--color-action)",
         color: textColor ? textColor : "#fff",

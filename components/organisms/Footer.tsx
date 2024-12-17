@@ -19,6 +19,7 @@ const Footer = () => {
             smooth={true}
             duration={500}
             className="text-gray-400 hover:text-white text-sm cursor-pointer"
+            href={"#about"}
           >
             O Nas
           </ScrollLink>
@@ -28,6 +29,7 @@ const Footer = () => {
             smooth={true}
             duration={500}
             className="text-gray-400 hover:text-white text-sm cursor-pointer"
+            href={"#offer-service"}
           >
             Oferta
           </ScrollLink>
@@ -37,6 +39,7 @@ const Footer = () => {
             smooth={true}
             duration={500}
             className="text-gray-400 hover:text-white text-sm cursor-pointer"
+            href={"#contact"}
           >
             Kontakt
           </ScrollLink>

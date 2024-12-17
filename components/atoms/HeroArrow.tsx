@@ -2,7 +2,7 @@
 import React from "react";
 import { FaArrowDown } from "react-icons/fa";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 
 interface Props {
   isLoaded: boolean;
@@ -26,14 +26,15 @@ const HeroArrow = ({ isLoaded }: Props) => {
       className="absolute bottom-0 text-white w-full  flex justify-center gap-10 z-20"
       style={{ opacity }}
     >
-      <Link
+      <ScrollLink
         to="offersAll"
         smooth={true}
         duration={1000}
         className="rounded-full bg-slate-300 bg-opacity-40 flex justify-center items-center w-10 h-10 text-black mb-20 pt-1 cursor-pointer transition-all duration-300 ease-out hover:-translate-y-4"
+        href={"#offersAll"}
       >
         <FaArrowDown className="text-2xl" />
-      </Link>
+      </ScrollLink>
     </motion.div>
   );
 };

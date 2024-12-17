@@ -5,7 +5,7 @@ import HeroImagePicture from "@/public/images/Hero/Hero-High.jpg";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { CircleLoader } from "react-spinners";
 import LoadingBar from "react-top-loading-bar";
-import LogoImage from "@/public/images/Logos/logo-long-no-bckg.png";
+import LoadingImage from "@/public/images/Hero/Hero-Loading.jpg";
 
 interface Props {
   setIsLoaded: (value: boolean) => void;
@@ -25,7 +25,6 @@ const HeroImage = ({ setIsLoaded }: Props) => {
       {!isImageLoaded && (
         <div className="z-50 flex flex-col gap-10 justify-center items-center h-screen">
           <LoadingBar color="#fff" progress={50} height={10} />
-          <Image src={LogoImage} alt="loading image" priority={true} />
           <CircleLoader color="#fff" size={100} />
         </div>
       )}
@@ -37,6 +36,12 @@ const HeroImage = ({ setIsLoaded }: Props) => {
           isImageLoaded ? "block" : "hidden"
         }`}
         priority={true}
+        fetchPriority="high"
+        placeholder="blur"
+        blurDataURL={LoadingImage.src}
+        sizes="(max-width: 768px) 100vw, 
+         (max-width: 1200px) 50vw, 
+         33vw"
         onLoad={() => {
           setIsImageLoaded(true);
           setIsLoaded(true);

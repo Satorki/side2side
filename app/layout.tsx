@@ -27,6 +27,10 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <head>
+        <meta
+          property="og:image"
+          content="https://side2side.com/opengraph-image.png"
+        />
         <link rel="icon" href={Favicon.src} />
       </head>
       <body>
