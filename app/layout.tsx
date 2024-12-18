@@ -14,7 +14,7 @@ export const metadata: Metadata = {
       "Side2Side to profesjonalny warsztat samochodowy, który łączy pasję do motoryzacji z nowoczesnymi rozwiązaniami.",
     type: "website",
     locale: "pl-PL",
-    url: "www.side2side.pl",
+    url: "https://side2side.pl/",
     siteName: "Side2Side",
   },
 };
