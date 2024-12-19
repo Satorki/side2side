@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import CrewImage from "@/public/images/About/about.jpg";
+import CrewImage from "@/public/images/About/about-side2side.jpg";
 
 const ImageAbout = () => {
   return (

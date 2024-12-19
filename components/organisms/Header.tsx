@@ -82,7 +82,7 @@ const Header = () => {
           <NavbarBrand>
             <Link href="/">
               {isMenuOpen || isLargeScreen ? (
-                <div className="flex">
+                <li className="flex">
                   <LogoSmall />
                   <motion.div
                     initial={{ opacity: 0, x: -110 }}
@@ -91,9 +91,9 @@ const Header = () => {
                   >
                     <LogoBig />
                   </motion.div>
-                </div>
+                </li>
               ) : (
-                <div className="flex">
+                <li className="flex">
                   <LogoSmall />
                   <motion.div
                     initial={{ opacity: 1, x: 0 }}
@@ -102,7 +102,7 @@ const Header = () => {
                   >
                     <LogoBig />
                   </motion.div>
-                </div>
+                </li>
               )}
             </Link>
           </NavbarBrand>

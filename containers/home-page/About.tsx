@@ -38,8 +38,8 @@ const About = () => {
             </>
           )}
           <div>
-            <FadeUp delay={1}>
-              <DescriptionSingle text="Wiemy, że Twój samochód to coś więcej niż tylko pojazd – to pasja i styl życia. Naszą misją jest dostarczanie usług, które zapewnią niezawodność i wyjątkowe osiągi w każdych warunkach. W Side2Side Motorsport łączymy precyzję, doświadczenie i miłość do motoryzacji, by wyjść naprzeciw każdemu wyzwaniu."/>
+            <FadeUp delay={0.3}>
+              <DescriptionSingle text="Wiemy, że Twój samochód to coś więcej niż tylko pojazd – to pasja i styl życia. Naszą misją jest dostarczanie usług, które zapewnią niezawodność i wyjątkowe osiągi w każdych warunkach. W Side2Side Motorsport łączymy precyzję, doświadczenie i miłość do motoryzacji, by wyjść naprzeciw każdemu wyzwaniu." />
             </FadeUp>
           </div>
           <ButtonAction

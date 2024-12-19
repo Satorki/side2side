@@ -32,6 +32,7 @@ const HeroArrow = ({ isLoaded }: Props) => {
         duration={1000}
         className="rounded-full bg-slate-300 bg-opacity-40 flex justify-center items-center w-10 h-10 text-black mb-20 pt-1 cursor-pointer transition-all duration-300 ease-out hover:-translate-y-4"
         href={"#offersAll"}
+        aria-label="Przewiń do sekcji ofert"
       >
         <FaArrowDown className="text-2xl" />
       </ScrollLink>

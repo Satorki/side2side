@@ -41,7 +41,7 @@ export default function RootLayout({
         />
         <meta
           property="og:image"
-          content="https://side2side.com/opengraph-image.png"
+          content="https://side2side.com/opengraph-image.jpg"
         />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -57,7 +57,7 @@ export default function RootLayout({
         />
         <meta
           name="twitter:image"
-          content="https://side2side.com/opengraph-image.png"
+          content="https://side2side.com/opengraph-image.jpg"
         />
 
         <link rel="icon" href={Favicon.src} />

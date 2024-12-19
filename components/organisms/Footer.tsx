@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center">
         <div className="text-center md:text-left">
           <h2 className="text-xl font-bold">Side2Side Motorsport</h2>
-          <p className="text-sm text-gray-400 mt-1">
+          <p className="text-sm text-gray-300 mt-1">
             Profesjonalny serwis samochodowy | Tuning | Motorsport
           </p>
         </div>
@@ -18,7 +18,7 @@ const Footer = () => {
             offset={-45}
             smooth={true}
             duration={500}
-            className="text-gray-400 hover:text-white text-sm cursor-pointer"
+            className="text-gray-300 hover:text-white text-sm cursor-pointer"
             href={"#about"}
           >
             O Nas
@@ -28,7 +28,7 @@ const Footer = () => {
             offset={-45}
             smooth={true}
             duration={500}
-            className="text-gray-400 hover:text-white text-sm cursor-pointer"
+            className="text-gray-300 hover:text-white text-sm cursor-pointer"
             href={"#offer-service"}
           >
             Oferta
@@ -38,18 +38,18 @@ const Footer = () => {
             offset={-45}
             smooth={true}
             duration={500}
-            className="text-gray-400 hover:text-white text-sm cursor-pointer"
+            className="text-gray-300 hover:text-white text-sm cursor-pointer"
             href={"#contact"}
           >
             Kontakt
           </ScrollLink>
         </nav>
         <div className="text-center md:text-right mt-4 md:mt-0">
-          <p className="text-sm text-gray-400">
+          <p className="text-sm text-gray-300">
             © {new Date().getFullYear()} Side2Side Motorsport. All rights
             reserved.
           </p>
-          <p className="text-sm text-gray-400 mt-1">
+          <p className="text-sm text-gray-300 mt-1">
             Developed by{" "}
             <a
               href="https://github.com/satorki"
@@ -57,7 +57,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="text-white hover:underline"
             >
-              Sebastian
+              Sebastian K.
             </a>
           </p>
         </div>

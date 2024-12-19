@@ -51,10 +51,16 @@ const Contact = () => {
       title: "Social:",
       descriptionUp: (
         <div className="flex gap-4">
-          <Link href={"https://www.facebook.com/S2SMotorsport"}>
+          <Link
+            href={"https://www.facebook.com/S2SMotorsport"}
+            aria-label="Przejdź na Facebook side2side"
+          >
             <FaFacebook className="text-3xl active:font-bold hover:text-[#d52727] cursor-pointer" />
           </Link>
-          <Link href={"https://www.instagram.com/side2side_motorsport/"}>
+          <Link
+            href={"https://www.instagram.com/side2side_motorsport/"}
+            aria-label="Przejdź na Instagram side2side"
+          >
             <FaInstagram className="text-3xl active:font-bold hover:text-[#d52727] cursor-pointer" />
           </Link>
         </div>
@@ -83,6 +89,7 @@ const Contact = () => {
             </div>
             <div className="map">
               <iframe
+                title="Side2Side Motorsport Wolsztyn Nowe Tłoki"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18997.98319147391!2d16.105319432614245!3d52.142336158585195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4705d16678e0ae9b%3A0x944a1727876068bd!2sSide2Side%20Motorsport!5e0!3m2!1spl!2spl!4v1730192139471!5m2!1spl!2spl"
                 style={{ border: 0 }}
                 className="w-full h-full rounded-2xl"
