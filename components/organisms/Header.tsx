@@ -80,31 +80,35 @@ const Header = () => {
       >
         <NavbarContent>
           <NavbarBrand>
-            <Link href="/">
-              {isMenuOpen || isLargeScreen ? (
-                <li className="flex">
-                  <LogoSmall />
-                  <motion.div
-                    initial={{ opacity: 0, x: -110 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ type: "spring" }}
-                  >
-                    <LogoBig />
-                  </motion.div>
-                </li>
-              ) : (
-                <li className="flex">
-                  <LogoSmall />
-                  <motion.div
-                    initial={{ opacity: 1, x: 0 }}
-                    animate={{ opacity: 0, x: -110 }}
-                    transition={{ type: "spring" }}
-                  >
-                    <LogoBig />
-                  </motion.div>
-                </li>
-              )}
-            </Link>
+            <ul className="flex">
+              <li className="flex">
+                <Link href="/">
+                  {isMenuOpen || isLargeScreen ? (
+                    <>
+                      <LogoSmall />
+                      <motion.div
+                        initial={{ opacity: 0, x: -110 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ type: "spring" }}
+                      >
+                        <LogoBig />
+                      </motion.div>
+                    </>
+                  ) : (
+                    <>
+                      <LogoSmall />
+                      <motion.div
+                        initial={{ opacity: 1, x: 0 }}
+                        animate={{ opacity: 0, x: -110 }}
+                        transition={{ type: "spring" }}
+                      >
+                        <LogoBig />
+                      </motion.div>
+                    </>
+                  )}
+                </Link>
+              </li>
+            </ul>
           </NavbarBrand>
         </NavbarContent>
         <NavbarContent className="hidden md:flex gap-4" justify="end">

@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import Footer from "@/components/organisms/Footer";
 import Header from "@/components/organisms/Header";
 import Favicon from "@/public/images/Icons/favicon-bigs.png";
+import OpenGraphImage from "@/public/opengraph-image.jpg";
 
 export const metadata: Metadata = {
   title: "Side2Side | Eksperci w serwisie, tuningu i motorsporcie",
@@ -18,6 +19,14 @@ export const metadata: Metadata = {
     locale: "pl-PL",
     url: "https://side2side.pl/",
     siteName: "Side2Side",
+    images: [
+      {
+        url: `${process.env.NEXT_PUBLIC_BASE_URL}${OpenGraphImage.src}`,
+        width: 1200,
+        height: 630,
+        alt: "Side2Side - Eksperci w serwisie, tuningu i motorsporcie",
+      },
+    ],
   },
 };
 

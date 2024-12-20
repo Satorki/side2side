@@ -25,18 +25,8 @@ body {
 }
 
 @font-face {
-  font-family: "Space Grotesk";
-  src: url("../public/fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf");
-}
-
-@font-face {
   font-family: "Jura";
   src: url("../public/fonts/Jura/Jura-VariableFont_wght.ttf");
-}
-
-@font-face {
-  font-family: "Libre Franklin";
-  src: url("../public/fonts/Libre_Franklin/LibreFranklin-VariableFont_wght.ttf");
 }
 
 @font-face {
