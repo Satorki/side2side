@@ -17,7 +17,7 @@ const BgTransition = ({ children }: BgTransitionProps) => {
   const changeBackground = useTransform(
     scrollYProgress,
     [0, 0.2, 1],
-    ["#645B4A", "#1D2321", "#1D2321"]
+    ["#717171", "#1D2321", "#1D2321"]
   );
 
   return (
