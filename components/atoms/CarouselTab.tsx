@@ -22,7 +22,6 @@ const CarouselTab = ({
         src={image}
         alt={title}
         className="object-cover object-center w-full h-full rounded-xl"
-        loading="lazy"
         placeholder="blur"
       />
       {showDescription && (
