@@ -1,5 +1,4 @@
 "use client";
-import React, { useEffect, useState } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -9,7 +8,7 @@ import {
 } from "../atoms/Carousel";
 import a2 from "../../public/images/Project/2a.jpg";
 import a3 from "../../public/images/Project/3.jpg";
-import a4 from "../../public/images/Project/4a.jpg";
+import a4 from "../../public/images/Project/4b.jpg";
 import a5 from "../../public/images/Project/5.jpg";
 import a6 from "../../public/images/Project/6.jpg";
 import a7 from "../../public/images/Project/7aa.jpg";
@@ -20,15 +19,8 @@ import a8 from "../../public/images/Project/8a.jpg";
 import a9 from "../../public/images/Project/9.jpg";
 import CompleteCar from "@/public/images/Project/project10.jpg";
 import CarouselTab from "../atoms/CarouselTab";
-import { Spinner } from "@nextui-org/react";
 
 const ProjectsCarousel = () => {
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1500);
-    return () => clearTimeout(timer);
-  }, []);
-
   const imageList = [
     {
       id: 0,
@@ -111,37 +103,31 @@ const ProjectsCarousel = () => {
 
   return (
     <div className="relative w-full">
-      {loading ? (
-        <div className="flex justify-center items-center h-64">
-          <Spinner size="lg" />
-        </div>
-      ) : (
-        <Carousel>
-          <CarouselContent className="-ml-6 max-w-[1100px]">
-            {imageList.map((item) => (
-              <CarouselItem key={item.id} className="md:basis-1/2 pl-6">
-                {(item.id === 0 && (
-                  <CarouselTab
-                    image={item.image}
-                    title={item.title}
-                    description={item.description}
-                    showDescription={false}
-                  />
-                )) || (
-                  <CarouselTab
-                    image={item.image}
-                    title={item.title}
-                    number={item.id}
-                    description={item.description}
-                  />
-                )}
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselNavigation alwaysShow />
-          <CarouselIndicator classNameButton="w-2.5 h-2.5" />
-        </Carousel>
-      )}
+      <Carousel>
+        <CarouselContent className="-ml-6 max-w-[1100px]">
+          {imageList.map((item) => (
+            <CarouselItem key={item.id} className="md:basis-1/2 pl-6">
+              {(item.id === 0 && (
+                <CarouselTab
+                  image={item.image}
+                  title={item.title}
+                  description={item.description}
+                  showDescription={false}
+                />
+              )) || (
+                <CarouselTab
+                  image={item.image}
+                  title={item.title}
+                  number={item.id}
+                  description={item.description}
+                />
+              )}
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselNavigation alwaysShow />
+        <CarouselIndicator classNameButton="w-2.5 h-2.5" />
+      </Carousel>
     </div>
   );
 };

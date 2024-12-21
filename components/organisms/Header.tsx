@@ -131,7 +131,7 @@ const Header = () => {
                         smooth={true}
                         duration={500}
                         offset={-79}
-                        className="text-white text-[1.1rem] w-10"
+                        className="text-white text-[1.1rem] w-10 hover:text-black"
                       >
                         SERWIS
                       </ScrollLink>
@@ -141,7 +141,7 @@ const Header = () => {
                         to="offer-tuning"
                         smooth={true}
                         duration={500}
-                        className="text-white text-[1.1rem]"
+                        className="text-white text-[1.1rem] hover:text-black"
                       >
                         TUNING
                       </ScrollLink>
@@ -151,7 +151,7 @@ const Header = () => {
                         to="offer-motorsport"
                         smooth={true}
                         duration={500}
-                        className="text-white text-[1.1rem]"
+                        className="text-white text-[1.1rem] hover:text-black"
                       >
                         MOTORSPORT
                       </ScrollLink>
@@ -162,7 +162,7 @@ const Header = () => {
                         smooth={true}
                         duration={500}
                         onClick={() => setIsMenuOpen(false)}
-                        className="text-white text-[1.1rem]"
+                        className="text-white text-[1.1rem] hover:text-black"
                       >
                         SPECJALNA
                       </ScrollLink>
@@ -174,7 +174,7 @@ const Header = () => {
                   to={item.link.replace("/#", "")}
                   smooth={true}
                   duration={500}
-                  className="text-white text-[1.3rem]"
+                  className="text-white text-[1.3rem] hover:text-gray-300"
                   href={item.link}
                 >
                   {item.name}

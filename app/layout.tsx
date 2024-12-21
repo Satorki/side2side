@@ -3,7 +3,6 @@ import "../styles/globals.css";
 import Footer from "@/components/organisms/Footer";
 import Header from "@/components/organisms/Header";
 import Favicon from "@/public/images/Icons/favicon-bigs.png";
-import OpenGraphImage from "@/public/opengraph-image.jpg";
 
 export const metadata: Metadata = {
   title: "Side2Side | Eksperci w serwisie, tuningu i motorsporcie",
@@ -21,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "Side2Side",
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_BASE_URL}${OpenGraphImage.src}`,
+        url: "https://side2side.pl/opengraph-image.jpg",
         width: 1200,
         height: 630,
         alt: "Side2Side - Eksperci w serwisie, tuningu i motorsporcie",
@@ -50,7 +49,7 @@ export default function RootLayout({
         />
         <meta
           property="og:image"
-          content="https://side2side.com/opengraph-image.jpg"
+          content="https://side2side.pl/opengraph-image.jpg"
         />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -66,7 +65,7 @@ export default function RootLayout({
         />
         <meta
           name="twitter:image"
-          content="https://side2side.com/opengraph-image.jpg"
+          content="https://side2side.pl/opengraph-image.jpg"
         />
 
         <link rel="icon" href={Favicon.src} />

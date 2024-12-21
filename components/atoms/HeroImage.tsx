@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import HeroImagePicture from "@/public/images/Hero/Hero-High.jpg";
+import HeroImagePicture from "@/public/images/Hero/Hero-Medium.jpg";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { CircleLoader } from "react-spinners";
 import LoadingBar from "react-top-loading-bar";

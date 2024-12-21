@@ -8,7 +8,7 @@ Landing page for Side2side company.
 
 The site is deployed and accessible via the following link:
 
-https://side2side.netlify.app/
+https://side2side.pl/
 
 ## Design Pattern
 
