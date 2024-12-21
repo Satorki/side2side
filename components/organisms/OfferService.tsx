@@ -1,3 +1,4 @@
+"use client";
 import ButtonAction from "@/components/atoms/ButtonAction";
 import React, { useEffect, useState } from "react";
 import FadeUp from "@/components/atoms/FadeUp";
@@ -55,10 +56,7 @@ const OfferService: React.FC = () => {
             titleEnding="dostosowana do Ciebie."
           />
           <FadeUp delay={0.5} duration={2}>
-            <DescriptionSingle
-              text="Oferujemy kompleksowy serwis dla pojazdów osobowych i dostawczych do 3,5 tony, zapewniając ich sprawność w codziennym użytkowaniu."
-              isBold={true}
-            />
+            <DescriptionSingle text="Oferujemy kompleksowy serwis dla pojazdów osobowych i dostawczych do 3,5 tony, zapewniając ich sprawność w codziennym użytkowaniu." />
           </FadeUp>
           {isDesktop && showButtons()}
         </div>
@@ -80,7 +78,6 @@ const OfferService: React.FC = () => {
           display: flex;
           flex-direction: row-reverse;
           justify-content: center;
-          align-items: center;
           max-width: 1200px;
           margin: 2rem auto;
           gap: 5rem;

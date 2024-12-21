@@ -1,3 +1,4 @@
+"use client";
 import FadeUp from "@/components/atoms/FadeUp";
 import TitleSection from "@/components/atoms/TitleSection";
 import ReviewSingle from "@/components/molecules/ReviewSingle";
@@ -8,10 +9,10 @@ const Rewievs = () => {
     <div id="rewievs">
       <div className="flex flex-col gap-5 md:gap-10 justify-center items-center max-w-[1200px] mx-auto">
         <div className="pt-8">
-        <TitleSection titleBegining="Opinie naszych klientów" />
+          <TitleSection titleBegining="Opinie naszych klientów" />
         </div>
         <div className="rewievs-container">
-          <FadeUp delay={0.3}>
+          <FadeUp delay={0.1}>
             <ReviewSingle
               text="Kilukrotnie korzystałem z usług i nigdy się nie zawiodłem. Powierzony temat wykonany zawsze na 101%. Warszat prowadzony z dbałością o najdrobniejsze detale i przyjaznym podejściem dla klienta.
 Reasumowując zdecydowanie polecam :)"
@@ -21,7 +22,7 @@ Reasumowując zdecydowanie polecam :)"
             />
           </FadeUp>
 
-          <FadeUp delay={0.4}>
+          <FadeUp delay={0.3}>
             <ReviewSingle
               text="Korzystałem z pomocy dwa razy i za każdym razem byłem zadowolony. Miła obsługa, są słowni, dotrzymali umówionych terminów, mają umiarkowane ceny. Szybko stawiają trafną diagnozę i szybko usuwają usterki. Dzisiaj była wymiana czujnika położenia wałka rozrządu.
 Wczoraj szybka diagnoza bez kolejki, a dzisiaj 15 minut i zrobione. Rachunek też nie wysoki.

@@ -1,3 +1,4 @@
+"use client";
 import ButtonAction from "@/components/atoms/ButtonAction";
 import React, { useEffect, useState } from "react";
 import FadeUp from "@/components/atoms/FadeUp";
@@ -34,10 +35,7 @@ const OfferTunning: React.FC = () => {
             titleEnding=" z jazdy."
           />
           <FadeUp delay={0.5} duration={2}>
-            <DescriptionSingle
-              text="Tuningujemy z pasją, by Twój pojazd osiągał maksimum możliwości."
-              isBold={true}
-            />
+            <DescriptionSingle text="Tuningujemy z pasją, by Twój pojazd osiągał maksimum możliwości." />
           </FadeUp>
 
           {isDesktop && (
@@ -67,7 +65,6 @@ const OfferTunning: React.FC = () => {
       </div>
       <style jsx>{`
         #offer-tuning {
-          /* background-color: #303030; */
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -77,7 +74,6 @@ const OfferTunning: React.FC = () => {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
-          align-items: center;
           color: #fff;
           width: 100%;
           max-width: 1200px;

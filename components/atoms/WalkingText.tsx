@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { InfiniteSlider } from "./InfiniteSlider";
 import konopackiImage from "@/public/images/Company-Logos/konopacki0.png";
@@ -5,7 +6,7 @@ import adamatImage from "@/public/images/Company-Logos/adamat0.png";
 import interImage from "@/public/images/Company-Logos/inter0.png";
 import krawczykImage from "@/public/images/Company-Logos/krawczyk0.png";
 import swagierImage from "@/public/images/Company-Logos/swagier0.png";
-import tmcImage from "@/public/images/Company-Logos/tmc0.png";
+import tmcImage from "@/public/images/Company-Logos/tmc1.jpg";
 import wacheImage from "@/public/images/Company-Logos/wache0.png";
 import fmicImage from "@/public/images/Company-Logos/fmic0.png";
 import Link from "next/link";
@@ -84,7 +85,7 @@ const WalkingText = () => {
         </h3>
       </div>
       {isDesktop ? (
-        <InfiniteSlider gap={20} reverse duration={40} durationOnHover={90}>
+        <InfiniteSlider gap={30} reverse duration={40} durationOnHover={90}>
           {images.map((image) => (
             <Link
               key={image.index}
@@ -124,7 +125,7 @@ const WalkingText = () => {
               </Link>
             ))}
           </InfiniteSlider>
-          <InfiniteSlider gap={10} duration={40} durationOnHover={90}>
+          <InfiniteSlider gap={20} duration={40} durationOnHover={90}>
             {images.slice(3).map((image) => (
               <Link
                 key={image.index}

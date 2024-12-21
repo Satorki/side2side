@@ -1,15 +1,8 @@
-import ButtonAction from "@/components/atoms/ButtonAction";
+"use client";
 import DescriptionSingle from "@/components/atoms/DescriptionSingle";
 import FadeUp from "@/components/atoms/FadeUp";
 import TitleSection from "@/components/atoms/TitleSection";
 import ProjectsCarousel from "@/components/molecules/ProjectsCarousel";
-import { ArrowLeft } from "lucide-react";
-import Image from "next/image";
-import React, { useState } from "react";
-import CompleteCar from "@/public/images/Project/project10.jpg";
-import leftCar from "@/public/images/Project/3.jpg";
-import rightCar from "@/public/images/Project/7aaa.jpg";
-import { AnimatePresence, motion } from "framer-motion";
 
 const Projects = () => {
   return (
@@ -21,10 +14,7 @@ const Projects = () => {
             titleAnimationText=""
           />
           <FadeUp delay={0.5} duration={2}>
-            <DescriptionSingle
-              text="Stworzymy dla Ciebie zwyciężające samochody."
-              isBold={true}
-            />
+            <DescriptionSingle text="Stworzymy dla Ciebie zwyciężające samochody." />
           </FadeUp>
           <FadeUp delay={0.8} duration={2}>
             <DescriptionSingle text="We współpracy z naszym serwisem został stworzony od postaw samochód dla Kickster'a - BMW E46 2JZ - 650 KM / 700 Nm przystosowany do zawodów driftingowych." />

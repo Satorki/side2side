@@ -79,37 +79,35 @@ const Header = () => {
         className="bg-black"
       >
         <NavbarContent>
-          <NavbarBrand>
-            <ul className="flex">
-              <li className="flex">
-                <Link href="/">
-                  {isMenuOpen || isLargeScreen ? (
-                    <>
-                      <LogoSmall />
-                      <motion.div
-                        initial={{ opacity: 0, x: -110 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ type: "spring" }}
-                      >
-                        <LogoBig />
-                      </motion.div>
-                    </>
-                  ) : (
-                    <>
-                      <LogoSmall />
-                      <motion.div
-                        initial={{ opacity: 1, x: 0 }}
-                        animate={{ opacity: 0, x: -110 }}
-                        transition={{ type: "spring" }}
-                      >
-                        <LogoBig />
-                      </motion.div>
-                    </>
-                  )}
-                </Link>
-              </li>
-            </ul>
-          </NavbarBrand>
+          <li>
+            <NavbarBrand>
+              <Link href="/" aria-label="Strona główna">
+                {isMenuOpen || isLargeScreen ? (
+                  <>
+                    <LogoSmall />
+                    <motion.div
+                      initial={{ opacity: 0, x: -110 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ type: "spring" }}
+                    >
+                      <LogoBig />
+                    </motion.div>
+                  </>
+                ) : (
+                  <>
+                    <LogoSmall />
+                    <motion.div
+                      initial={{ opacity: 1, x: 0 }}
+                      animate={{ opacity: 0, x: -110 }}
+                      transition={{ type: "spring" }}
+                    >
+                      <LogoBig />
+                    </motion.div>
+                  </>
+                )}
+              </Link>
+            </NavbarBrand>
+          </li>
         </NavbarContent>
         <NavbarContent className="hidden md:flex gap-4" justify="end">
           {menuItems.map((item) => (

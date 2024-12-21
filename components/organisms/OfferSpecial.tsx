@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import AnimatedTransition from "../atoms/AnimatedTransition";
 import TitleSection from "../atoms/TitleSection";
@@ -101,8 +102,7 @@ const OfferSpecial = () => {
         <div className="flex flex-col gap-5 md:gap-10 flex-1">
           <TitleSection titleAnimationText="Dodatkowe" titleEnding=" usługi" />
           <FadeUp delay={0.5} duration={2}>
-            <DescriptionSingle
-              isBold={true}
+            <DescriptionSingle              
               text="Oferujemy szeroki zakres usług, które pomogą Ci zadbać o Twój pojazd,
           od konserwacji po zaawansowane remonty."
             />
@@ -144,7 +144,6 @@ const OfferSpecial = () => {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
-          align-items: center;
           color: #fff;
           max-width: 1200px;
           margin: 2rem auto;

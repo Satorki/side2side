@@ -1,3 +1,4 @@
+"use client";
 import LineAnimation from "@/components/atoms/LineAnimation";
 import TitleSection from "@/components/atoms/TitleSection";
 import OffersAllCarousel from "@/components/organisms/OffersAllCarousel";
@@ -7,7 +8,9 @@ const OffersAll = () => {
   return (
     <div id="offersAll">
       <div className="offer-container">
-        <TitleSection titleBegining="Doskonałość Techniczna dla Twojego Auta." />
+        <div className="xl:w-3/4">
+          <TitleSection titleBegining="Doskonałość Techniczna dla Twojego Auta." />
+        </div>
         <LineAnimation />
         <div className="tabs-container">
           <OffersAllCarousel />
@@ -27,7 +30,6 @@ const OffersAll = () => {
           color: var(--color-text);
           padding: 2rem;
           gap: 1.5rem;
-          
         }
 
         .tabs-container {

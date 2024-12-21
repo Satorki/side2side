@@ -1,3 +1,4 @@
+"use client";
 import TitleSection from "@/components/atoms/TitleSection";
 import { DoorOpen, Mail, MapPin, PhoneIcon, Share2 } from "lucide-react";
 import Link from "next/link";

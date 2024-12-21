@@ -1,5 +1,5 @@
+"use client";
 import ImageAbout from "@/components/atoms/ImageAbout";
-// import TitleSection from "@/components/atoms/TitleSection";
 import React, { useEffect, useState } from "react";
 import ButtonAction from "@/components/atoms/ButtonAction";
 import { CornerRightDown } from "lucide-react";

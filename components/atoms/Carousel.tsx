@@ -135,6 +135,7 @@ function CarouselNavigation({
     >
       <button
         type="button"
+        aria-label="Przejdź do poprzedniego slajdu" // Dodanie nazwy dostępnej
         className={cn(
           "pointer-events-auto h-fit w-fit rounded-full bg-zinc-700 p-2 transition-opacity duration-300 dark:bg-zinc-950 hover:bg-zinc-100 border",
           alwaysShow
@@ -159,6 +160,7 @@ function CarouselNavigation({
       </button>
       <button
         type="button"
+        aria-label="Przejdź do następnego slajdu" // Dodanie nazwy dostępnej
         className={cn(
           "pointer-events-auto h-fit w-fit rounded-full bg-zinc-750 p-2 transition-opacity duration-300 dark:bg-zinc-950 hover:bg-zinc-100 border",
           alwaysShow
@@ -208,10 +210,11 @@ function CarouselIndicator({
           <button
             key={i}
             type="button"
-            aria-label={`Go to slide ${i + 1}`}
+            aria-label={`Przejdź do slajdu ${i + 1}`}
+            aria-current={index === i ? "true" : undefined}
             onClick={() => setIndex(i)}
             className={cn(
-              "h-2 w-2 rounded-full transition-opacity duration-300",
+              "h-4 w-4 rounded-full transition-opacity duration-300",
               index === i
                 ? "bg-zinc-950 dark:bg-zinc-50"
                 : "bg-zinc-900/50 dark:bg-zinc-100/50",

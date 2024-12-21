@@ -42,7 +42,7 @@ const AnimatedTransition = ({
   ]);
 
   return (
-    <div className="max-w-[1200px] mx-auto w-full flex items-center font-jura  font-bold">
+    <div className="max-w-[1200px] mx-auto w-full flex items-center font-jura h-full pb-6 font-bold">
       <p
         className={`-rotate-90 text-[0.7rem] md:text-[1.6rem] mx-[-0.9rem] md:mx-[-2.2rem] opacity-60 font-bold tracking-wider xl:scale-100 mt-1 md:mt-2 ${
           mustScaleDown ? "scale-[0.65]" : "scale-100"

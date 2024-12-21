@@ -103,7 +103,7 @@ const OfferMotorsport = () => {
           display: flex;
           flex-direction: row-reverse;
           justify-content: center;
-          align-items: center;
+          
           color: #fff;
           max-width: 1200px;
           margin: 2rem auto;
