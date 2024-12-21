@@ -15,9 +15,9 @@ const Contact = () => {
     {
       id: 2,
       icon: <DoorOpen />,
-      title: "Otwarte od Poniedziałku do Piątku",
+      title: "Godziny Otwarcia",
       descriptionUp: "",
-      descriptionDown: "W godzinach: 08:00 - 16:00",
+      descriptionDown: "od poniedziałku do piątku: 08:00 - 16:00",
     },
     {
       id: 3,
