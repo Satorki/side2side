@@ -104,9 +104,9 @@ const ProjectsCarousel = () => {
   return (
     <div className="relative w-full">
       <Carousel>
-        <CarouselContent className="-ml-6 max-w-[1100px]">
+        <CarouselContent className="-ml-4 max-w-[330px] md:-ml-6 md:max-w-[1100px]">
           {imageList.map((item) => (
-            <CarouselItem key={item.id} className="md:basis-1/2 pl-6">
+            <CarouselItem key={item.id} className="pl-4 md:basis-1/2 md:pl-6">
               {(item.id === 0 && (
                 <CarouselTab
                   image={item.image}

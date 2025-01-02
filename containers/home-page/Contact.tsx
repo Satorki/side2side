@@ -39,10 +39,10 @@ const Contact = () => {
       title: "Email:",
       descriptionUp: (
         <Link
-          href={"mailto:side2side.garage@gmail.com"}
+          href={"mailto:kontakt@side2side.pl"}
           className="active:font-bold hover:text-[#d52727] underline underline-offset-2"
         >
-          side2side.garage@gmail.com
+          kontakt@side2side.pl
         </Link>
       ),
     },
