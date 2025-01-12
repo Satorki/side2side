@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Side2Side to profesjonalny warsztat samochodowy, który łączy pasję do motoryzacji z nowoczesnymi rozwiązaniami. Specjalizujemy się w serwisie pojazdów, modyfikacjach silnika, ulepszaniu zawieszenia oraz kompleksowym przygotowaniu samochodów do zawodów motorsportowych. Zaufaj naszym ekspertom i doświadcz wyjątkowej precyzji i wydajności.",
   keywords:
-    "serwis samochodowy Wolsztyn, warsztat samochodowy Wolsztyn, tuning samochodów, motorsport Wolsztyn, serwis pojazdów Wolsztyn, naprawa aut sportowych, Side2Side Motorsport, serwis BMW Wolsztyn, tuning BMW E39, profesjonalny warsztat BMW, tuning pojazdów sportowych, ",
+    "serwis samochodowy Wolsztyn, warsztat samochodowy Wolsztyn, tuning samochodów, motorsport Wolsztyn, serwis pojazdów Wolsztyn, naprawa aut sportowych, Side2Side Motorsport, serwis BMW Wolsztyn, tuning BMW E39, profesjonalny warsztat BMW, tuning pojazdów sportowych, tuning, motorsport, motor sport, serwis bmw, auto e39, bmw warsztat, tuning bmw, warsztaty tuningowe",
   openGraph: {
     title: "Side2Side | Eksperci w serwisie, tuningu i motorsporcie",
     description:
