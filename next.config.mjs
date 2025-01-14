@@ -3,7 +3,8 @@ const nextConfig = {
   productionBrowserSourceMaps: true,
 };
 
-module.exports = {
+const config = {
+  ...nextConfig,
   async redirects() {
     return [
       {
@@ -25,4 +26,4 @@ module.exports = {
   },
 };
 
-export default nextConfig;
+export default config;

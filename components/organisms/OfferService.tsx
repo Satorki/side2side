@@ -53,7 +53,7 @@ const OfferService: React.FC = () => {
           <TitleSection
             titleBegining="Profesjonalna "
             titleAnimationText="obsługa"
-            titleEnding="dostosowana do Ciebie."
+            titleEnding=" dostosowana do Ciebie."
           />
           <FadeUp delay={0.5} duration={2}>
             <DescriptionSingle text="Oferujemy kompleksowy serwis dla pojazdów osobowych i dostawczych do 3,5 tony, zapewniając ich sprawność w codziennym użytkowaniu." />
