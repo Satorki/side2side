@@ -9,6 +9,7 @@ import swagierImage from "@/public/images/Company-Logos/swagier0.png";
 import tmcImage from "@/public/images/Company-Logos/tmc1.jpg";
 import wacheImage from "@/public/images/Company-Logos/wache0.png";
 import fmicImage from "@/public/images/Company-Logos/fmic0.png";
+import rcuImage from "@/public/images/Company-Logos/rcu1.png";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -74,6 +75,12 @@ const WalkingText = () => {
       image: fmicImage,
       alt: "FMIC Performance logo",
       link: "https://www.fmic.pl",
+    },
+    {
+      index: 8,
+      image: rcuImage,
+      alt: "RCU logo",
+      link: "https://www.rcu.pl",
     },
   ];
 
