@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="relative bg-black text-white py-6 px-4">
       <div className="container max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center">
         <div className="text-center md:text-left">
-          <h2 className="text-xl font-bold">Side2Side Motorsport</h2>
+          <h2 className="text-xl font-bold">Side2Side</h2>
           <p className="text-sm text-gray-300 mt-1">
             Profesjonalny serwis samochodowy | Tuning | Motorsport
           </p>
@@ -46,8 +46,7 @@ const Footer = () => {
         </nav>
         <div className="text-center md:text-right mt-4 md:mt-0">
           <p className="text-sm text-gray-300">
-            © {new Date().getFullYear()} Side2Side Motorsport. All rights
-            reserved.
+            © {new Date().getFullYear()} Side2Side all rights reserved.
           </p>
           <p className="text-sm text-gray-300 mt-1">
             Developed by{" "}

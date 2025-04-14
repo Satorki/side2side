@@ -19,13 +19,16 @@ import brakes2 from "@/public/images/Special/brakes2b.jpg";
 import brakes3 from "@/public/images/Special/brakes3b.jpg";
 import injectors1 from "@/public/images/Special/injectors1b.jpg";
 import engine1 from "@/public/images/Special/engine1b.jpg";
-import engine2 from "@/public/images/Special/engine2b.jpg";
-import engine3 from "@/public/images/Special/engine3b.jpg";
-import engine4 from "@/public/images/Special/engine4b.jpg";
+//import engine2 from "@/public/images/Special/engine2b.jpg";
+//import engine3 from "@/public/images/Special/engine3b.jpg";
+//import engine4 from "@/public/images/Special/engine4b.jpg";
 import engine5 from "@/public/images/Special/engine5b.jpg";
-import engine6 from "@/public/images/Special/engine6b.jpg";
-import engine7 from "@/public/images/Special/engine7b.jpg";
-import engine8 from "@/public/images/Special/engine8b.jpg";
+import engine6 from "@/public/images/Special/engine6c.jpg";
+//import engine7 from "@/public/images/Special/engine7b.jpg";
+import engine8 from "@/public/images/Special/engine8c.jpg";
+import engine9 from "@/public/images/Special/engine9a.jpg";
+import engine10 from "@/public/images/Special/engine10a.jpg";
+import engine11 from "@/public/images/Special/engine11a.jpg";
 import AnimatedStar from "../atoms/AnimatedStar";
 
 const OfferSpecial = () => {
@@ -37,10 +40,9 @@ const OfferSpecial = () => {
         "Remonty kapitalne silników obejmują kompleksową diagnostykę, wymianę zużytych części oraz precyzyjne regulacje, które przywracają silnikowi pełną moc i niezawodność.",
       gallery: [
         engine1.src,
-        engine2.src,
-        engine7.src,
-        engine3.src,
-        engine4.src,
+        engine9.src,
+        engine10.src,
+        engine11.src,
         engine5.src,
         engine6.src,
         engine8.src,
@@ -102,7 +104,7 @@ const OfferSpecial = () => {
         <div className="flex flex-col gap-5 md:gap-10 flex-1">
           <TitleSection titleAnimationText="Dodatkowe" titleEnding=" usługi" />
           <FadeUp delay={0.5} duration={2}>
-            <DescriptionSingle              
+            <DescriptionSingle
               text="Oferujemy szeroki zakres usług, które pomogą Ci zadbać o Twój pojazd,
           od konserwacji po zaawansowane remonty."
             />

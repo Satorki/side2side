@@ -10,7 +10,7 @@ const Contact = () => {
       id: 1,
       icon: <MapPin />,
       title: "Adres:",
-      descriptionUp: "59A,",
+      descriptionUp: "24Y,",
       descriptionDown: "64-200 Nowe Tłoki",
     },
     {
