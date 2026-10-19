@@ -13,26 +13,26 @@ const Contact = () => {
       descriptionUp: "24Y,",
       descriptionDown: "64-200 Nowe Tłoki",
     },
-    {
-      id: 2,
-      icon: <DoorOpen />,
-      title: "Godziny Otwarcia",
-      descriptionUp: "",
-      descriptionDown: "od poniedziałku do piątku: 08:00 - 16:00",
-    },
-    {
-      id: 3,
-      icon: <PhoneIcon />,
-      title: "Telefon:",
-      descriptionUp: (
-        <Link
-          href="tel:+48 533 025 109"
-          className="active:font-bold hover:text-[#d52727] underline underline-offset-2"
-        >
-          +48 533 025 109
-        </Link>
-      ),
-    },
+    // {
+    //   id: 2,
+    //   icon: <DoorOpen />,
+    //   title: "Godziny Otwarcia",
+    //   descriptionUp: "",
+    //   descriptionDown: "od poniedziałku do piątku: 08:00 - 16:00",
+    // },
+    // {
+    //   id: 3,
+    //   icon: <PhoneIcon />,
+    //   title: "Telefon:",
+    //   descriptionUp: (
+    //     <Link
+    //       href="tel:+48 533 025 109"
+    //       className="active:font-bold hover:text-[#d52727] underline underline-offset-2"
+    //     >
+    //       +48 533 025 109
+    //     </Link>
+    //   ),
+    // },
     {
       id: 4,
       icon: <Mail />,
@@ -47,7 +47,7 @@ const Contact = () => {
       ),
     },
     {
-      id: 4,
+      id: 5,
       icon: <Share2 />,
       title: "Social:",
       descriptionUp: (

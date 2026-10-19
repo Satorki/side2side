@@ -7,16 +7,16 @@ import DescriptionSingle from "../atoms/DescriptionSingle";
 import ButtonAction from "../atoms/ButtonAction";
 import { PhoneCall } from "lucide-react";
 import SpecialList from "../atoms/SpecialList";
-import chassis1 from "@/public/images/Special/chassis1b.jpg";
-import chassis2 from "@/public/images/Special/chassis2b.jpg";
-import chassis3 from "@/public/images/Special/chassis3b.jpg";
-import chassis4 from "@/public/images/Special/chassis4b.jpg";
-import chassis5 from "@/public/images/Special/chassis5b.jpg";
-import chassis6 from "@/public/images/Special/chassis6b.jpg";
-import chassis7 from "@/public/images/Special/chassis7b.jpg";
-import brakes1 from "@/public/images/Special/brakes1b.jpg";
-import brakes2 from "@/public/images/Special/brakes2b.jpg";
-import brakes3 from "@/public/images/Special/brakes3b.jpg";
+// import chassis1 from "@/public/images/Special/chassis1b.jpg";
+// import chassis2 from "@/public/images/Special/chassis2b.jpg";
+// import chassis3 from "@/public/images/Special/chassis3b.jpg";
+// import chassis4 from "@/public/images/Special/chassis4b.jpg";
+// import chassis5 from "@/public/images/Special/chassis5b.jpg";
+// import chassis6 from "@/public/images/Special/chassis6b.jpg";
+// import chassis7 from "@/public/images/Special/chassis7b.jpg";
+// import brakes1 from "@/public/images/Special/brakes1b.jpg";
+// import brakes2 from "@/public/images/Special/brakes2b.jpg";
+// import brakes3 from "@/public/images/Special/brakes3b.jpg";
 import injectors1 from "@/public/images/Special/injectors1b.jpg";
 import engine1 from "@/public/images/Special/engine1b.jpg";
 //import engine2 from "@/public/images/Special/engine2b.jpg";
@@ -48,21 +48,21 @@ const OfferSpecial = () => {
         engine8.src,
       ],
     },
-    {
-      id: 2,
-      title: "Konserwacja podwozia",
-      content:
-        "Oferujemy profesjonalną konserwację podwozia, która chroni przed korozją i uszkodzeniami mechanicznymi, zapewniając dłuższą żywotność pojazdu.",
-      gallery: [
-        chassis2.src,
-        chassis1.src,
-        chassis3.src,
-        chassis4.src,
-        chassis5.src,
-        chassis6.src,
-        chassis7.src,
-      ],
-    },
+    // {
+    //   id: 2,
+    //   title: "Konserwacja podwozia",
+    //   content:
+    //     "Oferujemy profesjonalną konserwację podwozia, która chroni przed korozją i uszkodzeniami mechanicznymi, zapewniając dłuższą żywotność pojazdu.",
+    //   gallery: [
+    //     chassis2.src,
+    //     chassis1.src,
+    //     chassis3.src,
+    //     chassis4.src,
+    //     chassis5.src,
+    //     chassis6.src,
+    //     chassis7.src,
+    //   ],
+    // },
     {
       id: 3,
       title: "Czyszczenie wtrysków benzynowych",
@@ -70,13 +70,13 @@ const OfferSpecial = () => {
         "Czyszczenie wtrysków benzynowych poprawia spalanie paliwa, zwiększa moc silnika i zmniejsza zużycie paliwa. Używamy nowoczesnych technologii, aby przywrócić wtryski do pierwotnej sprawności.",
       gallery: [injectors1.src],
     },
-    {
-      id: 4,
-      title: "Regeneracja zacisków hamulcowych",
-      content:
-        "Nasza usługa regeneracji zacisków hamulcowych obejmuje kompleksowe czyszczenie, wymianę uszczelnień oraz testy szczelności, aby zapewnić optymalną wydajność hamulców.",
-      gallery: [brakes1.src, brakes2.src, brakes3.src],
-    },
+    // {
+    //   id: 4,
+    //   title: "Regeneracja zacisków hamulcowych",
+    //   content:
+    //     "Nasza usługa regeneracji zacisków hamulcowych obejmuje kompleksowe czyszczenie, wymianę uszczelnień oraz testy szczelności, aby zapewnić optymalną wydajność hamulców.",
+    //   gallery: [brakes1.src, brakes2.src, brakes3.src],
+    // },
   ];
 
   const [isDesktop, setIsDesktop] = useState(false);

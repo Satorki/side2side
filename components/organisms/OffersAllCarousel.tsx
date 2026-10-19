@@ -7,7 +7,7 @@ import {
   CarouselItem,
 } from "../atoms/Carousel";
 import OfferAllTab from "../molecules/OfferAllTab";
-import { ArrowDown, CircleDotDashed, SignalHigh, Wrench } from "lucide-react";
+import { ArrowDown, CircleDotDashed, SignalHigh } from "lucide-react";
 import ButtonAction from "../atoms/ButtonAction";
 
 const OffersAllCarousel = () => {
@@ -25,21 +25,21 @@ const OffersAllCarousel = () => {
   }, []);
 
   const carouselItems = [
-    {
-      icon: <Wrench className="w-1/2 h-auto" />,
-      title: "SERWIS",
-      description:
-        "Oferujemy kompleksowy serwis samochodów osobowych i dostawczych do 3,5 tony – dbamy o niezawodność i komfort jazdy na co dzień.",
-      bgColor: "rgba(30, 30, 30, 0.6)",
-      button: (
-        <ButtonAction
-          text="Przejdź"
-          icon={<ArrowDown />}
-          address="offer-service"
-          offset={-79}
-        />
-      ),
-    },
+    // {
+    //   icon: <Wrench className="w-1/2 h-auto" />,
+    //   title: "SERWIS",
+    //   description:
+    //     "Oferujemy kompleksowy serwis samochodów osobowych i dostawczych do 3,5 tony – dbamy o niezawodność i komfort jazdy na co dzień.",
+    //   bgColor: "rgba(30, 30, 30, 0.6)",
+    //   button: (
+    //     <ButtonAction
+    //       text="Przejdź"
+    //       icon={<ArrowDown />}
+    //       address="offer-service"
+    //       offset={-79}
+    //     />
+    //   ),
+    // },
     {
       icon: <SignalHigh className="w-1/2 h-auto" />,
       title: "TUNING",

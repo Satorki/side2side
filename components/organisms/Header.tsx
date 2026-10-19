@@ -125,7 +125,7 @@ const Header = () => {
                       base: "gap-4",
                     }}
                   >
-                    <DropdownItem key="SERWIS">
+                    {/* <DropdownItem key="SERWIS">
                       <ScrollLink
                         to="offer-service"
                         smooth={true}
@@ -135,7 +135,7 @@ const Header = () => {
                       >
                         SERWIS
                       </ScrollLink>
-                    </DropdownItem>
+                    </DropdownItem> */}
                     <DropdownItem key="TUNING">
                       <ScrollLink
                         to="offer-tuning"
@@ -190,7 +190,7 @@ const Header = () => {
               {item.id === 2 ? (
                 <div className="flex items-center justify-center">
                   <div className="flex flex-col gap-5">
-                    <ScrollLink
+                    {/* <ScrollLink
                       to="offer-service"
                       offset={-60}
                       smooth={true}
@@ -199,7 +199,7 @@ const Header = () => {
                       className="text-white text-[1.5rem] underline underline-offset-8 flex justify-center font-jura font-thin tracking-wider"
                     >
                       SERWIS
-                    </ScrollLink>
+                    </ScrollLink> */}
 
                     <ScrollLink
                       to="offer-tuning"

@@ -24,12 +24,12 @@ const Footer = () => {
             O Nas
           </ScrollLink>
           <ScrollLink
-            to="offer-service"
+            to="offer-tuning"
             offset={-45}
             smooth={true}
             duration={500}
             className="text-gray-300 hover:text-white text-sm cursor-pointer"
-            href={"#offer-service"}
+            href={"#offer-tuning"}
           >
             Oferta
           </ScrollLink>
